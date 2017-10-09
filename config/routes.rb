@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   Rails.application.routes.draw do
     resources :chores
     root :to => redirect('/chores')
+    # root 'chores#hello'
   end
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
