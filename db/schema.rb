@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20171003050622) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "chores", force: :cascade do |t|
     t.string   "task"
     t.string   "priority"
