@@ -4,7 +4,8 @@ class ChoresController < ApplicationController
     end
     
     def show
-        @chore = Chores.find(params[:id])
+        id = params[:id]
+        @chore = Chores.find(id)
     end
     
     def new
