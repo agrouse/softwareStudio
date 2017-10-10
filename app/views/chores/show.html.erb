@@ -1,0 +1,18 @@
+<h2> Details about <%= @chore.task %> </h2>
+ <ul>
+  <li>Status:
+   <%= @chore.status %> </li>
+  <li>Priority:
+    <%= @chore.priority %>
+  <li>Person Assigned:
+    <%= @chore.person_assigned %> </li>
+  <li>Last Accompished:
+    <%= @chore.last_accomplished %>
+    
+</ul>
+
+<h3>Description:</h3> 
+
+<p><%= @chore.description %> </p>
+
+<%= link_to 'Back to chores list', chores_path %>
