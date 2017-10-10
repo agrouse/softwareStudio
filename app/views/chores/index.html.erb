@@ -2,11 +2,9 @@
 <table>
 <%if @chores
   @chores.each do |t| %>
-   
-     <tr>
+
+        <tr>
          <td>  <a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-         
-         <td><%= t.descritpion%> </td>
          <td><%= t.created_at %>   </td>
      </tr>
    

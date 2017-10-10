@@ -3,8 +3,37 @@ class ChoresController < ApplicationController
         @chores = Chores.all
     end
     
-    def hello
-        render html: "Hello world"
+    def show
+        @chore = Chores.find(params[:id])
     end
+    
+    def new
+        @chore = Chores.new
+    end
+    
+    def edit
+    end
+    
+    # def create
+    #     @chore=Chore.new(chore_params)
+    #     if @chore.save
+    #         redirect_to '/chores'
+    #     else
+    #         render 'new'
+    #     end
+    # end
+    
+    private 
+        def chore_params
+    params.require(:chore).permit(:content)
+        end
+
+    def update
+    end
+    
+    def destroy
+    end
+    
+    
 
 end
