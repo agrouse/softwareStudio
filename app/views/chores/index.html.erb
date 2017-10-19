@@ -1,9 +1,36 @@
+<!-- Added in header and horizontal menu -->
+<div id="header">
+    <div id="logo">
+        <div id="logo_text">
+          <h1><a href="#">ménage</a></h1>
+          <h2>a distributed chores list</h2>
+        </div>
+    </div>
+    <div id="menubar">
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Chores</a></li>
+          <li><a href="#">Household</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+</div>
 
-<h1>Chores</h1>
-<table>
+<!-- div for styles -->
+<div id="page_content">
+    
+<h1 style="color: red">Pending Chores</h1>
+<table style="width:75%">
+    <tr>
+        <th>Chore</th>
+        <th>Time created</th>
+        <th>Delete?</th>
+    </tr>
 <%if @chores
   @chores.each do |t| %>
 
+        
         <tr>
          <td>  <a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
          <td><%= t.created_at %>   </td>
@@ -43,3 +70,4 @@
     <%= submit_tag 'Add'%>
     <% end %>
 <% end %>
+</div>

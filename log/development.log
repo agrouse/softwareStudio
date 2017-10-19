@@ -12893,3 +12893,849 @@ Processing by ChoresController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "1"]]
   Rendered chores/show.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20171009063806)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (10.8ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171009063806"]]
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateChores (20171010023550)
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ubuntu/workspace/db/migrate/20171010023550_create_chores.rb:11)
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171010023550"]]
+  [1m[36m (4.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 14:35:08 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:35:09 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 397ms (Views: 377.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 129.81.239.115 at 2017-10-19 14:35:09 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 129.81.239.115 at 2017-10-19 14:35:09 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 129.81.239.115 at 2017-10-19 14:35:09 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 129.81.239.115 at 2017-10-19 14:35:09 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 129.81.239.115 at 2017-10-19 14:35:09 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/chores" for 129.81.239.115 at 2017-10-19 14:36:12 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hZBa2vawAKuiyROSqQpXrDdcssLNXSaj8w2/uUFhbns3SjNcTJSpic+4tFJdUEAO06XoCLGna+ZWh/i9gD//+w==", "chore"=>{"task"=>"vacuum", "priority"=>"low"}, "commit"=>"Add"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["task", "vacuum"], ["priority", "low"], ["created_at", "2017-10-19 14:36:12.717856"], ["updated_at", "2017-10-19 14:36:12.717856"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+Redirected to https://mackennab-chores-mbarker7.c9users.io/chores
+Completed 302 Found in 107ms (ActiveRecord: 85.1ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:36:12 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/chores/1" for 129.81.239.115 at 2017-10-19 14:36:17 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Vtd7eAiG56LDQqnBu1ZHi8x1ssUA98SrIdeoi+VUNwzkDRL+sqJOgK4zDgFPDFApKIzoD3wNie6EXe+PJAqmjA==", "id"=>"1"}
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.4ms)[0m  COMMIT
+Redirected to https://mackennab-chores-mbarker7.c9users.io/chores
+Completed 302 Found in 20ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:36:17 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/chores" for 129.81.239.115 at 2017-10-19 14:36:20 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zw61ckHzgjBL5pC+zI1Ui+Ghus/0h8OJWnD12DGjvMV91Nz0+9crEiaXN34410MpBVjgBYh9jsz/+rLc8P0tRQ==", "chore"=>{"task"=>"sweep", "priority"=>"low"}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["task", "sweep"], ["priority", "low"], ["created_at", "2017-10-19 14:36:20.486218"], ["updated_at", "2017-10-19 14:36:20.486218"]]
+  [1m[35m (3.7ms)[0m  COMMIT
+Redirected to https://mackennab-chores-mbarker7.c9users.io/chores
+Completed 302 Found in 7ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:36:20 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 14:36:23 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChores Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:44:27 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 14:44:28 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:44:34 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 14:48:59 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:48:59 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 410ms (Views: 394.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/main.self-08ea89a23b3bfdc92c21707398a07c76caac993ba9df5c2f7d59cb9630787513.css?body=1" for 129.81.239.115 at 2017-10-19 14:49:00 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 14:50:22 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:50:23 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 314ms (Views: 298.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/main.self-b432a357a4361952bc402d7720d6489c4abb7baaca91059272a0e87dd8fdb966.css?body=1" for 129.81.239.115 at 2017-10-19 14:50:23 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 14:51:49 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:51:50 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 294ms (Views: 279.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/main.self-74de1dafbb61302b57f1200fbc05caf468d720ed4dee99e515bf5223a9dba135.css?body=1" for 129.81.239.115 at 2017-10-19 14:51:50 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 14:52:13 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:52:13 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 298ms (Views: 281.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/main.self-bf76daaab9d59d856ce65f07bba7abf6aed406a1357757f0964e212f9ba46c4d.css?body=1" for 129.81.239.115 at 2017-10-19 14:52:14 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 14:55:06 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:55:07 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 319ms (Views: 303.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/main.self-ddc0b9c781cb95808b6fc45aed0af0226d0e5a1e54fcd4d631a6df22965190c1.css?body=1" for 129.81.239.115 at 2017-10-19 14:55:07 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 14:57:13 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:57:14 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 319ms (Views: 302.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 14:57:26 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 14:57:29 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:02:22 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:02:23 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 420ms (Views: 404.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/main.self-6106c739877da813c54b23f8efa48c1e1aa84e4532fbe028889b461c93f0f9cf.css?body=1" for 129.81.239.115 at 2017-10-19 15:02:23 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:02:56 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:02:56 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 214ms (Views: 199.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:03:24 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:03:25 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 310ms (Views: 294.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/main.self-a5fdd17b2861c69c47486a4a3fd7910cce3fd5c06636eab0f854d117fd12076e.css?body=1" for 129.81.239.115 at 2017-10-19 15:03:25 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/chores" for 129.81.239.115 at 2017-10-19 15:03:55 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e3sDYjYP/5oahZkwJ745j4Qtegp37eOOGPcuqGYH7TLJoWrkjCtWuHf0PvDT5C4tYNQgwAsXrsu9fWmsp1l8sg==", "chore"=>{"task"=>"vacuum", "priority"=>"high"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["task", "vacuum"], ["priority", "high"], ["created_at", "2017-10-19 15:03:56.002201"], ["updated_at", "2017-10-19 15:03:56.002201"]]
+  [1m[36m (99.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://mackennab-chores-mbarker7.c9users.io/chores
+Completed 302 Found in 107ms (ActiveRecord: 99.8ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:03:56 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/chores/3" for 129.81.239.115 at 2017-10-19 15:04:07 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+aS+t0T9lNlYfI7wtbkqzrEhrbnmLupGT9c7CFJ44EpLftcx/tk9+zUNKTBB4z1sVdj3c5rUpwPqXXwMkyZxyg==", "id"=>"3"}
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.8ms)[0m  COMMIT
+Redirected to https://mackennab-chores-mbarker7.c9users.io/chores
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:04:07 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:14:06 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:14:06 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (1.0ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 440ms (Views: 396.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/main.self-4213e6b6eb4b4197cf0e3dd687d38dfce0cac15469658b8ce64672bc9f9e84ee.css?body=1" for 129.81.239.115 at 2017-10-19 15:14:07 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/transparent_light.png" for 129.81.239.115 at 2017-10-19 15:14:10 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/assets/transparent_light.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.0ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:14:15 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:14:16 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (1.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:14:17 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:18:19 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:18:19 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 381ms (Views: 357.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/main.self-f37e5851784bb10288e39a5d0d908e3e1a23b42d3900cf47a28fe47a473ea5bc.css?body=1" for 129.81.239.115 at 2017-10-19 15:18:20 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:22:32 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:22:32 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 338ms (Views: 316.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/transparent_light.png" for 129.81.239.115 at 2017-10-19 15:24:07 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/assets/transparent_light.png"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:28:59 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:28:59 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 285ms (Views: 268.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/main.self-74b9a9fde480965cacc5b670648920993f65d6f59f3e5be4d86e906843d5486a.css?body=1" for 129.81.239.115 at 2017-10-19 15:28:59 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:29:34 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:29:35 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 383ms (Views: 364.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/main.self-7a930e651dfd84e30fb3cd437ea0af3a336244f98c90c6c501d4420b323b5b7d.css?body=1" for 129.81.239.115 at 2017-10-19 15:29:35 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:29:45 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:29:46 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:29:46 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:29:48 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:29:48 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 15:29:51 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChores Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 33ms (Views: 18.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 15:30:08 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChores Load (0.5ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:34:34 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:34:35 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 280ms (Views: 265.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/main.self-65716baed16018c666323843a6d2278faa5b826a8f40ce6cdf9ac6129c1d365f.css?body=1" for 129.81.239.115 at 2017-10-19 15:34:35 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 15:34:37 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:34:47 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 15:35:05 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChores Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:36:18 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:36:19 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 305ms (Views: 289.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/main.self-c13c96ac0682bf7404fb88945b94d738d2a052ebf992d31b6ee3cfd2b4a57dff.css?body=1" for 129.81.239.115 at 2017-10-19 15:36:19 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 15:36:21 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 41ms (Views: 30.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:37:11 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:37:12 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 321ms (Views: 305.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/main.self-a452a609b9fa0d7fa361e7703cc9529df33c3d562d19f40f65caaa3799d0cba6.css?body=1" for 129.81.239.115 at 2017-10-19 15:37:12 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 15:37:14 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 14.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:37:54 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:38:39 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:38:40 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 270ms (Views: 254.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:39:29 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:39:29 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 332ms (Views: 308.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/main.self-d90499af50e4a0e34b6232d6947ad2ab9c273636b100c41196b61db217b25c26.css?body=1" for 129.81.239.115 at 2017-10-19 15:39:30 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.239.115 at 2017-10-19 15:39:53 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:39:53 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 312ms (Views: 296.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/chores" for 129.81.239.115 at 2017-10-19 15:40:13 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FMusBZ3sx3TGB0ksfdhyL9rPbCgGd9C1BOBlFChX6QumEcWDJ8huVqt27uyJgmWNPjY24nqNnfChaiIQ6Ql4iw==", "chore"=>{"task"=>"vacuum", "priority"=>"low"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["task", "vacuum"], ["priority", "low"], ["created_at", "2017-10-19 15:40:13.684116"], ["updated_at", "2017-10-19 15:40:13.684116"]]
+  [1m[36m (4.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://mackennab-chores-mbarker7.c9users.io/chores
+Completed 302 Found in 14ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:40:13 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores/2" for 129.81.239.115 at 2017-10-19 15:42:19 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChores Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered chores/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:42:49 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/main.self-dee21918ab2c38529644fe8693e3b6ee28682f66b3d2b767d62d2054c9401b1e.css?body=1" for 129.81.239.115 at 2017-10-19 15:42:50 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:45:52 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:45:54 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chores/4" for 129.81.239.115 at 2017-10-19 15:45:57 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mChores Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  Rendered chores/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores/4" for 129.81.239.115 at 2017-10-19 15:45:59 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mChores Load (0.3ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  Rendered chores/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.239.115 at 2017-10-19 15:46:01 +0000
+Cannot render console from 129.81.239.115! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
