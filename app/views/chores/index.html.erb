@@ -24,8 +24,9 @@
 <table style="width:75%">
     <tr>
         <th>Chore</th>
-        <th>Time created</th>
-        <th>Delete?</th>
+        <th>Priority</th>
+        <th>Person Assigned</th>
+        <th>Delete</th>
     </tr>
 <%if @chores
   @chores.each do |t| %>
@@ -33,7 +34,8 @@
         
         <tr>
          <td>  <a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-         <td><%= t.created_at %>   </td>
+         <td><%= t.priority %>   </td>
+         <td> <%= t.person_assigned%></td>
          <td><%= button_to "delete", t, :method => :delete %></td>
      </tr>
    
@@ -43,20 +45,6 @@
 </table>
 <br>
 
-<!--<div class="create">-->
-<!--  <div class="container">-->
-    
-    <!-- Your code here -->
-<!--    <%= form_for :chore do |f| %>  -->
-<!--  <div class="field"> -->
-<!--    <%= f.label :chore %><br> -->
-<!--    <%= f.text_area :task %><br>-->
-<!--    <%= f.label :priority%><br>-->
-<!--    <%= f.text_area :priority%><br>-->
-<!--  </div> -->
-<!--  <div class="actions"> -->
-<!--    <%= f.submit "Create" %> -->
-<!--  </div> -->
 <br>
 <h2>Create new chore</h2>
 <%= form_tag chores_path, :method => :post do %>
@@ -66,8 +54,8 @@
     <%= label :chore, :priority, 'Priority' %>
     <%= select :chore, :priority, ['low', 'moderate', 'high'] %>
     
+    <%= label :chore, :person_assigned, 'Person Assigned' %>
+    <%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%>
     
     <%= submit_tag 'Add'%>
     <% end %>
-<% end %>
-</div>
