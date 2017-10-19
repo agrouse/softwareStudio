@@ -14,9 +14,6 @@ class ChoresController < ApplicationController
         # default: render 'new' template
     end
     
-    def edit
-    end
-    
     def create 
         @chore = Chores.create!(chore_params)
         redirect_to chores_path
