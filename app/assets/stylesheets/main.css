@@ -1,0 +1,180 @@
+html{
+	height: 100%;
+}
+
+/* * {
+	margin: 0;
+	padding: 0;
+} */
+
+body {
+	font: normal .80em 'trebuchet ms', arial, sans-serif;
+	background-color: black;
+	color: black;
+}
+
+p {
+	padding: 0 0 20px 0;
+	line-height: 1.7em;
+}
+
+img {
+	border: 0;
+}
+
+h1, h2, h3 {
+	font: normal 175% 'century gothic', arial, sans-serif;
+	color: #000;
+	margin: 0 0 15px 0;
+	padding: 15px 0 5px 0;
+}
+
+a, a:hover {
+	outline: none;
+	text-decoration: underline;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+
+blockquote {
+	margin: 20px 0; 
+	padding: 10px 20px 0 20px;
+	border: 1px solid #E5E5DB;
+	background: #FFF;
+}
+
+ul {
+	margin: 2px 0 22px 17px;
+}
+
+ul li {
+	list-style-type: circle;
+	margin: 0 0 6px 0; 
+	padding: 0 0 4px 5px;
+}
+
+ol {
+	margin: 8px 0 22px 20px;
+}
+
+ol li {
+	margin: 0 0 11px 0;
+}
+
+#logo, #menubar, #site_content, #footer {
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#header {
+	background: transparent;
+	height: 202px;
+}
+
+#logo {
+	width: 898px;
+	position: relative;
+	height: 148px;
+	border-bottom: 2px solid #FFF;
+}
+
+#logo #logo_text {
+	position: absolute; 
+	top: 20px;
+	left: 0;
+}
+
+#logo h1, #logo h2 {
+	font: normal 300% 'century gothic', arial, sans-serif;
+	border-bottom: 0;
+	text-transform: none;
+	margin: 0;
+}
+
+#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover {
+	padding: 22px 0 0 0;
+	color: #FFF;
+	letter-spacing: -1px;
+	text-decoration: none;
+}
+
+
+#logo_text h2 {
+	font-size: 100%;
+	padding: 4px 0 0 0;
+	color: #FFF;
+}
+
+#menubar {
+	width: 898px;
+	height: 52px;
+	padding: 0;
+	background: #000;
+} 
+
+#menu, #menu li {
+	float: left;
+	margin: 0; 
+	padding: 0;
+}
+
+#menu li {
+	list-style: none;
+}
+
+#menu li a {
+	letter-spacing: 0.1em;
+	font: normal 100% arial, sans-serif;
+	display: block; 
+	float: left; 
+	height: 17px;
+	margin: 10px 0 0 10px;
+	padding: 9px 26px 6px 26px;
+	text-align: center;
+	color: #FFF;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: transparent;
+} 
+
+#menu li a:hover {
+    color: #FFF;
+    background-color: #808B96;
+}
+
+
+
+
+
+#page_content {
+	width: 854px;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+	padding: 0 24px 20px 20px;
+	background: #FFF;
+} 
+
+
+
+
+table {
+	margin: 10px 0 30px 0;
+}
+
+table tr th, table tr td {
+	background: #3B3B3B;
+	color: #FFF;
+	padding: 7px 4px;
+	text-align: left;
+}
+  
+table tr td {
+	background: #F0EFE2;
+	color: #47433F;
+	border-top: 1px solid #FFF;
+}
