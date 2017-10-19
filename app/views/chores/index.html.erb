@@ -1,3 +1,4 @@
+
 <h1>Chores</h1>
 <table>
 <%if @chores
@@ -6,6 +7,7 @@
         <tr>
          <td>  <a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
          <td><%= t.created_at %>   </td>
+         <td><%= button_to "delete", t, :method => :destroy %></td>
      </tr>
    
  <%end 
