@@ -4,7 +4,7 @@ class ChoresController < ApplicationController
     end
     
     def show
-        # id = params[:id]
+        id = params[:id]
         @chore = Chores.find(params[:id])
         @chore = Chores.find(id)
     end
@@ -23,7 +23,9 @@ class ChoresController < ApplicationController
      end
     
     def update
-        
+       @chore = Chores.find params[:id]
+       @chore.update_attributes!(chore_params)
+       redirect_to chore_path(@chore)
     end
     
     def destroy
@@ -34,7 +36,8 @@ class ChoresController < ApplicationController
     
     private 
         def chore_params
-    params.require(:chore).permit("task","priority")
+    params.require(:chore).permit("task","priority","status","description",
+    "person_assigned","last_accomplished","history")
         end
     
 end

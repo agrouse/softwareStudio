@@ -7,7 +7,7 @@
         <tr>
          <td>  <a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
          <td><%= t.created_at %>   </td>
-         <td><%= button_to "delete", t, :method => :destroy %></td>
+         <td><%= button_to "delete", t, :method => :delete %></td>
      </tr>
    
  <%end 

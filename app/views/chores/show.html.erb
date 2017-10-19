@@ -15,4 +15,16 @@
 
 <p><%= @chore.description %> </p>
 
+<h2>Update chore</h2>
+<%= form_tag chore_path, :method => :put do %>
+    <%= label :chore, :task, 'Chore' %>
+    <%= text_field :chore, :task  %>
+    
+    <%= label :chore, :priority, 'Priority' %>
+    <%= select :chore, :priority, ['low', 'moderate', 'high'] %>
+    
+    
+    <%= submit_tag 'Update'%>
+    <% end %>
+
 <%= link_to 'Back to chores list', chores_path %>
