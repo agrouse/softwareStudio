@@ -23,20 +23,17 @@
 <h2> Details about <%= @chore.task %> </h2>
  <ul>
   <li>Status:
-   <%= @chore.status %> </li>
+   <%= @chore.status %> uncompleted </li>
   <li>Priority:
     <%= @chore.priority %>
   <li>Person Assigned:
     <%= @chore.person_assigned %> </li>
-  <li>Last Accompished:
-    <%= @chore.last_accomplished %>
-    
 </ul>
+<br>
+<h2>Complete Chore</h2>
 
-<h3>Description:</h3> 
 
-<p><%= @chore.description %> </p>
-
+<br>
 <h2>Update chore</h2>
 <%= form_tag chore_path, :method => :put do %>
     <%= label :chore, :task, 'Chore' %>
@@ -44,6 +41,9 @@
     
     <%= label :chore, :priority, 'Priority' %>
     <%= select :chore, :priority, ['low', 'moderate', 'high'] %>
+    
+    <%= label :chore, :person_assigned, 'Person Assigned' %>
+    <%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%>
     
     
     <%= submit_tag 'Update'%>
