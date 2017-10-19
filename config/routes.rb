@@ -10,7 +10,7 @@
     
     get '/chores/:id' => 'chores#show'
     
-    # post 'chores' => 'chores#create'
+    post 'chores' => redirect('/chores')
     
   end
   # You can have the root of your site routed with "root"

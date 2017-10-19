@@ -11,5 +11,33 @@
  <%end 
  
  end%>
- 
 </table>
+<br>
+
+<!--<div class="create">-->
+<!--  <div class="container">-->
+    
+    <!-- Your code here -->
+<!--    <%= form_for :chore do |f| %>  -->
+<!--  <div class="field"> -->
+<!--    <%= f.label :chore %><br> -->
+<!--    <%= f.text_area :task %><br>-->
+<!--    <%= f.label :priority%><br>-->
+<!--    <%= f.text_area :priority%><br>-->
+<!--  </div> -->
+<!--  <div class="actions"> -->
+<!--    <%= f.submit "Create" %> -->
+<!--  </div> -->
+<br>
+<h2>Create new chore</h2>
+<%= form_tag chores_path, :method => :post do %>
+    <%= label :chore, :task, 'Chore' %>
+    <%= text_field :chore, :task  %>
+    
+    <%= label :chore, :priority, 'Priority' %>
+    <%= select :chore, :priority, ['low', 'moderate', 'high'] %>
+    
+    
+    <%= submit_tag 'Add'%>
+    <% end %>
+<% end %>
