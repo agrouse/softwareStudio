@@ -14729,3 +14729,1426 @@ Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.6ms)
 
 Started GET "/assets/main.self-72c87f11faa04a81c0d1438cb0d4714db009a9c3f7d83b28e8c7abd08b939a7d.css?body=1" for 129.81.217.248 at 2017-10-19 18:59:04 +0000
 Cannot render console from 129.81.217.248! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 64.28.62.15 at 2017-10-19 22:54:39 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 64.28.62.15 at 2017-10-19 22:54:40 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 509ms (Views: 481.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/main.self-c40dd2d204973362181467cbd0b6d0e389b0a4cf7690015c9615b672cdf20fc8.css?body=1" for 64.28.62.15 at 2017-10-19 22:54:41 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 64.28.62.15 at 2017-10-19 22:57:55 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 64.28.62.15 at 2017-10-19 22:57:55 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (2.0ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 351ms (Views: 333.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/main.self-54a9c2391a5e31c0a76d7ec1ba8425ef8f0dc8b45e923cca93472a86eaac7f06.css?body=1" for 64.28.62.15 at 2017-10-19 22:57:56 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 64.28.62.15 at 2017-10-19 23:02:44 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 64.28.62.15 at 2017-10-19 23:02:45 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (1.0ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 388ms (Views: 370.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/main.self-7f60090c58defaf7fa2a8fe30ef047514fd28a9c10c1e53c0ae8e8797a4b2007.css?body=1" for 64.28.62.15 at 2017-10-19 23:02:45 +0000
+Cannot render console from 64.28.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 00:52:01 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 00:52:02 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 426ms (Views: 395.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-6944b98c5c370851ef4ea9cde11d3200b51482a248f772aade7bc46c7418a0a3.css?body=1" for 129.81.203.61 at 2017-10-20 00:52:02 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 00:55:04 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 00:55:04 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 349ms (Views: 331.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/main.self-a11549c2b43abc9f102efbb3a8c9f0d38982d9a82021483201103ab7b0269db5.css?body=1" for 129.81.203.61 at 2017-10-20 00:55:05 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 00:58:11 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 00:58:12 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (2.1ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 478ms (Views: 451.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/main.self-7fa8cf58553f68a6f75ec89ac88af0a733649ebeb60eea1be80d96219dd9695e.css?body=1" for 129.81.203.61 at 2017-10-20 00:58:12 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 00:59:15 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 00:59:15 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 389ms (Views: 362.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/main.self-abb71722dbba9bfc8e40ec29321db920dde44ac4de5b94b6ebd378e989f36234.css?body=1" for 129.81.203.61 at 2017-10-20 00:59:15 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:00:29 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:00:29 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 431ms (Views: 413.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/main.self-1da84a0ab1e80fa5f5516204ad08ccb3f0a8bf0c4b9d5623a31658f2fb98cbd6.css?body=1" for 129.81.203.61 at 2017-10-20 01:00:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:01:51 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:01:52 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 377ms (Views: 357.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:04:16 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:04:17 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 385ms (Views: 365.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:04:56 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:04:56 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 390ms (Views: 371.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/main.self-063acb040303fd06d0923a88c7feb6e239c2efc23ec490082a7a42d899fecd84.css?body=1" for 129.81.203.61 at 2017-10-20 01:04:57 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:09:49 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:09:49 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 401ms (Views: 380.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/main.self-f3ac18ed55fc0b87dc1013cdad7639462e7584d9edfe4ee7bf05a567bf3aabfd.css?body=1" for 129.81.203.61 at 2017-10-20 01:09:50 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:10:03 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:10:03 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 510ms (Views: 484.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/main.self-fc779c238ff809b6dd1d800160902a23af85a974fd5b0ca1d41380f50614030e.css?body=1" for 129.81.203.61 at 2017-10-20 01:10:04 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:10:19 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:10:20 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 359ms (Views: 341.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:12:12 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:12:12 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 373ms (Views: 354.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-337d89ae1bcdbc6d060a707f3b9d4023ab26135a94f2342e80a7d5f6d349f63c.css?body=1" for 129.81.203.61 at 2017-10-20 01:12:13 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:13:18 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:13:18 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 332ms (Views: 315.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/main.self-a64d8bb78dbf048f7d183f483276a171f80a8604700a095ffe6644aa80293796.css?body=1" for 129.81.203.61 at 2017-10-20 01:13:19 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:13:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:13:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 351ms (Views: 334.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:13:44 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:13:45 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 366ms (Views: 342.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-aa96f89ed3821c72be2a8dc61eff8ed313981ccada419e97fd9e70726edb17b7.css?body=1" for 129.81.203.61 at 2017-10-20 01:13:45 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:14:55 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:14:55 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 349ms (Views: 329.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/main.self-f899101ba1e980d5ccf5a579ccc67971eaad3530f1888123df77c08e296b7922.css?body=1" for 129.81.203.61 at 2017-10-20 01:14:56 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:17:25 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:17:26 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  Rendered chores/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected ','
+...ores_path, :method => :post do, class: "newChore" );@output_...
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected ')', expecting keyword_end
+...> :post do, class: "newChore" );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/chores/index.html.erb:51: syntax error, unexpected ','
+  app/views/chores/index.html.erb:51: syntax error, unexpected ')', expecting keyword_end
+  app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.5ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:18:05 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:18:06 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  Rendered chores/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...(class: "newChore") chores_path, :method => :post do @output...
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+...Chore") chores_path, :method => :post do @output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/chores/index.html.erb:51: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/views/chores/index.html.erb:51: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+  app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.0ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:20:04 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:20:04 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  Rendered chores/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/chores/index.html.erb:52: syntax error, unexpected ':', expecting keyword_end
+...            <%= label :chore, :task, 'Chore' );@output_buffe...
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:52: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+... label :chore, :task, 'Chore' );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/chores/index.html.erb:52: syntax error, unexpected ':', expecting keyword_end
+  app/views/chores/index.html.erb:52: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+  app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:20:43 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:20:43 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  Rendered chores/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected ','
+...ores_path, :method => :post do, html: {class="newChore"} );@...
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected '}', expecting keyword_end
+...st do, html: {class="newChore"} );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/chores/index.html.erb:51: syntax error, unexpected ','
+  app/views/chores/index.html.erb:51: syntax error, unexpected '}', expecting keyword_end
+  app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:21:01 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:21:02 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  Rendered chores/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected ','
+...ores_path, :method => :post do, html: {class: "newChore"} );...
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:51: syntax error, unexpected ')', expecting keyword_end
+...do, html: {class: "newChore"} );@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/chores/index.html.erb:51: syntax error, unexpected ','
+  app/views/chores/index.html.erb:51: syntax error, unexpected ')', expecting keyword_end
+  app/views/chores/index.html.erb:65: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/chores/index.html.erb:67: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.3ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:22:40 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:22:41 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 439ms (Views: 414.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:27:18 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:27:18 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 418ms (Views: 398.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/main.self-8aafc4a44f0667e14a02a57654c166ef881d9a9bd7dd14c7aa804d9a2633289a.css?body=1" for 129.81.203.61 at 2017-10-20 01:27:19 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:27:55 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:27:56 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 460ms (Views: 436.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-06d7c0da255001f3c182576a85d5fdce1f21d3135382ac3106265cc5839f913e.css?body=1" for 129.81.203.61 at 2017-10-20 01:27:56 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:33:07 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:33:08 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 397ms (Views: 380.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/main.self-0b29dffcbbbfdfb2af89e16d17e7e963b9eda877b21a105563b22268891319c0.css?body=1" for 129.81.203.61 at 2017-10-20 01:33:08 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:33:56 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:33:56 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 335ms (Views: 318.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/main.self-f8d13bdb3728904332fe1ef29b7fc0ab8963dbaf687bd9dfdef2afac7aa64673.css?body=1" for 129.81.203.61 at 2017-10-20 01:33:57 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:34:26 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:34:27 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 403ms (Views: 383.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/main.self-e8a288540019a3ebb3b57e63ddf51b7803b8384f4d091f67afcec8c403026d0a.css?body=1" for 129.81.203.61 at 2017-10-20 01:34:27 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:38:45 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:38:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 357ms (Views: 340.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-83ad28bd8a6874c9f5eefed322780ff8308c9a5aef73f742e18c5a4bbf65e3e9.css?body=1" for 129.81.203.61 at 2017-10-20 01:38:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:39:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:39:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 355ms (Views: 338.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-61ad8ef93e315619b1c60a6afbda0e2f596fc05195cd828e43e3af21c998cd82.css?body=1" for 129.81.203.61 at 2017-10-20 01:39:47 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:40:45 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:40:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 358ms (Views: 340.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-dbe4d10514fc0726564347a6f6607a6ea2f2656d578d9e41803432265e859fab.css?body=1" for 129.81.203.61 at 2017-10-20 01:40:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:41:24 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (4.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:41:24 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 358ms (Views: 340.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/main.self-9fed73b16ae00c604d59b919f839e04eecd21ba66a24155c9e338f805dc11d4b.css?body=1" for 129.81.203.61 at 2017-10-20 01:41:25 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:42:28 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:42:28 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 393ms (Views: 375.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/main.self-9f44812bedebd484407c2fae969020044c88b1f16b7a557960aa663fa472c497.css?body=1" for 129.81.203.61 at 2017-10-20 01:42:29 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:43:14 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:43:14 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 408ms (Views: 391.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/main.self-0e54891239312d87395eb2f8894486960a15164fdfb51a4e958b4a9bf3264761.css?body=1" for 129.81.203.61 at 2017-10-20 01:43:15 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:43:48 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:43:48 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 376ms (Views: 358.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/main.self-ded7f88b4b48679d0e1172dde1d6cffaf92aed7cbc2f7bd04fffb2cfa2e34fab.css?body=1" for 129.81.203.61 at 2017-10-20 01:43:49 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:44:20 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:44:20 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 392ms (Views: 374.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:44:59 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:45:00 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 378ms (Views: 360.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-6d1819de4c2bfd0df50c054f544768a3735684a539fbdebb9676c3b7217e385f.css?body=1" for 129.81.203.61 at 2017-10-20 01:45:00 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:45:27 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:45:28 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 357ms (Views: 339.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/main.self-1107e037db924acd0743ed5afb30e340fa74e60686dc48990a6d0d46b84eacc5.css?body=1" for 129.81.203.61 at 2017-10-20 01:45:28 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:46:42 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:46:42 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 425ms (Views: 403.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-cbcd7c55cc5da5995b5969dc215f17d92fbfef12e05081acf9ca2b983b64c087.css?body=1" for 129.81.203.61 at 2017-10-20 01:46:43 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:46:57 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/main.self-26ca6de0f3c4b831417b90cf21054d2fd825561895643dbfcec88a1849919348.css?body=1" for 129.81.203.61 at 2017-10-20 01:46:57 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:46:59 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:47:00 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:47:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:47:31 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 451ms (Views: 426.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/main.self-eefd63c6206fcb67809183c4715a0f2bc62dbba5265ef17f17af5aff0c59b278.css?body=1" for 129.81.203.61 at 2017-10-20 01:47:31 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:48:20 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:48:20 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 365ms (Views: 348.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/main.self-0e23d0061bd36a18a062b79113f21ff31aea9a3012d2bb4afa4bb0f556a23b21.css?body=1" for 129.81.203.61 at 2017-10-20 01:48:21 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:48:45 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:48:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 367ms (Views: 350.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/main.self-a76c9ef0cd440632975dca693581466a0adb6e16929c27d20996ba91741c4626.css?body=1" for 129.81.203.61 at 2017-10-20 01:48:46 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:51:32 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:51:33 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 372ms (Views: 354.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/main.self-07e8edbd9ce62bd1a730a96a9d8b219979c94a3976ed343ce7d88d6a786a73b4.css?body=1" for 129.81.203.61 at 2017-10-20 01:51:33 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:52:28 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:52:28 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 385ms (Views: 367.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/main.self-23e2238f32ad7c6e6e1cc5301702b213877f953901e4e1efff438b59a992f6e8.css?body=1" for 129.81.203.61 at 2017-10-20 01:52:29 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:53:36 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:53:37 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 360ms (Views: 343.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-ccd541f435ba2c9f9a70470796610c4948469ff1c9ea87b562874350edf1e18a.css?body=1" for 129.81.203.61 at 2017-10-20 01:53:37 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 01:53:57 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:53:58 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 375ms (Views: 357.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/main.self-a9c16d3a5db9d28ea4da76e030e6959f3f27d28de156b7630ca10f7231eec35c.css?body=1" for 129.81.203.61 at 2017-10-20 01:53:58 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:54:43 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 01:58:58 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:00:15 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:00:15 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 358ms (Views: 341.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/main.self-ac54adace3f0f9161762d5efa5c99c34991da5a3b6a171fd68315aca532760d5.css?body=1" for 129.81.203.61 at 2017-10-20 02:00:15 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:01:01 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:01:01 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 420ms (Views: 398.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/main.self-6dd3ce81b8e30ea4c07ca3a04746ee020f47e2132d5fb19032991dab0997cbfe.css?body=1" for 129.81.203.61 at 2017-10-20 02:01:02 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:01:21 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:01:22 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 391ms (Views: 374.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/main.self-ee312b3ab6448ac31c447e10f60db11266c1c643f6a078a8606b41daba66c35f.css?body=1" for 129.81.203.61 at 2017-10-20 02:01:22 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:01:37 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:01:38 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 382ms (Views: 366.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/main.self-03cf7a184ca0c48bc560695200bbe301bb76adfdd79a562442d152da2dfa5f53.css?body=1" for 129.81.203.61 at 2017-10-20 02:01:38 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:02:06 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:02:07 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 423ms (Views: 403.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/main.self-e2d210ddabc72f25f6eb3635ea52da7b04eb57133c18a34902e65c8f0309e1e5.css?body=1" for 129.81.203.61 at 2017-10-20 02:02:07 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:02:23 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:02:23 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 408ms (Views: 386.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/main.self-219a31abef036d7320d1e75657e56aa963dfe777b017d1b035636e416f19bcee.css?body=1" for 129.81.203.61 at 2017-10-20 02:02:24 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:05:24 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:05:24 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 397ms (Views: 377.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-467d26b6dc3f89f8648b57834b4550e080365a2fc355df004c7d218fc6f8cbf0.css?body=1" for 129.81.203.61 at 2017-10-20 02:05:25 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:06:53 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:06:53 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 435ms (Views: 414.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/main.self-1147bc000757acc96611ad8b1bd9834290efadc2efca2681188721cb05876684.css?body=1" for 129.81.203.61 at 2017-10-20 02:06:54 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:09:25 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:09:25 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 378ms (Views: 361.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-8652d4493a76d87cbf917b07dd77152a6a7c09ec88001868d111cbbb26775a5a.css?body=1" for 129.81.203.61 at 2017-10-20 02:09:26 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:09:48 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:09:48 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 357ms (Views: 340.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/main.self-0818cacf82ed81ef443a17a102a286a2ed4c4ef6fd27ec778b3cdaceadcc9470.css?body=1" for 129.81.203.61 at 2017-10-20 02:09:49 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:10:37 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:10:37 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 387ms (Views: 368.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/main.self-cfc81ff8c81045256f2a50302be4a5b53bb8ad537b2ceec47e7e745ae44cfa87.css?body=1" for 129.81.203.61 at 2017-10-20 02:10:38 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:12:07 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:12:08 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 411ms (Views: 387.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/main.self-a15c98cc827ec78cb2d528b30c8dfce9419a229d7023076185110c5bbf500ceb.css?body=1" for 129.81.203.61 at 2017-10-20 02:12:08 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:13:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:13:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 410ms (Views: 388.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/main.self-5449204acadd80dfeffef2753e02908d352c5a569e97c1bd087833b7cfb2aa03.css?body=1" for 129.81.203.61 at 2017-10-20 02:13:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:14:43 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:14:43 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 355ms (Views: 338.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/main.self-ac51eb7b98fd0b871c70255008e8779b6c2bb9408372ab8caee9bca5e268bf94.css?body=1" for 129.81.203.61 at 2017-10-20 02:14:44 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:15:02 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:15:02 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 361ms (Views: 344.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/main.self-000b6f9edb718cb9d88f68b54e96cc7331353e25e8ad406ac32839cf1f17360a.css?body=1" for 129.81.203.61 at 2017-10-20 02:15:03 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:15:31 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:15:31 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 370ms (Views: 352.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/main.self-a99c5198d5cb26e6ce16692619e8bd56837a681ac12ff48ce3588b28ae5ed20d.css?body=1" for 129.81.203.61 at 2017-10-20 02:15:32 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:17:59 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:18:00 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 406ms (Views: 387.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/main.self-4e981244fe955b9a4f5c97893ac531edc9024cd8cf97c71b79fb20bb3f3c14c7.css?body=1" for 129.81.203.61 at 2017-10-20 02:18:00 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:18:35 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:18:35 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 382ms (Views: 364.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/main.self-96f9985286527893a01643af69c79f12b79d5ad5c6411639be13621cced985cd.css?body=1" for 129.81.203.61 at 2017-10-20 02:18:36 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:20:03 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:20:04 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 384ms (Views: 366.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/main.self-2915bcd4cc9d3fdd6dacea76adec06b78151f49545f5daf21942989fafe51012.css?body=1" for 129.81.203.61 at 2017-10-20 02:20:04 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:20:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:20:30 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 366ms (Views: 349.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/main.self-cf789214df8d4449fd1a457619d5ad6df51d47d5cf783bb8401252bd8cc3fba4.css?body=1" for 129.81.203.61 at 2017-10-20 02:20:31 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:21:07 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:21:08 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 436ms (Views: 416.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/main.self-c6cfbd3db4beef23d1ee3ee0d40c1082826db6af42777caf6169a00d43e4521a.css?body=1" for 129.81.203.61 at 2017-10-20 02:21:08 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:23:23 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:23:23 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 482ms (Views: 464.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/main.self-ca6307cf7165c60f4ceacb7534cb299c1cc81705ce6812e7d95df904aadbd161.css?body=1" for 129.81.203.61 at 2017-10-20 02:23:24 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:24:07 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:24:07 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 367ms (Views: 350.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/main.self-76e1b3007c51f452f0a5f2418c0f70355efb23dbfb1b0da4c110805e47eb27e9.css?body=1" for 129.81.203.61 at 2017-10-20 02:24:08 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:25:06 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:25:06 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 321ms (Views: 303.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:25:50 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:25:50 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 340ms (Views: 322.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 129.81.203.61 at 2017-10-20 02:26:13 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.203.61 at 2017-10-20 02:26:14 +0000
+Cannot render console from 129.81.203.61! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 374ms (Views: 356.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 68.227.66.230 at 2017-10-20 04:38:16 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-10-20 04:38:16 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChores Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 68.227.66.230 at 2017-10-20 04:41:34 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-10-20 04:41:35 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.9ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 1128ms (Views: 1101.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/main.self-21f7e2136c2738aa4c065c909a51a17a89a8445c781d564ab68538174c1c8583.css?body=1" for 68.227.66.230 at 2017-10-20 04:41:36 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 68.227.66.230 at 2017-10-20 04:44:25 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-10-20 04:44:25 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 380ms (Views: 363.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/main.self-fe06284dc114d9120eea951a4646914008ff603b4954667acc852ce7cbe36c9a.css?body=1" for 68.227.66.230 at 2017-10-20 04:44:25 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 68.227.66.230 at 2017-10-20 04:46:51 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-10-20 04:46:52 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 327ms (Views: 310.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 68.227.66.230 at 2017-10-20 04:47:40 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-10-20 04:47:40 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 337ms (Views: 320.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 68.227.66.230 at 2017-10-20 04:48:19 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-10-20 04:48:19 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 370ms (Views: 353.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/main.self-ed0c19ccb0efbd89a421591b0ff5052d49d21ec31752be90cb35500a2bccd68d.css?body=1" for 68.227.66.230 at 2017-10-20 04:48:20 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255

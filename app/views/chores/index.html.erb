@@ -2,7 +2,7 @@
 <div id="header">
     <div id="logo">
         <div id="logo_text">
-          <h1><a href="#">ménage</a></h1>
+          <h1><a href=#>ménage</a></h1>
           <h2>a distributed chores list</h2>
         </div>
     </div>
@@ -19,15 +19,17 @@
 
 <!-- div for styles -->
 <div id="page_content">
+<h1 style="color: black">Pending Chores</h1>
+<div id="table">
+    <div class="tbl-header">
+        <table style="width:100%">
+            <tr>
+                <th>Chore</th>
+                <th>Priority</th>
+                <th>Person Assigned</th>
+                <th>Delete</th>
+            </tr>
     
-<h1 style="color: red">Pending Chores</h1>
-<table style="width:75%">
-    <tr>
-        <th>Chore</th>
-        <th>Priority</th>
-        <th>Person Assigned</th>
-        <th>Delete</th>
-    </tr>
 <%if @chores
   @chores.each do |t| %>
 
@@ -43,19 +45,23 @@
  
  end%>
 </table>
+</div>
 <br>
 
 <br>
-<h2>Create new chore</h2>
-<%= form_tag chores_path, :method => :post do %>
-    <%= label :chore, :task, 'Chore' %>
-    <%= text_field :chore, :task  %>
     
-    <%= label :chore, :priority, 'Priority' %>
-    <%= select :chore, :priority, ['low', 'moderate', 'high'] %>
-    
-    <%= label :chore, :person_assigned, 'Person Assigned' %>
-    <%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%>
-    
-    <%= submit_tag 'Add'%>
-    <% end %>
+        <h2>Create new chore</h2>
+        <%= form_tag chores_path, class: "newChore", :method => :post do %>
+            <%= label :chore, :task, 'Chore' %>
+            <%= text_field :chore, :task  %>
+            
+            <%= label :chore, :priority, 'Priority' %>
+            <%= select :chore, :priority, ['low', 'moderate', 'high'] %>
+            
+            <%= label :chore, :person_assigned, 'Person Assigned' %>
+            <%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%>
+            
+            <%= submit_tag 'Add'%>
+            <% end %>
+
+</div>
