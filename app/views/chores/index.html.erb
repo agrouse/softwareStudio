@@ -20,15 +20,16 @@
 <!-- div for styles -->
 <div id="page_content">
 <h1 style="color: black">Pending Chores</h1>
-<div id="table">
-    <div class="tbl-header">
         <table style="width:100%">
             <tr>
-                <th>Chore</th>
-                <th>Priority</th>
-                <th>Person Assigned</th>
-                <th>Delete</th>
+                <div class="tbl-header">
+                    <th>Chore</th>
+                    <th>Priority</th>
+                    <th>Person Assigned</th>
+                    <th>Delete</th>
+                </div>
             </tr>
+            
     
 <%if @chores
   @chores.each do |t| %>
@@ -41,9 +42,9 @@
          <td><%= button_to "delete", t, :method => :delete %></td>
      </tr>
    
- <%end 
+ <%end%> 
  
- end%>
+ <%end%>
 </table>
 </div>
 <br>
