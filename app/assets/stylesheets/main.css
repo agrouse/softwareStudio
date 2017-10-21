@@ -10,30 +10,50 @@ html{
 
 body {
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
-	background-color: black;
-	color: black;
+	/*background: -webkit-linear-gradient(left, #25c481, #25b7c4);*/
+	/*background: linear-gradient(to right, #25c481, #25b7c4);*/
+	background: black;
 }
 
-p {
-	padding: 0 0 20px 0;
-	line-height: 1.7em;
+section{
+  margin: 50px;
 }
 
-img {
-	border: 0;
-}
+/*p {*/
+/*	padding: 0 0 20px 0;*/
+/*	line-height: 1.7em;*/
+/*}*/
+
+/*img {*/
+/*	border: 0;*/
+/*}*/
 
 h1, h2, h3 {
 	font: normal 175% 'century gothic', arial, sans-serif;
-	color: #000;
-	margin: 0 0 15px 0;
-	padding: 15px 0 5px 0;
+	color: white;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	text-align: left;
+	font-weight: 300;
 }
-
+#page_content {
+	width: 854px;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+	padding: 0 24px 20px 20px;
+	font: white;
+} 
+#table{
+  width:100%;
+  table-layout: fixed;
+}
+tr:first-child{
+  font-size: large;
+ }
 a, a:hover {
 	outline: none;
 	text-decoration: underline;
-	color: #000;
+	color: white;
 }
 
 a:hover {
@@ -115,7 +135,7 @@ ol li {
 	width: 898px;
 	height: 52px;
 	padding: 0;
-	background: #000;
+	/*background: #000;*/
 } 
 
 #menu, #menu li {
@@ -152,30 +172,101 @@ ol li {
 
 
 
-#page_content {
-	width: 854px;
-	overflow: hidden;
-	margin: 0 auto 0 auto;
-	padding: 0 24px 20px 20px;
-	background: #FFF;
+
+
+
+
+
+/*table {*/
+/*	margin: 10px 0 30px 0;*/
+/*}*/
+
+/*table tr th, table tr td {*/
+/*	background: #3B3B3B;*/
+/*	color: #FFF;*/
+/*	padding: 7px 4px;*/
+/*	text-align: left;*/
+/*}*/
+ 
+/*table{*/
+/*  width:100%;*/
+/*  table-layout: fixed;*/
+/*} */
+ 
+/*table tr td {*/
+/*	background: #F0EFE2;*/
+/*	color: #47433F;*/
+/*	border-top: 1px solid #FFF;*/
+/*}*/
+
+/*.newChore{*/
+/*	color: white;*/
+/*	font: white;*/
+/*}*/
+
+
+
+
+
+th{
+  padding: 15px 10px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 14px;
+  border: red;
+  text-transform: uppercase;
+  color: white;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 2px white;
+}
+
+
+/* demo styles */
+
+
+
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
 } 
-
-
-
-
-table {
-	margin: 10px 0 30px 0;
-}
-
-table tr th, table tr td {
-	background: #3B3B3B;
-	color: #FFF;
-	padding: 7px 4px;
-	text-align: left;
-}
-  
-table tr td {
-	background: #F0EFE2;
-	color: #47433F;
-	border-top: 1px solid #FFF;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
