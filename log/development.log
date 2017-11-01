@@ -14830,3 +14830,50 @@ Processing by ChoresController#index as HTML
   [1m[36mChores Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
   Rendered chores/index.html.erb within layouts/application (3.0ms)
 Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 68.227.66.230 at 2017-11-01 01:02:10 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-01 01:02:10 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 276ms (Views: 261.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self-83a0305bbc761ed1560f066d7758ef06953c0b1b0909fe0f808bb558c6a173f9.css?body=1" for 68.227.66.230 at 2017-11-01 01:02:10 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 68.227.66.230 at 2017-11-01 01:14:41 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-01 01:14:42 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 300ms (Views: 283.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 68.227.66.230 at 2017-11-01 01:15:05 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-01 01:15:05 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChores Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 274ms (Views: 258.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self-d6d031b39f278ff061d53242050e23050423fa3cd55585f6fb9741ccd41fadca.css?body=1" for 68.227.66.230 at 2017-11-01 01:15:06 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
