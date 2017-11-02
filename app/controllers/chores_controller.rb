@@ -2,22 +2,22 @@ class ChoresController < ApplicationController
     
     before_action :confirm_logged_in
     def index
-        @chores = Chores.all
+        @chores = Chore.all
     end
     
     def show
         id = params[:id]
-        @chore = Chores.find(params[:id])
-        @chore = Chores.find(id)
+        @chore = Chore.find(params[:id])
+        @chore = Chore.find(id)
     end
     
     def new
-        @chore = Chores.new
+        @chore = Chore.new
         # default: render 'new' template
     end
     
     def create 
-        @chore = Chores.create!(chore_params)
+        @chore = Chore.create!(chore_params)
         redirect_to chores_path
     end
     
@@ -26,7 +26,7 @@ class ChoresController < ApplicationController
     #to do this--keeping it in the database but removing it from the screen
     #idea: based on a boolean completed, it'll show up on chores_path
     def complete 
-        @chore = Chores.find params[:id]
+        @chore = Chore.find params[:id]
         flash[:notice] = "#{@chore.task} was successfully completed."
         @chore.destroy
         redirect_to chores_path
@@ -34,14 +34,14 @@ class ChoresController < ApplicationController
     end
     
     def update
-       @chore = Chores.find params[:id]
+       @chore = Chore.find params[:id]
        @chore.update_attributes!(chore_params)
        flash[:notice] = "#{@chore.task} was successfully updated."
        redirect_to chore_path(@chore)
     end
     
     def destroy
-        @chore = Chores.find params[:id]
+        @chore = Chore.find params[:id]
         @chore.destroy
         redirect_to chores_path
     end
