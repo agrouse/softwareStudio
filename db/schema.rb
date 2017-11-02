@@ -24,14 +24,19 @@ ActiveRecord::Schema.define(version: 20171010023550) do
     t.string   "person_assigned"
     t.datetime "last_accomplished"
     t.string   "history"
+    t.string   "household"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "people", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "description"
+    t.string   "password_digest"
+    t.string   "username"
+    t.string   "household"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

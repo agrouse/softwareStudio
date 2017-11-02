@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-chores = Chores.create!([{task: 'Clean dishes', priority: 'high', status: 'uncompleted'}, {task: 'Trash', priority: 'moderate', status: 'completed'}])
+#chores = Chores.create!([{task: 'Clean dishes', priority: 'high', status: 'uncompleted'}, {task: 'Trash', priority: 'moderate', status: 'completed'}])
+people = Person.create!([{name: 'Bryce', description: 'great guy', username: 'greatguy22'}])
 #chores.save!
 # Person.create(name: 'Yana', chore: chores.first)
