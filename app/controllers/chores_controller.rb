@@ -1,4 +1,6 @@
 class ChoresController < ApplicationController
+    
+    before_action :confirm_logged_in
     def index
         @chores = Chores.all
     end
