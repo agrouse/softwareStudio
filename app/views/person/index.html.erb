@@ -1,0 +1,63 @@
+<!-- Added in header and horizontal menu -->
+<div id="header">
+    <div id="logo">
+        <div id="logo_text">
+          <h1><a href=#>ménage</a></h1>
+          <h2>a distributed chores list</h2>
+        </div>
+    </div>
+    <div id="menubar">
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Chores</a></li>
+          <li><a href="#">Household</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- div for styles -->
+<div id="page_content">
+<h1 style="color: black">Pending Chores</h1>
+        <table style="width:100%">
+            <tr>
+                <div class="tbl-header">
+                    <th>Chore</th>
+                    <th>Priority</th>
+                    <th>Person Assigned</th>
+                    <th>Delete</th>
+                </div>
+            </tr>
+            
+    
+<%if @people
+  @people.each do |t| %>
+
+        
+        <tr>
+         <td>  <a href="<%= person_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+         <td><%= t.username %>   </td>
+         <td> <%= t.description%></td>
+         <td><%= button_to "Delete", t, :method => :delete %></td>
+     </tr>
+   
+ <%end%> 
+ 
+ <%end%>
+</table>
+
+<br>
+
+<br>
+    
+        <h2>Create new person</h2>
+        <%= form_tag person_path, class: "newPerson", :method => :post do %>
+            <%= label :people, :name, 'Person' %>
+            <%= text_field :people, :name %>
+            
+            <%= submit_tag 'Add'%>
+            <% end %>
+            </div>
+
+</div>
