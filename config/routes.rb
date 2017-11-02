@@ -3,6 +3,12 @@
   # See how all your routes lay out with "rake routes".
 
   Rails.application.routes.draw do
+  get 'access/menu'
+
+  get 'access/login'
+  post 'access/attempt_login'
+  get 'access/logout'
+
     resources :chores
     root :to => redirect('/chores')
     # root 'chores#hello'

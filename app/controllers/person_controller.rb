@@ -1,4 +1,7 @@
 class PersonController < ApplicationController
+    
+    before_action :confirm_logged_in, :except => [:new, :create]
+    
     def index
         @people = Person.all
     end
@@ -39,7 +42,7 @@ class PersonController < ApplicationController
     
     private 
         def people_params
-    params.require(:people).permit(:name,:password_digest,:username,:description,:household)
+    params.require(:people).permit(:name,:password,:username,:description,:household)
         end
     
 end
