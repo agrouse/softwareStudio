@@ -46,8 +46,8 @@ class ChoresController < ApplicationController
     
     private 
         def chore_params
-    params.require(:chore).permit("task","priority","status","description",
-    "person_assigned","last_accomplished","history")
+    params.require(:chore).permit(:task,:priority,:status,:description,
+    :person_assigned,:last_accomplished,:history,:household)
         end
     
 end

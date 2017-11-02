@@ -7,10 +7,15 @@
     root :to => redirect('/chores')
     # root 'chores#hello'
     
+    get 'person' => 'person#index'
+    
+    get '/person/:id' => 'person#show'
     
     get '/chores/:id' => 'chores#show'
     
     post 'chores' => redirect('/chores')
+    
+    post 'person' => redirect('/person')
     
   end
   # You can have the root of your site routed with "root"
