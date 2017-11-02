@@ -1,0 +1,15 @@
+<table summary="Chore form fields">
+    <tr>
+        <td><%= label :chore, :task, 'Chore' %></td>
+        <td><%= text_field :chore, :task  %></td>
+    </tr>
+    <tr>  
+        <td><%= label :chore, :priority, 'Priority' %></td>
+        <td><%= select :chore, :priority, ['low', 'moderate', 'high'] %></td>
+    </tr> 
+    <tr>
+        <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+        <td><%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%></td>
+    </tr>
+</table>
+

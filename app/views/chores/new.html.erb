@@ -9,10 +9,7 @@
     
     <!-- Your code here -->
     <%= form_for(@chore) do |f| %>  
-  <div class="field"> 
-    <%= f.label :chore %><br> 
-    <%= f.text_area :description %> 
-  </div> 
+    <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
   <div class="actions"> 
     <%= f.submit "Create" %> 
   </div> 

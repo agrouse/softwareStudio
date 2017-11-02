@@ -35,17 +35,8 @@
 
 <br>
 <h2>Update chore</h2>
-<%= form_tag chore_path, :method => :put do %>
-    <%= label :chore, :task, 'Chore' %>
-    <%= text_field :chore, :task  %>
-    
-    <%= label :chore, :priority, 'Priority' %>
-    <%= select :chore, :priority, ['low', 'moderate', 'high'] %>
-    
-    <%= label :chore, :person_assigned, 'Person Assigned' %>
-    <%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%>
-    
-    
+<%= form_tag chore_path, :method => :put do |f| %>
+    <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
     <%= submit_tag 'Update'%>
     <% end %>
 
