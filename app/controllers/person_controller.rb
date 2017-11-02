@@ -10,12 +10,12 @@ class PersonController < ApplicationController
     end
     
     def new
-        @people = Person.new
+        @person = Person.new
         # default: render 'new' template
     end
     
     def create 
-        @people = Person.create!(people_params)
+        @person = Person.create!(people_params)
         redirect_to people_path
     end
     
