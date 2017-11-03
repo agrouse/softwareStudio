@@ -9,6 +9,7 @@
   post 'access/attempt_login'
   get 'access/logout'
   get 'access/reg' 
+  get 'access/landing'
 
     resources :chores
     resources :people
