@@ -13,7 +13,7 @@
 
     resources :chores
     resources :people
-    root :to => redirect('/chores')
+    root :to => redirect('/access/landing')
     # root 'chores#hello'
     
     
