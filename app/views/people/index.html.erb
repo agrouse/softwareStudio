@@ -4,7 +4,7 @@
         <table style="width:100%">
             <tr>
                 <div class="tbl-header">
-                    <th>Profile</th>
+                    <th>Name</th>
                     <th>Username</th>
                     <th>Description</th>
                     <th>Delete</th>
@@ -17,7 +17,7 @@
 
         
         <tr>
-         <td>  <a href="<%= people_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+         <td>  <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
          <td><%= t.username %>   </td>
          <td> <%= t.description%></td>
          <td><%= button_to "Delete", t, :method => :delete %></td>
@@ -30,15 +30,5 @@
 
 <br>
 
-<br>
-    
-        <h2>Create new person</h2>
-        <%= form_tag people_path, class: "newPerson", :method => :post do %>
-            <%= label :people, :name, 'Person' %>
-            <%= text_field :people, :name %>
-            
-            <%= submit_tag 'Add'%>
-            <% end %>
-            </div>
 
 </div>

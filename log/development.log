@@ -1,0 +1,1231 @@
+
+
+Started GET "/" for 129.81.34.20 at 2017-11-03 03:37:18 +0000
+Cannot render console from 129.81.34.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/chores" for 129.81.34.20 at 2017-11-03 03:37:19 +0000
+Cannot render console from 129.81.34.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.20 at 2017-11-03 03:37:19 +0000
+Cannot render console from 129.81.34.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 229ms (Views: 228.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 68.227.66.230 at 2017-11-03 04:42:51 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-03 04:42:52 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:42:52 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/access.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 68.227.66.230 at 2017-11-03 04:42:52 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 68.227.66.230 at 2017-11-03 04:54:42 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 68.227.66.230 at 2017-11-03 04:54:43 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 248ms (Views: 237.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 68.227.66.230 at 2017-11-03 04:54:46 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 68.227.66.230 at 2017-11-03 04:54:48 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:54:50 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 68.227.66.230 at 2017-11-03 04:54:52 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 68.227.66.230 at 2017-11-03 04:54:53 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:54:53 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:54:54 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-03 04:54:55 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:54:55 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 68.227.66.230 at 2017-11-03 04:54:55 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-03 04:54:57 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:54:57 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:54:57 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 68.227.66.230 at 2017-11-03 04:54:58 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:54:58 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 68.227.66.230 at 2017-11-03 04:54:59 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:55:00 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 68.227.66.230 at 2017-11-03 04:55:01 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-03 04:55:01 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-03 04:55:01 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFirstNameToPeople (20171103050556)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mALTER TABLE "people" ADD "first_name" symbol[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFirstNameToPeople (20171103050556)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (17.2ms)[0m  [1mALTER TABLE "people" ADD "first_name" character varying[0m
+  [1m[35mSQL (7.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171103050556"]]
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLastNameToPeople (20171103051054)
+  [1m[35m (5.5ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mALTER TABLE "people" ADD "last_name" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171103051054"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveNameToPeople (20171103051134)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (13.7ms)[0m  [1mALTER TABLE "people" DROP "name"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171103051134"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (129.4ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (109.9ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (843.4ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (748.8ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.6ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "household" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying) [0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mSQL (0.4ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (17.9ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (12.4ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "household" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying) 
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (47.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103051134')
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103050556')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171009063806')
+  [1m[36m (1.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171010023550')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103051054')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 68.227.66.230 at 2017-11-03 05:12:53 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 68.227.66.230 at 2017-11-03 05:12:53 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 273ms (Views: 261.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 68.227.66.230 at 2017-11-03 05:13:41 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (5007.3ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (261.0ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.4ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (692.7ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.5ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (11.9ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.1ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (9.6ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "household" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying) [0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (16.9ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "household" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying) [0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$bu3HlCul1QpP7GErboNjbe53Bn21EVdJG6IzzWrRMW1Hs8XZBnofi"], ["created_at", "2017-11-03 05:15:59.431534"], ["updated_at", "2017-11-03 05:15:59.431534"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$BkqYOTfS5Y1pjN1OlhRsHOgQxEGHOAnOkOyBzB9a8ecG8Q9tdnX.."], ["created_at", "2017-11-03 05:15:59.506183"], ["updated_at", "2017-11-03 05:15:59.506183"]]
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$iFNZS.kZTpaJrQbURHTA/.D5vJ3/bH83EBHOkgi7fceGCDTHKbRrO"], ["created_at", "2017-11-03 05:16:13.617383"], ["updated_at", "2017-11-03 05:16:13.617383"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$tPlAHP6NK6cVmcuWvAoMfuX4L78HDHhcCHsblUr8JOPLLoPTtjjnW"], ["created_at", "2017-11-03 05:16:13.692582"], ["updated_at", "2017-11-03 05:16:13.692582"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 129.81.49.68 at 2017-11-03 19:12:16 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.1ms)
+
+
+Started GET "/" for 129.81.49.68 at 2017-11-03 19:12:41 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (3.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:12:42 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 371ms (Views: 359.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:12:45 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.49.68 at 2017-11-03 19:12:53 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.49.68 at 2017-11-03 19:12:53 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 129.81.49.68 at 2017-11-03 19:13:10 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eEg6YB7Z7dkWGjhbF/u8DE6GscVP4CuNla37z5WtSWlAA4cteyPq4HR9jhUmUs4jx5JifeVQUldjD93oFABZTA==", "people"=>{"first_name"=>"Amy", "last_name"=>"Grouse", "username"=>"amyg0905", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (4.6ms)[0m  [1mINSERT INTO "people" ("password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["password_digest", "$2a$10$KABpbDKqSOArRHwOv8wJa.vMsytoIrxaoFBygeniUbYgVFp8I8qS6"], ["username", "amyg0905"], ["created_at", "2017-11-03 19:13:10.665913"], ["updated_at", "2017-11-03 19:13:10.665913"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+Redirected to https://software-studio-agrouse.c9users.io/people
+Completed 302 Found in 113ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:13:10 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:13:10 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:13:13 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.49.68 at 2017-11-03 19:13:18 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JBL3gNXK0LFv4Oa4q/KpcSm31TyofW5xNAtruItcNSIcWUrNsDDXiA2HUPaaW9teoKMGhALNF6vCqU2fCvElBw==", "username"=>"agrouse", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "agrouse"]]
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+
+
+Started GET "/" for 129.81.49.68 at 2017-11-03 19:14:13 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:14:13 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 289ms (Views: 277.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:14:13 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.49.68 at 2017-11-03 19:14:15 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 57ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:14:20 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.49.68 at 2017-11-03 19:14:23 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"88UwcLYvRzdTLS406vhdM9NUwouK/jNZrUQkUM/oQmzLjo0909VADjFKmHrbUS8cWkARMyBOSoNb5gJ3TkVSSQ==", "username"=>"amyg0905", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "amyg0905"]]
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 88ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:14:23 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (2.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (4.0ms)
+  Rendered chores/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 129.81.49.68 at 2017-11-03 19:16:46 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:16:47 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 400ms (Views: 385.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:16:47 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:16:51 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:16:52 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.8ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (15.9ms)
+  Rendered chores/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:16:55 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:16:57 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:16:58 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:16:58 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.5ms)
+  Rendered chores/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:16:59 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (1.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `name' for #<Person:0x007f3154e5b190>):
+    17: 
+    18:         
+    19:         <tr>
+    20:          <td>  <a href="<%= people_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+    21:          <td><%= t.username %>   </td>
+    22:          <td> <%= t.description%></td>
+    23:          <td><%= button_to "Delete", t, :method => :delete %></td>
+  app/views/people/index.html.erb:20:in `block in _app_views_people_index_html_erb__3709365513258631681_69924926922300'
+  app/views/people/index.html.erb:16:in `_app_views_people_index_html_erb__3709365513258631681_69924926922300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:17:34 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for #<Person:0x007f3154e15618>):
+    17: 
+    18:         
+    19:         <tr>
+    20:          <td>  <a href="<%= people_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+    21:          <td><%= t.username %>   </td>
+    22:          <td> <%= t.description%></td>
+    23:          <td><%= button_to "Delete", t, :method => :delete %></td>
+  app/views/people/index.html.erb:20:in `block in _app_views_people_index_html_erb__3709365513258631681_69924926922300'
+  app/views/people/index.html.erb:16:in `_app_views_people_index_html_erb__3709365513258631681_69924926922300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.1ms)
+
+
+Started GET "/" for 129.81.49.68 at 2017-11-03 19:19:01 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:19:01 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 266ms (Views: 256.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:19:03 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.49.68 at 2017-11-03 19:19:04 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vd172eFrj8UAap7Yysw1wbPZVDm3l3YosJ+sWpoKfRNtlsaUhJGI/GINKJb7ZUfuOs2HgR0nD/JGPYp9G6dtNg==", "username"=>"amyg0905", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "amyg0905"]]
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 91ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:19:05 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (9.0ms)
+  Rendered chores/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:19:07 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `name' for #<Person:0x007f78ee10bf80>):
+    17: 
+    18:         
+    19:         <tr>
+    20:          <td>  <a href="<%= people_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+    21:          <td><%= t.username %>   </td>
+    22:          <td> <%= t.description%></td>
+    23:          <td><%= button_to "Delete", t, :method => :delete %></td>
+  app/views/people/index.html.erb:20:in `block in _app_views_people_index_html_erb__1252480249693109177_70078683481320'
+  app/views/people/index.html.erb:16:in `_app_views_people_index_html_erb__1252480249693109177_70078683481320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.1ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:19:29 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `name' for #<Person:0x007f78eea5fc58>):
+    17: 
+    18:         
+    19:         <tr>
+    20:          <td>  <a href="<%= people_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+    21:          <td><%= t.username %>   </td>
+    22:          <td> <%= t.description%></td>
+    23:          <td><%= button_to "Delete", t, :method => :delete %></td>
+  app/views/people/index.html.erb:20:in `block in _app_views_people_index_html_erb__1252480249693109177_70078683481320'
+  app/views/people/index.html.erb:16:in `_app_views_people_index_html_erb__1252480249693109177_70078683481320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.6ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:20:08 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:20:27 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:20:28 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.7ms)
+  Rendered chores/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:20:28 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:20:30 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 129.81.49.68 at 2017-11-03 19:45:06 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:45:06 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:45:26 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 323ms (Views: 307.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 129.81.49.68 at 2017-11-03 19:45:26 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/landing" for 129.81.49.68 at 2017-11-03 19:45:26 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:45:29 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.49.68 at 2017-11-03 19:45:30 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cBeyOmVQ92YPOi072ZvGt7r6FdcgU+kCZVbZkDH4d51IXA93AKrwX21dm3XoMrSYM+7Gb4rjkNiT9P+3sFVnuA==", "username"=>"amyg0905", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "amyg0905"]]
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 189ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:45:30 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (20.3ms)
+  Rendered chores/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/people/4" for 129.81.49.68 at 2017-11-03 19:45:45 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "4"]]
+  Rendered people/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 27ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:45:52 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people/3" for 129.81.49.68 at 2017-11-03 19:45:54 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:45:55 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people/1" for 129.81.49.68 at 2017-11-03 19:45:56 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered people/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:45:58 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:47:45 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 33ms (Views: 27.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:47:46 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people/4" for 129.81.49.68 at 2017-11-03 19:48:11 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  Rendered people/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:48:12 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people/3" for 129.81.49.68 at 2017-11-03 19:48:13 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 129.81.49.68 at 2017-11-03 19:48:35 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:48:35 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:48:35 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.49.68 at 2017-11-03 19:48:37 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 129.81.49.68 at 2017-11-03 19:48:52 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Ocis+rEJ5mcQimGfKZK5Cpleh9cJaqtVH8pPCdYnT3ArJ/+jz4goP4ln8hNDzjLo3Gpp/aV03ei3Q8bpvWNGA==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("first_name", "last_name", "password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Erin"], ["last_name", "Blake"], ["password_digest", "$2a$10$JGPlMP3BBUyC/avbUGgTpOjZMHZlBfGWrknn3HmogA.8j4JhCXNkq"], ["username", "eblake"], ["created_at", "2017-11-03 19:48:52.882168"], ["updated_at", "2017-11-03 19:48:52.882168"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://software-studio-agrouse.c9users.io/people
+Completed 302 Found in 75ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:48:52 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.49.68 at 2017-11-03 19:48:53 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.49.68 at 2017-11-03 19:48:58 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"frexkoimL+HyVRv/uIyQA7Kv8dRLJtH7mcebu633Lt9G/Azf7Vwo2JAyrbGJJeIsO7sibOGWqCFvZb2cLFo++g==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake"]]
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 69ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.49.68 at 2017-11-03 19:48:58 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/access/reg" for 129.81.49.68 at 2017-11-03 19:49:02 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:49:03 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/people/5" for 129.81.49.68 at 2017-11-03 19:49:04 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GG0MjApC3oZrFntGzM5HUXmeZ9qvSOU0a3F5IAFqWWcgJrHBb7jZvwlxzQj9ZzV+8Iq0YgX4nO6d018HgMdJQg==", "id"=>"5"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 5]]
+  [1m[35m (3.2ms)[0m  COMMIT
+Redirected to https://software-studio-agrouse.c9users.io/people
+Completed 302 Found in 7ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/people" for 129.81.49.68 at 2017-11-03 19:49:04 +0000
+Cannot render console from 129.81.49.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.24.134 at 2017-11-03 19:59:42 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/login" for 129.81.24.134 at 2017-11-03 19:59:43 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 335ms (Views: 319.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 129.81.24.134 at 2017-11-03 19:59:43 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/access/landing" for 129.81.24.134 at 2017-11-03 19:59:43 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 129.81.24.134 at 2017-11-03 20:00:32 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/access/reg" for 129.81.24.134 at 2017-11-03 20:00:36 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 129.81.24.134 at 2017-11-03 20:00:40 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.24.134 at 2017-11-03 20:00:40 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 70ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.24.134 at 2017-11-03 20:00:40 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.24.134 at 2017-11-03 20:00:43 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.24.134 at 2017-11-03 20:00:43 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.24.134 at 2017-11-03 20:00:44 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.24.134 at 2017-11-03 20:00:44 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 129.81.24.134 at 2017-11-03 20:00:45 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.24.134 at 2017-11-03 20:00:45 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.24.134 at 2017-11-03 20:00:46 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.24.134 at 2017-11-03 20:00:48 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 129.81.24.134 at 2017-11-03 20:00:48 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.24.134 at 2017-11-03 20:00:48 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://software-studio-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.24.134 at 2017-11-03 20:00:48 +0000
+Cannot render console from 129.81.24.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)

@@ -2,7 +2,7 @@
 <div id="page_content">
 
 
-<h2> Details about <%= @people.name %> </h2>
+<h2> Details about <%= @people.first_name %> </h2>
  <ul>
   <li>Username:
    <%= @people.username %> </li>
@@ -16,8 +16,11 @@
 <br>
 <h2>Update Profile</h2>
 <%= form_tag person_path, :method => :put do %>
-    <%= label :people, :name, 'Name' %>
-    <%= text_field :people, :name  %>
+    <%= label :people, :first_name, 'first name' %>
+    <%= text_field :people, :first_name  %>
+    
+    <%= label :people, :last_name, 'Last name' %>
+    <%= text_field :people, :last_name  %>
     
     <%= label :people, :description, 'Description' %>
     <%= text_field :people, :description %>

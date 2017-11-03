@@ -11,3 +11,7 @@ sudo sudo -u postgres psql
 
 To run:
 rails s -b $IP -p $PORT
+
+Changing database structures will need you to configure Heroku db. Here are the steps: 
+heroku run rake db:reset
+heroku run rake db:migrate
