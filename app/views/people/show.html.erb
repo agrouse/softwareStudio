@@ -8,10 +8,10 @@
     </div>
     <div id="menubar">
         <ul id="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Chores</a></li>
+          <li><a href="/chores">Home</a></li>
+          <li><a href="/chores">Chores</a></li>
           <li><a href="#">Household</a></li>
-          <li><a href="#">Profile</a></li>
+          <li><a href="/people">Profile</a></li>
           <li><a href="#">Help</a></li>
         </ul>
     </div>
@@ -27,12 +27,12 @@
   <li>Description:
     <%= @people.description %>
   <li>household:
-    <%= @people %> </li>
+    <%= @people.household %> </li>
 </ul>
 <br>
 
 <br>
-<h2>Update people</h2>
+<h2>Update Profile</h2>
 <%= form_tag person_path, :method => :put do %>
     <%= label :people, :name, 'Name' %>
     <%= text_field :people, :name  %>
@@ -47,6 +47,6 @@
     <%= submit_tag 'Update'%>
     <% end %>
 
-<%= link_to 'Back to chores list', chores_path %>
+<%= link_to 'Back to profile list', people_path %>
 
 </div>
