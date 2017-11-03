@@ -10,18 +10,18 @@
   get 'access/logout'
 
     resources :chores
+    resources :people
     root :to => redirect('/chores')
     # root 'chores#hello'
     
-    get 'person' => 'person#index'
     
-    get '/person/:id' => 'person#show'
+    get '/people/:id' => 'people#show'
     
     get '/chores/:id' => 'chores#show'
     
     post 'chores' => redirect('/chores')
     
-    post 'person' => redirect('/person')
+    post 'people' => redirect('/people')
     
   end
   # You can have the root of your site routed with "root"
