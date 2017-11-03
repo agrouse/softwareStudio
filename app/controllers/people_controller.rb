@@ -19,7 +19,7 @@ class PeopleController < ApplicationController
     
     def create 
         @people = Person.create!(people_params)
-        redirect_to person_path
+        redirect_to people_path
     end
     
     #For now, it will just delete the chore. In the future, we should keep
@@ -37,7 +37,7 @@ class PeopleController < ApplicationController
     def destroy
         @people = Person.find params[:id]
         @people.destroy
-        redirect_to person_path
+        redirect_to people_path
     end
     
     private 
