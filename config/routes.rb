@@ -8,6 +8,7 @@
   get 'access/login'
   post 'access/attempt_login'
   get 'access/logout'
+  get 'access/reg' 
 
     resources :chores
     resources :people
@@ -22,6 +23,8 @@
     post 'chores' => redirect('/chores')
     
     post 'people' => redirect('/people')
+    
+    
     
   end
   # You can have the root of your site routed with "root"
