@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103051134) do
+ActiveRecord::Schema.define(version: 20171114055706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(version: 20171103051134) do
     t.datetime "updated_at"
   end
 
+  create_table "households", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+  end
+
   create_table "people", force: :cascade do |t|
     t.string   "description"
     t.string   "password_digest"
@@ -38,6 +44,9 @@ ActiveRecord::Schema.define(version: 20171103051134) do
     t.datetime "updated_at",      null: false
     t.string   "first_name"
     t.string   "last_name"
+    t.integer  "household_id"
   end
+
+  add_index "people", ["household_id"], name: "index_people_on_household_id", using: :btree
 
 end
