@@ -2534,3 +2534,642 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveHouseholdToPeople (20171114144837)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "people" DROP "household_id"[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveHouseholdToPeople (20171114144837)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "people" DROP "household_id"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171114144837"]]
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'households'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (5.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddHouseholdToPerson (20171114145132)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "people" ADD "household_id" integer[0m
+  [1m[35m (5.4ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people"  ("household_id")
+  [1m[36m (21.4ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171114145132"]]
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'households'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mHousehold Load (0.9ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  [1m[35mPerson Load (0.8ms)[0m  SELECT  "people".* FROM "people"  ORDER BY "people"."id" ASC LIMIT 1
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[36m (5007.7ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (157.5ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1232.3ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (2.0ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (16.2ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (26.7ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (8.9ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (15.4ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (3.8ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (14.3ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (7.7ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (5.4ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (20.7ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (20.1ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (7.0ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (7.3ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (9.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (9.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (3.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (2.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (2.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (2.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5013.1ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (110.7ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (895.6ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.7ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (21.7ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.8ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (14.5ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (4.5ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (14.8ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (7.3ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (5.9ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.4ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (15.1ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (24.3ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (6.4ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (6.7ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (7.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (2.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (6.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[35mPerson Load (0.8ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.7ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  [1m[35mChore Load (1.9ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$Wj7kd4TYFV7VWFjBYW7clOPnvKiM.PzgnlDqU2yBAlq.PTVBUT4LG"], ["created_at", "2017-11-14 15:05:08.800072"], ["updated_at", "2017-11-14 15:05:08.800072"]]
+  [1m[35m (4.6ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$5odjY0oDrvum4NwIRrrtfeM.lPcKziuPVt9f3QCbq781d/UcrFJFG"], ["created_at", "2017-11-14 15:05:08.884634"], ["updated_at", "2017-11-14 15:05:08.884634"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House 1"], ["created_at", "2017-11-14 15:05:08.921516"], ["updated_at", "2017-11-14 15:05:08.921516"]]
+  [1m[35mSQL (0.6ms)[0m  UPDATE "people" SET "household_id" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["household_id", 1], ["updated_at", "2017-11-14 15:05:08.923792"], ["id", 2]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mPerson Load (1.9ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mPerson Load (1.0ms)[0m  SELECT  "people".* FROM "people"  ORDER BY "people"."id" ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "people" WHERE "people"."id" = $1  [["id", 1]]
+  [1m[36m (3.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (1.1ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$F2gK/j2TDuZYnjKQb4B0X.oPX6UitT0Cv69/Lx0mTjIVmNGM3Q62m"], ["created_at", "2017-11-14 15:06:45.022507"], ["updated_at", "2017-11-14 15:06:45.022507"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$Gw7Rv99wr0SdSXba6HHQL.lnrLgB9Xie3oip/Xh3AwyQrhyOGEoL."], ["created_at", "2017-11-14 15:06:45.105749"], ["updated_at", "2017-11-14 15:06:45.105749"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House 1"], ["created_at", "2017-11-14 15:06:45.134134"], ["updated_at", "2017-11-14 15:06:45.134134"]]
+  [1m[35mSQL (0.8ms)[0m  UPDATE "people" SET "household_id" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-14 15:06:45.136310"], ["id", 4]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36m (5007.6ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (115.3ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.6ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (920.8ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.9ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (21.9ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.6ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (3.2ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (14.2ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (8.5ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (4.7ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.1ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (14.3ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (14.7ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (5.4ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (6.6ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (9.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (10.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (4.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$MYuuOoSY5Yj/nAsnRmVy0ePFPodXXVVmdle4jmWTyf3Y8yp5NLheK"], ["created_at", "2017-11-14 15:08:49.336451"], ["updated_at", "2017-11-14 15:08:49.336451"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$qnQIfuvFaO7Z4CHZcaqLru/Mb6TWGFd91kwMRmjx32tYtJrTRBMxW"], ["created_at", "2017-11-14 15:08:49.422462"], ["updated_at", "2017-11-14 15:08:49.422462"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[35mPerson Load (1.0ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$3xMMp245JQmp9mKT61lM2.LH1YsqviLvdvqVRXfKSy02IS7Ui1hZ."], ["created_at", "2017-11-14 15:12:42.602186"], ["updated_at", "2017-11-14 15:12:42.602186"]]
+  [1m[35m (3.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$MxqSIUn9IRiUwVGLkEeGCuftADx6S3/LpSKQoilc2VJs17uPy8aom"], ["created_at", "2017-11-14 15:12:42.690260"], ["updated_at", "2017-11-14 15:12:42.690260"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[36m (5008.2ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (119.0ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (1.0ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1107.5ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.1ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (15.3ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.5ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (3.4ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (14.9ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (5.6ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (5.9ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.1ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (16.8ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (14.0ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (5.7ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (7.5ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (9.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (8.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$gk9b/n7UefPL1PyGt1JnSeqYk22M.ga0bVH61joWxWjR3faw1cCfK"], ["created_at", "2017-11-14 15:12:56.709762"], ["updated_at", "2017-11-14 15:12:56.709762"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$mC0sOyK3hGLREcw7rSrnu.Elhn4ENj31JEsAEyhJHRIanLaNqRRsO"], ["created_at", "2017-11-14 15:12:56.791465"], ["updated_at", "2017-11-14 15:12:56.791465"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House 1"], ["created_at", "2017-11-14 15:20:57.567765"], ["updated_at", "2017-11-14 15:20:57.567765"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+  [1m[36mPerson Load (1.1ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36m (5007.4ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (125.1ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (846.9ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.3ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (13.3ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.0ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (12.9ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (8.9ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (14.5ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (7.7ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (4.4ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (18.0ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (14.1ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (14.0ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (4.4ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (5.0ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "House 1"], ["created_at", "2017-11-14 15:23:46.379932"], ["updated_at", "2017-11-14 15:23:46.379932"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.9ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House 1"], ["created_at", "2017-11-14 15:25:32.559434"], ["updated_at", "2017-11-14 15:25:32.559434"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36m (5007.4ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (111.5ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.6ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1094.3ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.5ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (15.4ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.8ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (12.4ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (6.3ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (15.4ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (14.8ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (7.6ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.2ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (22.5ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (13.1ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (5.5ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (5.0ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (9.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (6.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (6.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "House 1"], ["created_at", "2017-11-14 15:26:35.426622"], ["updated_at", "2017-11-14 15:26:35.426622"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mPerson Load (1.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36m (5008.3ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (118.8ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.6ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1023.0ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.7ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.1ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (12.7ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (9.9ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (14.3ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (5.1ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (5.1ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (19.1ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (13.5ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (5.6ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (6.7ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (7.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (4.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "House 1"], ["created_at", "2017-11-14 15:27:28.721584"], ["updated_at", "2017-11-14 15:27:28.721584"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$Dt0fb5bsUGvqrWyCqCPH3.oa3Gy0Vc/4vt3CR4NKy4UsQ9Xoyue.y"], ["household_id", 1], ["created_at", "2017-11-14 15:27:28.819875"], ["updated_at", "2017-11-14 15:27:28.819875"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$4lHBFjB2Ki7SFqwBDNqq.OghdnyLh88xZNiliW.3b4iYdTsPPkDSm"], ["household_id", 1], ["created_at", "2017-11-14 15:27:28.902998"], ["updated_at", "2017-11-14 15:27:28.902998"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House 1"], ["created_at", "2017-11-14 15:27:33.985496"], ["updated_at", "2017-11-14 15:27:33.985496"]]
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$ZWmgYL8NDNZuVJC84pKPZetYZ4Q26uBeAyh0nc5ikg/HKFRcA757u"], ["household_id", 1], ["created_at", "2017-11-14 15:27:34.082188"], ["updated_at", "2017-11-14 15:27:34.082188"]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$pzu8pXIJSHzPnmGDfniO/OcmjVY7oQXKc1Y8XcoU1GotmeqVTceQ."], ["household_id", 1], ["created_at", "2017-11-14 15:27:34.165611"], ["updated_at", "2017-11-14 15:27:34.165611"]]
+  [1m[35m (7.0ms)[0m  COMMIT
+  [1m[35mPerson Load (1.3ms)[0m  SELECT "people".* FROM "people"
+
+
+Started GET "/access/login" for 68.227.66.230 at 2017-11-14 15:28:13 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 68.227.66.230 at 2017-11-14 15:28:15 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VaT3unDqfHAIlp1rDe/9VNl9hc4ZLzBcdSo7+2WFvyx5Se9DrJ5hD6DUHicobQ2bkynsxnFHImIEEXrHZhKv8g==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "eblake"]]
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 104ms (Views: 82.7ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/access/attempt_login" for 68.227.66.230 at 2017-11-14 15:28:17 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wYMAUcKjJS6smxNgt2aNQl45sr5442dQQDAMfDgekDf6xT4m36R6xLw7wGnX2r6QyyPwpGLn6MwO4EN83dqng==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake"]]
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (5007.1ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (111.3ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (972.5ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.4ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (16.7ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.5ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (16.7ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (6.5ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (15.1ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) [0m
+  [1m[35m (6.0ms)[0m  CREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")
+  [1m[36m (5.5ms)[0m  [1mALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (16.2ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying) [0m
+  [1m[35m (13.6ms)[0m  CREATE TABLE "people" ("id" serial primary key, "description" character varying, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying, "household_id" integer) 
+  [1m[36m (5.3ms)[0m  [1mCREATE  INDEX  "index_people_on_household_id" ON "people" USING btree ("household_id")[0m
+  [1m[35m (4.9ms)[0m  ALTER TABLE "people" ADD CONSTRAINT "fk_rails_829e856eff"
+FOREIGN KEY ("household_id")
+  REFERENCES "households" ("id")
+
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114145132')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171103050556')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051134')[0m
+  [1m[35m (2.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114144837')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171103051054')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "House 1"], ["created_at", "2017-11-14 15:28:18.741021"], ["updated_at", "2017-11-14 15:28:18.741021"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$dhYIVIA3HbG0a3WvOyV6UeSJjjZ3AXnaBXAl7.6kUtHE/BWYAdXdi"], ["household_id", 1], ["created_at", "2017-11-14 15:28:18.834624"], ["updated_at", "2017-11-14 15:28:18.834624"]]
+  [1m[35m (4.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$JAG4Kr7HMheM.DDwLGoTq.JVyWjLPWFvmrDUaQemxdF2WDS28v.sy"], ["household_id", 1], ["created_at", "2017-11-14 15:28:18.915643"], ["updated_at", "2017-11-14 15:28:18.915643"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/access/attempt_login" for 68.227.66.230 at 2017-11-14 15:28:19 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zS3XVSHvCGmWUgeWjn4/2WPrPwxW7gMUKYkyqUoyEzfhwM+s/ZsVFj4QhNqr/M8WKb9WBD6GESpYsnOVSaUD6Q==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "eblake"]]
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/access/attempt_login" for 68.227.66.230 at 2017-11-14 15:28:28 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PhdOjiAaKxwS3d3ZFKCN0kZkzq2W3kEqB6861oh3phAS+lZ3/G42Y7qfXpUxIn0dDDCnpf62UxR2lHvqi+C2zg==", "username"=>"agrouse", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "agrouse"]]
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/access/attempt_login" for 68.227.66.230 at 2017-11-14 15:28:51 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZaLjJHzQ/Teiyv8p+aXv57Zb/KKLy3Y9TpqYYQ8jZ1RJT/vdoKTgSAqIfGXcJx8o/A+VquOjZAM/odldDLR3ig==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to https://software-studio-agrouse.c9users.io/chores
+Completed 302 Found in 80ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 68.227.66.230 at 2017-11-14 15:28:51 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (11.2ms)
+  Rendered chores/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/people" for 68.227.66.230 at 2017-11-14 15:28:59 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/people/1" for 68.227.66.230 at 2017-11-14 15:29:01 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kCEDozy4ZSXdKdVyxFM7JDLxBByOgMyFvTX7HB7z87a8zBta4Mx4WnVrVj7h0cvreKVtFObo3rvMDrogHWTjaA==", "id"=>"1"}
+  [1m[35mPerson Load (0.8ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "people" WHERE "people"."id" = $1  [["id", 1]]
+  [1m[36m (3.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://software-studio-agrouse.c9users.io/people
+Completed 302 Found in 12ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/people" for 68.227.66.230 at 2017-11-14 15:29:01 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/people/2" for 68.227.66.230 at 2017-11-14 15:29:02 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"782qTeBISLkLkpb1Zbs5CkQ3N74XrfQfj9MfVi59h/PDILK0PDxVxqPQFblAOcnFDmNetn/F5iH+6F5qLeqXLQ==", "id"=>"2"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.9ms)[0m  COMMIT
+Redirected to https://software-studio-agrouse.c9users.io/people
+Completed 302 Found in 7ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/people" for 68.227.66.230 at 2017-11-14 15:29:02 +0000
+Cannot render console from 68.227.66.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.7ms)
+  [1m[36mPerson Load (1.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "House 1"], ["created_at", "2017-11-14 15:29:40.214762"], ["updated_at", "2017-11-14 15:29:40.214762"]]
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Bryce"], ["last_name", "Bullock"], ["description", "great guy"], ["username", "greatguy22"], ["password_digest", "$2a$10$q7R5zOZaclkdyN2MNKWpPuJCKf8BsrkRquZrfIUX9awk5MYgZTeLm"], ["household_id", 1], ["created_at", "2017-11-14 15:29:40.329748"], ["updated_at", "2017-11-14 15:29:40.329748"]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["description", "test user"], ["username", "test_user"], ["password_digest", "$2a$10$1NJSoobPGEN./ew9EACm6uAC9kq.b.rNSV6OgAytA8YUS97.j/oTa"], ["household_id", 1], ["created_at", "2017-11-14 15:29:40.419912"], ["updated_at", "2017-11-14 15:29:40.419912"]]
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[35mPerson Load (0.8ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people"  ORDER BY "people"."id" ASC LIMIT 1[0m
+  [1m[35mHousehold Load (1.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]

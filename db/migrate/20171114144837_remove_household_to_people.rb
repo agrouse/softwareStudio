@@ -1,5 +1,5 @@
 class RemoveHouseholdToPeople < ActiveRecord::Migration
   def change
-    remove_column :people, :household, :string
+    remove_reference :people, :household, index: true
   end
 end
