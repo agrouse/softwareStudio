@@ -10,6 +10,9 @@
                     <th>Delete</th>
                 </div>
             </tr>
+
+
+
             
     
 <%if @people
@@ -17,7 +20,7 @@
 
         
         <tr>
-         <td>  <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
+         <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
          <td><%= t.username %>   </td>
          <td> <%= t.description%></td>
          <td><%= button_to "Delete", t, :method => :delete %></td>
