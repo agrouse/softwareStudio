@@ -5,11 +5,12 @@ class HouseholdsController < ApplicationController
         @households = Household.all
     end
     
-    # def show
-    #     id = params[:id]
-    #     @chore = Chore.find(params[:id])
-    #     @chore = Chore.find(id)
-    # end
+    def show
+        id = params[:id]
+        @household = Household.find(params[:id])
+        #@household = Household.find(id)
+       # @household = Household.where(:person => )
+    end
     
     # def new
     #     @chore = Chore.new
@@ -46,11 +47,10 @@ class HouseholdsController < ApplicationController
     #     redirect_to chores_path
     # end
     
-    # private 
-    #     def chore_params
-    # params.require(:chore).permit(:task,:priority,:status,:description,
-    # :person_assigned,:last_accomplished,:history,:household)
-    #     end
+    private 
+        def household_params
+    params.require(:household).permit(:name,:people)
+        end
     
 end
 

@@ -1,0 +1,28 @@
+<!-- div for styles -->
+<div id="page_content">
+<h1 style="color: black">Households (administrative page)</h1>
+        <table style="width:100%">
+            <tr>
+                <div class="tbl-header">
+                    <th>Households</th>
+                    <th>Delete</th>
+                </div>
+            </tr>
+
+    
+<%if @households
+  @households.each do |t| %>
+        <tr>
+         <td><a href="<%= households_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+         <td><%= button_to "Delete", t, :method => :delete %></td>
+     </tr>
+   
+ <%end%> 
+ 
+ <%end%>
+</table>
+
+<br>
+
+
+</div>
