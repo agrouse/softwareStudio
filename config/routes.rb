@@ -13,13 +13,12 @@
 
     resources :chores
     resources :people
+    resources :households
     root :to => redirect('/access/landing')
     # root 'chores#hello'
     
     
     get '/people/:id' => 'people#show'
-    
-    get '/chores/:id' => 'chores#show'
     
     post 'chores' => redirect('/chores')
     

@@ -1,6 +1,6 @@
 <!-- div for styles -->
 <div id="page_content">
-<h1 style="color: black">People</h1>
+<h1 style="color: black">Our House</h1>
         <table style="width:100%">
             <tr>
                 <div class="tbl-header">
@@ -11,18 +11,14 @@
                 </div>
             </tr>
 
-
-
-            
     
 <%if @people
   @people.each do |t| %>
-
-        
         <tr>
          <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
          <td><%= t.username %>   </td>
          <td> <%= t.description%></td>
+         <td> <%= t.household.name></td>
          <td><%= button_to "Delete", t, :method => :delete %></td>
      </tr>
    
