@@ -17,6 +17,7 @@
     root :to => redirect('/access/landing')
     # root 'chores#hello'
     
+    get '/households/:id' => 'households#show'
     
     get '/people/:id' => 'people#show'
     

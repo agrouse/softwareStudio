@@ -4,21 +4,16 @@
         <table style="width:100%">
             <tr>
                 <div class="tbl-header">
-                    <th>Name</th>
-                    <th>Username</th>
-                    <th>Description</th>
+                    <th>Households</th>
                     <th>Delete</th>
                 </div>
             </tr>
 
     
-<%if @people
-  @people.each do |t| %>
+<%if @households
+  @households.each do |t| %>
         <tr>
-         <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
-         <td><%= t.username %>   </td>
-         <td> <%= t.description%></td>
-         <td> <%= t.household.name></td>
+         <td><a href="<%= households_path %>/<%= t.id %>"><%= t.name %> </a> </td>
          <td><%= button_to "Delete", t, :method => :delete %></td>
      </tr>
    
