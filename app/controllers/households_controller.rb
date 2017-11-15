@@ -1,5 +1,5 @@
 class HouseholdsController < ApplicationController
-    
+
     before_action :confirm_logged_in
     def index
         @households = Household.all
@@ -53,3 +53,4 @@ class HouseholdsController < ApplicationController
     #     end
     
 end
+
