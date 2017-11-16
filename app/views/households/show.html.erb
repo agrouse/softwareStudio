@@ -1,11 +1,18 @@
 <div id="page_content">
 
 
-<h2> Details about <%= @household.name %> </h2>
+<h2> Details about <%= @households.name %> </h2>
  <ul>
   <li>Time Created:</li>
-      <li><%= @household.created_at %></li>
+      <li><%= @households.created_at %></li>
 </ul>
+<h2>Update Household</h2>
+<%= form_tag household_path, :method => :put do %>
+    <%= label :households, :name, 'Name' %>
+    <%= text_field :households, :name  %>
+    
+    <%= submit_tag 'Update'%>
+    <% end %>
 
 <%= link_to 'Back to house list', households_path %>
 </div>
