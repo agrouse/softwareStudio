@@ -18,13 +18,13 @@ class HouseholdsController < ApplicationController
     end
     
     def create 
-        @households = Household.create!(household_params)
+        @households = Household.create(household_params)
         redirect_to households_path
     end
     
     def update
         @households = Household.find params[:id]
-        @households.update_attributes!(household_params)
+        @households.update_attributes(household_params)
         flash[:notice] = "#{@households.name} was successfully updated."
         redirect_to household_path(@households)
     end

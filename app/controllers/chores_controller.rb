@@ -17,7 +17,9 @@ class ChoresController < ApplicationController
     end
     
     def create 
-        @chores = Chore.create!(chore_params)
+        @chores = Chore.create(chore_params)
+        house_id=Person.find(session[:user_id]).household_id
+        @chores.update(:household_id => house_id)
         redirect_to chores_path
     end
     
@@ -35,7 +37,7 @@ class ChoresController < ApplicationController
     
     def update
        @chores = Chore.find params[:id]
-       @chores.update_attributes!(chore_params)
+       @chores.update_attributes(chore_params)
        flash[:notice] = "#{@chores.task} was successfully updated."
        redirect_to chore_path(@chores)
     end

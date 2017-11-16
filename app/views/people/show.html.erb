@@ -2,7 +2,7 @@
 <div id="page_content">
 
 
-<h2> Details about <%= @people.first_name %> </h2>
+<h2> Details about <%= @people.first_name %> <%= @people.last_name%> </h2>
  <ul>
   <li>Username:
    <%= @people.username %> </li>
@@ -25,12 +25,12 @@
     
     <%= label :people, :last_name, 'Last name' %>
     <%= text_field :people, :last_name  %>
-    
+    </br>
     <%= label :people, :description, 'Description' %>
     <%= text_field :people, :description %>
     
     <%= label :people, :household_id, 'Household' %>
-    <%= select :people, :household_id, [1]%>
+    <%= collection_select :people, :household_id, Household.all, :id, :name%>
     
     
     <%= submit_tag 'Update'%>

@@ -2,10 +2,15 @@
 
 
 <h2> Details about <%= @households.name %> </h2>
+<h3> People</h3>
  <ul>
-  <li>Time Created:</li>
-      <li><%= @households.created_at %></li>
+  <%@households.people.each do |a|%>
+      <li><a href="<%= people_path %>/<%= a.id %>"><%=a.first_name + " " + a.last_name%></a></li>
+  <%end%>
 </ul>
+<%if @households.people[0]==nil%>
+<%= "None" %>
+<%end%>
 <h2>Update Household</h2>
 <%= form_tag household_path, :method => :put do %>
     <%= label :households, :name, 'Name' %>

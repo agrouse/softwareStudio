@@ -1,5 +1,8 @@
 <!-- div for styles -->
 <div id="page_content">
+<%ses_id=session[:user_id]
+ses_house_id=Person.find(ses_id).household_id
+if ses_house_id!=nil%>
 <h1 style="color: black">Pending Chores</h1>
         <table style="width:100%">
             <tr>
@@ -11,10 +14,9 @@
                 </div>
             </tr>
             
-    
 <%if @chores
-  @chores.each do |t| %>
-
+  @chores.each do |t| 
+      if t.household_id==ses_house_id%>
         
         <tr>
          <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
@@ -22,10 +24,10 @@
          <td><%= t.person_assigned%></td>
          <td><%= button_to "Completed", t, :method => :delete %></td>
      </tr>
-   
+       <%end%>
  <%end%> 
- 
- <%end%>
+<%end%>
+
 </table>
 
 <br>
@@ -39,5 +41,7 @@
             <%= submit_tag 'Add'%>
             <% end %>
             </div>
-
+<%else%>
+    <h2>Please join household first </h2>
+<%end%>
 </div>

@@ -8,7 +8,7 @@ class CreateChores < ActiveRecord::Migration
       t.string :person_assigned
       t.datetime :last_accomplished
       t.string :history
-      t.string :household
+      t.references :household
       t.timestamps
     end
   end
