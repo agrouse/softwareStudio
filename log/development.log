@@ -7994,3 +7994,244 @@ Processing by PeopleController#index as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
   Rendered people/index.html.erb within layouts/application (4.5ms)
 Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 129.81.34.41 at 2017-11-16 04:15:30 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.34.41 at 2017-11-16 04:15:30 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 302ms (Views: 292.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 04:15:32 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.41 at 2017-11-16 04:15:36 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xTVIDQyTwy/G/BchgH23Es2YWpz5NcRTf8A280ryc+5Psdp6AvCljJRWCrAVdmISRmNnlF5QKpUMew813Mvmxg==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 196ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 04:15:36 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (1.0ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (11.1ms)
+  Rendered chores/index.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 77ms (Views: 70.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 04:15:38 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.8ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 41ms (Views: 30.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 04:15:40 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered households/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 04:16:30 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered households/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/households/1" for 129.81.34.41 at 2017-11-16 04:16:36 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4hE5Kt0DK6bak6mUdRPbYdFRI9oneHrghbgohDaL421olatd02BNBYg5tAXgGA5hWqoe0oAdlCb2AxFCoLJ2RQ==", "household"=>{"name"=>"Party house"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.4ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: households):
+  app/controllers/households_controller.rb:40:in `household_params'
+  app/controllers/households_controller.rb:27:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.1ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 04:16:50 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered households/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/households/1" for 129.81.34.41 at 2017-11-16 04:16:56 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KK4ZvMiV4NQ/baWKhZF1gphGFki+WHRVnlYBriHRiHaiKovLxvaGd23HuBsQmqCCE70rQBk9mpPt7Thot+gdXg==", "households"=>{"name"=>"Party House"}, "commit"=>"Update", "id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "households" SET "name" = $1, "updated_at" = $2 WHERE "households"."id" = $3  [["name", "Party House"], ["updated_at", "2017-11-16 04:16:56.688073"], ["id", 1]]
+  [1m[36m (3.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/households/1
+Completed 302 Found in 11ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 04:16:56 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered households/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/households/1" for 129.81.34.41 at 2017-11-16 04:17:00 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AH71oRR+w+B0N+MlizDIRSj5Q/SZh0hUk7crjBPfKfaK+mfWGh2lQyad/rQeOx1FowJ+/D7ippLgDBJKhea83g==", "households"=>{"name"=>"House 1"}, "commit"=>"Update", "id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "households" SET "name" = $1, "updated_at" = $2 WHERE "households"."id" = $3  [["name", "House 1"], ["updated_at", "2017-11-16 04:17:00.712366"], ["id", 1]]
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/households/1
+Completed 302 Found in 9ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 04:17:00 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered households/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 04:17:02 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.9ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 04:17:59 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mHousehold Load (0.6ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 04:18:08 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/households" for 129.81.34.41 at 2017-11-16 04:18:13 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lkHV7+824006POKkfNWfAb+RgTXEVBuW7E9euPcQ+9scxUeY4VWF7miW/zXp3koBNGq8PWMx9VCf9Gd+YSlu8w==", "households"=>{"name"=>"House 2"}, "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "House 2"], ["created_at", "2017-11-16 04:18:13.481471"], ["updated_at", "2017-11-16 04:18:13.481471"]]
+  [1m[36m (3.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/households
+Completed 302 Found in 10ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 04:18:13 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households/3" for 129.81.34.41 at 2017-11-16 04:18:15 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered households/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 04:18:19 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 04:18:34 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 04:18:38 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/access/logout" for 129.81.34.41 at 2017-11-16 04:18:44 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 04:18:44 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://bryce-chores-brycebullock.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 04:18:44 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
