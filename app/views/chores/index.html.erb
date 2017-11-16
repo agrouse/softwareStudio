@@ -17,9 +17,9 @@
 
         
         <tr>
-         <td>  <a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+         <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
          <td><%= t.priority %>   </td>
-         <td> <%= t.person_assigned%></td>
+         <td><%= t.person_assigned%></td>
          <td><%= button_to "Completed", t, :method => :delete %></td>
      </tr>
    

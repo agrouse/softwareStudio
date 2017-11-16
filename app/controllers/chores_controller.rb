@@ -7,17 +7,17 @@ class ChoresController < ApplicationController
     
     def show
         id = params[:id]
-        @chore = Chore.find(params[:id])
-        @chore = Chore.find(id)
+        @chores = Chore.find(params[:id])
+        @chores = Chore.find(id)
     end
     
     def new
-        @chore = Chore.new
+        @chores = Chore.new
         # default: render 'new' template
     end
     
     def create 
-        @chore = Chore.create!(chore_params)
+        @chores = Chore.create!(chore_params)
         redirect_to chores_path
     end
     
@@ -26,30 +26,30 @@ class ChoresController < ApplicationController
     #to do this--keeping it in the database but removing it from the screen
     #idea: based on a boolean completed, it'll show up on chores_path
     def complete 
-        @chore = Chore.find params[:id]
-        flash[:notice] = "#{@chore.task} was successfully completed."
-        @chore.destroy
+        @chores = Chore.find params[:id]
+        flash[:notice] = "#{@chores.task} was successfully completed."
+        @chores.destroy
         redirect_to chores_path
         
     end
     
     def update
-       @chore = Chore.find params[:id]
-       @chore.update_attributes!(chore_params)
-       flash[:notice] = "#{@chore.task} was successfully updated."
-       redirect_to chore_path(@chore)
+       @chores = Chore.find params[:id]
+       @chores.update_attributes!(chore_params)
+       flash[:notice] = "#{@chores.task} was successfully updated."
+       redirect_to chore_path(@chores)
     end
     
     def destroy
-        @chore = Chore.find params[:id]
-        @chore.destroy
+        @chores = Chore.find params[:id]
+        @chores.destroy
         redirect_to chores_path
     end
     
     private 
         def chore_params
     params.require(:chore).permit(:task,:priority,:status,:description,
-    :person_assigned,:last_accomplished,:history,:household)
+    :person_assigned,:last_accomplished,:history,:household,:household_id)
         end
     
 end
