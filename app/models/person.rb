@@ -1,8 +1,6 @@
 class Person < ActiveRecord::Base
     has_secure_password
     belongs_to :household
-    ALPHA = /\A[A-Za-z]+\Z/
-    ALPHANUMERIC = /\A[a-zA-Z0-9]+\Z/i
     
     validates :first_name, :presence => true,
                             :length => { :within => 2..30 },
@@ -11,9 +9,11 @@ class Person < ActiveRecord::Base
     validates :last_name, :presence => true,
                             :length => { :within => 2..30 },
                             :format => /\A[a-zA-Z]+\Z/
-                            
-    validates :password, :presence => true,
-                            :length => { :within => 7..30}
+               
+    validates :description, :length => { :within => 0..30},
+                            :format => /\A[a-zA-Z0-9 ]+\Z/
+    #validates :password, :presence => true,
+    #                        :length => { :within => 7..30}
     
     validates :username, :presence => true,
                             :length => { :within => 3..30}
