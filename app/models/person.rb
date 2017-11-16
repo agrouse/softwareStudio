@@ -10,8 +10,8 @@ class Person < ActiveRecord::Base
                             :length => { :within => 2..30 },
                             :format => /\A[a-zA-Z]+\Z/
                
-    validates :description, :length => { :within => 0..30},
-                            :format => /\A[a-zA-Z0-9 ]+\Z/
+    #validates :description, :length => { :within => 0..30}
+    #                        :format => /\A[a-zA-Z0-9 ]+\Z/
     #validates :password, :presence => true,
     #                        :length => { :within => 7..30}
     
