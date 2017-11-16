@@ -18,7 +18,7 @@ class PeopleController < ApplicationController
     end
     
     def create 
-        @people = Person.create!(people_params)
+        @people = Person.create(people_params)
         redirect_to people_path
     end
     
@@ -29,7 +29,7 @@ class PeopleController < ApplicationController
     
     def update
        @people = Person.find params[:id]
-       @people.update_attributes!(people_params)
+       @people.update_attributes(people_params)
        flash[:notice] = "#{@people.first_name} was successfully updated."
        redirect_to person_path(@people)
     end
