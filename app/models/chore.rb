@@ -3,6 +3,6 @@ class Chore < ActiveRecord::Base
     
     validates :task, presence: true,
                 :length => { :within => 4..30 },
-                :format => /\A[a-zA-Z]+\Z/
+                :format => /\A[a-zA-Z ]+\Z/
            
 end
