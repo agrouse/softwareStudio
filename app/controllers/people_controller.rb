@@ -30,7 +30,7 @@ class PeopleController < ApplicationController
     def update
        @people = Person.find params[:id]
        @people.update_attributes!(people_params)
-       flash[:notice] = "#{@people.name} was successfully updated."
+       flash[:notice] = "#{@people.first_name} was successfully updated."
        redirect_to person_path(@people)
     end
     
@@ -42,7 +42,7 @@ class PeopleController < ApplicationController
     
     private 
         def people_params
-    params.require(:people).permit(:first_name, :last_name,:password,:username,:description,:household)
+    params.require(:people).permit(:first_name, :last_name,:password,:username,:description,:household,:household_id)
         end
     
 end

@@ -7,6 +7,7 @@
                     <th>Name</th>
                     <th>Username</th>
                     <th>Description</th>
+                    <th>Household</th>
                     <th>Delete</th>
                 </div>
             </tr>
@@ -17,8 +18,12 @@
         <tr>
          <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
          <td><%= t.username %>   </td>
-         <td> <%= t.description%></td>
-         <td> <%= t.household.name></td>
+         <td><%= t.description%></td>
+         <%if t.household%>
+             <td><%= t.household.name%></td>
+         <%else%>
+             <td>None</td>
+         <%end%>
          <td><%= button_to "Delete", t, :method => :delete %></td>
      </tr>
    

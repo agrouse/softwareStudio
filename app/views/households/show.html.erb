@@ -1,17 +1,11 @@
-
 <div id="page_content">
 
 
 <h2> Details about <%= @household.name %> </h2>
  <ul>
-  <li>People:
-  <% @household.people.each do |name| =></li>
-      <li><%= name.name %></li>
-    <% end %>
+  <li>Time Created:</li>
+      <li><%= @household.created_at %></li>
 </ul>
-<br>
-
 
 <%= link_to 'Back to house list', households_path %>
-
 </div>

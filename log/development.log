@@ -4466,3 +4466,2792 @@ Cannot render console from 129.81.188.69! Allowed networks: 127.0.0.1, ::1, 127.
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 129.81.188.69 at 2017-11-15 22:40:00 +0000
 Cannot render console from 129.81.188.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.34.41 at 2017-11-16 02:05:02 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.34.41 at 2017-11-16 02:05:02 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 446ms (Views: 433.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/households.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 129.81.34.41 at 2017-11-16 02:05:03 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/households.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 129.81.34.41 at 2017-11-16 02:05:03 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 02:05:04 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.41 at 2017-11-16 02:05:10 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MYHNhkcplbfEEE6+GZVRp1RZOKbeMwav6VEIf0XzDVy7BV/xSUrzFJa6Uy+MnoSn36IFrnlW6Gma6jG508qYdA==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (2.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 137ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:05:11 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+LoadError (Unable to autoload constant ChoresController, expected /home/ubuntu/workspace/app/controllers/chores_controller.rb to define it):
+  activesupport (4.2.5) lib/active_support/dependencies.rb:495:in `load_missing_constant'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.5) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.7ms)
+
+
+Started GET "/" for 129.81.34.41 at 2017-11-16 02:08:50 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.34.41 at 2017-11-16 02:08:50 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 323ms (Views: 313.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 02:08:53 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.41 at 2017-11-16 02:08:57 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KeigW1GK1GvAHASJ0Nx9p5VkeQWMH+hEPGL1gwdczxqIzD2YyVN8v2qbYOySKT2Fa6s7LFVkWdjSrIQmiTmFA==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (1.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 162ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:08:58 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (1.1ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (20.4ms)
+  Rendered chores/index.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 118ms (Views: 109.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/chores/2" for 129.81.34.41 at 2017-11-16 02:09:01 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChore Load (0.5ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered chores/_chore_form.html.erb (5.9ms)
+  Rendered chores/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 94ms (Views: 87.9ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/chores/2" for 129.81.34.41 at 2017-11-16 02:09:07 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9AgMagxqrw3T0+hu5pCAKokzaXb6rI26nv/CIvvsJM1+jJ4dAgnJroF59f9zm1UqAshUfl3JY3ztRPvkbdWx5Q==", "chore"=>{"task"=>"Sweep floors", "priority"=>"high", "person_assigned"=>"Bryce"}, "commit"=>"Update", "id"=>"2"}
+  [1m[35mChore Load (0.5ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "chores" SET "priority" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["priority", "high"], ["updated_at", "2017-11-16 02:09:07.532226"], ["id", 2]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores/2
+Completed 302 Found in 13ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/chores/2" for 129.81.34.41 at 2017-11-16 02:09:07 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChore Load (0.5ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:10 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/access/reg" for 129.81.34.41 at 2017-11-16 02:09:11 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:12 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/access/reg" for 129.81.34.41 at 2017-11-16 02:09:21 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.34.41 at 2017-11-16 02:09:21 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.34.41 at 2017-11-16 02:09:22 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:24 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:27 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.7ms)
+  Rendered chores/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  Rendered chores/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (1.1ms)
+  Rendered chores/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:32 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:32 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:32 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.3ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:33 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:33 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.2ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:33 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.8ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:33 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:34 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:34 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:34 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.9ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:34 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.7ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (1.1ms)
+  Rendered chores/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:34 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.3ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.7ms)
+  Rendered chores/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.7ms)
+  Rendered chores/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  Rendered chores/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.7ms)
+  Rendered chores/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.7ms)
+  Rendered chores/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:09:36 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/household" for 129.81.34.41 at 2017-11-16 02:09:40 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/household"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (68.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (122.6ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:09:44 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mHousehold Load (0.8ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 53ms (Views: 40.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:09:47 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:8: syntax error, unexpected =>
+...sehold.people.each do |name| =></li>
+...                               ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:9: unknown regexp option - l
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: unterminated string meets end of file
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/households/show.html.erb:8: syntax error, unexpected =>
+  app/views/households/show.html.erb:9: unknown regexp option - l
+  app/views/households/show.html.erb:17: unknown regexp options - dv
+  app/views/households/show.html.erb:17: unterminated string meets end of file
+  app/views/households/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.4ms)
+
+
+Started GET "/" for 129.81.34.41 at 2017-11-16 02:14:00 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.34.41 at 2017-11-16 02:14:01 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 363ms (Views: 349.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 02:14:04 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.41 at 2017-11-16 02:14:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eO6LE+Qio95gV1Bhv1pOWBnpFnNBlVVmnZdb/1xdVXLyahlk6kHFfTL9TfAqUZtYkhIre+bwu6DuLGI5ymTAWg==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.8ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 135ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:14:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (13.8ms)
+  Rendered chores/index.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 78ms (Views: 70.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:14:12 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:21: syntax error, unexpected '<'
+         <td> '.freeze;@output_buffer.append=( t.household.name></td>
+                                                                 ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:22: unknown regexp options - td
+unmatched close parenthesis: /td>
+         <td><%= button_to "Delete", t, :method => :delete );@output_buffer.safe_append='</
+/home/ubuntu/workspace/app/views/people/index.html.erb:23: syntax error, unexpected '<'
+     </tr>
+      ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:28: unknown regexp options - tabl
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/people/index.html.erb:33: unterminated regexp meets end of file):
+  app/views/people/index.html.erb:21: syntax error, unexpected '<'
+  app/views/people/index.html.erb:22: unknown regexp options - td
+  app/views/people/index.html.erb:23: syntax error, unexpected '<'
+  app/views/people/index.html.erb:28: unknown regexp options - tabl
+  app/views/people/index.html.erb:30: syntax error, unexpected '<'
+  app/views/people/index.html.erb:33: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:14:38 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.6ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (166.3ms)
+Completed 200 OK in 206ms (Views: 201.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:15:28 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:15:34 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:15:41 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dso/WLSf/aSli6/GXPkYNqmHQQaZIybPxR6QjB+QC+r8Tq0vuvybB/chslfJ8s02Inx8Dj5GyAm2palKiamewg==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household"=>"home1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::AssociationTypeMismatch (Household(#69972878172280) expected, got String(#19914860)):
+  app/controllers/people_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.3ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:16:04 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dso/WLSf/aSli6/GXPkYNqmHQQaZIybPxR6QjB+QC+r8Tq0vuvybB/chslfJ8s02Inx8Dj5GyAm2palKiamewg==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household"=>"other"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::AssociationTypeMismatch (Household(#69972878172280) expected, got String(#19914860)):
+  app/controllers/people_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:16:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (1.0ms)
+  Rendered chores/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:16:12 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:16:15 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mHousehold Load (0.7ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:16:17 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:8: syntax error, unexpected =>
+...sehold.people.each do |name| =></li>
+...                               ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:9: unknown regexp option - l
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: unknown regexp options - dv
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: unterminated string meets end of file
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/households/show.html.erb:8: syntax error, unexpected =>
+  app/views/households/show.html.erb:9: unknown regexp option - l
+  app/views/households/show.html.erb:17: unknown regexp options - dv
+  app/views/households/show.html.erb:17: unterminated string meets end of file
+  app/views/households/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.8ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:16:57 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people" WHERE "people"."household_id" = $1  [["household_id", 1]]
+  Rendered households/show.html.erb within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<Person:0x007f47aa193ba8>):
+     6:  <ul>
+     7:   <li>People:
+     8:   <%= @household.people.each do |name| %></li>
+     9:       <li><%= name.name %></li>
+    10:     <% end %>
+    11: </ul>
+    12: <br>
+  app/views/households/show.html.erb:9:in `block in _app_views_households_show_html_erb___1454698838218555276_69972887095640'
+  app/views/households/show.html.erb:8:in `_app_views_households_show_html_erb___1454698838218555276_69972887095640'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.6ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:22:26 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people" WHERE "people"."household_id" = $1  [["household_id", 1]]
+  Rendered households/show.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<Person:0x007f47aa9b5a48>):
+     6:  <ul>
+     7:   <li>People:</li>
+     8: <!--  <%= @household.people.each do |person| %>
+     9:       <li><%= person.name %></li>
+    10:     <% end %>-->
+    11: </ul>
+    12: <br>
+  app/views/households/show.html.erb:9:in `block in _app_views_households_show_html_erb___1454698838218555276_69972890919600'
+  app/views/households/show.html.erb:8:in `_app_views_households_show_html_erb___1454698838218555276_69972890919600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:23:14 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:9: syntax error, unexpected '<'
+      <li>'.freeze;@output_buffer.ap...
+       ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:11: unknown regexp option - l
+/home/ubuntu/workspace/app/views/households/show.html.erb:12: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/households/show.html.erb:15: syntax error, unexpected tCONSTANT, expecting keyword_end
+...t_buffer.append=( link_to 'Back to house list', households_p...
+...                               ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+</div>'.freeze;@output_buffer.to_s
+ ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: unterminated regexp meets end of file):
+  app/views/households/show.html.erb:9: syntax error, unexpected '<'
+  app/views/households/show.html.erb:11: unknown regexp option - l
+  app/views/households/show.html.erb:12: syntax error, unexpected '<'
+  app/views/households/show.html.erb:15: syntax error, unexpected tCONSTANT, expecting keyword_end
+  app/views/households/show.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+  app/views/households/show.html.erb:17: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.8ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:23:48 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:9: syntax error, unexpected '<'
+      <li>'.freeze;@output_buffer.ap...
+       ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:11: unknown regexp option - l
+/home/ubuntu/workspace/app/views/households/show.html.erb:12: syntax error, unexpected '<'
+/home/ubuntu/workspace/app/views/households/show.html.erb:15: syntax error, unexpected tCONSTANT, expecting keyword_end
+...t_buffer.append=( link_to 'Back to house list', households_p...
+...                               ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+</div>'.freeze;@output_buffer.to_s
+ ^
+/home/ubuntu/workspace/app/views/households/show.html.erb:17: unterminated regexp meets end of file):
+  app/views/households/show.html.erb:9: syntax error, unexpected '<'
+  app/views/households/show.html.erb:11: unknown regexp option - l
+  app/views/households/show.html.erb:12: syntax error, unexpected '<'
+  app/views/households/show.html.erb:15: syntax error, unexpected tCONSTANT, expecting keyword_end
+  app/views/households/show.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+  app/views/households/show.html.erb:17: unterminated regexp meets end of file
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:24:41 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `each' for Wed, 15 Nov 2017 20:50:10 UTC +00:00:Time):
+     5: <h2> Details about <%= @household.name %> </h2>
+     6:  <ul>
+     7:   <li>People:</li>
+     8:   <%= @household.created_at.each do |time| %>
+     9:       <li><%= time %></li>
+    10:   <% end %>-->
+    11: </ul>
+  app/views/households/show.html.erb:8:in `_app_views_households_show_html_erb___1454698838218555276_69972888699020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.1ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:25:27 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/households/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.3ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:25:48 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/households/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.7ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:26:23 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/households/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:26:46 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/households/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.0ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:27:05 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/households/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/households/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.6ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:27:51 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:27:58 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.7ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/households/2" for 129.81.34.41 at 2017-11-16 02:27:59 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered households/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:28:01 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.6ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/households/2" for 129.81.34.41 at 2017-11-16 02:28:03 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for HouseholdsController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 129.81.34.41 at 2017-11-16 02:28:20 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/landing" for 129.81.34.41 at 2017-11-16 02:28:20 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 02:28:22 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.41 at 2017-11-16 02:28:27 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXE4TilCFpIcNjFwIkz2Ak7+Xf4CfTHD3uQHH7dRSPwT9ao5JyFwMU6cLOG3RyMCxQVg9qUY3wWtXz7ZIWjd1A==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 70ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:28:27 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (1.0ms)
+  Rendered chores/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chores/1" for 129.81.34.41 at 2017-11-16 02:28:30 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/chores/1" for 129.81.34.41 at 2017-11-16 02:28:51 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y81t5Ta41x5GKUNlfI70KDBc1KSg6Q/j7mPJOhk8tSFBSf+SONuxvRSDXvTphSEou6fprAeM4SWd2PD8jwUgCQ==", "chore"=>{"task"=>"Wash Windows", "priority"=>"high", "person_assigned"=>"Amy"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "chores" SET "priority" = $1, "updated_at" = $2 WHERE "chores"."id" = $3[0m  [["priority", "high"], ["updated_at", "2017-11-16 02:28:51.225780"], ["id", 1]]
+  [1m[35m (3.1ms)[0m  COMMIT
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores/1
+Completed 302 Found in 11ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/chores/1" for 129.81.34.41 at 2017-11-16 02:28:51 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:28:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/chores" for 129.81.34.41 at 2017-11-16 02:29:13 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oPM6zSuLlWra2o6iJygpm+PhJx+2Y+6LArOoDty/vqYqd6i6JejzyYhwkzOyI/ybaBoaFxEGAE1xCJHISoYrjg==", "chore"=>{"task"=>"Wipe counters", "priority"=>"low", "person_assigned"=>"Randomized"}, "commit"=>"Add"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["task", "Wipe counters"], ["priority", "low"], ["person_assigned", "Randomized"], ["created_at", "2017-11-16 02:29:13.392025"], ["updated_at", "2017-11-16 02:29:13.392025"]]
+  [1m[35m (4.1ms)[0m  COMMIT
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 10ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:29:13 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (0.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:29:15 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:29:18 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:29:32 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sXbBLQXsBpXR8Wiz2FgQeLrU13rYn4pFff3QvjQ5e5k78lNaC49gNoNbdSJNU8V4MS/qcn/6ZIMORul4ogDusQ==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household"=>"home1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::AssociationTypeMismatch (Household(#69972878172280) expected, got String(#19914860)):
+  app/controllers/people_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:29:53 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:29:54 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:29:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:29:57 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:29:58 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:30:01 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/households/1" for 129.81.34.41 at 2017-11-16 02:30:04 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHousehold Load (0.7ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered households/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:30:05 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 129.81.34.41 at 2017-11-16 02:30:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:30:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://bryce-chores-brycebullock.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 02:30:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.41 at 2017-11-16 02:31:27 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xX7xBAtPblaOvyBeX/YyDRE+V/fi0qzeEn3dMaSIBs5P+mNzBSwI9dwVPc/K/ecNmsVq/0W3QhhhxuT3MrGT5g==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 77ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:31:27 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mChore Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.7ms)
+  Rendered chores/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:31:29 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/people/4" for 129.81.34.41 at 2017-11-16 02:31:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:31:37 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:31:39 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:31:41 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:32:29 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:32:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mHousehold Load (0.7ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/access/landing" for 129.81.34.41 at 2017-11-16 02:32:35 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:32:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:32:56 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  Rendered chores/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 02:32:58 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:33:00 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:34:48 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:34:49 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:34:54 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UM0bNhUm+Y6uWSv+OlRu0S10KZst3OS0RPeP4YwmRgnaSYlBG0WfLfzzNm+vX7vRpo8Uk4q5CnI3TLYnGh/TIQ==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household"=>"home1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::AssociationTypeMismatch (Household(#69972878172280) expected, got String(#19914860)):
+  app/controllers/people_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:37:14 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:37:36 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.2ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:39:16 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:39:19 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTtoQymMHvQJL4vJrw9nROh1AmIhjnm8m9E6vGV6hi2vv/o0J+94V1uFllg6BLJEY44/aobrl3roagN680MTBQ==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household"=>"home1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::AssociationTypeMismatch (Household(#69972878172280) expected, got String(#19914860)):
+  app/controllers/people_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.9ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:39:46 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:39:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:42:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    26:     <%= text_field :people, :description %>
+    27:     
+    28:     <%= label :people, :household, 'Household' %>
+    29:     <%= select :people, :household, @households.each%>
+    30:     
+    31:     
+    32:     <%= submit_tag 'Update'%>
+  app/views/people/show.html.erb:29:in `block in _app_views_people_show_html_erb__3638519216111310925_69972887709800'
+  app/views/people/show.html.erb:18:in `_app_views_people_show_html_erb__3638519216111310925_69972887709800'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:44:26 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/app/views/people/show.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/people/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/people/show.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:44:57 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:38: syntax error, unexpected keyword_end
+    '.freeze;@output_buffer.append=(end);@output_buffer.safe_append='
+                                       ^
+/home/ubuntu/workspace/app/views/people/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/people/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/people/show.html.erb:38: syntax error, unexpected keyword_end
+  app/views/people/show.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/people/show.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.4ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:45:30 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:38: syntax error, unexpected keyword_end
+    '.freeze;@output_buffer.append=(end);@output_buffer.safe_append='
+                                       ^
+/home/ubuntu/workspace/app/views/people/show.html.erb:39: syntax error, unexpected keyword_end
+'.freeze;@output_buffer.append=(end);@output_buffer.safe_append='
+                                   ^
+/home/ubuntu/workspace/app/views/people/show.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/people/show.html.erb:45: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/people/show.html.erb:38: syntax error, unexpected keyword_end
+  app/views/people/show.html.erb:39: syntax error, unexpected keyword_end
+  app/views/people/show.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/people/show.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.4ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:45:52 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:46:36 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+...eze;@output_buffer.append=(else );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/workspace/app/views/people/show.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+/home/ubuntu/workspace/app/views/people/show.html.erb:45: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/people/show.html.erb:47: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+  app/views/people/show.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+  app/views/people/show.html.erb:45: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/people/show.html.erb:47: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.0ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:46:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:47:14 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Hi):
+    36:     @households.each do |h| %>
+    37:     <%= h.name %>
+    38:     <%end%>
+    39:     <%else Hi%>
+    40: <%end%>
+    41: <%= link_to 'Back to profile list', people_path %>
+    42: 
+  app/views/people/show.html.erb:39:in `_app_views_people_show_html_erb__3638519216111310925_69972888706600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.6ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:47:21 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+...eze;@output_buffer.append=(else Hi);@output_buffer.safe_appe...
+...                               ^):
+  app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.0ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:47:43 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+...eze;@output_buffer.append=(else puts "Hi");@output_buffer.sa...
+...                               ^):
+  app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:48:05 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+@output_buffer.append=(else puts "Hi");@output_buffer.safe_append='
+                           ^):
+  app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:48:26 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered people/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+@output_buffer.append=(else "hi");@output_buffer.safe_append='
+                           ^):
+  app/views/people/show.html.erb:39: syntax error, unexpected keyword_else
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:48:40 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:49:04 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:52:14 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:52:16 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rwxuZe8IuRv42JZOcBQkj97X4mOVP3cZKQymsZpExQ0liPwS4WvfuKpyi9/lH/GPVSzfazJamd9at593DH1QJQ==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::AssociationTypeMismatch (Household(#69972878172280) expected, got String(#19914860)):
+  app/controllers/people_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:52:43 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:52:46 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UNHrfJLkVDLwkggZVv7S/hMfbvXsdH1omFiHKNV9sVfx9Xa/Cj385loVbHwUC5Lc7dAs3DUPzPR2lvaNWxj7Q==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household_id"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+Unpermitted parameter: household_id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `name' for #<Person:0x007f47aa806800>):
+  app/controllers/people_controller.rb:33:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:54:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 161ms (Views: 144.4ms | ActiveRecord: 4.6ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:54:16 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y3kROI2FeuvvTcOkAIxnoQovAxFiKKuRR0M12o2kA2bp/YNPg+YcSL3n3jWVh7KhgdQ+GcVNRVc0+AwcG52WTg==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household_id"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+Unpermitted parameter: household_id
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (114.9ms)[0m  COMMIT
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/3
+Completed 302 Found in 131ms (ActiveRecord: 115.6ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:54:16 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:54:22 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XB6yxfP9nDitnhGT298uIJBSSuXY2Y08R/g8syKuJuDWmiCy/Z76m/80DAJO1PsgG6l37X+8Y/o0QwV1tJezyA==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"ok guy", "household_id"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+Unpermitted parameter: household_id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "people" SET "description" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["description", "ok guy"], ["updated_at", "2017-11-16 02:54:22.458945"], ["id", 3]]
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/3
+Completed 302 Found in 10ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:54:22 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/people/3" for 129.81.34.41 at 2017-11-16 02:54:29 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dDHUgj6lP0WMzFRNw+AYmct++BsqEWRcxCghBItyytL+tUb1MMZZ5t5mSdxW682ZQIXFE410ipq3kxjCHUtf+g==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"great guy", "household_id"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Unpermitted parameter: household_id
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "people" SET "description" = $1, "updated_at" = $2 WHERE "people"."id" = $3[0m  [["description", "great guy"], ["updated_at", "2017-11-16 02:54:29.859833"], ["id", 3]]
+  [1m[35m (3.8ms)[0m  COMMIT
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/3
+Completed 302 Found in 10ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/people/3" for 129.81.34.41 at 2017-11-16 02:54:29 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:54:36 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/people/4" for 129.81.34.41 at 2017-11-16 02:54:38 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 54ms (Views: 39.1ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/people/4" for 129.81.34.41 at 2017-11-16 02:54:52 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fXZdE6TSpVPgAjkUJE015mEnO5/EU/EmUAS+VS9mWfT38s9kqrHD8LKoJIWxRuDm6twGl2M2H+Ajv4eTuV/M3A==", "people"=>{"first_name"=>"Amy", "last_name"=>"Grouse", "description"=>"test use", "household_id"=>"1"}, "commit"=>"Update", "id"=>"4"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 4]]
+Unpermitted parameter: household_id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "people" SET "description" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["description", "test use"], ["updated_at", "2017-11-16 02:54:52.224428"], ["id", 4]]
+  [1m[36m (2.9ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/4
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/people/4" for 129.81.34.41 at 2017-11-16 02:54:52 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mHousehold Load (0.9ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/people/4" for 129.81.34.41 at 2017-11-16 02:54:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CRkdcxh3S5A+/h3pdxKx2D5MpQTPJR95W1UO8QLLyHODnY8EFhQtM2xUAHjiGWTYtbeYDGhA8b8o7jc3lPJdWw==", "people"=>{"first_name"=>"Amy", "last_name"=>"Grouse", "description"=>"test user", "household_id"=>"1"}, "commit"=>"Update", "id"=>"4"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Unpermitted parameter: household_id
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "people" SET "description" = $1, "updated_at" = $2 WHERE "people"."id" = $3[0m  [["description", "test user"], ["updated_at", "2017-11-16 02:54:55.745763"], ["id", 4]]
+  [1m[35m (3.5ms)[0m  COMMIT
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/4
+Completed 302 Found in 11ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/people/4" for 129.81.34.41 at 2017-11-16 02:54:55 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 129.81.34.41 at 2017-11-16 02:55:30 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.34.41 at 2017-11-16 02:55:30 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 367ms (Views: 356.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.41 at 2017-11-16 02:55:33 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.41 at 2017-11-16 02:55:38 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdIbcTImcFjzPVInXIpzMk6OqPHE1kCO9BnGpSHVqoXvVokGPEUW+6GXT7bJgaYyxXWV+WOzrkiHov9jt+w/rQ==", "username"=>"test_user", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to https://bryce-chores-brycebullock.c9users.io/chores
+Completed 302 Found in 98ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/chores" for 129.81.34.41 at 2017-11-16 02:55:38 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (11.3ms)
+  Rendered chores/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 79ms (Views: 72.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:55:44 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/people/3" for 129.81.34.41 at 2017-11-16 02:55:56 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"coTOO0VKxv13cj95Y56qy7Bnur7jOuA60q9o/Q533CT4AFxMSymgXiXYIuj2lX/LO5yHtkRfDvyhFFE7mE5JDA==", "id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 3]]
+  [1m[35m (4.6ms)[0m  COMMIT
+Redirected to https://bryce-chores-brycebullock.c9users.io/people
+Completed 302 Found in 11ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:55:56 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/access/reg" for 129.81.34.41 at 2017-11-16 02:55:59 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 129.81.34.41 at 2017-11-16 02:56:13 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ra5yy3b/VOsHGh+SSO3kW+ag1QFNLF4hzADvgWUc9TonKuC8eJwySFWwAgPd5jFbbVvoCepJsOe/u9ZH8yVgEg==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "username"=>"cool_dude22", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("first_name", "last_name", "password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Bryce"], ["last_name", "Bullock"], ["password_digest", "$2a$10$087mPX1ScmMBu0EXXyhYTOJcIjS8EeE/BQuPDJMx2ImJ6TSOTOfpG"], ["username", "cool_dude22"], ["created_at", "2017-11-16 02:56:13.831802"], ["updated_at", "2017-11-16 02:56:13.831802"]]
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/people
+Completed 302 Found in 80ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:56:13 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    19:          <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
+    20:          <td><%= t.username %>   </td>
+    21:          <td><%= t.description%></td>
+    22:          <td><%= t.household.name%></td>
+    23:          <td><%= button_to "Delete", t, :method => :delete %></td>
+    24:      </tr>
+    25:    
+  app/views/people/index.html.erb:22:in `block in _app_views_people_index_html_erb___4232899304326812828_70251355133740'
+  app/views/people/index.html.erb:17:in `_app_views_people_index_html_erb___4232899304326812828_70251355133740'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.8ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:59:39 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:22: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+..._buffer.append=(if t.household);@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:24: syntax error, unexpected keyword_else
+...eze;@output_buffer.append=(else);@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+/home/ubuntu/workspace/app/views/people/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/people/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/people/index.html.erb:22: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/people/index.html.erb:24: syntax error, unexpected keyword_else
+  app/views/people/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+  app/views/people/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+  app/views/people/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+  app/views/people/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/people/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 02:59:57 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  Rendered people/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/people/index.html.erb:22: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+..._buffer.append=(if t.household);@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:24: syntax error, unexpected keyword_else, expecting ')'
+/home/ubuntu/workspace/app/views/people/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+/home/ubuntu/workspace/app/views/people/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ubuntu/workspace/app/views/people/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+/home/ubuntu/workspace/app/views/people/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/people/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/people/index.html.erb:22: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/people/index.html.erb:24: syntax error, unexpected keyword_else, expecting ')'
+  app/views/people/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+  app/views/people/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+  app/views/people/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+  app/views/people/index.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/people/index.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.3ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 03:01:24 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 03:01:42 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  Rendered people/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     9:   <li>Description:
+    10:     <%= @people.description %>
+    11:   <li>household:
+    12:     <%= @people.household.name %> </li>
+    13: </ul>
+    14: <br>
+    15: 
+  app/views/people/show.html.erb:12:in `_app_views_people_show_html_erb__1436603799958779949_70251358759580'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.8ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 03:02:56 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  Rendered people/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/people/5" for 129.81.34.41 at 2017-11-16 03:03:00 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aIxN54MBXnvqiY1/9dZT+1JEafEjdc49fRl3BdwrZeriCN+QjWI42LgjkO5g3Yb72b9U+YQQIPsOok7DShLwwg==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"", "household_id"=>"1"}, "commit"=>"Update", "id"=>"5"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+Unpermitted parameter: household_id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "people" SET "description" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["description", ""], ["updated_at", "2017-11-16 03:03:00.493331"], ["id", 5]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/5
+Completed 302 Found in 18ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 03:03:00 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  Rendered people/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/people/5" for 129.81.34.41 at 2017-11-16 03:03:11 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXOo4mlIX4NFbCQOC6usP0Qo6A2gQ+NkGAt7DmsCge0b9zqVZys5IBfGOZ+eoHk/z9PVBQcmDaJrsELI/TsUxQ==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"cool_dude", "household_id"=>"1"}, "commit"=>"Update", "id"=>"5"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+Unpermitted parameter: household_id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "people" SET "description" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["description", "cool_dude"], ["updated_at", "2017-11-16 03:03:11.779071"], ["id", 5]]
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/5
+Completed 302 Found in 10ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 03:03:11 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  Rendered people/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 03:03:19 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.7ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 03:03:21 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/4" for 129.81.34.41 at 2017-11-16 03:03:23 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/people/4" for 129.81.34.41 at 2017-11-16 03:03:25 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLUqayxnCQVPgjDcRyBGmD9MAjHJRwNOMYOxj76mEuqWMbgcIgRvph0oLU3SK5OYtLc/OW4i7YhCOIhJKJ+Hwg==", "people"=>{"first_name"=>"Amy", "last_name"=>"Grouse", "description"=>"test user", "household_id"=>"1"}, "commit"=>"Update", "id"=>"4"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 4]]
+Unpermitted parameter: household_id
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/4
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/people/4" for 129.81.34.41 at 2017-11-16 03:03:25 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 129.81.34.41 at 2017-11-16 03:03:31 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 03:03:33 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  Rendered people/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 03:04:09 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  Rendered people/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 44ms (Views: 28.6ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/people/5" for 129.81.34.41 at 2017-11-16 03:04:12 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uk4gfKj5Eimlq0xNGhZFHWsyylEswNCdyhNYaW4XmKEwyrILppp0ivcBUdyPHZAd4Mn3WYulPlu5qGGv+C4NiQ==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"cool_dude", "household_id"=>"1"}, "commit"=>"Update", "id"=>"5"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "people" SET "household_id" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["household_id", 1], ["updated_at", "2017-11-16 03:04:12.519384"], ["id", 5]]
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+Redirected to https://bryce-chores-brycebullock.c9users.io/people/5
+Completed 302 Found in 12ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/people/5" for 129.81.34.41 at 2017-11-16 03:04:12 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mHousehold Load (0.2ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/households" for 129.81.34.41 at 2017-11-16 03:04:22 +0000
+Cannot render console from 129.81.34.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.5ms)

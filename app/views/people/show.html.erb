@@ -9,7 +9,11 @@
   <li>Description:
     <%= @people.description %>
   <li>household:
-    <%= @people.household %> </li>
+    <%if @people.household%>
+        <%= @people.household.name %> </li>
+    <%else%>
+        None </li>
+    <%end%>
 </ul>
 <br>
 
@@ -25,12 +29,13 @@
     <%= label :people, :description, 'Description' %>
     <%= text_field :people, :description %>
     
-    <%= label :people, :household, 'Household' %>
-    <%= select :people, :household, ['home1', 'home2', 'home3','other']%>
+    <%= label :people, :household_id, 'Household' %>
+    <%= select :people, :household_id, [1]%>
     
     
     <%= submit_tag 'Update'%>
     <% end %>
+
 
 <%= link_to 'Back to profile list', people_path %>
 
