@@ -1,32 +1,43 @@
 <!-- div for styles -->
 <div id="page_content">
-<h1 style="color: black">Households (administrative page)</h1>
+<h1 style="color: black">Our House</h1>
         <table style="width:100%">
             <tr>
                 <div class="tbl-header">
-                    <th>Households</th>
-                    <th>Delete</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Description</th>
+                    <th>Household</th>
                 </div>
             </tr>
 
-    
-<%if @households
-  @households.each do |t| %>
+<%ses_id=session[:user_id]
+user_house_id=Person.find(ses_id).household_id%>
+
+<%if user_house_id != nil%>
+    <%if @people
+      @people.each do |t| %>
+        <%if t.household_id==user_house_id %>
         <tr>
-         <td><a href="<%= households_path %>/<%= t.id %>"><%= t.name %> </a> </td>
-         <td><%= button_to "Delete", t, :method => :delete %></td>
-     </tr>
-   
- <%end%> 
+             <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
+             <td><%= t.username %>   </td>
+             <td><%= t.description%></td>
+             <td><%= t.household.name%></td>
+         </tr>
+        <%end%>
+      <%end%>
+    <%end%> 
+ <%else%>
+    <%t=Person.find(ses_id)%>
+    <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
+        <td><%= t.username %>   </td>
+        <td><%= t.description%></td>
+        <td>None</td>
+        <!--<td><%= button_to "Delete", t, :method => :delete %></td>-->
  <%end%>
 </table>
 
 <br>
-<h2>Add Household</h2>
-        <%= form_tag households_path, class: "newHousehold", :method => :post do %>
-                <%= label :households, :name, 'Name:' %>
-                <%= text_field :households, :name %>
-                <%= submit_tag 'Submit'%>
-                <% end %>
+
 
 </div>
