@@ -8,7 +8,6 @@
                     <th>Username</th>
                     <th>Description</th>
                     <th>Household</th>
-                    <th>Delete</th>
                 </div>
             </tr>
 
@@ -24,7 +23,6 @@ user_house_id=Person.find(ses_id).household_id%>
              <td><%= t.username %>   </td>
              <td><%= t.description%></td>
              <td><%= t.household.name%></td>
-             <td><%= button_to "Delete", t, :method => :delete %></td>
          </tr>
         <%end%>
       <%end%>
