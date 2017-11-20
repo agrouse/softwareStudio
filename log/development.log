@@ -16775,3 +16775,1521 @@ Processing by PeopleController#index as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
   Rendered people/index.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 129.81.34.165 at 2017-11-20 05:53:00 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.34.165 at 2017-11-20 05:53:00 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 286ms (Views: 276.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.34.165 at 2017-11-20 05:53:03 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (12.8ms)
+  Rendered chores/index.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 157ms (Views: 145.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/access/logout" for 129.81.34.165 at 2017-11-20 05:53:23 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.34.165 at 2017-11-20 05:53:23 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.34.165 at 2017-11-20 05:53:23 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.34.165 at 2017-11-20 05:53:26 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MGWERNoMVKxZ/l2+QIRPXFGvXztAOY1B0NVe3ISUF1V6EHJpR5agAeNHHjrBBmOG3MmvuzdJeGf76zBvVUwy5w==", "username"=>"mcooper", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "mcooper"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 75ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.34.165 at 2017-11-20 05:53:26 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (0.6ms)
+  Rendered chores/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people" for 129.81.34.165 at 2017-11-20 05:53:27 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/people/1" for 129.81.34.165 at 2017-11-20 05:53:28 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/people/1" for 129.81.34.165 at 2017-11-20 05:53:33 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uBq+4r/gMlTlsouIDA8iWZpUm9epQonNzjHQy9dgzO/yb0jPInrG+V8LyAyNjQ6DFzJrV94yfOvlD754BrjpXQ==", "people"=>{"first_name"=>"Bryce", "last_name"=>"Bullock", "description"=>"hello", "household_id"=>"1"}, "commit"=>"Update", "id"=>"1"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Redirected to https://ss-project-eblake1.c9users.io/people/1
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/people/1" for 129.81.34.165 at 2017-11-20 05:53:33 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/access/landing" for 129.81.34.165 at 2017-11-20 05:53:36 +0000
+Cannot render console from 129.81.34.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 06:31:38 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 06:31:38 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 337ms (Views: 318.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 06:31:40 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/access/reg.html.erb:18: syntax error, unexpected '<', expecting ')'
+                <%= password_field :people, :p...
+                 ^
+/home/ubuntu/workspace/app/views/access/reg.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;                 end 
+                             ^
+/home/ubuntu/workspace/app/views/access/reg.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/access/reg.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/access/reg.html.erb:18: syntax error, unexpected '<', expecting ')'
+  app/views/access/reg.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+  app/views/access/reg.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/access/reg.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.2ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 06:32:16 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 06:32:34 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E6cxJRWIsLT8xsDuOgfAQMyKLBoMgCLwKccxkGrCMO5Z0scIiBJEGUZ/g2q7heyaQezcmnvw19YC+V8juxoVXA==", "people"=>{"first_name"=>"jane", "last_name"=>"doe", "username"=>"jdoe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (25.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 140ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 06:32:34 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 66ms (Views: 61.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/access/logout" for 24.252.82.128 at 2017-11-20 06:32:41 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 06:32:41 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 06:32:41 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 06:33:18 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 06:33:20 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 06:33:52 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6yTmzTp5hiN6VaWjFWMDQaWVC54nZ8h9Wv41arvtu32hURDgp+NyjsDs5ieU4S+bKPP7HlAXPVtxwFvZajWezw==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eblake2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 2.5ms)
+
+NoMethodError (undefined method `password_changed?' for #<Person:0x007f7df5ac4a48>
+Did you mean?  password_digest_changed?):
+  app/controllers/people_controller.rb:21:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.4ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 06:38:28 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 06:38:28 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 282ms (Views: 272.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 06:38:31 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 06:38:49 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U8s0h4kZY45s/o4KvkbDJHYed6VQUoDfMFNOUdozA+TOtr/g76RI4MKubyrezfWHL6JXuIxvyVX/yOKlrDpvQ==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eeb", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 119ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 06:38:49 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 06:38:49 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 24.252.82.128 at 2017-11-20 06:38:53 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 06:38:54 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 06:38:54 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 06:39:04 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aqbZ4P+7uMEC45hwlfnOtJASQrpPfI3lRuLAyxFtsy4g0y/NYiFMbLha2/QUe+JuHXSyOjgMeMNt3K54wLWWnA==", "username"=>"eeb", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eeb"]]
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 06:39:09 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Fh/iQ2njYyhB87X3JEmsQkp57BAQ5Aah3wreU9Gj0OSLYmkkD15IRu+jVNdEwprhE8XMDczZTysQkXKnp6q8Q==", "username"=>"eeb", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "eeb"]]
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 24.252.82.128 at 2017-11-20 06:39:21 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 06:39:21 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 06:39:21 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 06:44:40 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 06:44:40 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 276ms (Views: 265.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 06:44:45 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 06:45:09 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VB5tU3UWtYcJiGV7iGN/4seSZ0he1bniwNcA3e7m5bgea5t+6IxBKrMxJv8J4VM4SvSXyCmlTMTr6W5uPz7ACg==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eeb", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 121ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 06:45:09 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 06:45:09 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 13:38:58 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 13:38:59 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 385ms (Views: 373.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 13:39:02 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 13:39:17 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Jo3pORyHRmqE/KYVGvSMR2Obc1ZaCzp3mRCfFDiluiy78GJeejptBCqsRzV6f7rkOidTS4Y2c/1WizPgTqzWg==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eblake2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Unknown validator: 'MessageValidator'):
+  app/models/person.rb:25:in `<class:Person>'
+  app/models/person.rb:1:in `<top (required)>'
+  app/controllers/people_controller.rb:21:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.1ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 13:53:33 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 13:53:34 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 291ms (Views: 281.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 13:53:36 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 13:54:25 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 129.81.217.172 at 2017-11-20 16:48:56 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.217.172 at 2017-11-20 16:48:56 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 339ms (Views: 326.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.217.172 at 2017-11-20 16:48:59 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 129.81.217.172 at 2017-11-20 16:49:15 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hkTD9KQP1Ujz1dBtmw/xlDAJ01mEH0AWhQEHyKcqQCHMMTXZOZUh5Ulsk+kajd1OvW8j2fNvtTCuP2l7dvJlkw==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.3ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007fbc7a2f42a0>
+Did you mean?  attr_accessor):
+  app/models/person.rb:7:in `<class:Person>'
+  app/models/person.rb:1:in `<top (required)>'
+  app/controllers/people_controller.rb:21:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 129.81.217.172 at 2017-11-20 16:49:52 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.217.172 at 2017-11-20 16:49:53 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 340ms (Views: 325.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.217.172 at 2017-11-20 16:49:55 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 129.81.217.172 at 2017-11-20 16:50:06 +0000
+Cannot render console from 129.81.217.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nNr0uogCRJ06NfKNYlJBqn4RZnqfaZkjw+H8Yg0GWLjWrwKXFZiwMICMsQnj0G1w83eW+ugZbAXo35LR3N59Cg==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eblake2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.3ms)
+
+NoMethodError (undefined method `attr_protected' for #<Class:0x007f7cf62e1b50>
+Did you mean?  attr_reader):
+  app/models/person.rb:8:in `<class:Person>'
+  app/models/person.rb:1:in `<top (required)>'
+  app/controllers/people_controller.rb:21:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.4ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 17:07:57 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:07:58 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 337ms (Views: 326.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:08:01 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 17:08:03 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PvBGqiND9gQ1oGdDixvsHtozNKyPvpo0vHpfHWOicJd0hbCHvtkCqY8ZJMcKmcDEV1XELPjObxKXRDGusnpVJQ==", "username"=>"mcooper", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.9ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "mcooper"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 125ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 17:08:03 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mChore Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  Rendered chores/_chore_form.html.erb (13.7ms)
+  Rendered chores/index.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 98ms (Views: 90.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 17:08:06 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered households/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 44ms (Views: 30.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:08:07 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (161.0ms)
+Completed 200 OK in 186ms (Views: 181.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 17:08:09 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered households/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 192ms (Views: 189.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:08:10 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (1.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.6ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 17:08:11 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered households/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 17:09:19 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:09:21 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people/6" for 24.252.82.128 at 2017-11-20 17:09:23 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.7ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/people/6" for 24.252.82.128 at 2017-11-20 17:09:27 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QGPVsO0zFXiBAtAke7ZrHkLPliaXVWTUgHcBpu5ScwcKFiOdcKnh1Tu7k6D6NEfEz6lmpuAlkfKrSW8VP4pWtQ==", "people"=>{"first_name"=>"max", "last_name"=>"cooper", "description"=>"", "household_id"=>"1"}, "commit"=>"Update", "id"=>"6"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to https://ss-project-eblake1.c9users.io/people/6
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/people/6" for 24.252.82.128 at 2017-11-20 17:09:27 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 17:09:29 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:09:30 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:09:34 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 118ms (Views: 116.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people/6" for 24.252.82.128 at 2017-11-20 17:09:35 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered people/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/people/6" for 24.252.82.128 at 2017-11-20 17:09:41 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TRiZC39MNXUFQC02MJhTFoKVGkQTdfMzLaOGRiIlvXAHbW8m4tbB2L/5brKxGn/MD/PqxGQFBhUGnej18/2Ywg==", "people"=>{"first_name"=>"max", "last_name"=>"cooper", "description"=>"hello", "household_id"=>"1"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "people" SET "description" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["description", "hello"], ["updated_at", "2017-11-20 17:09:41.086107"], ["id", 6]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://ss-project-eblake1.c9users.io/people/6
+Completed 302 Found in 14ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/people/6" for 24.252.82.128 at 2017-11-20 17:09:41 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mHousehold Load (0.2ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:09:43 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/people/2" for 24.252.82.128 at 2017-11-20 17:09:44 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered people/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/people/2" for 24.252.82.128 at 2017-11-20 17:09:50 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m3cHaoUdwM4Y0MOYKo5wfrDM8/4t0YnRx1/77L6LU9jRAvFHGIc0Y6JpgByrDFykPaoDflqhfPfsYZVfb1N2ag==", "people"=>{"first_name"=>"Amy", "last_name"=>"Grouse", "description"=>"new user", "household_id"=>"1"}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 6]]
+Redirected to https://ss-project-eblake1.c9users.io/people/2
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/people/2" for 24.252.82.128 at 2017-11-20 17:09:50 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT "households".* FROM "households"
+  Rendered people/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:09:52 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/access/logout" for 24.252.82.128 at 2017-11-20 17:09:56 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 17:09:56 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:09:56 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:10:00 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:10:12 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UQSCsHCvtwPzzWfWQiT63v0d59vc3M+N5uOs+z3lwmcbcXSd7TVDrkl0JFLDptYEcHsXW6usOqvN3cJI7D3n1Q==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 89ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:10:13 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:10:13 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 17:10:32 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lE9ky9lil/PhdVzUSWL1zkpgvlhDCyAob6t0c2EZsoDeOpLmRPhjXlvMH1DI4NkUxwZO2DR71Q5ElRrAsMGXMg==", "username"=>"eblake2", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake2"]]
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:10:35 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:10:53 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iSgEesumTUqwvIkURTdEpQN4WDOaoEz7+w3c7LxPDHjDXfJXVjy55woFypDEtWh/jh6os+3Qud3QM7JfbZcpyg==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "people" ("first_name", "last_name", "password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Erin"], ["last_name", "Blake"], ["password_digest", "$2a$10$H4ze6VAlmEWzYgaWAeAEAelM06/uJ.6hoY4Old7VKepqMw7OiaQiO"], ["username", "eblake2"], ["created_at", "2017-11-20 17:10:53.659934"], ["updated_at", "2017-11-20 17:10:53.659934"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 80ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:10:53 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:10:53 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 17:11:05 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/IKRwlZmKEsMDANcTxXtDEnw4V0S5S0w1Mr/V70c3yth/xqlMNsDJaJc4nwvntuvEEzBQM7YZLobUVOjyxWzg==", "username"=>"eblake2", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake2"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 71ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 17:11:05 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered chores/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 17:15:50 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:15:51 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 301ms (Views: 291.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:15:56 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 17:15:57 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ruG6RNkLwf12+DM/WLA5WggrtRykS7k4N79PPZtDvOjklExpRJE1UMxBcLvZMhWAhU1FnNM7TB4cgSGOSpuZWg==", "username"=>"eblake2", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake2"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 97ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 17:15:58 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered chores/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 17:15:59 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (1.0ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 46ms (Views: 35.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:16:01 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered people/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people/7" for 24.252.82.128 at 2017-11-20 17:16:02 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mHousehold Load (0.6ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/people/7" for 24.252.82.128 at 2017-11-20 17:16:05 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NL40sxVtQpj9Jt09VTZwV6To3SApb/E38llAwLf0tTZ+y8KeiPe2NUefnrnUtFyNKY4toF4fBBHZZy5zZiyQhA==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "description"=>"", "household_id"=>"1"}, "commit"=>"Update", "id"=>"7"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "people" SET "description" = $1, "household_id" = $2, "updated_at" = $3 WHERE "people"."id" = $4[0m  [["description", ""], ["household_id", 1], ["updated_at", "2017-11-20 17:16:05.831058"], ["id", 7]]
+  [1m[35m (4.2ms)[0m  COMMIT
+Redirected to https://ss-project-eblake1.c9users.io/people/7
+Completed 302 Found in 12ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/people/7" for 24.252.82.128 at 2017-11-20 17:16:06 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT "households".* FROM "households"
+  Rendered people/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 17:16:08 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households/1" for 24.252.82.128 at 2017-11-20 17:16:10 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people" WHERE "people"."household_id" = $1  [["household_id", 1]]
+  Rendered households/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 115ms (Views: 112.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:24:06 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:25:00 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:25:21 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oloYS1VoOK2BjFlrviZVkXdP+N0zQMqXeReUDzOecDjoL+5myPLMADs1Gu8/pHlL+ikIXUQwP7FSKfq84kZVig==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 117ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:25:21 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:25:30 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:26:43 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/access_controller.rb:11: syntax error, unexpected =>, expecting keyword_then or ';' or '\n'
+...d].present? && :confirmation => true
+...                               ^
+/home/ubuntu/workspace/app/controllers/access_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/access_controller.rb:11: syntax error, unexpected =>, expecting keyword_then or ';' or '\n'
+  app/controllers/access_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:27:02 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:27:07 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:27:18 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3SBDoI6CtszCpJD7jhzy8mboe9TH8afDPpGp9wANWw+XVbWNExhCYXgd038Pnt4o646LVLCBUuUVr8dE0dV+vQ==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35m (89.5ms)[0m  ROLLBACK
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 178ms (ActiveRecord: 92.7ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:27:18 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:27:34 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:27:36 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:27:40 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:27:49 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tzOInTXtCcCU5vpy/k3fsPE26Hc6EJLOAkMTqcvfGeL9Rn6wqHf9bS5fufZ/z/NqfFAY901gZ+gpfX0aGgc8UA==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 85ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:27:50 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:28:24 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 24.252.82.128 at 2017-11-20 17:28:26 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 17:28:27 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:28:27 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:28:31 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:28:53 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5nXAYoaXXVQ7pVKvOR1DXY1VfM00Ol9fqlFmUpIMQXOsADZPGw2p+YEcESu4n2+HADOMTUNKqnmBbwjhQ9RkwQ==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "username"=>"eblake", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 89ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:28:53 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:28:53 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:30:26 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:30:28 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:30:42 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OaQ/cQZCNxi8MJuTHFF+9GdioZw3WSnJiTL97tTNCCdz0clcm9jDtQaJ2Bed01Iu6gRRHEAp3O+iDJNdBRUtlQ==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eblake", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 85ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:30:43 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:30:43 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.252.82.128 at 2017-11-20 17:45:44 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 24.252.82.128 at 2017-11-20 17:45:45 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 365ms (Views: 353.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:45:47 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 17:45:58 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZJs7LgSOe+gKS0QQKdlKcv2KoqNOMpRQapVAVrRpttcu7s0DmRSPRbDyB5SoW2aocOxSIzlCYXZBqy7lZbGTZQ==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eblake", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 202ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 17:45:58 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:45:58 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:58:14 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:58:17 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:58:17 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 17:58:39 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 17:58:51 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 18:00:18 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 24.252.82.128 at 2017-11-20 18:00:20 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 18:00:20 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 18:00:20 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 18:00:27 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UkqNnh1gt+Pz529upc+2c36Fjdh9ceUwvth+lsMGpF0YP3uzgPpDTkleLOokTZqp8+N9WAoBEBaV5hAlEt6B7w==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (1.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake"]]
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 79ms (Views: 24.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/access/reg" for 24.252.82.128 at 2017-11-20 18:00:36 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 24.252.82.128 at 2017-11-20 18:00:48 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5cVaB7boGKOY/j87k0vp0DOhtnCRfiOQ5yKRBSNqVkCvsKwqK3LsDiJHfL8SycUKvsdG8OYO1rbMHP+28rJz8g==", "people"=>{"first_name"=>"erin", "last_name"=>"blake", "username"=>"eblake", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (33.7ms)[0m  ROLLBACK
+Redirected to https://ss-project-eblake1.c9users.io/people
+Completed 302 Found in 118ms (ActiveRecord: 34.1ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 18:00:48 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://ss-project-eblake1.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 24.252.82.128 at 2017-11-20 18:00:48 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 18:01:00 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1/fohLNSqyDYYyp4yV+XPLA61j7KCwF96vwObnZYNM6dgh6pLshfjWLaafxI3bvmPVwmvr179FvBwmDdp4ARfA==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "eblake"]]
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 18:01:04 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MwniQZC1vm6nh340D9MVWNJlNDMuWqz8kci10EpNa8d5fBRsDS9Kwx0+PbCOUTmCXwPEs1kqWdq69ttjm5VOdQ==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake"]]
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/access/attempt_login" for 24.252.82.128 at 2017-11-20 18:01:20 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q7t8MAY21J0WQrntcunzxAeSbajVi9sWX54+pNRr6qMJzoodm6wgMKz7+mnza98eivSdKKL7LjB0oFAXBbPPEQ==", "username"=>"eblake2", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "eblake2"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 78ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/chores" for 24.252.82.128 at 2017-11-20 18:01:20 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (1.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mChore Load (1.2ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (10.6ms)
+  Rendered chores/index.html.erb within layouts/application (58.4ms)
+Completed 200 OK in 107ms (Views: 97.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/households" for 24.252.82.128 at 2017-11-20 18:01:22 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (1.0ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 108ms (Views: 85.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 18:01:23 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (174.0ms)
+Completed 200 OK in 199ms (Views: 195.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 18:04:04 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 118ms (Views: 115.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/people/7" for 24.252.82.128 at 2017-11-20 18:04:07 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36mHousehold Load (2.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mHousehold Load (0.7ms)[0m  SELECT "households".* FROM "households"
+  Rendered people/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 18:04:52 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/people" for 24.252.82.128 at 2017-11-20 18:06:01 +0000
+Cannot render console from 24.252.82.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.7ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 1.9ms)

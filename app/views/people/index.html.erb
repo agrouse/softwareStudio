@@ -19,7 +19,7 @@ user_house_id=Person.find(ses_id).household_id%>
       @people.each do |t| %>
         <%if t.household_id==user_house_id %>
         <tr>
-             <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> </td>
+             <td><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a> </td>
              <td><%= t.username %>   </td>
              <td><%= t.description%></td>
              <td><%= t.household.name%></td>
