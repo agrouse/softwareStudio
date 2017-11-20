@@ -14667,3 +14667,98 @@ Processing by ChoresController#index as HTML
   [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 8]]
   Rendered chores/index.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 129.81.188.190 at 2017-11-20 04:59:29 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/login" for 129.81.188.190 at 2017-11-20 04:59:29 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 292ms (Views: 283.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.188.190 at 2017-11-20 04:59:29 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.188.190 at 2017-11-20 04:59:33 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.188.190 at 2017-11-20 04:59:34 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HC+hCuIfzhH/w/qI4OaxbHBUR0LNz7qhcQFoQbd/OQ5bDfW6JJU5z+ttGCRdYqpWex3QZfjuh0kme9c6FD1CsA==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake"]]
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 153ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/chores" for 129.81.188.190 at 2017-11-20 04:59:34 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered chores/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/households" for 129.81.188.190 at 2017-11-20 04:59:36 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT "households".* FROM "households"
+  Rendered households/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 38ms (Views: 29.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/people" for 129.81.188.190 at 2017-11-20 04:59:38 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered people/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people/3" for 129.81.188.190 at 2017-11-20 04:59:39 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/people/3" for 129.81.188.190 at 2017-11-20 04:59:42 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JIyntJC1yvEHmnyjs2PwmQGjqR8ILvUUiDPrm1q0N9ljrvMEVj89LxM0ng8O5+ujCuo+OD0PyPzfSVTg+fZMZw==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "description"=>"", "household_id"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "people" SET "description" = $1, "household_id" = $2, "updated_at" = $3 WHERE "people"."id" = $4  [["description", ""], ["household_id", 1], ["updated_at", "2017-11-20 04:59:42.768153"], ["id", 3]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/people/3
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/people/3" for 129.81.188.190 at 2017-11-20 04:59:42 +0000
+Cannot render console from 129.81.188.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.6ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 1.3ms)
