@@ -9,25 +9,14 @@
   <!--<link href="css/main.css" rel="stylesheet"> -->
 </head>
 <body>
-<div id="header">
-    <div id="logo">
-        <div id="logo_text">
-          <h1><a href="/access/landing">ménage</a></h1>
-          <h2>an easy way to divide chores</h2>
-        </div>
-    </div>
-    <div id="menubar">
-        <ul id="menu">
-          <li><a href="/access/landing">Home</a></li>
-          <li><a href="/chores">Chores</a></li>
-          <li><a href="/households">Household</a></li>
-          <li><a href="/people">Profile</a></li>
-          <li><a href="/access/reg">Sign up</a></li>
-          <li><a href="/access/login">Login</a></li>
-          <li><a href="/access/logout">Logout</a></li>
-        </ul>
-    </div>
-</div>
+<% if current_page?(controller: 'access', action: 'landing') %>
+    <%= render 'layouts/home_header' %>
+<% elsif (current_page?(controller: 'access', action: 'reg')) || (current_page?(controller: 'access', action: 'login')) %>
+    <%= render 'layouts/signup_header' %>
+<% else %>
+    <%= render 'layouts/header' %>
+<% end %>
+
 
 <%= yield %>
 <div id="page_content"
