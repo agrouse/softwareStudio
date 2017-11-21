@@ -5,18 +5,23 @@ class ApplicationController < ActionController::Base
   
 
   helper_method :people_of_household
-   def people_of_household
-     #get user's id from currently logged in person
-     userID = session[:user_id]
-  #   #get house for associated with this user
-     person = Person.find(userID)
-     houseID = person.household_id
-     house = Household.find(houseID)
-  #   #get all users of this house
-     peopleList = []
-
+  def people_of_household
+    #get user's id from currently logged in person
+    userID = session[:user_id]
+    #get house for associated with this user
+    person = Person.find(userID)
+    houseID = person.household_id
+    #get all users of this house
+    peopleList = []
+    Person.all.each do |p|
+      if p.household_id == houseID
+        peopleList.push(p)
+      end
+    end
     return peopleList
-   end
+    
+  end
+
    
   
   private
