@@ -19811,3 +19811,1659 @@ Processing by ChoresController#index as HTML
   Rendered chores/_chore_form.html.erb (1.5ms)
   Rendered chores/index.html.erb within layouts/application (4.4ms)
 Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 129.81.125.145 at 2017-11-21 02:35:27 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/login" for 129.81.125.145 at 2017-11-21 02:35:27 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 289ms (Views: 279.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.125.145 at 2017-11-21 02:35:27 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.125.145 at 2017-11-21 02:35:30 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.125.145 at 2017-11-21 02:35:31 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M5wihhEJ7u64MwE917dtgqvwjsT7coQQi7gXS/qI1QAqSa4nrYGST2j4v7eCnP9Os26c/fbDuXw95gjfPubSLA==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "eblake"]]
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 118ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:35:31 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.6ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (11.3ms)
+  Rendered chores/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 53ms (Views: 48.3ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 02:35:39 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NU15IGeZpD+Az1ybijUp3Z3Ci07dM9MQ2DG5oDoSVxksmPWB2xHYnlAE4hHfHrsRhVyZd9CC7nxub6Y0/nxQNQ==", "chore"=>{"task"=>"Sweep", "priority"=>"low"}, "person"=>{"household_id"=>"2"}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["task", "Sweep"], ["priority", "low"], ["created_at", "2017-11-21 02:35:39.216652"], ["updated_at", "2017-11-21 02:35:39.216652"]]
+  [1m[35m (41.5ms)[0m  COMMIT
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3[0m  [["household_id", 2], ["updated_at", "2017-11-21 02:35:39.262794"], ["id", 24]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 56ms (ActiveRecord: 45.1ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:35:39 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/chores/24" for 129.81.125.145 at 2017-11-21 02:35:58 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BNq1o518dpcROu3VYXlm2rODl0pe/yDyj8S+5STwSDMdDzkCIfQKNsHxU180UvQWqx2Fc1NOHZ45mqFx4J5PHw==", "id"=>"24"}
+  [1m[35mChore Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 24]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 24]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 7ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:35:58 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.6ms)
+  Rendered chores/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/chores/23" for 129.81.125.145 at 2017-11-21 02:35:59 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"58tW4zSLGDUONszxzX3lnI9Hqogl+gQPWNkcy0q88j/+HtpCiANklN79cnuYVndQl9m4sShLOWPuhwNfjtL1Ew==", "id"=>"23"}
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 23]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:35:59 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/chores/22" for 129.81.125.145 at 2017-11-21 02:36:00 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z0XS2PELHAZgN31/VGTd1bg7B4vxT3970CGgSaiHqizWkF55TYNgp7D8w/UBT08ZoKUVsvz+Qhdmf7/dbOmtAA==", "id"=>"22"}
+  [1m[35mChore Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 22]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 5ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:36:00 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.7ms)
+  Rendered chores/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 02:55:25 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NeLskQGbnSQu+Us+6+GUhC3rw+gANSTUNWrVOIz5HREsN2AwvRPhhf4y9bS+ygZINXXR0Q2EGbiDNMqsSJcaPQ==", "chore"=>{"task"=>"Sweep ", "priority"=>"low"}, "person"=>{"household_id"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["task", "Sweep "], ["priority", "low"], ["created_at", "2017-11-21 02:55:25.665341"], ["updated_at", "2017-11-21 02:55:25.665341"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 02:55:25.691240"], ["id", 25]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 126ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:55:25 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (1.8ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (1.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.5ms)
+  Rendered chores/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 47ms (Views: 42.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:58:22 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.2ms)
+  Rendered chores/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 02:58:29 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+tjIZ/EZ54D8Rxkq1X0wju715aa6EC45CQgtunD02BrjDUTGTZGbISyMp6CAVqJC9mv3n7ehE1W/VjIutJrfNg==", "chore"=>{"task"=>"Sweep ", "priority"=>"low"}, "person"=>{"person_assigned"=>"1"}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["task", "Sweep "], ["priority", "low"], ["created_at", "2017-11-21 02:58:29.877984"], ["updated_at", "2017-11-21 02:58:29.877984"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3[0m  [["household_id", 2], ["updated_at", "2017-11-21 02:58:29.883039"], ["id", 26]]
+  [1m[35m (1.8ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 10ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 02:58:30 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.5ms)
+  Rendered chores/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:00:15 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.2ms)
+  Rendered chores/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:00:24 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WW4nmGYLorUv2BbNOYZqBtZ9DNbTmdcCWLuFxKBTNuNAu6s52oPeFP8TqEdsrfjKzuMe794o6m7u5ZpQZD0xzw==", "chore"=>{"task"=>"Bryce", "priority"=>"low", "person_assigned"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["task", "Bryce"], ["priority", "low"], ["person_assigned", "1"], ["created_at", "2017-11-21 03:00:24.069227"], ["updated_at", "2017-11-21 03:00:24.069227"]]
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:00:24.077338"], ["id", 27]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 14ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:00:24 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:00:31 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/vY2TwJkAKeREdMOMZWVwjc++TUoOYZP32V5AM1007+LlR4gIHso06P+cZt7cSbEELp3dkR23WJI4pwx1vUYg==", "chore"=>{"task"=>"amy", "priority"=>"low", "person_assigned"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:00:31 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.5ms)
+  Rendered chores/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:00:34 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ixb+tqw9w3SZUGQOvKpvU0g6tr7M0Cbr9hbJrKxxwSE6w3IXELW/1Umb2oTpgf2fUKSkh8FhG4dASNY4aB/GDQ==", "chore"=>{"task"=>"bryce", "priority"=>"low", "person_assigned"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["task", "bryce"], ["priority", "low"], ["person_assigned", "1"], ["created_at", "2017-11-21 03:00:34.491857"], ["updated_at", "2017-11-21 03:00:34.491857"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:00:34.497825"], ["id", 28]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 12ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:00:34 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:00:38 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fl2ABU7xGnABxaBw9t0ldAaj8xSL3uyuwm5MQAXfmGJniAyk8nlm0dEOHvqj9re4Hj3hLYZv0cJ0MFPUwbGfTg==", "chore"=>{"task"=>"amy", "priority"=>"low", "person_assigned"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:00:38 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:00:48 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zr+GEURAqwDmr2s2Da2qx3w99GACS1pp9d8YcltrNCN/agqw+MjXoTZk1bxYhjgLZKPmWQ/6ZwVDgQfmnwUzDw==", "chore"=>{"task"=>"erin-windows", "priority"=>"low", "person_assigned"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:00:48 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (85.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (90.7ms)
+Completed 200 OK in 108ms (Views: 21.8ms | ActiveRecord: 85.8ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:01:06 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2395XKAgy3plEhctAhvIKzgQ0vzGZkz6DObOb6dIPdDCqvX9HKi327XZqadXMFrnII7AxcvXcZa6uNH7YyY6/A==", "chore"=>{"task"=>"amySweep", "priority"=>"low", "person_assigned"=>"2"}, "commit"=>"Add"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["task", "amySweep"], ["priority", "low"], ["person_assigned", "2"], ["created_at", "2017-11-21 03:01:06.688149"], ["updated_at", "2017-11-21 03:01:06.688149"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:01:06.694176"], ["id", 29]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 12ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:01:06 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.6ms)
+  Rendered chores/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:01:22 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/Bo4Ia9POUvl45rsp732LK4xeQQgTYWIrN3m03bXAteJeRBOjVARP9cMOHntWUUqibX3R0wC3qU7WgPibVbJw==", "chore"=>{"task"=>"SweepErin", "priority"=>"low", "person_assigned"=>"3"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["task", "SweepErin"], ["priority", "low"], ["person_assigned", "3"], ["created_at", "2017-11-21 03:01:22.154730"], ["updated_at", "2017-11-21 03:01:22.154730"]]
+  [1m[36m (4.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:01:22.162534"], ["id", 30]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 14ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:01:22 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.5ms)
+  Rendered chores/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:01:27 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PcWLHbsApZPOkKuoGPuNjk40wglVS5WFjtRB+XwhpogkEAe8B4jZMh5bFSJN0B9CVqrQMFj6qOk4il5tuE+hpA==", "chore"=>{"task"=>"asdfasd", "priority"=>"low", "person_assigned"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["task", "asdfasd"], ["priority", "low"], ["person_assigned", "1"], ["created_at", "2017-11-21 03:01:27.967996"], ["updated_at", "2017-11-21 03:01:27.967996"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:01:27.973684"], ["id", 31]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 11ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:01:28 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.5ms)
+  Rendered chores/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:01:47 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.1ms)
+  Rendered chores/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:01:48 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:01:55 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T4s+2NDSgtl3I5RdAakf7WVrJILKz1OSEorutO1wmAZWXrJ5bFr+eKfoKtdUgo0hffU2u8d+bv6k1PEgKR6fKg==", "chore"=>{"task"=>"asdfasd", "priority"=>"low", "person_assigned"=>"Bryce"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["task", "asdfasd"], ["priority", "low"], ["person_assigned", "Bryce"], ["created_at", "2017-11-21 03:01:55.104121"], ["updated_at", "2017-11-21 03:01:55.104121"]]
+  [1m[36m (2.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:01:55.110092"], ["id", 32]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 11ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:01:55 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  Rendered chores/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/chores/25" for 129.81.125.145 at 2017-11-21 03:02:03 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ibUO+F5itCgu5+y+eb3042ZpfDp0Bch0nIwjG0Z8df2QYIJZ4urIif4sUjQslmYvfvduA3m09Rgq0jyPghJy0Q==", "id"=>"25"}
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 25]]
+  [1m[35m (2.9ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:03 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.6ms)
+  Rendered chores/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 118ms (Views: 30.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/chores/26" for 129.81.125.145 at 2017-11-21 03:02:03 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qDs2oZczLizxnhEMxIpPhnknXwRQprcI9Z4YEsEUbY2x7roAK7tSjSFVr4aRod1KYblNPV0XimRDwAeGBXpqoQ==", "id"=>"26"}
+  [1m[35mChore Load (0.3ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 26]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 26]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:03 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (42.1ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  Rendered chores/index.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 64ms (Views: 20.5ms | ActiveRecord: 42.7ms)
+
+
+Started DELETE "/chores/27" for 129.81.125.145 at 2017-11-21 03:02:04 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UTBvtIFVhRRKGVzp5dw9btBIfpLBmRYyR8qBYnKVeEdI5eMVPd35tZrS4mOw96+iyNZsq8woK17xlJ72tvt/aw==", "id"=>"27"}
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 27]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:04 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.5ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/chores/28" for 129.81.125.145 at 2017-11-21 03:02:04 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+Y7XJwggFvOvzTQzrWpEB+2KxjxtS887I5kkaPkwR0fgW1uGtKhqUn8Girn4QdbL9RTUBWD68leVxzv8PV5Aaw==", "id"=>"28"}
+  [1m[35mChore Load (0.3ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 28]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:04 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.5ms)
+  Rendered chores/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/chores/29" for 129.81.125.145 at 2017-11-21 03:02:05 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/83WByEkwheLlCKKrlz/MxK2fsmvyCWJxtT74XJt75LmGFqmnay+tltfnAD7d23/Cihs8KJ5GOVwiuR1tgPovg==", "id"=>"29"}
+  [1m[36mChore Load (0.2ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 29]]
+  [1m[35m (2.1ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:05 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.2ms)
+  Rendered chores/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/chores/30" for 129.81.125.145 at 2017-11-21 03:02:05 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c54Nca22Tj66Oapjwzf6qC8BECarwQfS1BSUTMEIgWtqS4HQET4yn2ryFOmWHGhkN58CH6ZwOr5iSovYBWaGRw==", "id"=>"30"}
+  [1m[35mChore Load (0.3ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 30]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:05 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  Rendered chores/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/chores/31" for 129.81.125.145 at 2017-11-21 03:02:06 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vTrCqcd4s9333s2pxx1j0CnQFbkhRs4+hHhitp4vvSuk704Ie/DPfCcVcyOSNvEcMU4HgCz381IyJn0iWkG6Bw==", "id"=>"31"}
+  [1m[36mChore Load (0.2ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 31]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 88ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:06 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.0ms)
+  Rendered chores/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/chores/32" for 129.81.125.145 at 2017-11-21 03:02:06 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UogSO/X3UN1PCxIacvXBQrwqYTDkBJwdGzCzssHt+qBLXZ6aSX8sfJ/ArJAn3lOOpLRzCem1oXGtbqwmBYP9jA==", "id"=>"32"}
+  [1m[35mChore Load (0.3ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 32]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:02:07 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  Rendered chores/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:09:41 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/application_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:12:50 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.1ms)
+  Rendered chores/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 50ms (Views: 43.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:13:47 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (25.4ms)
+  Rendered chores/index.html.erb within layouts/application (28.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe1915e28>:0x007fdbe0f3cfa0>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14:     </tr>
+    15:         
+    16: </table>
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291174122440'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:14:04 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (24.0ms)
+  Rendered chores/index.html.erb within layouts/application (116.8ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 3.8ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe0e34108>:0x007fdbe0dffdb8>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14:     </tr>
+    15:         
+    16: </table>
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291174122440'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:14:16 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (23.6ms)
+  Rendered chores/index.html.erb within layouts/application (44.5ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 3.4ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe4ddd4a8>:0x007fdbe4ddcb48>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14:     </tr>
+    15:         
+    16: </table>
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291205373200'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:16:10 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (23.7ms)
+  Rendered chores/index.html.erb within layouts/application (143.3ms)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 101.0ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe4ac5900>:0x007fdbe48dd908>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14:     </tr>
+    15:         
+    16: </table>
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291205373200'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:16:52 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (26.9ms)
+  Rendered chores/index.html.erb within layouts/application (52.4ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 5.5ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe4941b10>:0x007fdbe49110f0>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14:     </tr>
+    15:         
+    16: </table>
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291205373200'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.1ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:17:06 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (27.5ms)
+  Rendered chores/index.html.erb within layouts/application (47.4ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 3.4ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe1a7a778>:0x007fdbe1a72370>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14:     </tr>
+    15:         
+    16: </table>
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291205373200'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:18:12 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.4ms)
+  Rendered chores/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 200ms (Views: 198.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:18:16 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+G1MYtqnhyMJeIx1r6o8TXMZonTrsB/VF/6CJSMFIUrhuMDDZi/7gtmzMv/6ga6Ba4ewTeYBIrmhoJ2x52smZg==", "chore"=>{"task"=>"", "priority"=>"low"}, "person"=>{"household_id"=>"2"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:18:16 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.6ms)
+  Rendered chores/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:18:21 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vLdBTdZPZvAzDIQ5NEp2xTdPP1kSj2uvKZfrDyWkcYSlYs3sascaUePHOrNhYeQJL9EtYB8+VsOfyfSb4cp2qA==", "chore"=>{"task"=>"l;jk", "priority"=>"low"}, "person"=>{"household_id"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:18:21 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.8ms)
+  Rendered chores/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:18:33 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qKRgsUXRzp1XWTPk5XNZZNdoDONP9t8a2G7oMDOcztmxcewQ+VmyPIeSjW6wWMuoz/Ye2kJH4nZuMPek9/LJ9Q==", "chore"=>{"task"=>"Sweep", "priority"=>"low"}, "person"=>{"household_id"=>"1"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "chores" ("task", "priority", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["task", "Sweep"], ["priority", "low"], ["created_at", "2017-11-21 03:18:33.744589"], ["updated_at", "2017-11-21 03:18:33.744589"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:18:33.751267"], ["id", 33]]
+  [1m[36m (100.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 111ms (ActiveRecord: 105.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:18:33 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.2ms)
+  Rendered chores/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:19:26 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.4ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.0ms)
+  Rendered chores/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:19:33 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVncaLEKxnFc6nRZti88nj1m/0Pb5ruIO97TncIuFiFkjFDJDYK60IwhytPjBK5SJfjtetZXhuSNgMwJBkARDQ==", "chore"=>{"task"=>"Windows", "priority"=>"low", "person_assigned"=>"Bryce"}, "commit"=>"Add"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["task", "Windows"], ["priority", "low"], ["person_assigned", "Bryce"], ["created_at", "2017-11-21 03:19:33.212232"], ["updated_at", "2017-11-21 03:19:33.212232"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3[0m  [["household_id", 2], ["updated_at", "2017-11-21 03:19:33.217846"], ["id", 34]]
+  [1m[35m (1.9ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 11ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:19:33 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.5ms)
+  Rendered chores/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:20:19 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (26.0ms)
+  Rendered chores/index.html.erb within layouts/application (29.6ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe1a7a778>:0x007fdbe4bf13d8>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291208572260'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:21:18 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/application_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.4ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:21:49 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/application_controller.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:21:56 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (undefined local variable or method `peopleList' for ApplicationController:Class):
+  app/controllers/application_controller.rb:24:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:23:36 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (undefined local variable or method `peopleList' for ApplicationController:Class):
+  app/controllers/application_controller.rb:22:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:23:47 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+LocalJumpError (unexpected return):
+  app/controllers/application_controller.rb:22:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.5ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:24:38 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+LocalJumpError (unexpected return):
+  app/controllers/application_controller.rb:22:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:25:30 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:33: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:33: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.6ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:25:40 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (41.2ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (28.0ms)
+  Rendered chores/index.html.erb within layouts/application (97.4ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 45.9ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe18ea4a8>:0x007fdbe4d4a130>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291208572260'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:26:05 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:33: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:33: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.4ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:26:56 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:33: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:33: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:27:08 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:32: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:32: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.6ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:27:21 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (22.9ms)
+  Rendered chores/index.html.erb within layouts/application (44.7ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe0d7c7d8>:0x007fdbe0d52c30>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291208572260'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:29:30 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (5.4ms)
+  Rendered chores/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for nil:NilClass):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, @application.people_of_household(), :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_28859940'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.3ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:30:04 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (8.2ms)
+  Rendered chores/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Application):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, Application.people_of_household(), :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291175011540'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:33:14 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (25.9ms)
+  Rendered chores/index.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe0d7c7d8>:0x007fdbe14311c8>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291176555680'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.4ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:34:04 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (3.5ms)
+  Rendered chores/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `map' for :people_of_household:Symbol
+Did you mean?  tap):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, :people_of_household, :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291178028640'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.3ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:36:09 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (37.3ms)
+  Rendered chores/index.html.erb within layouts/application (41.1ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined local variable or method `people_of_household' for #<#<Class:0x007fdbe0d7c7d8>:0x007fdbe192bcf0>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household, :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291179433700'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:36:17 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  Rendered chores/_chore_form.html.erb (28.9ms)
+  Rendered chores/index.html.erb within layouts/application (32.9ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `people_of_household' for #<#<Class:0x007fdbe0d7c7d8>:0x007fdbe194a858>):
+    10:     <tr>
+    11:         
+    12:         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
+    13:         <td><%= collection_select(:chore, :person_assigned, people_of_household(), :first_name, :first_name) %></td>
+    14: 
+    15:     </tr>
+    16:         
+  app/views/chores/_chore_form.html.erb:13:in `_app_views_chores__chore_form_html_erb__3996105970001303552_70291179438040'
+  app/views/chores/index.html.erb:39:in `block in _app_views_chores_index_html_erb__822247422903169434_70291205038020'
+  app/views/chores/index.html.erb:38:in `_app_views_chores_index_html_erb__822247422903169434_70291205038020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:36:30 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mHousehold Load (0.5ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (21.7ms)
+  Rendered chores/index.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 63ms (Views: 53.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/access/login" for 129.81.125.145 at 2017-11-21 03:36:40 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.125.145 at 2017-11-21 03:36:41 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p6Ber6EKvDgdKNl9OLd137gB9yabfqHkB0OoAphqJcq+ddIOHYLAmc3jZ/dtnOcToJ/lH5bPnIixHbeWXAQi5g==", "username"=>"eblake", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "eblake"]]
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 82ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:36:41 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  Rendered chores/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/chores" for 129.81.125.145 at 2017-11-21 03:36:52 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iQqWvxaiBxDjigbrzqyns/znatIH9exziGQkblQ7iWeQ3xoeqip7sTNBuGGbhzV/5Hl46wpE0R8+Ojv6kFWOSw==", "chore"=>{"task"=>"sweep", "priority"=>"low", "person_assigned"=>"Bryce"}, "commit"=>"Add"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["task", "sweep"], ["priority", "low"], ["person_assigned", "Bryce"], ["created_at", "2017-11-21 03:36:52.400143"], ["updated_at", "2017-11-21 03:36:52.400143"]]
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["household_id", 2], ["updated_at", "2017-11-21 03:36:52.409272"], ["id", 35]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 15ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:36:52 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  Rendered chores/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:37:06 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (1.0ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (14.5ms)
+  Rendered chores/index.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 139ms (Views: 126.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/people" for 129.81.125.145 at 2017-11-21 03:37:14 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered people/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.125.145 at 2017-11-21 03:37:18 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered people/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/people/3" for 129.81.125.145 at 2017-11-21 03:37:20 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R1950x9ZJkVHwd3+cioLkuiIHB1YQm5RolaDsGlQ8/FeivVyo9Fa5JcKY3QnAZle8BYOJFXzUz0UCJwkrT703Q==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "description"=>"", "household_id"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "people" SET "household_id" = $1, "updated_at" = $2 WHERE "people"."id" = $3  [["household_id", 1], ["updated_at", "2017-11-21 03:37:20.700611"], ["id", 3]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/people/3
+Completed 302 Found in 9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/people/3" for 129.81.125.145 at 2017-11-21 03:37:20 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.2ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:37:22 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.5ms)
+  Rendered chores/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/people" for 129.81.125.145 at 2017-11-21 03:37:29 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:37:32 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.4ms)
+  Rendered chores/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/people" for 129.81.125.145 at 2017-11-21 03:37:37 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered people/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.125.145 at 2017-11-21 03:37:39 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.2ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/people/3" for 129.81.125.145 at 2017-11-21 03:37:40 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qD9hZwyhhMJM6xS05O4QfTZ+2IZWwe2tedJxyzInneSx6u3GsCn4Y5wgqj6xxYKxLuDKv1tw0MHPjG5f9kmayA==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "description"=>"", "household_id"=>"1"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/people/3
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/people/3" for 129.81.125.145 at 2017-11-21 03:37:40 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (53.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 77ms (Views: 21.7ms | ActiveRecord: 54.0ms)
+
+
+Started PUT "/people/3" for 129.81.125.145 at 2017-11-21 03:37:43 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L/98NkDgGSRjZHiKuGCVhrNFcS7VRnSQ0BxkBTSzg+c2KvCX/GhlhbOvxgDtSwdKq9tjF9j3SfxmQnuR8N2Eyw==", "people"=>{"first_name"=>"Erin", "last_name"=>"Blake", "description"=>"", "household_id"=>"2"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "people" SET "household_id" = $1, "updated_at" = $2 WHERE "people"."id" = $3[0m  [["household_id", 2], ["updated_at", "2017-11-21 03:37:43.627295"], ["id", 3]]
+  [1m[35m (2.4ms)[0m  COMMIT
+Redirected to https://menage-mama-agrouse.c9users.io/people/3
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/people/3" for 129.81.125.145 at 2017-11-21 03:37:43 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT "households".* FROM "households"
+  Rendered people/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:37:46 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mChore Load (0.3ms)[0m  SELECT "chores".* FROM "chores"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mHousehold Load (0.2ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.1ms)
+  Rendered chores/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/chores/33" for 129.81.125.145 at 2017-11-21 03:37:51 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UU8QN0USeu1qhD7B9SE690GptDl6mxTm0ajAJL2jJXJImpyW+ZoGTLpPgEugCqg7WTemAHcqKYpn9t+wec0iXg==", "id"=>"33"}
+  [1m[35mChore Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 33]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 7ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/chores" for 129.81.125.145 at 2017-11-21 03:37:51 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.3ms)
+  Rendered chores/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/access/login" for 129.81.125.145 at 2017-11-21 03:39:09 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 129.81.125.145 at 2017-11-21 03:39:13 +0000
+Cannot render console from 129.81.125.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
