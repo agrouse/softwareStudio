@@ -5,14 +5,21 @@
                 <%= label :people, :first_name, 'First name:' %>
                 <%= text_field :people, :first_name %>
                 <br>
+                <br>
                 <%= label :people, :last_name, 'Last name:' %>
                 <%= text_field :people, :last_name %>
                 <br>
-                <%= label :people, :username, 'Username' %>
+                <br>
+                <%= label :people, :username, 'Username:' %>
                 <%= text_field :people, :username %>
                 <br>
-                <%= label :people, :password, 'Password' %>
+                <br>
+                <%= label :people, :password, 'Password:' %>
                 <%= password_field :people, :password %>
+                <br>
+                <br>
+                <%= label :people, :password, 'Confirm Password:'%>
+                <%= password_field :people, :password_confirmation %>
                 <br>
                 <br>
                 <%= submit_tag 'Submit'%>
