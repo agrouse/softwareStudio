@@ -67,12 +67,14 @@ div {
 
 #button1 {
 	float: left;
-	margin: 0 0 0 650px;
+	#margin: 0 0 0 650px;
+	margin-left: 40%;
 }
 
 #button2 {
 	float: right;
-	margin: 0 650px 0 0;
+	#margin: 0 650px 0 0;
+	margin-right: 40%;
 }
 
 #button1 a:hover, #button2 a:hover {
