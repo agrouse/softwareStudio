@@ -1,0 +1,15 @@
+<div id="header">
+    <div id="logo">
+        <div id="logo_text">
+          <h1><a href="/access/landing">ménage</a></h1>
+          <h2>an easy way to divide chores</h2>
+        </div>
+    </div>
+    <div id="menubar">
+      <ul id="menu">
+        <li><a href="/access/landing">Home</a></li>
+        <li><a href="/access/reg">Sign up</a></li>
+        <li><a href="/access/login">Login</a></li>
+      </ul>
+    </div>
+</div>
