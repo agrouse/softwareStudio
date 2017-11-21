@@ -9,7 +9,7 @@
     </tr> 
     <tr>
         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
-        <td><%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%></td>
+        <td><%= collection_select(:household, :person_id, @Person.all, :id, :first_name) %></td>
     </tr>
         
 </table>

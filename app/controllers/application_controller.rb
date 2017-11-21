@@ -11,4 +11,16 @@ class ApplicationController < ActionController::Base
       redirect_to(access_login_path)
     end
   end
+  
+  def people_of_household()
+    #get user's id from currently logged in person
+    @user = Person.find(params[:id])
+    #get house for associated with this user
+    @houseID = @user.household_id
+    @house = Households.find(houseID)
+    #get all users of this house
+    @peopleInHouse = house.people
+    return peopleInHouse
+    
+  end
 end
