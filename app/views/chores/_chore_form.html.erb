@@ -10,7 +10,7 @@
     <tr>
         
         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
-        <td><%= collection_select(:person, :person_assigned, people_of_household, :first_name, :first_name) %></td>
+        <td><%= collection_select(:chore, :person_assigned, people_of_household, :first_name, :first_name) %></td>
 
     </tr>
         
