@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   
 
   helper_method :people_of_household
+  helper_method :chores_of_household
   def people_of_household
     #get user's id from currently logged in person
     userID = session[:user_id]
@@ -21,7 +22,20 @@ class ApplicationController < ActionController::Base
     return peopleList
     
   end
-
+  def chores_of_household
+    #get user's id from currently logged in person
+    userID = session[:user_id]
+    #get house for associated with this user
+    person = Person.find(userID)
+    choreslist = []
+    Chore.all.each do |chore|
+      if chore.person_assigned == person.first_name
+        choreslist.push(chore)
+      end
+    end
+    return choreslist
+    
+  end
    
   
   private

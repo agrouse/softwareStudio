@@ -3,7 +3,15 @@
 <%ses_id=session[:user_id]
 ses_house_id=Person.find(ses_id).household_id
 if ses_house_id!=nil%>
-<h1 style="color: black">Pending Chores</h1>
+<h2>Create new chore</h2>
+        <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
+            <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
+            
+            <%= submit_tag 'Add'%>
+            <% end %>
+            
+</br>
+<h1 style="color: black">Pending Chores for <%=Household.find(ses_house_id).name %></h1>
         <table style="width:100%">
             <tr>
                 <div class="tbl-header">
@@ -30,18 +38,9 @@ if ses_house_id!=nil%>
 
 </table>
 
-<br>
-
-<br>
-    
-        <h2>Create new chore</h2>
-        <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
-            <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-            
-            <%= submit_tag 'Add'%>
-            <% end %>
-            </div>
+</div>  
+        
 <%else%>
-    <h2>Please join household first </h2>
+   <h2><%= link_to "Please join or create a household first", households_path %></h2>
 <%end%>
 </div>

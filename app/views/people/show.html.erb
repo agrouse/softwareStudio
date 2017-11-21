@@ -16,8 +16,14 @@
     <%end%>
 </ul>
 <br>
-
+<h2>Chores Assigned</h2>
+<%Chore.all.each do |chore|%>
+    <%if chore.person_assigned == @people.first_name%>
+        <li><%=chore.task%></li>
+    <%end%>
+<%end%>
 <br>
+<%if @people == Person.find(session[:user_id])%>
 <h2>Update Profile</h2>
 <%= form_tag person_path, :method => :put do %>
     <%= label :people, :first_name, 'first name' %>
@@ -36,7 +42,7 @@
     <%= submit_tag 'Update'%>
     <% end %>
 
-
+<%end%>
 <%= link_to 'Back to profile list', people_path %>
 
 </div>
