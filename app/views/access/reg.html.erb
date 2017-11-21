@@ -2,27 +2,37 @@
     
         <h2>Join</h2>
         <%= form_tag people_path, class: "newPerson", :method => :post do %>
-                <%= label :people, :first_name, 'First name:' %>
-                <%= text_field :people, :first_name %>
-                <br>
-                <br>
-                <%= label :people, :last_name, 'Last name:' %>
-                <%= text_field :people, :last_name %>
-                <br>
-                <br>
-                <%= label :people, :username, 'Username:' %>
-                <%= text_field :people, :username %>
-                <br>
-                <br>
-                <%= label :people, :password, 'Password:' %>
-                <%= password_field :people, :password %>
-                <br>
-                <br>
-                <%= label :people, :password, 'Confirm Password:'%>
-                <%= password_field :people, :password_confirmation %>
-                <br>
-                <br>
-                <%= submit_tag 'Submit'%>
+        <table>
+                <tr>
+                        <td><%= label :people, :first_name, 'First name:' %></td>
+                        <td><%= text_field :people, :first_name %></td>
+                </tr>
+                
+                <tr>
+                        <td><%= label :people, :last_name, 'Last name:' %></td>
+                        <td><%= text_field :people, :last_name %></td>
+                </tr>
+                
+                <tr>
+                        <td><%= label :people, :username, 'Username:' %></td>
+                        <td><%= text_field :people, :username %></td>
+                </tr>
+                
+                <tr>
+                        <td><%= label :people, :password, 'Password:' %></td>
+                        <td><%= password_field :people, :password %></td>
+                </tr>
+                
+                <tr>
+                        <td><%= label :people, :password, 'Confirm Password:'%></td>
+                        <td><%= password_field :people, :password_confirmation %></td>
+                </tr>
+                
+                <tr>
+                        <td></td>
+                        <td><%= submit_tag 'Submit'%></td>
+                </tr>
+        </table>
                 <% end %>
 
     
