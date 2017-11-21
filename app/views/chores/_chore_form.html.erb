@@ -8,8 +8,10 @@
         <td><%= select :chore, :priority, ['low', 'moderate', 'high'] %></td>
     </tr> 
     <tr>
+        
         <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
-        <td><%= select :chore, :person_assigned, ['Amy', 'Bryce', 'Erin', 'Mackenna', 'Randomized']%></td>
+        <td><%= collection_select(:chore, :person_assigned, people_of_household, :first_name, :first_name) %></td>
+
     </tr>
         
 </table>

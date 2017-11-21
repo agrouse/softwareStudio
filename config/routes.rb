@@ -10,6 +10,7 @@
   get 'access/logout'
   get 'access/reg' 
   get 'access/landing'
+  
   get 'access/home'
 
     resources :chores

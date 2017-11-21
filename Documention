@@ -13,6 +13,14 @@ To run:
 rails s -b $IP -p $PORT
 
 Changing database structures will need you to configure Heroku db. Here are the steps: 
-heroku run rake db:reset
+heroku run rake db:reset --app menage
 heroku run rake db:migrate --app menage
 heroku apps 
+
+Commiting to git:
+git add .
+git commit -m "Message"
+
+When merge errors:
+git clean -df 
+git checkout -- .

@@ -28,9 +28,14 @@ class PeopleController < ApplicationController
     #idea: based on a boolean completed, it'll show up on chores_path
     
     def update
-       @people = Person.find params[:id]
-       @people.update_attributes(people_params)
-       flash[:notice] = "#{@people.first_name} was successfully updated."
+               
+       @people = Person.find(params[:id])
+        if Person.find(session[:user_id]) != @people
+           flash[:notice] = "Access Denied"
+        else 
+            @people.update_attributes(people_params)
+            flash[:notice] = "#{@people.first_name} was successfully updated."
+        end 
        redirect_to person_path(@people)
     end
     
@@ -42,7 +47,7 @@ class PeopleController < ApplicationController
     
     private 
         def people_params
-    params.require(:people).permit(:first_name, :last_name,:password,:username,:description,:household,:household_id)
+    params.require(:people).permit(:first_name, :last_name,:password,:password_confirmation,:username,:description,:household,:household_id)
         end
     
 end
