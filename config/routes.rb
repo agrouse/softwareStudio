@@ -27,7 +27,8 @@
     
     post 'people' => redirect('/people')
     
-    
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/') 
     
   end
   # You can have the root of your site routed with "root"

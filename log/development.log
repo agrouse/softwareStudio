@@ -4848,3 +4848,65 @@ Processing by PeopleController#show as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___481259021083168334_33165280 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:16)
   Rendered layouts/_header (0.1ms)
 Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 108.208.174.130 at 2017-11-22 01:16:45 +0000
+Cannot render console from 108.208.174.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 108.208.174.130 at 2017-11-22 01:16:46 +0000
+Cannot render console from 108.208.174.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2742500746958438414_22553200 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:12)
+  Rendered layouts/_home_header (0.4ms)
+Completed 200 OK in 313ms (Views: 302.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 108.208.174.130 at 2017-11-22 01:16:49 +0000
+Cannot render console from 108.208.174.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2742500746958438414_22553200 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 108.208.174.130 at 2017-11-22 01:16:52 +0000
+Cannot render console from 108.208.174.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h8NZUqE6q03Dt/udpv2kqYRLB984Xg2Z56/aPAd8Fu7Ntq9/PKBf4HkOuBknf4hzCS33X08u+L/MkbSP1qQzXA==", "username"=>"greatguy22", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "greatguy22"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 122ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/chores" for 108.208.174.130 at 2017-11-22 01:16:52 +0000
+Cannot render console from 108.208.174.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (13.1ms)
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."task" ASC LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "chores"
+  Rendered chores/index.html.erb within layouts/application (42.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2742500746958438414_22553200 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:16)
+  Rendered layouts/_header (0.4ms)
+Completed 200 OK in 64ms (Views: 55.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 108.208.174.130 at 2017-11-22 03:17:31 +0000
+Cannot render console from 108.208.174.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 108.208.174.130 at 2017-11-22 03:17:32 +0000
+Cannot render console from 108.208.174.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2119113045133896916_30931560 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:12)
+  Rendered layouts/_home_header (0.7ms)
+Completed 200 OK in 382ms (Views: 370.8ms | ActiveRecord: 0.0ms)
