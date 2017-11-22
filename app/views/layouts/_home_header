@@ -1,7 +1,6 @@
 <div id="title">
     <h1 style="color: white; font-size: 100px;">ménage</h1>
 </div>
-	
 <div id="button1">
 	<h3><a href="/access/reg" style="text-decoration: none; color: white;">Sign up</a></h3>
 </div>
