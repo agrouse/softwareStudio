@@ -2,7 +2,8 @@ class ChoresController < ApplicationController
     
     before_action :confirm_logged_in
     def index
-        @chores = Chore.all
+        @chores = Chore.order(:task).page(params[:page]).per_page(5)
+        #@chores = Chore.all
     end
     
     def show
@@ -20,6 +21,7 @@ class ChoresController < ApplicationController
         @chores = Chore.create(chore_params)
         house_id=Person.find(session[:user_id]).household_id
         @chores.update(:household_id => house_id)
+        @chores.update(status: "uncompleted" )
         redirect_to chores_path
     end
     
