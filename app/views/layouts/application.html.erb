@@ -17,9 +17,10 @@
 <% end %>
 
 <%= yield %>
+<%if !current_page?(controller: 'access', action: 'landing')%>
 <div id="page_content"
 <div style= "font-size: 24px; color: red;"><%= notice %> </div>
 </div>
-
+<%end%>
 </body>
 </html>
