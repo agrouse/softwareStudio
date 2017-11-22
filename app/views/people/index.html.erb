@@ -14,6 +14,8 @@
 <%ses_id=session[:user_id]
 user_house_id=Person.find(ses_id).household_id%>
 
+<%= will_paginate @people, previous_label: h("<"), next_label: h(">") %>
+
 <%if user_house_id != nil%>
     <%if @people
       @people.each do |t| %>

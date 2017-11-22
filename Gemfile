@@ -28,6 +28,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+#The will_paginate gem modifies Collection of ActiveRecord in a way to implement pagination
+gem 'will_paginate','>3.0'
+
+#Google third party authentication
+gem "omniauth-google-oauth2", "~> 0.2.1"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

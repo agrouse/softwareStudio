@@ -2,7 +2,9 @@ class ChoresController < ApplicationController
     
     before_action :confirm_logged_in
     def index
-        @chores = Chore.all
+        @chores = Chore.order(:household_id).page(params[:page]).per_page(5)
+        #@chores = Chore.order(:task).page(params[:page]).per_page(5)
+        #@chores = Chore.all
     end
     
     def show
@@ -13,15 +15,21 @@ class ChoresController < ApplicationController
     
     def new
         @chores = Chore.new
-        # default: render 'new' template
     end
     
     def create 
         @chores = Chore.create(chore_params)
         house_id=Person.find(session[:user_id]).household_id
         @chores.update(:household_id => house_id)
+        @chores.update(status: "uncompleted" )
+        #if @task_length.length < 2 
+         #   flash[:notice] = "#{@chores.task} was successfully created."
+        #else
+         #   flash[:notice] = "#{@chores.task} unable to be created, check parameters."
         redirect_to chores_path
+        
     end
+
     
     #For now, it will just delete the chore. In the future, we should keep
     #it for anaylytics and assignments. Logic will have to be implemented

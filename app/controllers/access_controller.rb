@@ -18,9 +18,9 @@ class AccessController < ApplicationController
     
     if authorized_user
       session[:user_id] = authorized_user.id
-      session[:username] = authorized_user.username
-      flash[:notice] = "You are now logged in, " + authorized_user.username
-      redirect_to("/chores")
+      session[:first_name] = authorized_user.first_name
+      flash[:notice] = "You are now logged in, " + authorized_user.first_name
+      redirect_to("/access/home")
     else
       flash.now[:notice] = "Invalid username/password combination."
       render('login')

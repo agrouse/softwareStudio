@@ -1,11 +1,11 @@
 <!-- div for styles -->
 <div id="page_content">
-<h1 style="color: black">Households (administrative page)</h1>
+<h1 style="color: black">Households</h1>
         <table style="width:100%">
             <tr>
                 <div class="tbl-header">
                     <th>Households</th>
-                    <th>Delete</th>
+                    <th>Join Household</th>
                 </div>
             </tr>
 
@@ -14,7 +14,8 @@
   @households.each do |t| %>
         <tr>
          <td><a href="<%= households_path %>/<%= t.id %>"><%= t.name %> </a> </td>
-         <td><%= button_to "Delete", t, :method => :delete %></td>
+         <td><%= link_to "Join", person_path(:id => session[:user_id], people: {:household_id => t.id}), :class => "button", :method => "PUT" %>
+  </td>
      </tr>
    
  <%end%> 
@@ -22,6 +23,9 @@
 </table>
 
 <br>
+
+<%= will_paginate @households, previous_label: h("<"), next_label: h(">") %>
+
 <h2>Add Household</h2>
         <%= form_tag households_path, class: "newHousehold", :method => :post do %>
                 <%= label :households, :name, 'Name:' %>

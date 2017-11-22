@@ -1,3 +1,81 @@
 // Place all the styles related to the Access controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.landing {
+    width: 100%;
+	background-color: black;
+	color: white;
+	font: normal .80em 'trebuchet ms', arial, sans-serif;
+}
+
+#title h1{
+	
+	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+#button1 h3, #button2 h3 {
+	-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+div {
+	display:block;
+}
+
+#title {
+	width: 400px;
+	margin: 200px auto 50px auto;
+}
+
+#button1, #button2 {
+	width: 100px;
+	display: inline-block;
+}
+
+#button1 {
+	float: left;
+	margin: 0 0 0 450px;
+}
+
+#button2 {
+	float: right;
+	margin: 0 450px 0 0;
+}
+
+#button1 a:hover, #button2 a:hover {
+    font-weight: bold;
+}
