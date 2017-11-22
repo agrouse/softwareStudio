@@ -3,7 +3,8 @@ class PeopleController < ApplicationController
     before_action :confirm_logged_in, :except => [:new, :create]
     
     def index
-        @people = Person.all
+        @people = Person.order(:first_name).page(params[:page]).per_page(5)
+        #@people = Person.all
     end
     
     def show
