@@ -2,7 +2,8 @@ class HouseholdsController < ApplicationController
 
     before_action :confirm_logged_in
     def index
-        @households = Household.all
+        @households = Household.order(:name).page(params[:page]).per_page(1)
+        #@households = Household.all
     end
     
     def show
