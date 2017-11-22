@@ -14,7 +14,6 @@ class ChoresController < ApplicationController
     
     def new
         @chores = Chore.new
-        # default: render 'new' template
     end
     
     def create 
@@ -22,8 +21,14 @@ class ChoresController < ApplicationController
         house_id=Person.find(session[:user_id]).household_id
         @chores.update(:household_id => house_id)
         @chores.update(status: "uncompleted" )
+        #if @task_length.length < 2 
+         #   flash[:notice] = "#{@chores.task} was successfully created."
+        #else
+         #   flash[:notice] = "#{@chores.task} unable to be created, check parameters."
         redirect_to chores_path
+        
     end
+
     
     #For now, it will just delete the chore. In the future, we should keep
     #it for anaylytics and assignments. Logic will have to be implemented

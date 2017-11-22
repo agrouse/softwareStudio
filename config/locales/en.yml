@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    errors:
+        models:
+            Chore:
+                attributes:
+                    task: "Chore must be at least 2 letters long"
+            
