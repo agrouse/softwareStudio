@@ -3,10 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
-
-  helper_method :people_of_household
+  
+  helper_method :people_of_personal_household
   helper_method :chores_of_household
-  def people_of_household
+  helper_method :people_of_any_household
+  def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]
     #get house for associated with this user
@@ -22,6 +23,20 @@ class ApplicationController < ActionController::Base
     return peopleList
     
   end
+  def people_of_any_household(house)
+    houseID = house.id
+    peopleList = []
+    Person.all. each do |p|
+      if p.household_id == houseID
+        peopleList.push(p)
+      end
+    end
+    return peopleList
+  end
+    #get household_id of particular house
+    
+    #get people of house from 
+    #return people of that house
   def chores_of_household
     #get user's id from currently logged in person
     userID = session[:user_id]
