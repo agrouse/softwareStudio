@@ -9984,3 +9984,311 @@ Processing by HouseholdsController#show as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2433667319999387588_41688900 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:16)
   Rendered layouts/_header (0.0ms)
 Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 50.110.110.53 at 2017-11-25 21:58:48 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/reg" for 50.110.110.53 at 2017-11-25 21:58:48 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/access_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/access_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+
+
+Started GET "/access/landing" for 50.110.110.53 at 2017-11-25 21:58:48 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/access_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/access_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+
+
+Started GET "/access/landing" for 50.110.110.53 at 2017-11-25 21:59:22 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__4321871303478809841_16107460 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:12)
+  Rendered layouts/_home_header (0.4ms)
+Completed 200 OK in 290ms (Views: 288.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 50.110.110.53 at 2017-11-25 21:59:30 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__4321871303478809841_16107460 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.4ms)
+Completed 200 OK in 47ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/attempt_login" for 50.110.110.53 at 2017-11-25 21:59:52 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/attempt_login"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.2ms)
+
+
+Started GET "/access/attempt_login" for 50.110.110.53 at 2017-11-25 22:00:06 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/attempt_login"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.7ms)
+
+
+Started GET "/access/attempt_login" for 50.110.110.53 at 2017-11-25 22:01:52 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/attempt_login"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/" for 50.110.110.53 at 2017-11-25 22:02:07 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/reg" for 50.110.110.53 at 2017-11-25 22:02:07 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (13.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.4ms)
+Completed 200 OK in 293ms (Views: 284.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 50.110.110.53 at 2017-11-25 22:02:07 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:12)
+  Rendered layouts/_home_header (1.4ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 50.110.110.53 at 2017-11-25 22:02:11 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.1ms)
+Completed 200 OK in 47ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 50.110.110.53 at 2017-11-25 22:02:12 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+AFeU1BSSPJ/36kcuLeFfZ6TNOry2bjSC1K3jgGeIe8dAbVR4YYJ6+L6QRMD3cx2eEwPoR4RDPZw8qYG8RK79A==", "username"=>"agrouse", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "agrouse"]]
+Redirected to https://menage-mama-agrouse.c9users.io/access/home
+Completed 302 Found in 174ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/access/home" for 50.110.110.53 at 2017-11-25 22:02:12 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#home as HTML
+  Rendered access/home.html.erb within layouts/application (0.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:16)
+  Rendered layouts/_header (0.5ms)
+Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 50.110.110.53 at 2017-11-25 22:02:14 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "people"
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people"  ORDER BY "people"."first_name" ASC LIMIT 5 OFFSET 0[0m
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered people/index.html.erb within layouts/application (37.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:16)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 124ms (Views: 119.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/access/logout" for 50.110.110.53 at 2017-11-25 22:02:14 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 50.110.110.53 at 2017-11-25 22:02:14 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://menage-mama-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 50.110.110.53 at 2017-11-25 22:02:15 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.0ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 50.110.110.53 at 2017-11-25 22:02:16 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (0.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.0ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 50.110.110.53 at 2017-11-25 22:02:39 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IVVKbfmYkdnd/S3xncSzjAWpVTcAFrIO8wwjT1I3arnEVaFvSEzQwEDYxf4mrvqH43ZufOzeBiqIrDLHorvwog==", "people"=>{"first_name"=>"Bird", "last_name"=>"Dog", "username"=>"bdog", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("first_name", "last_name", "password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Bird"], ["last_name", "Dog"], ["password_digest", "$2a$10$/jIQ5zIxP2Tt/3l1nbFGIuJsJ2p4on3vU30Bt3JkeDlQkqrpf8gXK"], ["username", "bdog"], ["created_at", "2017-11-25 22:02:39.692883"], ["updated_at", "2017-11-25 22:02:39.692883"]]
+  [1m[36m (3.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/people
+Completed 302 Found in 84ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/people" for 50.110.110.53 at 2017-11-25 22:02:39 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+Redirected to https://menage-mama-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 50.110.110.53 at 2017-11-25 22:02:39 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.0ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 50.110.110.53 at 2017-11-25 22:02:45 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQ/m5oTmCbOC3M6gTAZzXmVTb5AZ9TelVfuo1+hiZVtEDw3kNTJIqh/5Jq/3bDpVg4xU2/U9g4EuW7lfGO7/QA==", "username"=>"bdog", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "bdog"]]
+Redirected to https://menage-mama-agrouse.c9users.io/access/home
+Completed 302 Found in 71ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/access/home" for 50.110.110.53 at 2017-11-25 22:02:45 +0000
+Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#home as HTML
+  Rendered access/home.html.erb within layouts/application (0.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:16)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
