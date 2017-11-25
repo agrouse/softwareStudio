@@ -9986,6 +9986,7 @@ DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header d
 Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.6ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 50.110.110.53 at 2017-11-25 21:58:48 +0000
 Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -10118,6 +10119,46 @@ Cannot render console from 50.110.110.53! Allowed networks: 127.0.0.1, ::1, 127.
 
 ActionController::RoutingError (No route matches [GET] "/access/attempt_login"):
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+=======
+Started GET "/" for 98.190.208.118 at 2017-11-25 18:26:28 +0000
+Cannot render console from 98.190.208.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+>>>>>>> ff3fe70844594fc98aee88bee2f995a94ef78b8f
   web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
   web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
@@ -10145,6 +10186,7 @@ ActionController::RoutingError (No route matches [GET] "/access/attempt_login"):
   /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
@@ -10292,3 +10334,64 @@ Processing by AccessController#home as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__3581451280726101951_40697580 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:16)
   Rendered layouts/_header (0.1ms)
 Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+=======
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.4ms)
+
+
+Started GET "/" for 98.190.208.118 at 2017-11-25 18:27:06 +0000
+Cannot render console from 98.190.208.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (6.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 98.190.208.118 at 2017-11-25 18:27:07 +0000
+Cannot render console from 98.190.208.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (1.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___648053243639898342_31622640 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:12)
+  Rendered layouts/_home_header (0.5ms)
+Completed 200 OK in 330ms (Views: 319.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 98.190.208.118 at 2017-11-25 18:27:32 +0000
+Cannot render console from 98.190.208.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___648053243639898342_31622640 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (1.7ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 98.190.208.118 at 2017-11-25 18:27:34 +0000
+Cannot render console from 98.190.208.118! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (22.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___648053243639898342_31622640 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.1ms)
+Completed 200 OK in 85ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.190.208.117 at 2017-11-25 20:36:46 +0000
+Cannot render console from 98.190.208.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 98.190.208.117 at 2017-11-25 20:36:46 +0000
+Cannot render console from 98.190.208.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___3005633275436380048_20532620 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:12)
+  Rendered layouts/_home_header (0.5ms)
+Completed 200 OK in 392ms (Views: 380.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/reg" for 98.190.208.117 at 2017-11-25 20:36:49 +0000
+Cannot render console from 98.190.208.117! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#reg as HTML
+  Rendered access/reg.html.erb within layouts/application (25.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_signup_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___3005633275436380048_20532620 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:14)
+  Rendered layouts/_signup_header (0.6ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+>>>>>>> ff3fe70844594fc98aee88bee2f995a94ef78b8f
