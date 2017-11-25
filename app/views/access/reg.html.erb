@@ -1,23 +1,18 @@
 <div id="page_content">
     
-        <div class="tab">
-                <%= form_tag people_path, class: "newPerson", :method => :post do %>
-                <table>
-                        <tr>
-                                <td><%= label :people, :first_name, 'First name:' %></td>
-                                <td><%= text_field :people, :first_name %></td>
-                        </tr>
-                        
-                        <tr>
-                                <td><%= label :people, :last_name, 'Last name:' %></td>
-                                <td><%= text_field :people, :last_name %></td>
-                        </tr>
-                </table>  
-                <% end %>
-        </div>
-        <h2>Step 2</h2>
+        <h2>Join</h2>
         <%= form_tag people_path, class: "newPerson", :method => :post do %>
         <table>
+                <tr>
+                        <td><%= label :people, :first_name, 'First name:' %></td>
+                        <td><%= text_field :people, :first_name %></td>
+                </tr>
+                
+                <tr>
+                        <td><%= label :people, :last_name, 'Last name:' %></td>
+                        <td><%= text_field :people, :last_name %></td>
+                </tr>
+                
                 <tr>
                         <td><%= label :people, :username, 'Username:' %></td>
                         <td><%= text_field :people, :username %></td>
@@ -31,25 +26,6 @@
                 <tr>
                         <td><%= label :people, :password, 'Confirm Password:'%></td>
                         <td><%= password_field :people, :password_confirmation %></td>
-                </tr>
-                
-                <tr>
-                        <td></td>
-                        <td><%= submit_tag 'Submit'%></td>
-                </tr>
-        </table>
-                <% end %>
-        <h2>Step 3</h2>
-        <%= form_tag household_path, class: "newHousehold", :method => :post do %>
-        <table>
-                <h3>Already belong to a household?</h3>
-                <tr>
-                        <td><%= label :households, :name, 'Name:' %></td>
-                        <td><%= text_field :households, :name %></td>
-                </tr>
-                <h3>Create a household</h3>
-                <tr>
-                        
                 </tr>
                 
                 <tr>
