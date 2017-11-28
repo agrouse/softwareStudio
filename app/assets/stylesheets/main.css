@@ -5,6 +5,7 @@ https://www.html5webtemplates.co.uk/templates.html */
 
 html{
 	height: 100%;
+	font-size: 100%;
 }
 
 
@@ -158,6 +159,7 @@ ol li {
 	margin: 0 auto 0 auto;
 	padding: 0 24px 20px 20px;
 	background: #FFF;
+	
 } 
 
 

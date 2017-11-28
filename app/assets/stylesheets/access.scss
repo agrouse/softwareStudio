@@ -57,23 +57,41 @@ div {
 }
 
 #title {
-	width: 400px;
-	margin: 200px auto 50px auto;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
 }
 
-#button1, #button2 {
-	width: 100px;
-	display: inline-block;
+.btn {
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding: 5px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.btn-primary.active {
+    color: white;
+    font-weight: bold;
 }
 
 #button1 {
-	float: left;
-	margin: 0 0 0 450px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #button2 {
-	float: right;
-	margin: 0 450px 0 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #button1 a:hover, #button2 a:hover {
