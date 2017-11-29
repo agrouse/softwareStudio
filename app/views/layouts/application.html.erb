@@ -11,7 +11,7 @@
 <% if current_page?(controller: 'access', action: 'landing') %>
     <%= render 'layouts/home_header' %>
 <% elsif (current_page?(controller: 'access', action: 'login')) || (current_page?(controller: 'access', action: 'attempt_login')) %>
-    <%= render 'layouts/access_header' %>
+    <%= nil %>
 <% elsif (current_page?(controller: 'people', action: 'signup')) %>
     <%= nil%>
 <% else %>

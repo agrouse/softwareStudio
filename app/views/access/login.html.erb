@@ -1,23 +1,36 @@
+<div id = "signupWrapper">
+    <div class="row">
+        <div class="col-md-12">
+                <div class="box">
+                    <div class="col-md-5">
+                        <a href="/access/landing" style="color:white;"><span style="font-size: 30px; margin-top: 5%;" class="glyphicon glyphicon-circle-arrow-left"></span></a>
+                    </div>
+                    <div class="col-md-5">
+                        <h1 style="color:white;">Log In</h1>
+                    </div>
 
-<!-- Added in header and horizontal menu -->
+                        <%= form_for(:session, url: access_attempt_login_path) do |f| %>
+                            <div class="signUpForm">
+                                <div class = "row">
+                                    <%= f.text_field :username, placeholder: "User name", :class =>'custom-control'%>
+                                </div>
+                                <div class = "row">
+                                    <%= f.password_field :password, placeholder: "Password", :class =>'custom-control'%>
+                                </div>
+                                <div class="row">
+                                    <%= button_tag(type: 'submit', class: "submitBtn btn btn-primary") do %>
+                                        <span class="glyphicon glyphicon-ok"></span> 
+                                    <% end %>
+                                </div>
+                                
+                                
+  
 
-<div id="page_content">
-    
-    <h2>Login</h2>
-    <%= form_tag(access_attempt_login_path, :method => :post) do %>
-    <table>
-        <tr>
-            <td><%= label_tag(:username) %></td>
-            <td><%= text_field_tag(:username, params[:username]) %></td>
-        </tr>
-        <tr>
-            <td><%= label_tag(:password) %></td>
-            <td><%= password_field_tag(:password) %></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td><%= submit_tag "Log In" , :class => "button" %></td>
-        </tr>
-    </table>
-    <% end %>
+                            </div>
+                            <% end %>
+                </div>
+        </div>
+    </div>
 </div>
+
+    

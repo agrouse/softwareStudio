@@ -6,13 +6,13 @@
   get 'access/menu'
 
   get 'access/login'
+  get 'access/attempt_login'
   post 'access/attempt_login'
   get 'access/logout'
   get 'people/signup' 
   get 'access/landing'
   get 'access/home'
   
-
     resources :chores
     resources :people
     resources :households
@@ -26,6 +26,7 @@
     post 'chores' => redirect('/chores')
     
     post 'people' => redirect('/people')
+    
     
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/') 
