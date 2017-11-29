@@ -1,0 +1,35 @@
+<div id = "signupWrapper">
+    <div class="jumbotron" style="background:black;">
+        <div class = "row">
+            <div class="title col-md-6 col-md-offset-4">
+                    <h1 style="color:white;">Join Ménage</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="signUpForm">
+                <%= form_for :people, :url => {:action => "create"} do |f| %>
+                    <div class = "col-md-6 col-md-offset-5">
+                        <%= f.text_field :first_name, placeholder: "First name", :class =>'inputfield'%>
+                    </div>
+                    <div class = "col-md-6 col-md-offset-5">
+                        <%= f.text_field :last_name, placeholder: "Last name", :class =>'inputfield'%>
+                    </div>
+                    <div class = "col-md-6 col-md-offset-5">
+                        <%= f.text_field :username, placeholder: "User name", :class =>'inputfield' %>
+                    </div>
+                    <div class= "col-md-6 col-md-offset-5">
+                        <%= f.password_field :password, placeholder: "Password", :class => 'inputfield' %>
+                    </div>
+                    <div class="col-md-6 col-md-offset-5">
+                        <%= f.password_field :password_confirmation, placeholder: "Confirm password", :class => 'inputfield' %>
+                    </div>
+                    
+                    <div class="col-md-6 col-md-offset-5">
+                        <%= f.submit 'Submit', :class => "button btn" %>
+                    </div>
+                        
+                    <% end %>
+        </div>
+    </div>
+</div>

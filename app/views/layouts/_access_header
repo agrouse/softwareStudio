@@ -1,4 +1,4 @@
-<div id="header">
+<div id="access_logo">
     <div id="logo">
         <div id="logo_text">
           <h1><a href="/access/landing">ménage</a></h1>
@@ -8,7 +8,7 @@
     <div id="menubar">
       <ul id="menu">
         <li><a href="/access/landing">Home</a></li>
-        <li><a href="/access/reg">Sign up</a></li>
+        <li><a href="/people/signup">Sign up</a></li>
         <li><a href="/access/login">Login</a></li>
       </ul>
     </div>

@@ -8,7 +8,7 @@
   get 'access/login'
   post 'access/attempt_login'
   get 'access/logout'
-  get 'access/reg' 
+  get 'people/signup' 
   get 'access/landing'
   get 'access/home'
   

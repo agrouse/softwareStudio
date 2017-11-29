@@ -6,13 +6,19 @@ https://www.html5webtemplates.co.uk/templates.html */
 html{
 	height: 100%;
 	font-size: 100%;
+	background: #16222A;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
 body {
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
-	background-color: black;
-	color: black;
+	background: #16222A;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 p {
@@ -116,7 +122,7 @@ ol li {
 	width: 898px;
 	height: 52px;
 	padding: 0;
-	background: #000;
+	background-image: linear-gradient(to right, #434343 0%, black 100%);
 } 
 
 #menu, #menu li {

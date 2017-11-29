@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
     
-    before_action :confirm_logged_in, :except => [:new, :create]
+    before_action :confirm_logged_in, :except => [:new, :create, :signup]
     
     def index
         @people = Person.order(:first_name).page(params[:page]).per_page(5)
@@ -44,6 +44,10 @@ class PeopleController < ApplicationController
         @people = Person.find params[:id]
         @people.destroy
         redirect_to people_path
+    end
+    
+    def signup
+        
     end
     
     private 
