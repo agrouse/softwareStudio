@@ -1,35 +1,44 @@
 <div id = "signupWrapper">
-    <div class="jumbotron">
-        <div class = "row">
-            <div class="title col-md-12">
-                    <h1 style="color:white; text-align:center;">sign up</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="signUpForm">
-                <%= form_for :people, :url => {:action => "create"} do |f| %>
-                    <div class = "col-md-6 col-md-offset-5">
-                        <%= f.text_field :first_name, placeholder: "First name", :class =>'inputfield'%>
+    <div class="row">
+        <div class="col-md-12">
+                <div class="box">
+                    <div class="col-md-5">
+                        <a href="/access/landing" style="color:white;"><span style="font-size: 30px; margin-top: 5%;" class="glyphicon glyphicon-circle-arrow-left"></span></a>
                     </div>
-                    <div class = "col-md-6 col-md-offset-5">
-                        <%= f.text_field :last_name, placeholder: "Last name", :class =>'inputfield'%>
+                    <div class="col-md-5">
+                        <h1 style="color:white;">Sign Up</h1>
                     </div>
-                    <div class = "col-md-6 col-md-offset-5">
-                        <%= f.text_field :username, placeholder: "User name", :class =>'inputfield' %>
-                    </div>
-                    <div class= "col-md-6 col-md-offset-5">
-                        <%= f.password_field :password, placeholder: "Password", :class => 'inputfield' %>
-                    </div>
-                    <div class="col-md-6 col-md-offset-5">
-                        <%= f.password_field :password_confirmation, placeholder: "Confirm password", :class => 'inputfield' %>
-                    </div>
-                    
-                    <div class="col-md-6 col-md-offset-5">
-                        <%= f.submit 'Submit', :class => "button btn" %>
-                    </div>
-                        
-                    <% end %>
+
+                        <%= form_for :people, :url => {:action => "create"} do |f| %>
+                            <div class="signUpForm">
+                                <div class = "row">
+                                    <%= f.text_field :first_name, placeholder: "First name", :class =>'custom-control'%>
+                                </div>
+                                <div class = "row">
+                                    <%= f.text_field :last_name, placeholder: "Last name", :class =>'custom-control'%>
+                                </div>
+                                <div class = "row">
+                                    <%= f.text_field :username, placeholder: "User name", :class =>'custom-control' %>
+                                </div>
+                                <div class= "row">
+                                    <%= f.password_field :password, placeholder: "Password", :class => 'custom-control' %>
+                                </div>
+                                <div class="row">
+                                    <%= f.password_field :password_confirmation, placeholder: "Confirm password", :class => 'custom-control' %>
+                                </div>
+                                
+                                <div class="row">
+                                    <%= button_tag(type: 'submit', class: "submitBtn btn btn-primary") do %>
+                                        <span class="glyphicon glyphicon-ok"></span> 
+                                    <% end %>
+                                </div>
+                                
+                                
+  
+
+                            </div>
+                            <% end %>
+                </div>
         </div>
     </div>
 </div>

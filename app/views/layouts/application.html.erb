@@ -13,16 +13,14 @@
 <% elsif (current_page?(controller: 'access', action: 'login')) || (current_page?(controller: 'access', action: 'attempt_login')) %>
     <%= render 'layouts/access_header' %>
 <% elsif (current_page?(controller: 'people', action: 'signup')) %>
-    <%= nil %>
+    <%= nil%>
 <% else %>
     <%= render 'layouts/header' %>
 <% end %>
 
 <%= yield %>
 <%if !current_page?(controller: 'access', action: 'landing') || !current_page?(controller: 'people', action: 'signup')  %>
-<div id="page_content">
 <div style= "font-size: 24px; color: red;"><%= notice %> </div>
-</div>
 <%end%>
 </body>
 </html>
