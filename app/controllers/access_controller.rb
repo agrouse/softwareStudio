@@ -2,7 +2,6 @@ class AccessController < ApplicationController
   
   before_action :confirm_logged_in, :except => [:landing, :login, :attempt_login, :logout]
   
-  
   def menu
   end
 
@@ -22,8 +21,13 @@ class AccessController < ApplicationController
     if authorized_user
       session[:user_id] = authorized_user.id
       session[:first_name] = authorized_user.first_name
-      flash[:notice] = "You are now logged in, " + authorized_user.first_name
-      redirect_to("/access/home")
+      if authorized_user.household_id == nil
+        redirect_to("/households")
+      
+      else
+        redirect_to("/access/home")
+        flash[:notice] = "You are now logged in, " + authorized_user.first_name
+      end
       
     else
       flash.now[:notice] = "Invalid username/password combination."

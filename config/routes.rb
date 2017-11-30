@@ -25,7 +25,8 @@
     
     post 'chores' => redirect('/chores')
     
-    post 'people' => redirect('/people')
+    post 'people' => redirect('/households')
+    
     
     
   get 'auth/:provider/callback', to: 'sessions#create'

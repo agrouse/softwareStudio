@@ -1,6 +1,6 @@
 class HouseholdsController < ApplicationController
 
-    before_action :confirm_logged_in
+    before_action :confirm_logged_in, :except => [:joinHousehold]
     def index
         @households = Household.order(:name).page(params[:page]).per_page(2)
         #@households = Household.all
@@ -35,6 +35,10 @@ class HouseholdsController < ApplicationController
         @households.destroy
         redirect_to households_path
     end
+    
+    def joinHousehold
+    end
+
     
     private 
         def household_params
