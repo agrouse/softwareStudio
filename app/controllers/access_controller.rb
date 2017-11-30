@@ -1,11 +1,14 @@
 class AccessController < ApplicationController
   
-  before_action :confirm_logged_in, :except => [:landing, :login, :reg, :attempt_login, :logout]
+  before_action :confirm_logged_in, :except => [:landing, :login, :attempt_login, :logout]
+  
+  
   def menu
   end
 
   def login
   end
+  
   
   def attempt_login
     if params[:username].present? && params[:password].present?

@@ -1,23 +1,19 @@
-
-<!-- Added in header and horizontal menu -->
-
-<div id="page_content">
+<div id="signupWrapper">
     
-    <h2>Login</h2>
-    <%= form_tag(access_attempt_login_path, :method => :post) do %>
-    <table>
-        <tr>
-            <td><%= label_tag(:username) %></td>
-            <td><%= text_field_tag(:username, params[:username]) %></td>
-        </tr>
-        <tr>
-            <td><%= label_tag(:password) %></td>
-            <td><%= password_field_tag(:password) %></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td><%= submit_tag "Log In" , :class => "button" %></td>
-        </tr>
-    </table>
-    <% end %>
+    <div class="box">
+        <div class="col-md-5">
+            <a href="/access/landing" style="color:white;"><span style="font-size: 30px; margin-top: 5%;" class="glyphicon glyphicon-circle-arrow-left"></span></a>
+        </div>
+        <h2 style="color:white;text-align:center; margin-top: 5%">Login</h2>
+        <%= form_tag(access_attempt_login_path, :class => 'regForm', :method => :post) do %>
+            <%= label_tag(:username, nil, class: 'custom-control') %>
+            <%= text_field_tag(:username, params[:username], class: 'custom-control') %>
+            <%= label_tag(:password, nil, class: 'custom-control') %>
+            <%= password_field_tag(:password, nil, class: 'custom-control') %>
+            <%= button_tag(type: 'submit', class: "submitBtn btn btn-primary") do %>
+                <span class="glyphicon glyphicon-ok"></span> 
+            <% end %>
+        <% end %>
+
+    </div>
 </div>

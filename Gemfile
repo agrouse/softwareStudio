@@ -34,6 +34,9 @@ gem 'will_paginate','>3.0'
 #Google third party authentication
 gem "omniauth-google-oauth2", "~> 0.2.1"
 
+#bootstrap
+gem 'bootstrap-sass', '3.3.7'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

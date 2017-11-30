@@ -1,0 +1,50 @@
+#signupWrapper{
+    height: 100%;
+    margin-top: 15%;
+}
+.custom-control{
+    width: 50%;
+    line-height: 2;
+    height: 34px;
+    margin-top: 2px;
+    margin-left: 25%;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    font-size: 16px;
+    background: none;
+    border-bottom: .5px solid white; 
+    color: white;
+    
+}
+
+#signupWrapper .btn {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5px;
+    background: #EECF6D;
+    line-height: 1.428571429;
+    height: 34px;
+    border-radius: 0px;
+}
+
+.box {
+    width: 50%;
+    height: 350px;
+    margin-left: 25%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid white; 
+}
+.signupForm {
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+#page_content {
+    display: hidden;
+}
+
+#logInBtn {
+    width: 5%;
+}

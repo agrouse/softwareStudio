@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.jumbotron {
+    background: #16222A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#signupWrapper .form_control {
+    width: 50%;
+    
+}
 .landing {
     width: 100%;
 	background-color: black;
@@ -18,7 +29,53 @@
             animation: fadein 3s;
 }
 
-#button1 h3, #button2 h3 {
+div {
+	display:block;
+}
+
+
+#title {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.btn {
+    background-color: none;
+    border: none;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding: 5px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.btn-primary.active {
+    color: white;
+    font-weight: bold;
+}
+
+#button1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button1 a:hover, #button2 a:hover {
+    font-weight: bold;
+}
+#button1, #button2 {
 	-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 5s; /* Firefox < 16 */
         -ms-animation: fadein 5s; /* Internet Explorer */
@@ -48,34 +105,4 @@
 @-ms-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
-
-
-
-div {
-	display:block;
-}
-
-#title {
-	width: 400px;
-	margin: 200px auto 50px auto;
-}
-
-#button1, #button2 {
-	width: 100px;
-	display: inline-block;
-}
-
-#button1 {
-	float: left;
-	margin: 0 0 0 450px;
-}
-
-#button2 {
-	float: right;
-	margin: 0 450px 0 0;
-}
-
-#button1 a:hover, #button2 a:hover {
-    font-weight: bold;
 }
