@@ -7,8 +7,8 @@ html{
 	height: 100%;
 	font-size: 100%;
 	background: #16222A;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #d7d2cc, #304352); /* Chrome 10-25, Safari 5.1-6*/
+	background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -16,8 +16,9 @@ html{
 body {
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
 	background: #16222A;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: -webkit-linear-gradient(to right, #d7d2cc, #304352);    /*Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #d7d2cc, #304352);  /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+	padding-bottom: 20%;
 
 }
 
@@ -122,7 +123,7 @@ ol li {
 	width: 898px;
 	height: 52px;
 	padding: 0;
-	background-image: linear-gradient(to right, #434343 0%, black 100%);
+	background-color: rgba(0, 0, 0, 0.2);
 } 
 
 #menu, #menu li {
@@ -140,7 +141,6 @@ ol li {
 	font: normal 100% arial, sans-serif;
 	display: block; 
 	float: left; 
-	height: 17px;
 	margin: 10px 0 0 10px;
 	padding: 9px 26px 6px 26px;
 	text-align: center;
@@ -152,7 +152,7 @@ ol li {
 
 #menu li a:hover {
     color: #FFF;
-    background-color: #808B96;
+    background-color: #B1B695;
 }
 
 
@@ -162,18 +162,17 @@ ol li {
 #page_content {
 	width: 854px;
 	overflow: hidden;
-	margin: 0 auto 0 auto;
+	margin: auto;
 	padding: 0 24px 20px 20px;
-	background: #FFF;
 	
 } 
-
-
 
 
 table {
 	margin: 10px 0 30px 0;
 }
+
+
 
 table tr th, table tr td {
 	background: #3B3B3B;
@@ -181,9 +180,26 @@ table tr th, table tr td {
 	padding: 7px 4px;
 	text-align: left;
 }
+
+
   
 table tr td {
-	background: #F0EFE2;
-	color: #47433F;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
 	border-top: 1px solid #FFF;
+}
+
+
+#tableWrapper tbody {
+    display:block;
+    height:300px;
+    overflow:auto;
+}
+#tableWrapper thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+#tableWrapper thead {
+    width: calc( 100% - 1em )
 }

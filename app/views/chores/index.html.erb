@@ -10,36 +10,40 @@ if ses_house_id!=nil%>
             <%= submit_tag 'Add'%>
             <% end %>
             
-</br>
-
-<h1 style="color: black">Pending Chores for <%=Household.find(ses_house_id).name %></h1>
-        <table style="width:100%">
+<br>
+<div id="tableWrapper">
+   <div id="tableScroll">
+    <table class="table table-dark table-hover table-fixed">
+        <thead>
             <tr>
-                <div class="tbl-header">
-                    <th>Chore</th>
-                    <th>Priority</th>
-                    <th>Person Assigned</th>
-                    <th>Complete</th>
-                </div>
+                <th class="col-md-3">Chore</th>
+                <th class="col-md-3">Priority</th>
+                <th class="col-md-3">Person Assigned</th>
+                <th class="col-md-3">Complete</th>
             </tr>
-<%if @chores
-  @chores.each do |t| 
-      if t.household_id==ses_house_id%>
-        
-        <tr>
-         <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-         <td><%= t.priority %>   </td>
-         <td><%= t.person_assigned%></td>
-         <td><%= button_to "Completed", t, :method => :delete %></td>
-     </tr>
-       <%end%>
- <%end%> 
-<%end%>
+        </thead>
+        <tbody>
+        <%if @chores
+            @chores.each do |t| 
+              if t.household_id==ses_house_id%>
+            <tr>
+             <td class="col-md-3"><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+             <td class="col-md-3"><%= t.priority %>   </td>
+             <td class="col-md-3"><%= t.person_assigned%></td>
+             <td class="col-md-3"><%= button_to "Completed", t, :method => :delete %></td>
+             </tr>
+           <%end%>
+     <%end%> 
+    <%end%>
+       <%= will_paginate @chores, previous_label: h("<"), next_label: h(">") %>
+        </tbody>
+   
+    </table>
+</div>
 
-<%= will_paginate @chores, previous_label: h("<"), next_label: h(">") %>
 
-</table>
 
+</div>
 </div>  
         
 <%else%>
