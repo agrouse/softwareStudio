@@ -40,7 +40,9 @@ if ses_house_id!=nil%>
                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
                  <td><%= t.priority %>   </td>
                  <td><%= t.person_assigned%></td>
-                 <td><%= button_to "Completed", t, :method => :delete %></td>
+                 <td><%= button_to t, method: :delete do %>
+                        <span class="glyphicon glyphicon-ok" style="color:#EECF6D"></span>
+                     <% end %></td>
              </tr>
            <%end%>
      <%end%> 

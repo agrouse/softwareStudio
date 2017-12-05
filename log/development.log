@@ -40517,3 +40517,176 @@ Processing by HouseholdsController#index as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___1294943237101540939_31464560 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:18)
   Rendered layouts/_header (0.1ms)
 Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:37:30 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.4ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (10.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___1294943237101540939_31464560 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:18)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:39:36 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.4ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (57.7ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined local variable or method `trans' for #<#<Class:0x007fad27cc0bb0>:0x007fad26d53628>
+Did you mean?  translate
+               trap):
+    40:                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+    41:                  <td><%= t.priority %>   </td>
+    42:                  <td><%= t.person_assigned%></td>
+    43:                  <td><%= button_to trans, method: :delete, remote: true, class: "btn btn-default" do %>
+    44:                       <span class="glyphicon glyphicon-trash"></span>
+    45:                         <% end %></td>
+    46:              </tr>
+  app/views/chores/index.html.erb:43:in `block in _app_views_chores_index_html_erb__2642955540849785991_70190828786080'
+  app/views/chores/index.html.erb:37:in `_app_views_chores_index_html_erb__2642955540849785991_70190828786080'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.6ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:41:38 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.0ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (57.5ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fad27cc0bb0>:0x007fad26aa24d8>):
+    40:                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+    41:                  <td><%= t.priority %>   </td>
+    42:                  <td><%= t.person_assigned%></td>
+    43:                  <td><%= link_to '<span class="glyphicon glyphicon-trash"></span>Delete it'.html_safe, post, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-lg' %></td>
+    44:              </tr>
+    45:            <%end%>
+    46:      <%end%> 
+  app/views/chores/index.html.erb:43:in `block in _app_views_chores_index_html_erb__2642955540849785991_70190827374780'
+  app/views/chores/index.html.erb:37:in `_app_views_chores_index_html_erb__2642955540849785991_70190827374780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.5ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:43:59 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.1ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (50.5ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined local variable or method `button_path' for #<#<Class:0x007fad27cc0bb0>:0x007fad272b44a0>
+Did you mean?  button_to
+               button_tag):
+    40:                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+    41:                  <td><%= t.priority %>   </td>
+    42:                  <td><%= t.person_assigned%></td>
+    43:                  <td><%= button_to button_path, method: :delete do %>
+    44:                     <span class="glyphicon glyphicon-search"></span>
+    45:                     <% end %></td>
+    46:              </tr>
+  app/views/chores/index.html.erb:43:in `block in _app_views_chores_index_html_erb__2642955540849785991_70190829017300'
+  app/views/chores/index.html.erb:37:in `_app_views_chores_index_html_erb__2642955540849785991_70190829017300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.1ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:45:10 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.0ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (14.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___1294943237101540939_31464560 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:18)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/chores/43" for 129.81.157.147 at 2017-12-05 23:45:27 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"htSloYhsaC0IsPaqhraqXNtiZ6wQD0pLCbtcSDo8DJdj1E6jObgpNJWVHqU93ONXPb1c5/zH/m9yG03AyrCWjA==", "id"=>"43"}
+  [1m[35mChore Load (0.3ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 43]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 7ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:45:27 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.7ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (13.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___1294943237101540939_31464560 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:18)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:46:00 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.1ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (11.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___1294943237101540939_31464560 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:18)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/chores" for 129.81.157.147 at 2017-12-05 23:46:42 +0000
+Cannot render console from 129.81.157.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.3ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (14.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___1294943237101540939_31464560 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:18)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 1.4ms)
