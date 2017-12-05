@@ -2,7 +2,7 @@ class ChoresController < ApplicationController
     
     before_action :confirm_logged_in
     def index
-        @chores = Chore.order(:household_id).page(params[:page]).per_page(10)
+        @chores = Chore.order(:household_id).page(params[:page]).per_page(50)
         #@chores = Chore.order(:task).page(params[:page]).per_page(5)
         #@chores = Chore.all
     end

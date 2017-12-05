@@ -1,6 +1,6 @@
 /* general stylings for site - break this file into 
 separate stylesheets for ease of access later? */
-/* some stylings and formatting pulled from 
+/* some stylings andformatting pulled from 
 https://www.html5webtemplates.co.uk/templates.html */
 
 html{
@@ -169,7 +169,7 @@ ol li {
 
 
 table {
-	margin: 10px 0 30px 0;
+	margin: auto;
 }
 
 
@@ -189,10 +189,12 @@ table tr td {
 	border-top: 1px solid #FFF;
 }
 
-
+#tableWrapper {
+	display: inline-block;
+}
 #tableWrapper tbody {
     display:block;
-    height:300px;
+    height:400px;
     overflow:auto;
 }
 #tableWrapper thead, tbody tr {
@@ -201,5 +203,9 @@ table tr td {
     table-layout:fixed;
 }
 #tableWrapper thead {
-    width: calc( 100% - 1em )
+    width: 100%
+}
+
+.panel{
+	background:none;
 }
