@@ -39,6 +39,8 @@ gem "omniauth-google-oauth2", "~> 0.2.1"
 #bootstrap
 gem 'bootstrap-sass', '3.3.7'
 
+gem 'jquery-validation-rails'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

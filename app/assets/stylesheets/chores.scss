@@ -4,8 +4,7 @@
 }
 .choreInput {
     padding: 8px;
-    vertical-align: top;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255,255,255,0.3);
     color: white;
     margin-right: 1px;
     position:absolute;
@@ -13,6 +12,14 @@
     height: 30px;
     box-sizing: border-box;
     
+}
+#choreHeader{
+  color: #fff;
+  background-color: rgba(255,255,255,0.2);
+  padding: 20px 15px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .formWrapper {

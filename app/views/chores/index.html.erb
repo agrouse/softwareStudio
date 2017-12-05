@@ -4,11 +4,6 @@
 ses_house_id=Person.find(ses_id).household_id
 if ses_house_id!=nil%>
 <div id="tableWrapper">
-    <div class="row">
-        <h4 class="col-md-3 text-center">Chore</h4>
-        <h4 class="col-md-3 text-center">Priority</h4>
-        <h4 class="col-md-3 text-center">Person Assigned</h4>
-    </div>
         <div class="row">
             <div class="formWrapper" style="width:100%">
                 <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
@@ -23,15 +18,23 @@ if ses_house_id!=nil%>
 <div class="row">
    <div id="tableScroll">
     <table class="table table-dark table-hover table-fixed">
+        <thead>
+            <tr>
+              <th id="choreHeader">Chore</th>
+              <th id="choreHeader">Priority</th>
+              <th id="choreHeader">Person Assigned</th>
+              <th id="choreHeader">Complete</th>
+            </tr>
+        </thead>
         <tbody>
         <%if @chores
             @chores.each do |t| 
               if t.household_id==ses_house_id%>
             <tr>
-             <td class="col-md-3"><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-             <td class="col-md-3"><%= t.priority %>   </td>
-             <td class="col-md-3"><%= t.person_assigned%></td>
-             <td class="col-md-3"><%= button_to "Completed", t, :method => :delete %></td>
+                 <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+                 <td><%= t.priority %>   </td>
+                 <td><%= t.person_assigned%></td>
+                 <td><%= button_to "Completed", t, :method => :delete %></td>
              </tr>
            <%end%>
      <%end%> 
