@@ -1,66 +1,68 @@
 <!-- div for styles -->
-<div id="page_content">
-<br>
-<br>
-
-<%ses_id=session[:user_id]
-ses_house_id=Person.find(ses_id).household_id
-if ses_house_id!=nil%>
-<div id="tableWrapper">
-<div class="row">
-        <div class="card">
-            <h4 class="card-title">Add Chore</h4>
-                <div class="card-body">
-                <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
-                    <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                    <%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
-                        <span class="glyphicon glyphicon-plus"></span>
-                    <% end %>
-                    <% end %>
-            </div>
-        </div>
-</div>
-<br>
-<div class="row">
-   <div id="tableScroll">
-    <table class="table table-dark table-hover table-fixed">
-        <thead>
-            <tr>
-              <th id="choreHeader">Chore</th>
-              <th id="choreHeader">Priority</th>
-              <th id="choreHeader">Person Assigned</th>
-              <th id="choreHeader">Complete</th>
-            </tr>
-        </thead>
-        <tbody>
-        <%if @chores
-            @chores.each do |t| 
-              if t.household_id==ses_house_id%>
-            <tr>
-                 <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                 <td><%= t.priority %>   </td>
-                 <td><%= t.person_assigned%></td>
-                 <td><%= button_to t, method: :delete do %>
-                        <span class="glyphicon glyphicon-ok" style="color:#EECF6D"></span>
-                     <% end %></td>
-             </tr>
-           <%end%>
-     <%end%> 
-    <%end%>
-       <%= will_paginate @chores, previous_label: h("<"), next_label: h(">") %>
-        </tbody>
-   
-    </table>
+<div class="choreWrapper">
+    <div id="page_content">
+    <br>
+    <br>
     
-</div>
-</div>
-
-
-
-</div>
-</div>  
+    <%ses_id=session[:user_id]
+    ses_house_id=Person.find(ses_id).household_id
+    if ses_house_id!=nil%>
+    <div id="tableWrapper">
+    <div class="row">
+            <div class="card">
+                <h4 class="card-title">Add Chore</h4>
+                    <div class="card-body">
+                    <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
+                        <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
+                        <%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
+                            <span class="glyphicon glyphicon-plus"></span>
+                        <% end %>
+                        <% end %>
+                </div>
+            </div>
+    </div>
+    <br>
+    <div class="row">
+       <div id="tableScroll">
+        <table class="table table-hover table-fixed">
+            <thead>
+                <tr>
+                  <th id="choreHeader">Chore</th>
+                  <th id="choreHeader">Priority</th>
+                  <th id="choreHeader">Person Assigned</th>
+                  <th id="choreHeader">Complete</th>
+                </tr>
+            </thead>
+            <tbody>
+            <%if @chores
+                @chores.each do |t| 
+                  if t.household_id==ses_house_id%>
+                <tr>
+                     <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+                     <td><%= t.priority %>   </td>
+                     <td><%= t.person_assigned%></td>
+                     <td><%= button_to t, method: :delete do %>
+                            <span class="glyphicon glyphicon-ok" style="color:#EECF6D"></span>
+                         <% end %></td>
+                 </tr>
+               <%end%>
+         <%end%> 
+        <%end%>
+           <%= will_paginate @chores, previous_label: h("<"), next_label: h(">") %>
+            </tbody>
+       
+        </table>
         
-<%else%>
-   <h2><%= link_to "Please join or create a household first", households_path %></h2>
-<%end%>
+    </div>
+    </div>
+    
+    
+    
+    </div>
+    </div>  
+            
+    <%else%>
+       <h2><%= link_to "Please join or create a household first", households_path %></h2>
+    <%end%>
+    </div>
 </div>
