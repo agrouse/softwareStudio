@@ -6,18 +6,16 @@ https://www.html5webtemplates.co.uk/templates.html */
 html{
 	height: 100%;
 	font-size: 100%;
-	background: #16222A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #d7d2cc, #304352); /* Chrome 10-25, Safari 5.1-6*/
-	background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*background: #6B8F71;  /* fallback for old browsers */
+    background-image: linear-gradient(to left, #dfe9f3 0%, white 100%);
 
 }
 
 
 body {
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
-	background: #16222A;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #d7d2cc, #304352);    /*Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #d7d2cc, #304352);  /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+	/*background: #6B8F71;   fallback for old browsers */
+	background-image: linear-gradient(to left, #dfe9f3 0%, white 100%);/*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
 	padding-bottom: 20%;
 
 }
@@ -33,7 +31,7 @@ img {
 
 h1, h2, h3 {
 	font: normal 175% 'century gothic', arial, sans-serif;
-	color: #000;
+	color: black;
 	margin: 0 0 15px 0;
 	padding: 15px 0 5px 0;
 }
@@ -41,7 +39,7 @@ h1, h2, h3 {
 a, a:hover {
 	outline: none;
 	text-decoration: underline;
-	color: #000;
+	color: black;
 }
 
 a:hover {
