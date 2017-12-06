@@ -4,8 +4,8 @@
 
 .jumbotron {
     background: #16222A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -15,7 +15,7 @@
 .landing {
     width: 100%;
 	background-color: black;
-	color: black;
+	color: white;
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
 }
 
@@ -44,7 +44,7 @@ div {
 .btn {
     background-color: none;
     border: none;
-    color: black;
+    color: white;
     font-family: 'Nunito', sans-serif;
     padding: 5px;
     letter-spacing: 1px;
@@ -55,7 +55,7 @@ div {
 }
 
 .btn-primary.active {
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
