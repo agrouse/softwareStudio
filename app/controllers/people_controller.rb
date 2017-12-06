@@ -47,7 +47,6 @@ class PeopleController < ApplicationController
     end
     
     def signup
-        
     end
     
     private 
