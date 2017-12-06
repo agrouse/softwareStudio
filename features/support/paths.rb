@@ -14,9 +14,18 @@ module NavigationHelpers
     case page_name
 
    
-      when "the Menage home page" then '/chores'
+    when "the Menage home page" 
+      '/access/landing'
         
-
+    when /^sign in/
+      '/access/login'
+    
+    when /^households/
+      '/households'
+    when /^welcome/
+      '/access/home'
+    when /^attempt login/
+      '/access/attempt_login'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

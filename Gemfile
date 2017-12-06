@@ -39,7 +39,7 @@ gem 'bootstrap-sass', '3.3.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'rdoc'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

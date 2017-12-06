@@ -33,6 +33,11 @@ class ApplicationController < ActionController::Base
     end
     return peopleList
   end
+  def chore_assignment_options(house)
+    list = people_of_any_household(house)
+    list.append("Unassigned")
+    return list
+  end
     #get household_id of particular house
     
     #get people of house from 
