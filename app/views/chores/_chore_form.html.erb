@@ -1,18 +1,5 @@
-<table summary="Chore form fields">
-    <tr>
-        <td><%= label :chore, :task, 'Chore' %></td>
-        <td><%= text_field :chore, :task  %></td>
-    </tr>
-    <tr>  
-        <td><%= label :chore, :priority, 'Priority' %></td>
-        <td><%= select :chore, :priority, ['low', 'moderate', 'high'] %></td>
-    </tr> 
-    <tr>
-        
-        <td><%= label :chore, :person_assigned, 'Person Assigned' %></td>
-        <td><%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name) %></td>
+<%= text_field :chore, :task, :class => "col-md-3 choreInput card-text" %>
+<%= select :chore, :priority, ['low', 'moderate', 'high'],{},class: "col-md-3 dropDown choreInput card-text" %>
+<%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-3 dropDown choreInput card-text"}) %>
 
-    </tr>
-        
-</table>
 

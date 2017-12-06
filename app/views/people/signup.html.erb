@@ -12,19 +12,19 @@
                         <%= form_for :people, :url => {:action => "create"} do |f| %>
                             <div class="signupForm">
                                 <div class = "row">
-                                    <%= f.text_field :first_name, placeholder: "First name", :class =>'custom-control'%>
+                                    <%= f.text_field :first_name, placeholder: "First name", :class =>'accessInput custom-control'%>
                                 </div>
                                 <div class = "row">
-                                    <%= f.text_field :last_name, placeholder: "Last name", :class =>'custom-control'%>
+                                    <%= f.text_field :last_name, placeholder: "Last name", :class =>'accessInput custom-control'%>
                                 </div>
                                 <div class = "row">
-                                    <%= f.text_field :username, placeholder: "User name", :class =>'custom-control' %>
+                                    <%= f.text_field :username, placeholder: "User name", :class =>'accessInput custom-control' %>
                                 </div>
                                 <div class= "row">
-                                    <%= f.password_field :password, placeholder: "Password", :class => 'custom-control' %>
+                                    <%= f.password_field :password, placeholder: "Password", :class => 'accessInput custom-control' %>
                                 </div>
                                 <div class="row">
-                                    <%= f.password_field :password_confirmation, placeholder: "Confirm password", :class => 'custom-control' %>
+                                    <%= f.password_field :password_confirmation, placeholder: "Confirm password", :class => 'accessInput custom-control' %>
                                 </div>
                                 
                                 <div class="row">

@@ -21,17 +21,20 @@ class AccessController < ApplicationController
     if authorized_user
       session[:user_id] = authorized_user.id
       session[:first_name] = authorized_user.first_name
+      
+      #if new user, join a household
       if authorized_user.household_id == nil
         redirect_to("/households")
-      
+      #if returning user, go to homepage
       else
-        redirect_to("/access/home")
+        redirect_to("/chores")
         flash[:notice] = "You are now logged in, " + authorized_user.first_name
       end
       
     else
-      flash.now[:notice] = "Invalid username/password combination."
-      render('login')
+      
+      redirect_to("/access/login")
+      flash[:notice] = "Invalid username/password combination."
     end
   end
   

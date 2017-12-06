@@ -7,8 +7,7 @@
     </div>
     <div id="menubar">
       <ul id="menu">
-        <li><a href="/access/home">Home</a></li>
-        <li><a href="/chores">Chores</a></li>
+        <li><a href="/chores">Home</a></li>
         <li><a href="/households">Household</a></li>
         <li><a href="/people">My House</a></li>
         <li><a href="/access/logout">Logout</a></li>
