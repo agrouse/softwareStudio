@@ -3,22 +3,32 @@
 
 
 <h2> Details about <%= @chores.task %> </h2>
- <ul>
-  <li>Status:
-   <%= @chores.status %> </li>
+<div class='people_info'>
+  <li>Last completed:
+   <% if @chores.last_accomplished != nil%>
+       <%= Time.at(@chores.last_accomplished).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")  %> </li>
+    <%else%>
+        <%=Time.at(@chores.created_at).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")%>
+    <%end%>
   <li>Priority:
     <%= @chores.priority %>
   <li>Person Assigned:
     <%= @chores.person_assigned %> </li>
-</ul>
 
-<br>
+</div>
+<div class='middle'>
 <h2>Update chore</h2>
+<div id="updateperson">
 <%= form_tag chore_path, :method => :put do |f| %>
     <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
     <%= submit_tag 'Update'%>
     <% end %>
-
+</div>
+</div>
+<br>
+<br>
+<div id="linkback">
 <%= link_to 'Back to chores list', chores_path %>
+</div>
 
 </div>
