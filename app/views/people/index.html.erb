@@ -1,36 +1,42 @@
-<!-- div for styles -->
-<div id="page_content">
-<h1 style="color: black">Our House</h1>
-<%ses_id=session[:user_id]
-user_house_id=Person.find(ses_id).household_id%>
-
-<%= will_paginate @people, previous_label: h("<"), next_label: h(">") %>
-<div class="card-deck">
-    <%if user_house_id != nil%>
-        <%if @people
-          @people.each do |t| %>
-            <%if t.household_id==user_house_id %>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
-                        <p class="card-text"><%= t.username %></p>   
-                        <%= t.household.name%>
+<div id="peopleWrapper">
+    <!-- div for styles -->
+    <div id="page_content">
+    <h1 style="color: black">Our House</h1>
+    <%ses_id=session[:user_id]
+    user_house_id=Person.find(ses_id).household_id%>
+    <div class="card-deck">
+        <%if user_house_id != nil%>
+            <%if @people
+              @people.each do |t| %>
+                <%if t.household_id==user_house_id %>
+                    <div class="col-md-4">
+                        <div class="card card-inverse">
+                            <div class="card-block" style="text-align: center;">
+                                    <h4 class="card-title" style="color:white;" ><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
+                                    <h6 class="card-subtitle" style="color:white;"><%= t.username %></h6> 
+                                    <a href="#" class="card-link"><span class="glyphicon glyphicon-envelope"aria-hidden="true" style="color:yellow"></span></a>
+                            </div>
+                                
+                                    
+                                
+                            
+                        </div>
                     </div>
-                </div>
-            <%end%>
-          <%end%>
-        <%end%> 
+                <%end%>
+              <%end%>
+            <%end%> 
+        </div>
+     <%else%>
+        <%t=Person.find(ses_id)%>
+        <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> 
+            <%= t.username %>   
+            <%= t.description%>
+            <%= button_to "Delete", t, :method => :delete %>
+     <%end%>
+    </table>
+    
+    <br>
+    
+    
     </div>
- <%else%>
-    <%t=Person.find(ses_id)%>
-    <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> 
-        <%= t.username %>   
-        <%= t.description%>
-        <%= button_to "Delete", t, :method => :delete %>
- <%end%>
-</table>
-
-<br>
-
-
 </div>
