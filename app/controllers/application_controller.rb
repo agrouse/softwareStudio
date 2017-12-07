@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   helper_method :people_of_personal_household
   helper_method :chores_of_household
   helper_method :people_of_any_household
+  helper_method :getPersonID
+  
   def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]
@@ -51,7 +53,11 @@ class ApplicationController < ActionController::Base
     return choreslist
     
   end
-   
+  
+  def getPersonID
+    userID = session[:user_id]
+    return userID.to_s
+  end
   
   private
     def confirm_logged_in

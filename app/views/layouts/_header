@@ -4,7 +4,8 @@
       <ul id="menu">
         <li class="nav-item"><a href="/chores">Chores</a></li>
         <li class="nav-item"><a href="/people">My House</a></li>
-        <li class="nav-item"><a href="#">My Profile</a></li>
+        <% @link = "/people/"+getPersonID %>
+        <li class="nav-item"><a href="#{@link}">My Profile</a></li>
         <li class="nav-item"><a href="/access/logout">Logout</a></li>
       </ul>
     </div>
