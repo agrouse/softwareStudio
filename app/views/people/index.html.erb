@@ -40,6 +40,8 @@
     
     </div>
 </div>
+<h2 style ="text-align: center"><%= link_to "Leave Household", person_path(:id => session[:user_id], people: {:household_id => nil}), :class => "button", :method => "PUT" %></h2>
+
 <script>
     var house = "<svg id='house' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 316.945 316.945'>" +
   "<g fill='#3d0332'>" +

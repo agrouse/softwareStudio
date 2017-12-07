@@ -1,19 +1,41 @@
 <div id="page_content">
 
+<h2 style="text-align: center"> Details about <%= @households.name %> </h2>
 
-<h2> Details about <%= @households.name %> </h2>
+<div class='people_info'>
 <h3> People</h3>
 <% people = people_of_any_household(@households) %> 
 <% people.each do |p| %>
  <li><%= p.first_name%> <%= p.last_name%></li>
 <% end %>
-<h2>Update Household</h2>
-<%= form_tag household_path, :method => :put do %>
-    <%= label :households, :name, 'Name' %>
-    <%= text_field :households, :name  %>
-    
-    <%= submit_tag 'Update'%>
-    <% end %>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <%= link_to 'Back to house list', households_path %>
 </div>
