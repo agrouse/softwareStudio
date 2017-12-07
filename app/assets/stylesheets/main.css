@@ -208,3 +208,6 @@ table tr td {
 #tableWrapper tr td {
 	background-color: rgba(0, 0, 0, 0.3);
 }
+#tableWrapper a {
+	color: white;
+}

@@ -1,5 +1,5 @@
-<%= text_field :chore, :task, :class => "col-md-3 choreInput card-text" %>
-<%= select :chore, :priority, ['low', 'moderate', 'high'],{},class: "col-md-3 dropDown choreInput card-text" %>
-<%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-3 dropDown choreInput card-text"}) %>
+<td style="width=25%"><%= text_field :chore, :task, :class => "col-md-12 choreInput" %></td>
+<td><%= select :chore, :priority, ['low', 'moderate', 'high'],{},class: "col-md-12 dropDown choreInput" %></td>
+<td><%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-12 dropDown choreInput"}) %></td>
 
 
