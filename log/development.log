@@ -41469,3 +41469,853 @@ Processing by AccessController#login as HTML
   Rendered access/login.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
 >>>>>>> a9a7e80870519a5c0cd60d0669c0a5f6435ef53c
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 02:49:06 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.8ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.6ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (74.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.4ms)
+Completed 200 OK in 889ms (Views: 829.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/main.self-b1e1d5b94689e5917d417e49d8a861069b7d6c17d6639999c1a896885f9bc456.css?body=1" for 129.81.83.57 at 2017-12-07 02:49:08 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 02:52:33 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.2ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (5.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.5ms)
+Completed 200 OK in 97ms (Views: 93.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 02:52:54 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (5.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.4ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 02:53:00 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.3ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (4.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.4ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 02:53:06 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (5.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.4ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 02:54:48 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (6.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.4ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 02:55:09 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.3ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (6.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.4ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 02:55:47 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (6.3ms)
+  [1m[36mChore Load (1.0ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (17.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/people" for 129.81.83.57 at 2017-12-07 02:57:28 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (4.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 02:57:31 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (10.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 03:02:13 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.5ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (6.4ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:04:42 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (19.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 70ms (Views: 67.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/chores" for 129.81.83.57 at 2017-12-07 03:05:07 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GWoQgj1t1sFG+Gmw296VZchR/nMiRbzaRSoEQUEbmZnEgudjjQaUdP8UdHhdF9dpr7MtuWvX7lA4ojyHXA8tlQ==", "chore"=>{"task"=>"sweep", "priority"=>"high", "person_assigned"=>"Dalton"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["task", "sweep"], ["priority", "high"], ["person_assigned", "Dalton"], ["created_at", "2017-12-07 03:05:07.419761"], ["updated_at", "2017-12-07 03:05:07.419761"]]
+  [1m[35m (4.2ms)[0m  COMMIT
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3[0m  [["household_id", 1], ["updated_at", "2017-12-07 03:05:07.432462"], ["id", 61]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (123.3ms)[0m  UPDATE "chores" SET "status" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["status", "uncompleted"], ["updated_at", "2017-12-07 03:05:07.438537"], ["id", 61]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 149ms (ActiveRecord: 138.2ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:05:07 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.2ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (10.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/chores/61" for 129.81.83.57 at 2017-12-07 03:05:26 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2FLqgsH8I0KoauLNbSn5DGhmnRx7cvgrFVyEic4yJ1MFuh1jcZdh9xGG/wXr4LsAD4RO1jLgqqFo1LxP0yaTXw==", "id"=>"61"}
+  [1m[35mChore Load (0.4ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 61]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "chores" WHERE "chores"."id" = $1  [["id", 61]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 7ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:05:26 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (27.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.0ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/chores" for 129.81.83.57 at 2017-12-07 03:05:44 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgDjr7noN029jhfvl97Jy9RHFbbUdm10OHnzOT5wMfq76BROCYN1+ARiCicRF4vHs6XGfJ3kP/5F8cv/I2SF9g==", "chore"=>{"task"=>"windows", "priority"=>"low", "person_assigned"=>"Yellow"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "chores" ("task", "priority", "person_assigned", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["task", "windows"], ["priority", "low"], ["person_assigned", "Yellow"], ["created_at", "2017-12-07 03:05:44.084674"], ["updated_at", "2017-12-07 03:05:44.084674"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "chores" SET "household_id" = $1, "updated_at" = $2 WHERE "chores"."id" = $3[0m  [["household_id", 1], ["updated_at", "2017-12-07 03:05:44.090957"], ["id", 62]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "chores" SET "status" = $1, "updated_at" = $2 WHERE "chores"."id" = $3  [["status", "uncompleted"], ["updated_at", "2017-12-07 03:05:44.095520"], ["id", 62]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 17ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:05:44 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.4ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (11.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/chores/62" for 129.81.83.57 at 2017-12-07 03:05:46 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mChore Load (0.7ms)[0m  SELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1  [["id", 62]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "chores".* FROM "chores" WHERE "chores"."id" = $1 LIMIT 1[0m  [["id", "62"]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  Rendered chores/show.html.erb within layouts/application (4.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/people" for 129.81.83.57 at 2017-12-07 03:05:48 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (3.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people/9" for 129.81.83.57 at 2017-12-07 03:05:50 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "9"]]
+  [1m[35mHousehold Load (0.3ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (3.4ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/people" for 129.81.83.57 at 2017-12-07 03:05:59 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (2.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:06:00 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (1.3ms)
+  [1m[35mChore Load (0.6ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0
+  Rendered chores/index.html.erb within layouts/application (13.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:06:19 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (4.0ms)
+  [1m[35mChore Load (0.8ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0
+  Rendered chores/index.html.erb within layouts/application (15.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:07:30 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (4.2ms)
+  [1m[35mChore Load (0.6ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0
+  Rendered chores/index.html.erb within layouts/application (14.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:07:52 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (3.8ms)
+  [1m[35mChore Load (1.1ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0
+  Rendered chores/index.html.erb within layouts/application (11.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:08:37 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (4.2ms)
+  [1m[35mChore Load (0.6ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0
+  Rendered chores/index.html.erb within layouts/application (12.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/chores" for 129.81.83.57 at 2017-12-07 03:09:21 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JhSJ5zJkNgoHbcEHACpiVEFfWCGpcG3xPYPyB3jUaIj7/H4Ggg90v76B3M+G4yBYJr2L6+DiP3tAC8rBZcDchA==", "chore"=>{"task"=>"", "priority"=>"low", "person_assigned"=>"Amy"}, "button"=>""}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 32ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:09:21 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.9ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (8.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:09:44 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (11.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/cards.self-610f4f27200bca31df949b27c73701315cc8cd62d78bca05a103c3bf64358a7d.css?body=1" for 129.81.83.57 at 2017-12-07 03:09:44 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-b1e1d5b94689e5917d417e49d8a861069b7d6c17d6639999c1a896885f9bc456.css?body=1" for 129.81.83.57 at 2017-12-07 03:09:44 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:10:48 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.0ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (12.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.0ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:11:02 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.4ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (13.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.0ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:11:46 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.9ms)
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (12.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:12:03 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.7ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (10.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:12:09 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (4.7ms)
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (14.8ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:12:15 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.2ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (11.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.0ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:12:23 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (4.9ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (14.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.0ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:12:25 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.8ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (11.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:12:37 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.5ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (8.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:14:35 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.0ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (8.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:16:06 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.9ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.5ms)
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (9.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 84ms (Views: 80.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/main.self-396bcdd9e84600b6d570a0483637e2de476d167a4145be2a65254753a790bed3.css?body=1" for 129.81.83.57 at 2017-12-07 03:16:06 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:18:27 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.4ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (8.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/people" for 129.81.83.57 at 2017-12-07 03:18:48 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:18:53 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.9ms)
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (10.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:19:16 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.9ms)
+  [1m[36mChore Load (0.7ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (11.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:19:19 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.2ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (11.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/signup.self-6352c138c76998d8dab5e1cd7bb92b51e325895ff92d1457cf6adf7df41236a1.css?body=1" for 129.81.83.57 at 2017-12-07 03:19:19 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:19:22 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (1.9ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (15.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:19:23 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.2ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (8.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/people" for 129.81.83.57 at 2017-12-07 03:19:23 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people/1" for 129.81.83.57 at 2017-12-07 03:19:25 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mHousehold Load (0.4ms)[0m  SELECT  "households".* FROM "households" WHERE "households"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT "chores".* FROM "chores"[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mHousehold Load (0.4ms)[0m  [1mSELECT "households".* FROM "households"[0m
+  Rendered people/show.html.erb within layouts/application (7.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:19:32 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (9.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:33:13 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.2ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (8.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:33:13 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.2ms)
+  [1m[36mChore Load (0.5ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (8.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/households" for 129.81.83.57 at 2017-12-07 03:33:13 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HouseholdsController#index as HTML
+  [1m[35mHousehold Load (1.3ms)[0m  SELECT  "households".* FROM "households"  ORDER BY "households"."name" ASC LIMIT 2 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "households"[0m
+  Rendered households/index.html.erb within layouts/application (5.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/main.self-396bcdd9e84600b6d570a0483637e2de476d167a4145be2a65254753a790bed3.css?body=1" for 129.81.83.57 at 2017-12-07 03:33:13 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:33:14 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.6ms)
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."household_id" ASC LIMIT 50 OFFSET 0[0m
+  Rendered chores/index.html.erb within layouts/application (9.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/access/logout" for 129.81.83.57 at 2017-12-07 03:35:00 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.83.57 at 2017-12-07 03:35:00 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://menage-mama-agrouse.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.83.57 at 2017-12-07 03:35:00 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.83.57 at 2017-12-07 03:35:02 +0000
+Cannot render console from 129.81.83.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__275007730905709265_39039420 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:13)
+  Rendered layouts/_home_header (0.4ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)

@@ -8,19 +8,7 @@
     ses_house_id=Person.find(ses_id).household_id
     if ses_house_id!=nil%>
     <div id="tableWrapper">
-    <div class="row">
-            <div class="card">
-                <h4 class="card-title">Add Chore</h4>
-                    <div class="card-body">
-                    <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
-                        <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                        <%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
-                            <span class="glyphicon glyphicon-plus"></span>
-                        <% end %>
-                        <% end %>
-                </div>
-            </div>
-    </div>
+
     <br>
     <div class="row">
        <div id="tableScroll">
@@ -34,6 +22,12 @@
                 </tr>
             </thead>
             <tbody>
+            <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
+                <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
+                <td><%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
+                            <span class="glyphicon glyphicon-plus"></span></td>
+                        <% end %>
+                        <% end %>    
             <%if @chores
                 @chores.each do |t| 
                   if t.household_id==ses_house_id%>
@@ -42,7 +36,7 @@
                      <td><%= t.priority %>   </td>
                      <td><%= t.person_assigned%></td>
                      <td><%= button_to t, method: :delete do %>
-                            <span class="glyphicon glyphicon-ok" style="color:#EECF6D"></span>
+                            <span class="glyphicon glyphicon-ok" style="color:black"></span>
                          <% end %></td>
                  </tr>
                <%end%>
