@@ -10,8 +10,10 @@
     <%else%>
         <%=Time.at(@chores.created_at).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")%>
     <%end%>
-  <li>Priority:
-    <%= @chores.priority %>
+  <li>Status:
+    <%= chores_logic(@chores) %></li>
+    <li>Priority:
+    <%= @chores.priority%> </li>
   <li>Person Assigned:
     <%= @chores.person_assigned %> </li>
 

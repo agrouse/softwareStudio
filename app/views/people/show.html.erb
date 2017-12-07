@@ -48,7 +48,7 @@
 <h2>Chores Assigned</h2>
 <%Chore.all.each do |chore|%>
     <%if chore.person_assigned == @people.first_name%>
-        <li><%=chore.task%></li>
+        <li><%=chore.task%>, Status: <%=chores_logic(chore)%></li>
     <%end%>
 <%end%>
 </div>
