@@ -3,7 +3,9 @@
     <div id="page_content">
     <br>
     <br>
-    
+    <div class="text-center">
+        <h1 style="color:#BDD4E7; font-size: 50px; font-weight: strong; margin-top:15%; margin-bottom:15%;";>Chores</h1>
+    </div>
     <%ses_id=session[:user_id]
     ses_house_id=Person.find(ses_id).household_id
     if ses_house_id!=nil%>

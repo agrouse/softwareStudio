@@ -13,7 +13,7 @@
     width: 50%;
 }
 .landing {
-    width: 100%;
+  width: 100%;
 	background-color: black;
 	color: white;
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
@@ -105,3 +105,61 @@ div {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+svg {
+  margin-left:26%;
+  margin-top: 5%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.house {
+  stroke-dasharray: 2326;
+  stroke-dashoffset: -2326;
+  transition: all 0.2s ease-in-out;
+  animation-direction: alternate;
+  animation: draw-house 10s infinite;
+  animation-play-state: running;
+}
+.window {
+  stroke-dasharray: 369;
+  stroke-dashoffset: -369;
+  transition: all 0.2s ease-in-out;
+  animation-direction: alternate;
+  animation: draw-window 10s infinite;
+  animation-play-state: running;
+}
+
+@keyframes draw-house {
+  0% {
+    stroke-dashoffset: -2326;
+    fill:transparent;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill:transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill:#FFFCF2;
+  }
+}
+
+@keyframes draw-window {
+  0% {
+    stroke-dashoffset: -360;
+    fill:transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill:transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill:#FFFCF2;
+  }
+}
+
