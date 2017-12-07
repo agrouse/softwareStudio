@@ -27,6 +27,7 @@
             <%end%> 
         </div>
      <%else%>
+        <%controller.redirect_to households_path%>
         <%t=Person.find(ses_id)%>
         <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> 
             <%= t.username %>   
