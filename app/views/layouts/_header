@@ -1,16 +1,9 @@
-<div id="header">
-    <div id="logo">
-        <div id="logo_text">
-          <h1><a href="/access/home">ménage</a></h1>
-          <h2>an easy way to divide chores</h2>
-        </div>
-    </div>
-    <div id="menubar">
+<div class="nav nav-tabs justify-content-center" style="padding-bottom:1%; padding-top:1%"> 
       <ul id="menu">
-        <li><a href="/chores">Home</a></li>
-        <li><a href="/households">Household</a></li>
-        <li><a href="/people">My House</a></li>
-        <li><a href="/access/logout">Logout</a></li>
+        <li class="nav-item"><a href="/chores">Chores</a></li>
+        <li class="nav-item"><a href="/people">My House</a></li>
+        <li class="nav-item"><a href="#">My Profile</a></li>
+        <li class="nav-item"><a href="/access/logout">Logout</a></li>
       </ul>
     </div>
 </div>
