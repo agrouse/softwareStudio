@@ -7,7 +7,6 @@ html{
 	height: 100%;
 	font-size: 100%;
 	background-color: rgb(31,39,61);
-
 }
 
 
@@ -15,7 +14,6 @@ body {
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
 	background-color: rgb(31,39,61);
 	padding-bottom: 20%;
-
 }
 
 p {
@@ -29,7 +27,7 @@ img {
 
 h1, h2, h3 {
 	font: normal 175% 'century gothic', arial, sans-serif;
-	color: #000;
+	color: #FFFCF2;
 	margin: 0 0 15px 0;
 	padding: 15px 0 5px 0;
 }
@@ -37,7 +35,7 @@ h1, h2, h3 {
 a, a:hover {
 	outline: none;
 	text-decoration: underline;
-	color: #000;
+	color: #FFFCF2;
 }
 
 a:hover {
@@ -74,6 +72,7 @@ ol li {
 #logo, #menubar, #site_content, #footer {
 	margin-left: auto; 
 	margin-right: auto;
+	background: #BDD4E7;
 }
 
 
@@ -113,7 +112,7 @@ ol li {
 }
 
 #menubar {
-	width: 898px;
+	width: 1000px;
 	height: 52px;
 	padding: 0;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -123,6 +122,7 @@ ol li {
 	float: left;
 	margin: 0; 
 	padding: 0;
+	
 }
 
 #menu li {
@@ -153,7 +153,7 @@ ol li {
 
 
 #page_content {
-	width: 854px;
+	width: 1000px;
 	overflow: hidden;
 	margin: auto;
 	padding: 0 24px 20px 20px;
@@ -168,12 +168,20 @@ table {
 
 
 table tr th, table tr td {
-	color: #FFF;
+	color: white;
 	padding: 7px 4px;
 	text-align: left;
 }
 
+table thead {
+	background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(left, #eef2f3, #8e9eab);
+background: -moz-linear-gradient(left, #eef2f3, #8e9eab);
+background: -o-linear-gradient(left, #eef2f3, #8e9eab);
+background: linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+
+}
   
 table tr td {
 	color: white;
@@ -196,10 +204,9 @@ table tr td {
 }
 #tableWrapper thead {
     width: 100%
+    
 }
-#tableWrapper tr td {
-	background-color: rgba(0, 0, 0, 0.3);
-}
+
 #tableWrapper a {
 	color: white;
 }
