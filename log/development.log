@@ -54512,3 +54512,27 @@ Processing by ChoresController#show as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__4285513615133384049_39862280 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:20)
   Rendered layouts/_header (0.1ms)
 Completed 200 OK in 62ms (Views: 38.1ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/chores/60" for 129.81.49.57 at 2017-12-07 19:42:54 +0000
+Cannot render console from 129.81.49.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/home/ubuntu/workspace/app/controllers/application_controller.rb:10: syntax error, unexpected <<, expecting keyword_end
+<<<<<<< HEAD
+  ^
+/home/ubuntu/workspace/app/controllers/application_controller.rb:13: syntax error, unexpected ===, expecting keyword_end
+=======
+   ^
+/home/ubuntu/workspace/app/controllers/application_controller.rb:15: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> b551f45a508e60ef65e3a23376a2a465395fb34d
+  ^):
+  app/controllers/application_controller.rb:10: syntax error, unexpected <<, expecting keyword_end
+  app/controllers/application_controller.rb:13: syntax error, unexpected ===, expecting keyword_end
+  app/controllers/application_controller.rb:15: syntax error, unexpected >>, expecting keyword_end
+  app/controllers/chores_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.6ms)

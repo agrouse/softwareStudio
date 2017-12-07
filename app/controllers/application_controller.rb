@@ -7,12 +7,8 @@ class ApplicationController < ActionController::Base
   helper_method :people_of_personal_household
   helper_method :chores_of_household
   helper_method :people_of_any_household
-<<<<<<< HEAD
-  helper_method :getPersonID
-  
-=======
   helper_method :chores_logic
->>>>>>> b551f45a508e60ef65e3a23376a2a465395fb34d
+
   def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]
