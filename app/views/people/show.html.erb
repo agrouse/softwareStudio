@@ -17,10 +17,6 @@
 </br>
 </br>
 
-<div class='people_info'>
-<h2>Details about <%= @people.first_name%></h2>
-<p style="color: black"><%= @people.description%></p>
-</div>
 
 <div class='middle'>
     <%if @people == Person.find(session[:user_id])%>
