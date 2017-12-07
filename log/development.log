@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 Started GET "/" for 129.81.124.223 at 2017-11-21 06:56:47 +0000
@@ -53569,3 +53570,5 @@ Processing by ChoresController#index as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2549300748073880222_42346740 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:20)
   Rendered layouts/_header (0.1ms)
 Completed 200 OK in 92ms (Views: 83.1ms | ActiveRecord: 1.7ms)
+=======
+>>>>>>> 51cb54ef8f67986832b1943486368c48c12b5af6

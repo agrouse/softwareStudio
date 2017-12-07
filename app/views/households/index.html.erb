@@ -1,10 +1,11 @@
 <!-- div for styles -->
 <div id="page_content">
-<h1 style="color: black">Households</h1>
+<h1>Households</h1>
         <table style="width:100%">
             <tr>
                 <div class="tbl-header">
                     <th>Households</th>
+                    <th>Members of Household</th>
                     <th>Join Household</th>
                 </div>
             </tr>
@@ -14,6 +15,9 @@
   @households.each do |t| %>
         <tr>
          <td><a href="<%= households_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+         <td><% people = people_of_any_household(t) %> 
+             <% people.each do |p| %> <%= p.first_name%> <%= p.last_name%>,
+         <% end %></td>
          <td><%= link_to "Join", person_path(:id => session[:user_id], people: {:household_id => t.id}), :class => "button", :method => "PUT" %>
   </td>
      </tr>

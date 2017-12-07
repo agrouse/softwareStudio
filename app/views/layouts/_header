@@ -1,11 +1,9 @@
-
 <div class="nav nav-tabs justify-content-center" style="padding-bottom:1%; padding-top:1%"> 
 <div id="header">
       <ul id="menu">
         <li class="nav-item"><a href="/chores">Chores</a></li>
         <li class="nav-item"><a href="/people">My House</a></li>
-        <% @link = "/people/"+getPersonID %>
-        <li class="nav-item"><a href="#{@link}">My Profile</a></li>
+        <li class="nav-item"><a href=<%="/people/#{session[:user_id]}"%>>My Profile</a></li>
         <li class="nav-item"><a href="/access/logout">Logout</a></li>
       </ul>
     </div>

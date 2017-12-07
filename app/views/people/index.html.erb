@@ -1,7 +1,7 @@
 <div id="peopleWrapper">
     <!-- div for styles -->
     <div id="page_content">
-    <h1 style="color: black">Our House</h1>
+    <h1>Our House</h1>
     <%ses_id=session[:user_id]
     user_house_id=Person.find(ses_id).household_id%>
     <div class="card-deck">
@@ -27,6 +27,7 @@
             <%end%> 
         </div>
      <%else%>
+        <%controller.redirect_to households_path%>
         <%t=Person.find(ses_id)%>
         <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> 
             <%= t.username %>   
@@ -40,6 +41,8 @@
     
     </div>
 </div>
+<h2 style ="text-align: center"><%= link_to "Leave Household", person_path(:id => session[:user_id], people: {:household_id => nil}), :class => "button", :method => "PUT" %></h2>
+
 <script>
     var house = "<svg id='house' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 316.945 316.945'>" +
   "<g fill='#3d0332'>" +
