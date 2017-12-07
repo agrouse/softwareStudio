@@ -18,6 +18,7 @@
             <thead>
                 <tr>
                   <th id="choreHeader">Chore</th>
+                  <th id="choreHeader">Current Status</th>
                   <th id="choreHeader">Priority</th>
                   <th id="choreHeader">Person Assigned</th>
                   <th id="choreHeader">Complete</th>
@@ -35,7 +36,8 @@
                   if t.household_id==ses_house_id%>
                 <tr>
                      <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                     <td><%= t.priority %>   </td>
+                     <td><%= t.status %></td>
+                     <td><%= chores_logic(t) %>   </td>
                      <td><%= t.person_assigned%></td>
                      <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now}), :class => "button", :method => "PUT" %>
                             
