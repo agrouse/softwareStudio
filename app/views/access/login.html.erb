@@ -4,7 +4,7 @@
         <div class="col-md-5">
             <a href="/access/landing" style="color:white;"><span style="font-size: 30px; margin-top: 5%;" class="glyphicon glyphicon-circle-arrow-left"></span></a>
         </div>
-        <h2 style="color:white;text-align:center; margin-top: 5%">Login</h2>
+        <h2 style="color:white; margin-top: 5%">Login</h2>
         <%= form_tag(access_attempt_login_path, :class => 'regForm', :method => :post) do %>
             <%= label_tag(:username, nil, class: 'accessInput custom-control') %>
             <%= text_field_tag(:username, params[:username], class: 'accessInput custom-control') %>

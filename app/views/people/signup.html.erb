@@ -1,13 +1,13 @@
 <div id = "signupWrapper">
-    <div class="row">
-        <div class="col-md-12">
                 <div class="box">
-                    <div class="col-md-5">
-                        <a href="/access/landing" style="color:white;"><span style="font-size: 30px; margin-top: 5%;" class="glyphicon glyphicon-circle-arrow-left"></span></a>
-                    </div>
-                    <div class="col-md-5">
-                        <h1 style="color:white;">Sign Up</h1>
-                    </div>
+  
+                        <div class="iconBack col-md-5" style="margin-top: 2%; margin-left:.5%">
+                            <a href="/access/landing" style="color:white;"><span style="font-size: 30px;" class="glyphicon glyphicon-circle-arrow-left"></span></a>
+                        </div>
+                    
+
+                            <h2 style="color:white; margin-top: 3%">Sign Up</h2>
+                    
 
                         <%= form_for :people, :url => {:action => "create"} do |f| %>
                             <div class="signupForm">
@@ -39,6 +39,4 @@
                             </div>
                             <% end %>
                 </div>
-        </div>
-    </div>
 </div>

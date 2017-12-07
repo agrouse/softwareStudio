@@ -175,7 +175,6 @@ table {
 
 
 table tr th, table tr td {
-	background: #3B3B3B;
 	color: #FFF;
 	padding: 7px 4px;
 	text-align: left;
@@ -184,9 +183,9 @@ table tr th, table tr td {
 
   
 table tr td {
-	background-color: rgba(0, 0, 0, 0.2);
 	color: white;
 	border-top: 1px solid #FFF;
+	
 }
 
 #tableWrapper {
@@ -205,7 +204,6 @@ table tr td {
 #tableWrapper thead {
     width: 100%
 }
-
-.panel{
-	background:none;
+#tableWrapper tr td {
+	background-color: rgba(0, 0, 0, 0.3);
 }
