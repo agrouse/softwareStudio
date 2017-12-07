@@ -4,13 +4,13 @@
 }
 #signupWrapper .custom-control{
     width: 50%;
-    line-height: 2;
+    line-height: 1;
     height: 34px;
-    margin-top: 2px;
-    margin-left: 25%;
-    margin-bottom: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-left: 23%;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     border: none;
     font-size: 16px;
     background: none;
@@ -33,8 +33,8 @@
     width: 50%;
     height: 350px;
     margin-left: 25%;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 2px solid white;
+    background-color: none;
+    border: none;
     margin-bottom: 50%;
 }
 .signupForm {
@@ -45,6 +45,21 @@
     display: hidden;
 }
 
-#logInBtn {
-    width: 5%;
+#signupWrapper .btn {
+    width: 15%;
+}
+
+#loginInput {
+    width: 50%;
+    line-height: 34px;
+    margin-top: 0px;
+    margin-left: 25%;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: none;
+    font-size: 16px;
+    background: none;
+    border-bottom: .5px solid white; 
+    color: white;
 }

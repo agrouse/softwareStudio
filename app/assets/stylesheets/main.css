@@ -6,15 +6,14 @@ https://www.html5webtemplates.co.uk/templates.html */
 html{
 	height: 100%;
 	font-size: 100%;
-	background-color: #1F273D;
+	background-color: rgb(31,39,61);
 }
 
 
 body {
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
-	background-color: #1F273D;
+	background-color: rgb(31,39,61);
 	padding-bottom: 20%;
-	color: #FFFCF2;
 }
 
 p {
@@ -77,9 +76,9 @@ ol li {
 }
 
 #header {
-	/*background: #BDD4E7;*/
-	/*height: 202px;
-	position: fixed;*/
+	background: transparent;
+	height: 202px;
+	position: fixed;
 }
 
 #logo {

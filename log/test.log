@@ -54,3 +54,1455 @@ Processing by ChoresController#index as HTML
   Rendered chores/index.html.erb within layouts/application (17.3ms)
 Completed 200 OK in 200ms (Views: 185.5ms | ActiveRecord: 1.3ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:30:09 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 6064ms (Views: 6048.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:32:16 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 228ms (Views: 218.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:38:46 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 259ms (Views: 244.5ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:38:46 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.9ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 17ms (ActiveRecord: 1.3ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:38:46 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:44:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 271ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:44:36 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 17ms (ActiveRecord: 1.1ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:44:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:44:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:44:36 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.9ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:44:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:46:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 222ms (Views: 212.5ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:46:30 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:46:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:46:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:46:30 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:46:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:48:16 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 228ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:48:16 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.2ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:48:16 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:48:16 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:48:16 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:48:16 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:50:01 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 219ms (Views: 208.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:50:02 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:50:02 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:50:02 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:50:02 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:50:02 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:52:15 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 206ms (Views: 197.0ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:52:15 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 1.1ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:52:15 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:52:15 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:52:15 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:52:15 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:56:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 236ms (Views: 226.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:56:36 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:56:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:56:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 03:56:36 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 03:56:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:00:51 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 222ms (Views: 211.6ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:00:51 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:00:51 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:00:51 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:00:51 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:00:51 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:03:05 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 228ms (Views: 217.3ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:03:05 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:03:05 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:03:05 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:03:05 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:03:05 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:04:01 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 219ms (Views: 209.2ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:04:01 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:04:01 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:04:01 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:04:01 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:04:01 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:07:46 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 235ms (Views: 225.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:07:47 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:07:47 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:07:47 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:07:47 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:07:47 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 271ms (Views: 260.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:08:36 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:08:36 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:36 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:54 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 286ms (Views: 274.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:08:54 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 17ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:54 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:54 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:08:54 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:08:54 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:10:45 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 229ms (Views: 219.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:10:46 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:10:46 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:10:47 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:10:47 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:10:47 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:11:09 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 237ms (Views: 226.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:11:09 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:11:09 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:11:10 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:11:10 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:11:10 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:13:43 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 249ms (Views: 237.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:13:43 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.2ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:13:43 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:13:44 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:13:44 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:13:44 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:15:51 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 222ms (Views: 212.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:15:51 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:15:51 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (2.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 2.3ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:15:51 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:22:33 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 234ms (Views: 223.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:22:33 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:22:33 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:22:34 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:22:34 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:22:34 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:38:29 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 222ms (Views: 212.3ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:38:29 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:38:29 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:38:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:38:30 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:38:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:43:25 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 226ms (Views: 216.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:43:25 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:43:25 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:43:25 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:44:48 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 217ms (Views: 207.3ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:44:48 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:44:48 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:44:49 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:44:49 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:44:49 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:45:16 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 213ms (Views: 204.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:45:17 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:45:17 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:45:18 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:45:18 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:45:18 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:46:31 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 225ms (Views: 214.6ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:46:31 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:46:31 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:46:32 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:46:58 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 235ms (Views: 224.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:46:58 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:46:58 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:46:59 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:46:59 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:46:59 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 248ms (Views: 237.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.3ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/households" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by HouseholdsController#index as HTML
+Redirected to http://www.example.com/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/households" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by HouseholdsController#index as HTML
+Redirected to http://www.example.com/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:52:35 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:56:48 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 216ms (Views: 206.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:56:48 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 04:56:48 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 04:56:48 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:02:09 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 209ms (Views: 199.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:02:10 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:02:10 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:02:10 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:03:42 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 212ms (Views: 202.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:03:42 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:03:42 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:03:42 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:03:42 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:03:42 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:04:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 222ms (Views: 212.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:04:30 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:04:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:04:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:04:30 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:04:30 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:10:55 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 209ms (Views: 200.0ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:10:56 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:10:56 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:10:56 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:10:56 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:10:56 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:19:21 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 223ms (Views: 213.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:19:21 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:19:21 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:19:21 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:20:00 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 228ms (Views: 218.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:20:00 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:20:00 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:20:00 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:20:21 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 220ms (Views: 210.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:20:22 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:20:22 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:20:22 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:27:38 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 216ms (Views: 206.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:27:39 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:27:39 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:27:39 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:28:06 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 229ms (Views: 219.2ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:28:06 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:28:06 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:28:06 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:28:06 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:28:06 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 228ms (Views: 218.7ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 15ms (ActiveRecord: 0.9ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-07 05:32:20 +0000
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-07 05:52:34 +0000
+Processing by PeopleController#signup as HTML
+  Rendered people/signup.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 229ms (Views: 218.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-07 05:52:34 +0000
+Processing by PeopleController#signup as HTML
+  Rendered people/signup.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-07 05:55:42 +0000
+Processing by PeopleController#signup as HTML
+  Rendered people/signup.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 226ms (Views: 216.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-07 05:55:42 +0000
+Processing by PeopleController#signup as HTML
+  Rendered people/signup.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-07 05:59:40 +0000
+Processing by PeopleController#signup as HTML
+  Rendered people/signup.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 232ms (Views: 222.5ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1 LIMIT 1[0m  [["username", "testing1"]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-07 05:59:41 +0000
+Processing by PeopleController#signup as HTML
+  Rendered people/signup.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1 LIMIT 1  [["username", "testing2"]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
