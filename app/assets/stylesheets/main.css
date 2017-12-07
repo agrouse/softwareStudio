@@ -83,6 +83,7 @@ ol li {
 #header {
 	background: transparent;
 	height: 202px;
+	position: fixed;
 }
 
 #logo {
@@ -206,4 +207,7 @@ table tr td {
 }
 #tableWrapper tr td {
 	background-color: rgba(0, 0, 0, 0.3);
+}
+#tableWrapper a {
+	color: white;
 }
