@@ -37,9 +37,9 @@
                      <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
                      <td><%= t.priority %>   </td>
                      <td><%= t.person_assigned%></td>
-                     <td><%= button_to t, method: :delete do %>
-                            <span class="glyphicon glyphicon-ok" style="color:black"></span>
-                         <% end %></td>
+                     <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now}), :class => "button", :method => "PUT" %>
+                            
+                         </td>
                  </tr>
                <%end%>
          <%end%> 
