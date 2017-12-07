@@ -23,9 +23,12 @@
     
     get '/people/:id' => 'people#show'
     
+    
     post 'chores' => redirect('/chores')
     
     post 'people' => redirect('/households')
+    
+    
     
     
     
