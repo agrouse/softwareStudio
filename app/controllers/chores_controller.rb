@@ -39,7 +39,6 @@ class ChoresController < ApplicationController
         @chores = Chore.find params[:id]
         flash[:notice] = "#{@chores.task} was successfully completed."
         @chores.last_accomplished=Time.now
-        redirect_to chores_path
         
     end
     
@@ -53,7 +52,6 @@ class ChoresController < ApplicationController
     def destroy
         @chores = Chore.find params[:id]
         @chores.destroy
-        redirect_to chores_path
     end
     
     private 
