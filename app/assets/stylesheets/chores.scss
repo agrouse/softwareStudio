@@ -14,10 +14,18 @@
     
 }
 #choreHeader{
-  color: rgb(31,39,61);
+  color: white;
   padding: 20px 15px;
   text-align: left;
   text-transform: uppercase;
   width: 100%;
+  border: white 1px;
 }
 
+.choreWrapper {
+    bbackground: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1F273D, #3C4F76, #1F273D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1F273D, #3C4F76, #1F273D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to bottom, #1F273D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #1F273D, #3C4F76, #1F273D);
+}
