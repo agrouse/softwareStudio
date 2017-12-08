@@ -210,3 +210,6 @@ table tr td {
 #tableWrapper a {
 	color: white;
 }
+#tableWrapper tr:hover td {
+    background-color: #B1B695;
+}
