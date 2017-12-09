@@ -1,6 +1,6 @@
 <td style="width=25%"><%= text_field :chore, :task, :class => "col-md-12 choreInput" %></td>
 <td><%= select :chore, :status, ['needs to be done', 'ok condition', 'doesn\'t need to be done'],{},class: "col-md-12 dropDown choreInput" %></td>
-<td><%= select :chore, :priority, ['low', 'moderate', 'high'],{},class: "col-md-12 dropDown choreInput" %></td>
+<td><%= select :chore, :priority, ['daily', 'weekly', 'monthly'],{},class: "col-md-12 dropDown choreInput" %></td>
 <td><%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-12 dropDown choreInput"}) %></td>
 
 
