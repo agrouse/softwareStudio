@@ -54,6 +54,27 @@ class ApplicationController < ActionController::Base
     
   end
 
+  #def sortTimes
+
+  
+  #def showSortedTable
+    #choresList=[]
+    #if chore.status == incomplete 
+      #if chore.priority == high
+        #append sorted list
+      #elif chore.priority == moderate
+        #append moderate to high
+      #else
+        #append low to moderate
+    
+  #def changePriority(chore)
+    #for all chores on table
+      #if chore.timeValue !> 0 and chore.priority!="low":
+        #upgrade priority
+    #showSortedTable  
+      
+
+
   def chores_logic(chore)
     status=chore.status
     priority=chore.priority

@@ -190,7 +190,8 @@ table tr td {
 	
 }
 table th {
-	background: rgba(255,255,255,.3);
+	background: rgba(255,255,255,.2);
+	height: 15%;
 }
 
 #tableWrapper {
@@ -215,5 +216,5 @@ table th {
 	color: white;
 }
 #tableWrapper tr:hover td {
-    background-color: #B1B695;
+    background: #3C4F76;
 }
