@@ -46,6 +46,8 @@ class ChoresController < ApplicationController
        @chores = Chore.find params[:id]
        @chores.update_attributes(chore_params)
        flash[:notice] = "#{@chores.task} was successfully updated."
+       
+       
        redirect_to chore_path(@chores)
     end
     

@@ -8,13 +8,21 @@ class ApplicationController < ActionController::Base
   helper_method :chores_of_household
   helper_method :people_of_any_household
   helper_method :chores_logic
-
   helper_method :current_user
-
+  helper_method :change_person_assigned
+  
+  def change_person_assigned(old_name)
+    Chore.all.each do |c|
+      if c.person_assigned == old_name
+        c.person_assigned == current_user.first_name
+      end
+    end
+    
+  end
 
   def current_user
     if session[:user_id]
-      @current_user = User.find(session[:user_id])
+      @current_user = Person.find(session[:user_id])
     
     else
       @current_user = nil
