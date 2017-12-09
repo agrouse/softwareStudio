@@ -218,3 +218,26 @@ table th {
 #tableWrapper tr:hover td {
     background: #3C4F76;
 }
+.nav .active {
+    color:            #F8F8F8;
+    background-color: #B1B695;
+
+}
+
+.nav-item {
+	letter-spacing: 0.1em;
+	font: normal 100% arial, sans-serif;
+	display: block; 
+	float: left; 
+	margin: 10px 0 0 10px;
+	padding: 9px 26px 6px 26px;
+	text-align: center;
+	color: #FFF;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: transparent;
+} 
+#header ul li:active a{
+	background:#000; color:#FFF;
+	
+}

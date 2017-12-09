@@ -82,6 +82,7 @@
 <div class=col-md-12>
 <h2 style ="text-align: center"><%= link_to "Leave Household", person_path(:id => session[:user_id], people: {:household_id => nil}), :class => "button", :method => "PUT" %></h2>
 </div>
+
 <script>
 $(document).ready(function(){
     $("#updateBtn").click(function(){
