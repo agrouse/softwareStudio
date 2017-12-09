@@ -9,6 +9,18 @@ class ApplicationController < ActionController::Base
   helper_method :people_of_any_household
   helper_method :chores_logic
 
+  helper_method :current_user
+
+
+  def current_user
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+    
+    else
+      @current_user = nil
+    end
+  end
+  
   def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]

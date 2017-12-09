@@ -73,3 +73,18 @@
     margin-left: 20px;
     margin-top: 10px;
 }
+.card-block {
+    height: 50%;
+}
+
+#peopleWrapper {
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1F273D, #3C4F76, #1F273D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1F273D, #3C4F76, #1F273D);
+background: -webkit-linear-gradient(to bottom, #1F273D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #1F273D, #3C4F76, #1F273D);
+}
+
+#updateperson {
+    display: hidden;
+}

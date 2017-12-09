@@ -1,25 +1,55 @@
 <div id="peopleWrapper">
     <!-- div for styles -->
     <div id="page_content">
-    <h1>Our House</h1>
+    <h1 class="text-center", style="margin-top:5%; margin-bottom:5%; font-size: 50px; color:#BDD4E7;">My House</h1>
     <%ses_id=session[:user_id]
-    user_house_id=Person.find(ses_id).household_id%>
+    user_house_id=Person.find(ses_id).household_id
+    person=Person.find(ses_id)%>
     <div class="card-deck">
+        <div class="col-md-6 offset-md-3" class="justify-contents: center;">
+            <div class="card card-inverse">
+                <div class="card-block" style="text-align:center">
+                    <h4 class="card-title" style="color:white; font-size: 30px;" ><%= person.first_name + " " + person.last_name %></h4> 
+                        <h6 class="card-subtitle" style="color:white; font-size: 20px;"><%= person.username %></h6> 
+                        <div style="padding: 5%">
+                                <%Chore.all.each do |chore|%>
+                                    <%if chore.person_assigned == person.first_name%>
+                                    <li style="color:white;"><%=chore.task%></li>
+                                    <%end%>
+                                <%end%>
+                        </div>
+                    
+                        
+                        <button id="updateBtn">Update</button>
+                        <div id = "updateperson" style="display: none;">
+                            <%= form_for person, url: 'people/update' do |r| %>
+                                    <%= r.label :first_name, :value => person.first_name %>
+                                    <%= r.text_field :first_name, :value =>person.first_name  %>
+                                    <%= r.label :last_name, :value => person.last_name %>
+                                    <%= r.text_field :last_name, :value => person.last_name %>
+                                <%= r.submit %>
+                              <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+            </div>
+        </div>
         <%if user_house_id != nil%>
             <%if @people
               @people.each do |t| %>
-                <%if t.household_id==user_house_id %>
+                <%if t.household_id==user_house_id and t != person %>
                     <div class="col-md-4">
                         <div class="card card-inverse">
                             <div class="card-block" style="text-align: center;">
                                     <h4 class="card-title" style="color:white;" ><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
                                     <h6 class="card-subtitle" style="color:white;"><%= t.username %></h6> 
                                     <a href="#" class="card-link"><span class="glyphicon glyphicon-envelope"aria-hidden="true" style="color:yellow"></span></a>
+                                    <br>
+                                    <br>
+                                    <br>
                             </div>
-                                
-                                    
-                                
-                            
                         </div>
                     </div>
                 <%end%>
@@ -44,11 +74,9 @@
 <h2 style ="text-align: center"><%= link_to "Leave Household", person_path(:id => session[:user_id], people: {:household_id => nil}), :class => "button", :method => "PUT" %></h2>
 
 <script>
-    var house = "<svg id='house' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 316.945 316.945'>" +
-  "<g fill='#3d0332'>" +
-    "<path class='house' stroke='#3d0332' fill='none' d='M158.465 2.605L4.752 136.858c-4.471 4.221-5.967 10.862-3.715 16.529 2.094 5.26 7.087 8.659 12.727 8.659h25.868V314.34h59.83v-92.464h33.793l.114 92.464h140.143V162.046h29.692c5.559 0 10.53-3.443 12.646-8.762 2.355-5.912.859-13.01-3.971-17.568L158.465 2.605zm93.291 137.685v152.294h-96.658l-.114-92.464H77.706v92.464H61.389V140.29H33.883L158.509 31.443 283.971 140.29h-32.215z'/>"  +
-  "</g>" +
-"</svg>";
-document.getElementById('house-icon').innerHTML = house;
-    
+$(document).ready(function(){
+    $("#updateBtn").click(function(){
+        $("#updateperson").slideToggle("slow");
+    });
+});
 </script>
