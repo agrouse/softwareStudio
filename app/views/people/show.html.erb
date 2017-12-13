@@ -19,7 +19,7 @@
 
 <div class='people_info'>
 <h2>Details about <%= @people.first_name%></h2>
-
+<p style="color: black"><%= @people.description%></p>
 </div>
 
 <div class='middle'>
@@ -39,10 +39,6 @@
     </br>
     
     
-    <%= label :people, :household_id, 'Household' %>
-    <%= collection_select :people, :household_id, Household.all, :id, :name%>
-    </br>
-    
     
     <%= submit_tag 'Update'%>
     <% end %>
@@ -56,20 +52,13 @@
 <h2>Chores Assigned</h2>
 <%Chore.all.each do |chore|%>
     <%if chore.person_assigned == @people.first_name%>
-        <li><%=chore.task%></li>
+        <li><%=chore.task%>, Status: <%=chores_logic(chore)%></li>
     <%end%>
 <%end%>
 </div>
 
 </br>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
 <div id="linkback">
 <%= link_to 'Back to profile list', people_path %>
 </div>

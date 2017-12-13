@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 Started GET "/" for 129.81.124.223 at 2017-11-21 06:56:47 +0000
@@ -52747,3 +52748,5 @@ Processing by PeopleController#show as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__1996890455386119860_21152600 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:19)
   Rendered layouts/_header (0.1ms)
 Completed 200 OK in 90ms (Views: 77.4ms | ActiveRecord: 10.2ms)
+=======
+>>>>>>> b551f45a508e60ef65e3a23376a2a465395fb34d

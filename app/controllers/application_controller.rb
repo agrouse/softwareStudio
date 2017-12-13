@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :people_of_personal_household
   helper_method :chores_of_household
   helper_method :people_of_any_household
+  helper_method :chores_logic
   def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]
@@ -50,6 +51,46 @@ class ApplicationController < ActionController::Base
     end
     return choreslist
     
+  end
+  def chores_logic(chore)
+    status=chore.status
+    priority=chore.priority
+    last_accomplished=chore.last_accomplished
+    case status
+    when "needs to be done"
+      status_num =0
+    when "ok condition"
+      status_num = 1
+    when "doesn't need to be done"
+      status_num = 2
+    else
+      status_num = 2
+    end
+    if last_accomplished != nil
+    
+    case priority
+    when "daily"
+      priority_num =2-((Time.now-last_accomplished)/28800).truncate
+    when "weekly"
+      priority_num =2-((Time.now-last_accomplished)/201600).truncate
+    when "monthly"
+      priority_num =2-((Time.now-last_accomplished)/806400).truncate
+    else
+      priority_num = 2
+    end
+    
+    else
+      priority_num = 2
+    end
+    if priority_num < status_num
+      if priority_num == 1
+        return "ok condition"
+      else
+        return "needs to be done"
+      end
+    else
+      return status
+    end
   end
    
   
