@@ -76,6 +76,7 @@ ol li {
 }
 
 
+
 #logo {
 	width: 898px;
 	position: relative;
@@ -172,13 +173,14 @@ table tr th, table tr td {
 	text-align: left;
 }
 
-table thead {
-	background: #8e9eab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(left, #eef2f3, #8e9eab);
-background: -moz-linear-gradient(left, #eef2f3, #8e9eab);
-background: -o-linear-gradient(left, #eef2f3, #8e9eab);
-background: linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+table thead {  /* fallback for old browsers */
+	/*background: -webkit-linear-gradient(left, #eef2f3, #8e9eab);*/
+	/*background: -moz-linear-gradient(left, #eef2f3, #8e9eab);*/
+	/*background: -o-linear-gradient(left, #eef2f3, #8e9eab);*/
+/*	background: linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/*opacity: .5;*/
 
+	
 
 }
   
@@ -186,6 +188,10 @@ table tr td {
 	color: white;
 	border-top: 1px solid #FFF;
 	
+}
+table th {
+	background: rgba(255,255,255,.2);
+	height: 15%;
 }
 
 #tableWrapper {
@@ -208,4 +214,30 @@ table tr td {
 
 #tableWrapper a {
 	color: white;
+}
+#tableWrapper tr:hover td {
+    background: #3C4F76;
+}
+.nav .active {
+    color:            #F8F8F8;
+    background-color: #B1B695;
+
+}
+
+.nav-item {
+	letter-spacing: 0.1em;
+	font: normal 100% arial, sans-serif;
+	display: block; 
+	float: left; 
+	margin: 10px 0 0 10px;
+	padding: 9px 26px 6px 26px;
+	text-align: center;
+	color: #FFF;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: transparent;
+} 
+#header ul li:active a{
+	background:#000; color:#FFF;
+	
 }

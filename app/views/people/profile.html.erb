@@ -1,0 +1,77 @@
+
+<div id="page_content">
+ 
+<div class="text-center">
+<div id="profiletop">
+<h2>Profile</h2>
+</br>
+<h1> <%= authorized_user.first_name %> <%= authorized_user.last_name%> </h1>
+</div>
+</div>
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<div class='people_info'>
+<h2>Details about <%= authorized_user.first_name%></h2>
+
+</div>
+
+<div class='middle'>
+    <%if authorized_user == Person.find(session[:user_id])%>
+<h2>Update Profile</h2>
+<div id="updateperson">
+<%= form_tag person_path, :method => :put do %>
+    <%= label :people, :first_name, 'First name' %>
+    <%= text_field :people, :first_name  %>
+    </br>
+    
+    <%= label :people, :last_name, 'Last name' %>
+    <%= text_field :people, :last_name  %>
+    </br>
+    <%= label :people, :description, 'Description' %>
+    <%= text_field :people, :description %>
+    </br>
+    
+    
+    <%= label :people, :household_id, 'Household' %>
+    <%= collection_select :people, :household_id, Household.all, :id, :name%>
+    </br>
+    
+    
+    <%= submit_tag 'Update'%>
+    <% end %>
+    </div>
+
+<%end%>
+</div>
+
+
+<div class="assigned">
+<h2>Chores Assigned</h2>
+<%Chore.all.each do |chore|%>
+    <%if chore.person_assigned == authorized_user.first_name%>
+        <li><%=chore.task%></li>
+    <%end%>
+<%end%>
+</div>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<div id="linkback">
+<%= link_to 'Back to profile list', people_path %>
+</div>
+
+</div>
