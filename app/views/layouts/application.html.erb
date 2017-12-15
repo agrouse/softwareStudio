@@ -9,7 +9,6 @@
   <!--<link href="css/main.css" rel="stylesheet"> -->
 </head>
 <body>
-<div class="container-fluid">
 <% if current_page?(controller: 'access', action: 'landing') %>
     <%= render 'layouts/home_header' %>
 <% elsif (current_page?(controller: 'access', action: 'login')) || (current_page?(controller: 'access', action: 'attempt_login')) %>
@@ -24,6 +23,5 @@
 <%if !current_page?(controller: 'access', action: 'landing') || !current_page?(controller: 'people', action: 'signup')  %>
 <div style= "font-size: 24px; color: red;"><%= notice %> </div>
 <%end%>
-</div>
 </body>
 </html>

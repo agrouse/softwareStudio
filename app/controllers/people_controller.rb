@@ -5,7 +5,6 @@ class PeopleController < ApplicationController
     def index
         #@people = Person.order(:first_name).page(params[:page]).per_page(6)
         @people = Person.all
-
     end
     
     def show
@@ -30,14 +29,15 @@ class PeopleController < ApplicationController
     #idea: based on a boolean completed, it'll show up on chores_path
     
     def update
+               
        @people = Person.find(params[:id])
         if Person.find(session[:user_id]) != @people
            flash[:notice] = "Access Denied"
         else 
             @people.update_attributes(people_params)
-
+            flash[:notice] = "#{@people.first_name} was successfully updated."
         end 
-        redirect_to people_path
+       redirect_to person_path(@people)
     end
     
     def destroy

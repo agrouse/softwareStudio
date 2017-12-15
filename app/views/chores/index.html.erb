@@ -4,7 +4,7 @@
     <br>
     <br>
     <div class="text-center">
-        <h1 style="color:#BDD4E7; font-size: 50px; font-weight: strong; margin-top:5%; margin-bottom:5%;";>Chores</h1>
+        <h1 style="color:#BDD4E7; font-size: 50px; font-weight: strong; margin-top:15%; margin-bottom:15%;";>Chores</h1>
     </div>
     <%ses_id=session[:user_id]
     ses_house_id=Person.find(ses_id).household_id
@@ -15,21 +15,19 @@
     <div class="row">
        <div id="tableScroll">
         <table class="table table-hover table-fixed">
-            
-                <thead>
-                    <tr>
-                          <th>Chore</th>
-                          <th>Status</th>
-                          <th>Priority</th>
-                          <th>Person Assigned</th>
-                          <th>Complete</th>
-                    </tr>
-                </thead>
-            
+            <thead>
+                <tr>
+                  <th id="choreHeader">Chore</th>
+                  <th id="choreHeader">Current Status</th>
+                  <th id="choreHeader">Priority</th>
+                  <th id="choreHeader">Person Assigned</th>
+                  <th id="choreHeader">Complete</th>
+                </tr>
+            </thead>
             <tbody>
             <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
                 <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                <td><%= button_tag(type: "submit", class: "btnSubmit btn btn-sm", style:"justify-content:center;") do %>
+                <td><%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
                             <span class="glyphicon glyphicon-plus"></span></td>
                         <% end %>
                         <% end %>    
@@ -38,6 +36,7 @@
                   if t.household_id==ses_house_id%>
                 <tr>
                      <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+                     <td><%= chores_logic(t) %></td>
                      <td><%= t.priority %>   </td>
                      <td><%= t.person_assigned%></td>
                      <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now, :status => "doesn't need to be done"}), :class => "button", :method => "PUT" %>
