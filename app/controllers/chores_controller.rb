@@ -1,6 +1,7 @@
 class ChoresController < ApplicationController
     
     before_action :confirm_logged_in
+    respond_to :html, :json
     def index
         @chores = Chore.order(:household_id).page(params[:page]).per_page(50)
         #@chores = Chore.order(:task).page(params[:page]).per_page(5)
