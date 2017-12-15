@@ -8,27 +8,6 @@ class ApplicationController < ActionController::Base
   helper_method :chores_of_household
   helper_method :people_of_any_household
   helper_method :chores_logic
-  helper_method :current_user
-  helper_method :change_person_assigned
-  
-  def change_person_assigned(old_name)
-    Chore.all.each do |c|
-      if c.person_assigned == old_name
-        c.person_assigned == current_user.first_name
-      end
-    end
-    
-  end
-
-  def current_user
-    if session[:user_id]
-      @current_user = Person.find(session[:user_id])
-    
-    else
-      @current_user = nil
-    end
-  end
-  
   def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]
@@ -73,28 +52,6 @@ class ApplicationController < ActionController::Base
     return choreslist
     
   end
-
-  #def sortTimes
-
-  
-  #def showSortedTable
-    #choresList=[]
-    #if chore.status == incomplete 
-      #if chore.priority == high
-        #append sorted list
-      #elif chore.priority == moderate
-        #append moderate to high
-      #else
-        #append low to moderate
-    
-  #def changePriority(chore)
-    #for all chores on table
-      #if chore.timeValue !> 0 and chore.priority!="low":
-        #upgrade priority
-    #showSortedTable  
-      
-
-
   def chores_logic(chore)
     status=chore.status
     priority=chore.priority
@@ -136,7 +93,6 @@ class ApplicationController < ActionController::Base
     end
   end
    
-
   
   private
     def confirm_logged_in

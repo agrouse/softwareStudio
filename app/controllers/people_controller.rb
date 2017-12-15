@@ -34,9 +34,8 @@ class PeopleController < ApplicationController
         if Person.find(session[:user_id]) != @people
            flash[:notice] = "Access Denied"
         else 
-            @old_name = @people.first_name
             @people.update_attributes(people_params)
-            change_person_assigned(@old_name)
+
         end 
         redirect_to people_path
     end
