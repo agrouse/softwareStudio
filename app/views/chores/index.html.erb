@@ -43,7 +43,7 @@
                     <tbody>
                     <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
                         <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                        <td><%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
+                        <td><%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm", style:"justify-content:center;") do %>
                                     <span class="glyphicon glyphicon-plus"></span></td>
                                 <% end %>
                                 <% end %>    
