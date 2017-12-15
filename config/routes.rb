@@ -23,19 +23,14 @@
     
     get '/people/:id' => 'people#show'
     
-    get '/people/people_form' => 'people#show'
-    
-    
     post 'chores' => redirect('/chores')
     
     post 'people' => redirect('/households')
     
-    put 'people/#{session[:user_id]}' => 'people#update'
-    
     
     
   get 'auth/:provider/callback', to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
+  get 'auth/failure', to: redirect('/') 
     
   end
   # You can have the root of your site routed with "root"
