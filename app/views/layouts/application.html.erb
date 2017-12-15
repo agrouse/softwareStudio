@@ -20,9 +20,11 @@
     <%= render 'layouts/header' %>
 <% end %>
 
+<div class="alert" style= "font-size: 24px; color: #ffff00; text-align: center; margin-top: 20px;"><%= notice %> </div>
 <%= yield %>
 <%if !current_page?(controller: 'access', action: 'landing') || !current_page?(controller: 'people', action: 'signup')  %>
-<div style= "font-size: 24px; color: red;"><%= notice %> </div>
+
 <%end%>
+
 </body>
 </html>
