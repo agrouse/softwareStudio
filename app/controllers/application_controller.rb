@@ -8,14 +8,6 @@ class ApplicationController < ActionController::Base
   helper_method :chores_of_household
   helper_method :people_of_any_household
   helper_method :chores_logic
-  
-
-  def respond_modal_with(*args, &blk)
-    options = args.extract_options!
-    options[:responder] = ModalResponder
-    respond_with *args, options, &blk
-  end
-  
   def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]
