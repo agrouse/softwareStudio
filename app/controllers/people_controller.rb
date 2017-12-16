@@ -1,9 +1,9 @@
 class PeopleController < ApplicationController
-    
+    #user controller that fixes access to site based on login
+    #and creates users with valid info
     before_action :confirm_logged_in, :except => [:new, :create, :signup]
     
     def index
-        #@people = Person.order(:first_name).page(params[:page]).per_page(6)
         @people = Person.all
     end
     
@@ -15,22 +15,23 @@ class PeopleController < ApplicationController
     
     def new
         @people = Person.new
-        # default: render 'new' template
     end
-    
+    #Create person initially with no household id set, validation on the five 
+    #possible text inputs and uniqueness of username
     def create 
         @people = Person.create(people_params)
-        redirect_to people_path
+        if @people.valid?
+            flash[:notice] = "#{@people.username} was successfully created."
+            redirect_to "/access/login"
+        else
+            flash[:notice] = @people.errors.full_messages[0]
+            redirect_to "/people/signup"
+        end
     end
     
-    #For now, it will just delete the chore. In the future, we should keep
-    #it for anaylytics and assignments. Logic will have to be implemented
-    #to do this--keeping it in the database but removing it from the screen
-    #idea: based on a boolean completed, it'll show up on chores_path
-    
     def update
-               
-       @people = Person.find(params[:id])
+        @people = Person.find(params[:id])
+        #check to make sure person is updating their own profile only
         if Person.find(session[:user_id]) != @people
            flash[:notice] = "Access Denied"
         else 
@@ -44,9 +45,6 @@ class PeopleController < ApplicationController
         @people = Person.find params[:id]
         @people.destroy
         redirect_to people_path
-    end
-    
-    def signup
     end
     
     private 
