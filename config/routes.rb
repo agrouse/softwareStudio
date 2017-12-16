@@ -18,7 +18,11 @@
         get 'complete'
       end
     end
-    resources :people
+    resources :people do
+      collection do
+        get 'joinhouse'
+      end
+    end
     resources :households do
       collection do
         get 'join'

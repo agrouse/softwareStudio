@@ -45,7 +45,9 @@ class HouseholdsController < ApplicationController
         @households = Household.find params[:id]
         person=Person.find(session[:user_id])
         person.update(:household_id => params[:id] )
-        redirect_to people_path
+        flash[:notice] = "#{person.first_name} was successfully updated."
+        redirect_to person_path(person)
+        puts "hello"
     end
     private 
         def household_params
