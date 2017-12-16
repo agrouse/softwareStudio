@@ -1,8 +1,8 @@
 class ChoresController < ApplicationController
-    
+    #controller for both tasks and chores, with status being nil for tasks
     before_action :confirm_logged_in
     def index
-        @chores = Chore.order(:household_id).page(params[:page]).per_page(50)
+        @chores = Chore.order(:person_assigned).page(params[:page]).per_page(50)
     end
     
     def show
@@ -14,30 +14,37 @@ class ChoresController < ApplicationController
     def new
         @chores = Chore.new
     end
-    
+    #Create chore with household id set by user who created it's household id
+    #note validation on the two possible text inputs must be greater than 2,
+    #less than 50
     def create 
         @chores = Chore.create(chore_params)
-        house_id=Person.find(session[:user_id]).household_id
-        @chores.update(:household_id => house_id)
-        #if @task_length.length < 2 
-         #   flash[:notice] = "#{@chores.task} was successfully created."
-        #else
-         #   flash[:notice] = "#{@chores.task} unable to be created, check parameters."
+        if @chores.valid?
+            house_id=Person.find(session[:user_id]).household_id
+            @chores.update(:household_id => house_id)
+            flash[:notice] = "#{@chores.task} was successfully created."
+        else
+            flash[:notice] = @chores.errors.full_messages[0]
+        end
         redirect_to chores_path
-        
     end
 
     
-    #For now, it will just delete the chore. In the future, we should keep
-    #it for anaylytics and assignments. Logic will have to be implemented
-    #to do this--keeping it in the database but removing it from the screen
-    #idea: based on a boolean completed, it'll show up on chores_path
+    #complete chore updates last_complete time to current time, and changes
+    #status to green, however if it is a task (i.e. status is nil) just 
+    #deletes the chore
     def complete 
         @chores = Chore.find params[:id]
-        @chores.last_accomplished=Time.now
-        @chores.update(:status => "green")
-        flash[:notice] = "#{@chores.task} was successfully completed."
-        redirect_to chores_path
+        if @chores.status == nil
+            @chores.destroy
+            flash[:notice] = "#{@chores.task} was successfully completed."
+            redirect_to chores_path
+        else
+            @chores.last_accomplished=Time.now
+            @chores.update(:status => "green")
+            flash[:notice] = "#{@chores.task} was successfully completed."
+            redirect_to chores_path
+        end
         
     end
     
