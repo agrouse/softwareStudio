@@ -40,6 +40,12 @@ class PeopleController < ApplicationController
         end 
        redirect_to person_path(@people)
     end
+    def joinhouse
+        @people=Person.find(session[:user_id])
+        @people.update_attribute(:household_id, params[:id])
+        flash[:notice] = "#{@people.first_name} was successfully updated."
+        redirect_to person_path(@people)
+    end
     
     def destroy
         @people = Person.find params[:id]

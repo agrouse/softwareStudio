@@ -8,7 +8,6 @@
 #
 # In this file we have automated seeding of users. We have seeded 7 users and one household
 
-
 house1 = Household.create!([{name: '31 McAlister Dr'}])
 house2 = Household.create!([{name: '725 Heatherwood Rd'}])
 bryce = Person.create!([{first_name: 'Bryce', last_name: 'Bullock', username: 'greatguy22', password: "password", password_confirmation: "password", household_id: 1}])

@@ -5,4 +5,5 @@ class Household < ActiveRecord::Base
 
     validates :name, :presence => true,
                     :length => { :within => 2..50 }
+    validates_uniqueness_of :name, :message => "House name already taken"
 end

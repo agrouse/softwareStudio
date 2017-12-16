@@ -29044,6 +29044,7 @@ Processing by AccessController#landing as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2029840678757161486_69923423942980 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:36)
   Rendered layouts/_home_header (0.0ms)
 Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 129.81.34.235 at 2017-12-16 22:22:26 +0000
@@ -31721,3 +31722,9 @@ ActionController::RoutingError (No route matches [GET] "/people/assets/menage_tu
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.5ms)
+=======
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE ("people"."username" = 'greatguy22' AND "people"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+>>>>>>> e5c5992d470d80f54554fcb89e70c839d783f1b1

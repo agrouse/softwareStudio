@@ -23,7 +23,7 @@
          <td><% people = people_of_any_household(t) %> 
              <% people.each do |p| %> <%= p.first_name%> <%= p.last_name%>,
          <% end %></td>
-         <td><%= link_to "Join", join_households_path(:id => t.id), :class => "button", :method => "GET" %>
+         <td><%= link_to "Join", joinhouse_people_path(:id => t.id), :class => "button", :method => "GET" %>
   </td>
      </tr>
    

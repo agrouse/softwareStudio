@@ -41,6 +41,10 @@ gem 'bootstrap-sass', '3.3.7'
 
 gem 'jquery-validation-rails'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 #images for users
 gem 'paperclip', '~> 4.1'
 gem 'paperclip-cloudinary'
