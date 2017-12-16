@@ -10,8 +10,8 @@
     
     
     <ul class="nav nav-tabs" id="choretable" style="width:100%;">
-        <li class="active"><a href="#all" data-toggle="tab">All</a></li>
-        <li><a href="#uncompleted" data-toggle="tab">Uncompleted</a></li>
+        <li class="active"><a href="#all" data-toggle="tab">All chores</a></li>
+        <li><a href="#uncompleted" data-toggle="tab">Needs to be done </a></li>
      </ul>
      
     
@@ -33,9 +33,9 @@
                 <table class="table table-hover table-fixed">
                     <thead>
                         <tr>
-                          <th id="choreHeader">ALLLLL</th>
+                          <th id="choreHeader">Task</th>
                           <th id="choreHeader">Current Status</th>
-                          <th id="choreHeader">Priority</th>
+                          <th id="choreHeader">Frequency</th>
                           <th id="choreHeader">Person Assigned</th>
                           <th id="choreHeader">Complete</th>
                         </tr>
@@ -43,7 +43,7 @@
                     <tbody>
                     <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
                         <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                        <td><%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
+                        <td><%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm", style:"justify-content:center;") do %>
                                     <span class="glyphicon glyphicon-plus"></span></td>
                                 <% end %>
                                 <% end %>    
@@ -94,9 +94,9 @@
                     <table class="table table-hover table-fixed">
                         <thead>
                             <tr>
-                              <th id="choreHeader">INCOMPLETE</th>
+                              <th id="choreHeader">Task</th>
                               <th id="choreHeader">Current Status</th>
-                              <th id="choreHeader">Priority</th>
+                              <th id="choreHeader">Frequency</th>
                               <th id="choreHeader">Person Assigned</th>
                               <th id="choreHeader">Complete</th>
                             </tr>
@@ -110,7 +110,7 @@
                                     <% end %>    
                         <%if @chores 
                             @chores.each do |t| 
-                              if (t.household_id==ses_house_id) && (t.priority == "low") %>
+                              if (t.household_id==ses_house_id) && (t.status == "needs to be done") %>
                             <tr>
                                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
                                  <td><%= chores_logic(t) %></td>
