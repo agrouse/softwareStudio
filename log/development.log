@@ -29044,3 +29044,7 @@ Processing by AccessController#landing as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2029840678757161486_69923423942980 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:36)
   Rendered layouts/_home_header (0.0ms)
 Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE ("people"."username" = 'greatguy22' AND "people"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
