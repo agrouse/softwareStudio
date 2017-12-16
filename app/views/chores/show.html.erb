@@ -1,10 +1,11 @@
+<div id = "choreProf">
 <!-- Added in header and horizontal menu -->
 <div id="page_content">
 
 
 
 <div class="row">
-    <div class="card" style="width: 350px;">
+    <div class="card" style="width: 350px; background: #DEFFED;">
         <img class="card-img-top" src="/assets/chore.jpg"
          alt="Card image cap"/>
 
@@ -64,8 +65,21 @@
 
         <h2 style="color:black;">Update Chore</h2>
         <div id="updateperson">
-        <%= form_tag chore_path, :method => :put do |f| %>
-            <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
+            <%= form_tag chore_path, :method => :put do %>
+            <%= label :chore, :task, 'Chore' %>
+            <%= text_field :chore, :task  %>
+            </br>
+            
+            <%= label :chore, :status, 'Status' %>
+            <%= select :chore, :status, ['red', 'yellow', 'green'],{},class: "col-md-12 dropDown choreInput" %>
+            </br>
+            <%= label :chore, :priority, 'Priority' %>
+            <%= select :chore, :priority, ['daily', 'weekly', 'monthly'],{},class: "col-md-12 dropDown choreInput" %>
+            </br>
+            <%= label :chore, :person_assigned, 'Person assigned' %>
+            <%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-12 dropDown choreInput"}) %>
+            </br>
+        
             
             <%= submit_tag 'Update'%>
             <% end %>
@@ -82,4 +96,5 @@
 <%= link_to 'Back to chore list', chores_path %>
 </div>
 
+</div>
 </div>
