@@ -1,4 +1,4 @@
-
+<div class="container-fluid" id="part1">
     <div class = "row" >
                 <div id="title">
                     <h1 style="color: white; font-size: 100px;">ménage</h1>
@@ -20,3 +20,65 @@
                 </div>
             </div>
         </div>
+        <div class="row"  style="color:white; justify-content: center; margin-top: 10%;">
+            <a href="#part2"><i class="glyphicon glyphicon-chevron-down"></i></a>
+        </div>
+</div>
+
+<div id = "part2" class="container-fluid" style="margin-bottom:25%">
+    <div class="row" style="color:white; justify-content: center;">
+        <a href="#part1"><i class="glyphicon glyphicon-chevron-up"></i></a>    
+    </div>
+    <div class="row" style="color:white; margin-top:5%;">
+        <div class="col-md-3 offset-md-5">
+            <h1 style="font-size: 50px;">ménage</h1>
+        </div>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <h2 style="font-style: italic;"> noun | mé·nage | \ mā-ˈnäzh , mə- \</h2>
+    </div>
+    <div class="row" style="justify-content: center; color:white; margin-bottom:none;">
+        <h4>:members of a household</h4>
+        
+    </div>
+    <div class="row" style="justify-content: center; color:white;">
+        <h4>:the members of a household</h4>
+    </div>
+    <div class="row" style="justify-content: center; color:white;">
+        <h4>origin: French</h4>
+    </div>
+    </br>
+    </br>
+    <div class="row" style="justify-content: center; color:white;">
+        
+        <p style="font-size:20px">[an online app helping you tackle your chores and tasks between housemates, equitably]</p>
+        
+    </div>
+    <div class="row" style="justify-content: center; color:white;">
+        <p style="font-size:15px">work together | organize your house | move on your life</p>
+    </div>
+    
+    
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/a276842440.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+
+</script>
