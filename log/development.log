@@ -28953,3 +28953,94 @@ Processing by ChoresController#index as HTML
 DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2029840678757161486_32878020 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
   Rendered layouts/_header (0.1ms)
 Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/access/logout" for 129.81.203.83 at 2017-12-16 18:46:53 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+Redirected to https://chorez-mbarker7.c9users.io/chores
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chores" for 129.81.203.83 at 2017-12-16 18:46:53 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+Redirected to https://chorez-mbarker7.c9users.io/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 129.81.203.83 at 2017-12-16 18:46:53 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 67ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.self-ff3791c1d32c80309675d1481de3f2c4e18c466828a731e717945cd888e53b0f.css?body=1" for 129.81.203.83 at 2017-12-16 18:46:53 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/assets/menage_tutorial.mp4" for 129.81.203.83 at 2017-12-16 18:46:53 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/assets/menage_tutorial.mp4"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/assets/slide.self-3bb8440389321c4d7d5d7185161d47dc03ed92061883fd78601a1b80b423f646.css?body=1" for 129.81.203.83 at 2017-12-16 18:46:54 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-4f9545df3c5770470e00623cc13baab208bbcb63723704e6697cacd523ed9598.css?body=1" for 129.81.203.83 at 2017-12-16 18:46:54 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/landing" for 129.81.203.83 at 2017-12-16 18:46:56 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2029840678757161486_69923423942980 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:36)
+  Rendered layouts/_home_header (0.1ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/landing" for 129.81.203.83 at 2017-12-16 18:46:58 +0000
+Cannot render console from 129.81.203.83! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (0.1ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb__2029840678757161486_69923423942980 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:36)
+  Rendered layouts/_home_header (0.0ms)
+Completed 200 OK in 45ms (Views: 44.9ms | ActiveRecord: 0.0ms)
