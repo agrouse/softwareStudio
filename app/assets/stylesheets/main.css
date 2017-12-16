@@ -263,3 +263,7 @@ table th {
 table th {
 	background: rgba(255,255,255,.3);
 }
+.circle:before {
+  content: ' \25CF';
+  font-size: 30px;
+}
