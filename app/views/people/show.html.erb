@@ -4,8 +4,6 @@
 <div class="text-center">
 <div id="profiletop">
 <h2>Profile</h2>
-</br>
-<h1> <%= @people.first_name %> <%= @people.last_name%> </h1>
 </div>
 </div>
 
@@ -13,49 +11,80 @@
 </br>
 </br>
 </br>
-</br>
-</br>
-</br>
 
-<div class='people_info'>
-<h2>Details about <%= @people.first_name%></h2>
-<p style="color: black"><%= @people.description%></p>
-</div>
 
-<div class='middle'>
-    <%if @people == Person.find(session[:user_id])%>
-<h2>Update Profile</h2>
-<div id="updateperson">
-<%= form_tag person_path, :method => :put do %>
-    <%= label :people, :first_name, 'First name' %>
-    <%= text_field :people, :first_name  %>
-    </br>
-    
-    <%= label :people, :last_name, 'Last name' %>
-    <%= text_field :people, :last_name  %>
-    </br>
-    <%= label :people, :description, 'Description' %>
-    <%= text_field :people, :description %>
-    </br>
-    
-    
-    
-    <%= submit_tag 'Update'%>
-    <% end %>
+<div class="row">
+    <div class="card" style="width: 300px;">
+        <img class="card-img-top" src="/assets/default-user.png" alt="Card image cap"/>
     </div>
-
-<%end%>
+    
+    <div class="card" style="width: 650px;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> <%= @people.first_name %> <%= @people.last_name%> </h1>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4" style="text-align:center;">
+                <p>username</p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p>household</p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p>chore preferences</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4" style="text-align:center;">
+                <p style="font-size: 28px;"><%= @people.username%></p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p style="font-size: 28px;"><%= @people.household_id%></p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p style="font-size: 28px;"><%= @people.description%></p>
+            </div>
+        </div>
+        
+    </div>
 </div>
 
+</br>
 
-<div class="assigned">
-<h2>Chores Assigned</h2>
-<%Chore.all.each do |chore|%>
-    <%if chore.person_assigned == @people.first_name%>
-        <li><%=chore.task%>, Status: <%=chores_logic(chore)%></li>
-    <%end%>
-<%end%>
+
+
+<div class="row">
+    <div class="card col-md-6 offset-md-3">
+        <%if @people == Person.find(session[:user_id])%>
+        <h2 style="color:black;">Update Profile</h2>
+        <div id="updateperson">
+        <%= form_tag person_path, :method => :put do %>
+            <%= label :people, :first_name, 'First name' %>
+            <%= text_field :people, :first_name  %>
+            </br>
+            
+            <%= label :people, :last_name, 'Last name' %>
+            <%= text_field :people, :last_name  %>
+            </br>
+            <%= label :people, :description, 'Chore preferences' %>
+            <%= text_field :people, :description %>
+            </br>
+            
+            
+            
+            <%= submit_tag 'Update'%>
+            <% end %>
+        </div>
+        
+        <%end%>
+    </div>
+        
 </div>
+
 
 </br>
 </br>
