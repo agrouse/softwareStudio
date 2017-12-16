@@ -1,19 +1,12 @@
 class AccessController < ApplicationController
-  
+#Log in and user authentiction  
   before_action :confirm_logged_in, :except => [:landing, :login, :attempt_login, :logout]
   
-  def menu
-  end
-
-  def login
-  end
-  
-  
+  #Logs user in if they exist
   def attempt_login
     if params[:username].present? && params[:password].present?
       found_user = Person.where(:username => params[:username]).first
       if found_user
-        puts "hello"
         authorized_user = found_user.authenticate(params[:password])
       end
     end
@@ -32,12 +25,13 @@ class AccessController < ApplicationController
       end
       
     else
-      
+      #if user does not exist, redirect to login
       redirect_to("/access/login")
       flash[:notice] = "Invalid username/password combination."
     end
   end
   
+  #Log out and sets token to nil
   def logout
     session[:user_id] = nil
     session[:username] = nil

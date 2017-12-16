@@ -1,51 +1,58 @@
-
+<!--See menage first page: Menage title with log in and sign up buttons-->
 <div class="container-fluid" id="part1">
 
 <!-- Landing page when user opens the app. Prompted with only two options, to sign up or to log in
 Used table format to make layout look clean-->
 
-
+    <!--Ménage title --> 
     <div class = "row" >
-                <div id="title">
-                    <h1 style="color: white; font-size: 100px;">ménage</h1>
-                </div>
+        <div id="title">
+            <h1 style="color: white; font-size: 100px;">ménage</h1>
+        </div>
     </div>
    
-
-        <div class="row">
-            <div class="col-xs-2 col-xs-offset-4">
-                <div id="button1"</div>
-                    <%= link_to "Sign up", '/people/signup', :class => " button btn btn-lg" %>
-                </div>
-            </div>
-
-   
-            <div class="col-xs-2">
-                <div id="button2">
-                    <%= link_to "Log in", '/access/login', :class => " button btn btn-lg" %>
-                </div>
+   <!--Log in and Sign up buttons-->
+    <div class="row">
+        <div class="col-xs-2 col-xs-offset-4">
+            <div id="button1"</div>
+                <%= link_to "Sign up", '/people/signup', :class => " button btn btn-lg" %>
             </div>
         </div>
-        <div class="row"  style="color:white; justify-content: center; margin-top: 10%;">
-            <a href="#part2"><i class="glyphicon glyphicon-chevron-down"></i></a>
+        <div class="col-xs-2">
+            <div id="button2">
+                <%= link_to "Log in", '/access/login', :class => " button btn btn-lg" %>
+            </div>
         </div>
+    </div>
+    
+    <!--Allows you to scroll to part 2-->
+    <div class="row"  style="color:white; justify-content: center; margin-top: 10%;">
+        <a href="#part2"><i class="glyphicon glyphicon-chevron-down"></i></a>
+    </div>
 </div>
 
+<!--Part 2 of Landing: description of Ménage-->
 <div id = "part2" class="container-fluid" style="margin-bottom:25%">
+    
+    <!--Icon to Scroll up to Part 1 of landing-->
     <div class="row" style="color:white; justify-content: center;">
         <a href="#part1"><i class="glyphicon glyphicon-chevron-up"></i></a>    
     </div>
+    
+    <!--Ménage Description titles-->
     <div class="row" style="color:white; margin-top:5%;">
         <div class="col-md-3 offset-md-5">
             <h1 style="font-size: 50px;">ménage</h1>
         </div>
     </div>
+    
+    
+    <!--Definition of Ménage-->
     <div class="row" style="justify-content: center;">
         <h2 style="font-style: italic;"> noun | mé·nage | \ mā-ˈnäzh , mə- \</h2>
     </div>
     <div class="row" style="justify-content: center; color:white; margin-bottom:none;">
         <h4>:members of a household</h4>
-        
     </div>
     <div class="row" style="justify-content: center; color:white;">
         <h4>:the members of a household</h4>
@@ -55,10 +62,10 @@ Used table format to make layout look clean-->
     </div>
     </br>
     </br>
+    
+    <!--Goal of Ménage-->
     <div class="row" style="justify-content: center; color:white;">
-        
         <p style="font-size:20px">[an online app helping you tackle your chores and tasks between housemates, equitably]</p>
-        
     </div>
     <div class="row" style="justify-content: center; color:white;">
         <p style="font-size:15px">work together | organize your house | move on with your life</p>
@@ -72,6 +79,8 @@ Used table format to make layout look clean-->
 <script src="https://use.fontawesome.com/a276842440.js"></script>
 
 <script>
+//Allows smooth scrolling between part 1 and part 2 of landing page
+//Source: https://codepen.io/wesleyvanwyk1979/pen/iAxwr?page=1&
 $(document).ready(function(){
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
