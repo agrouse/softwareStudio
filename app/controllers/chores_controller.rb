@@ -21,7 +21,6 @@ class ChoresController < ApplicationController
         @chores = Chore.create(chore_params)
         house_id=Person.find(session[:user_id]).household_id
         @chores.update(:household_id => house_id)
-        @chores.update(status: "uncompleted" )
         #if @task_length.length < 2 
          #   flash[:notice] = "#{@chores.task} was successfully created."
         #else

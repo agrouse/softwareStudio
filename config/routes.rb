@@ -27,7 +27,7 @@
     
     post 'people' => redirect('/households')
     
-    
+    put 'chores' => redirect('/chores')
     
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/') 
