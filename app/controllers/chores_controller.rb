@@ -1,19 +1,24 @@
 class ChoresController < ApplicationController
     #controller for both tasks and chores, with status being nil for tasks
     before_action :confirm_logged_in
+    
+    #view all chores using pagination
     def index
         @chores = Chore.order(:status).page(params[:page]).per_page(50)
     end
     
+    #only shows chores assigned for the user who is currently logged in
     def show
         id = params[:id]
         @chores = Chore.find(params[:id])
         @chores = Chore.find(id)
     end
     
+    #Create a new chore
     def new
         @chores = Chore.new
     end
+    
     #Create chore with household id set by user who created it's household id
     #note validation on the two possible text inputs must be greater than 2,
     #less than 50
@@ -48,6 +53,7 @@ class ChoresController < ApplicationController
         
     end
     
+    #update chore parameters and redirect to total chores page
     def update
        @chores = Chore.find params[:id]
        @chores.update_attributes(chore_params)
@@ -55,6 +61,7 @@ class ChoresController < ApplicationController
        redirect_to chore_path
     end
     
+    #destroys a chore from the database, the only chores that are destroyed are those denoted as tasks
     def destroy
         @chores = Chore.find params[:id]
         @chores.destroy
