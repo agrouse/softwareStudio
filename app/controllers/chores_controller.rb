@@ -19,14 +19,11 @@ class ChoresController < ApplicationController
         @chores = Chore.create(chore_params)
         house_id=Person.find(session[:user_id]).household_id
         @chores.update(:household_id => house_id)
-<<<<<<< HEAD
-        @chores.update(status: "uncompleted" )
-=======
         #if @task_length.length < 2 
          #   flash[:notice] = "#{@chores.task} was successfully created."
         #else
          #   flash[:notice] = "#{@chores.task} unable to be created, check parameters."
->>>>>>> ac83f6c291d99da097a0953238d1916b684c0613
+        @chores.update(status: "uncompleted" )
         redirect_to chores_path
         
     end
