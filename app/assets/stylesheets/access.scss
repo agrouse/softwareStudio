@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/* Styles specific to unique access pages; landing, sign up and login each have very different
+and individual structure compared to rest of site */
+
 .jumbotron {
     background: #16222A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
@@ -19,6 +23,8 @@
 	font: normal .80em 'trebuchet ms', arial, sans-serif;
 }
 
+
+/* Delayed fade in animation on landing page */
 #title h1{
 	
 	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -82,6 +88,8 @@ div {
             animation: fadein 5s;
 }
 
+
+/* Styles for house animation on signup or login pages */
 
 @keyframes fadein {
     from { opacity: 0; }
