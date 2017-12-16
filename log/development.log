@@ -31377,3 +31377,970 @@ Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0
 
 Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:15:19 +0000
 Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 129.81.78.87 at 2017-12-16 18:34:18 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.78.87 at 2017-12-16 18:34:18 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (2.4ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_31623260 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:36)
+  Rendered layouts/_home_header (0.3ms)
+Completed 200 OK in 482ms (Views: 466.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/main.css" for 129.81.78.87 at 2017-12-16 18:34:19 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.9ms)
+
+
+Started GET "/access/login" for 129.81.78.87 at 2017-12-16 18:34:21 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.78.87 at 2017-12-16 18:34:29 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cSHKGs1dZtgOd744TuE/46N7UexlsKUTmbmaG8tUQOM4XBBO/jxYQpSIpmlCTbiq9xWjOw1S72EZxqrMK0DQ0w==", "username"=>"agrouse", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "agrouse"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 119ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:34:30 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (16.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_task_form.html.erb (3.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mChore Load (0.9ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (43.6ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_31623260 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (1.1ms)
+Completed 200 OK in 112ms (Views: 103.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:34:30 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.1ms)
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:34:30 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:34:30 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:34:30 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:34:53 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (3.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_task_form.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (10.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274243175280 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 214ms (Views: 211.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:34:53 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.4ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:34:53 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.1ms)
+
+
+Started GET "/access/main.css" for 129.81.78.87 at 2017-12-16 18:35:08 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.3ms)
+
+
+Started GET "/access/login" for 129.81.78.87 at 2017-12-16 18:35:18 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/main.css" for 129.81.78.87 at 2017-12-16 18:35:18 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.8ms)
+
+
+Started POST "/access/attempt_login" for 129.81.78.87 at 2017-12-16 18:35:25 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f+ienCj5XfGYeCUTYM46ArIRD4puEIU9tzowoTY36D42lUTIG5hjawKHPUJsYr1L5n/9XQbyz083RQB21iN4Dg==", "username"=>"agrouse", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "agrouse"]]
+Redirected to https://ss-project-eblake1.c9users.io/chores
+Completed 302 Found in 71ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:35:25 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_task_form.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (10.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274247171100 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:35:25 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.1ms)
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:35:26 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:35:26 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:35:26 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:36:12 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_task_form.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mChore Load (0.4ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (10.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274247171100 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 166ms (Views: 164.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/main.self-f2be5a88ceb8e20d4d8010468d2d726862c5a67a84ee140bb01306ea140f0d43.css?body=1" for 129.81.78.87 at 2017-12-16 18:36:13 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:36:13 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.2ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:36:13 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.3ms)
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:36:30 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (2.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_task_form.html.erb (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mChore Load (0.6ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (9.4ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274247171100 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 122ms (Views: 119.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:36:31 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.6ms)
+
+
+Started GET "/assets/main.self-37019021d940add64ef814f66111f0d72f2bdddbefcc32241392be6958e4bcc7.css?body=1" for 129.81.78.87 at 2017-12-16 18:36:31 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:36:31 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.2ms)
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:37:01 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_task_form.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mChore Load (0.6ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (9.9ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274247171100 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 190ms (Views: 187.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:37:02 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:37:29 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_task_form.html.erb (1.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (10.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274247171100 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/main.self-ce6744d01b87baa0ee4f7d17a77f64fbef9c7ab37f0afdef29adb9b6a2062048.css?body=1" for 129.81.78.87 at 2017-12-16 18:37:29 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:37:29 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.6ms)
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:38:14 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (4.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (7.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_task_form.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mChore Load (2.4ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (17.2ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274242243400 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 93ms (Views: 84.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:38:14 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.2ms)
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:38:14 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:38:14 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:38:14 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:38:35 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (3.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_task_form.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (10.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274229773040 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 152ms (Views: 150.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:38:36 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:39:07 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_task_form.html.erb (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mChore Load (0.5ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (9.3ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274251008980 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:39:08 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.7ms)
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:39:08 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:39:08 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:39:08 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/chores" for 129.81.78.87 at 2017-12-16 18:39:31 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_chore_form.html.erb (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered chores/_task_form.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mChore Load (0.4ms)[0m  [1mSELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered chores/index.html.erb within layouts/application (10.7ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___2303775443999129814_70274240592240 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.1ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main.css" for 129.81.78.87 at 2017-12-16 18:39:31 +0000
+Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.9ms)
