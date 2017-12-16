@@ -30447,3 +30447,555 @@ Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0
 Started GET "/assets/menage_tutorial.mp4" for 129.81.78.87 at 2017-12-16 18:15:19 +0000
 Cannot render console from 129.81.78.87! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 >>>>>>> master
+  [1m[36m (5009.1ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (135.1ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (1.0ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1079.6ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (7.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (30.7ms)[0m  DROP TABLE "chores" CASCADE
+  [1m[36m (42.3ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.8ms)[0m  DROP TABLE "households" CASCADE
+  [1m[36m (14.7ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (6.6ms)[0m  DROP TABLE "people" CASCADE
+  [1m[36m (20.0ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "description" character varying, "password_digest" character varying, "username" character varying, "household_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "provider" character varying, "uid" character varying, "oauth_token" character varying, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) [0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (26.0ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (15.3ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (13.5ms)[0m  CREATE TABLE "people" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "description" character varying, "password_digest" character varying, "username" character varying, "household_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "provider" character varying, "uid" character varying, "oauth_token" character varying, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) 
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (9.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171216012232')
+  [1m[36m (3.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171009063806')
+  [1m[36m (2.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171010023550')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "31 McAlister Dr"], ["created_at", "2017-12-16 18:29:38.483920"], ["updated_at", "2017-12-16 18:29:38.483920"]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'greatguy22' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Bryce"], ["last_name", "Bullock"], ["username", "greatguy22"], ["password_digest", "$2a$10$zLs8U10L.1RhJUePIFm7d.nJR.phvsmHiYbmki7mlSQ0uo7zxbiVi"], ["household_id", 1], ["created_at", "2017-12-16 18:29:38.799824"], ["updated_at", "2017-12-16 18:29:38.799824"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'agrouse' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Amy"], ["last_name", "Grouse"], ["username", "agrouse"], ["password_digest", "$2a$10$3mPg3hhyKQLJ5TEB4Cmie.kZ8oO.OVqPydAEvyUKhJxTv8e888RJa"], ["household_id", 2], ["created_at", "2017-12-16 18:29:38.887099"], ["updated_at", "2017-12-16 18:29:38.887099"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'wogzaly' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Walter"], ["last_name", "Ogzaly"], ["username", "wogzaly"], ["password_digest", "$2a$10$HVyQbYDD9L8iI0y7QIDxw.Jk5SAwbNT6TprO.82/qJSDJTpheQ5Va"], ["household_id", 1], ["created_at", "2017-12-16 18:29:38.966963"], ["updated_at", "2017-12-16 18:29:38.966963"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'eburns' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Erin"], ["last_name", "Burns"], ["username", "eburns"], ["password_digest", "$2a$10$hivzw58c6if/RftaGxxlMuVdl01mxTNMQpfPLV7CNLsSWCgDYXb62"], ["household_id", 2], ["created_at", "2017-12-16 18:29:39.045646"], ["updated_at", "2017-12-16 18:29:39.045646"]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'mbarker' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["first_name", "Mackenna"], ["last_name", "Barker"], ["description", "test user"], ["username", "mbarker"], ["password_digest", "$2a$10$qGW8ebI.v3v3fJlkUUY3jOEqnSF8.OSqGNlClN1LdyPhRbchCSfom"], ["household_id", 1], ["created_at", "2017-12-16 18:29:39.124743"], ["updated_at", "2017-12-16 18:29:39.124743"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'epeyko' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Emma"], ["last_name", "Peyko"], ["username", "epeyko"], ["password_digest", "$2a$10$irGXQZNxy7dczCf.vNlWGOTivdCWCHZBm9db.vDIXqBBJ3OdWCpxW"], ["household_id", 1], ["created_at", "2017-12-16 18:29:39.203972"], ["updated_at", "2017-12-16 18:29:39.203972"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'aunderwood' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "Adrien"], ["last_name", "Underwood"], ["username", "aunderwood"], ["password_digest", "$2a$10$XAHwDGwvrVIXuTYSkl5CPOwQ6uqesAchmf/.DVTyrYU2/dm8subjS"], ["household_id", 1], ["created_at", "2017-12-16 18:29:39.286184"], ["updated_at", "2017-12-16 18:29:39.286184"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (13.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'households'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "31 McAlister Dr"], ["created_at", "2017-12-16 18:30:00.970577"], ["updated_at", "2017-12-16 18:30:00.970577"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (1.6ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'greatguy22' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'households'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "31 McAlister Dr"], ["created_at", "2017-12-16 18:32:02.458512"], ["updated_at", "2017-12-16 18:32:02.458512"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (1.2ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'greatguy22' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (111.0ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (111.4ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (863.5ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (868.7ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (19.1ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (13.8ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (13.5ms)[0m  CREATE TABLE "people" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "description" character varying, "password_digest" character varying, "username" character varying, "household_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "provider" character varying, "uid" character varying, "oauth_token" character varying, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) 
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (4.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171216012232')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171009063806')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171010023550')[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (17.5ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (13.0ms)[0m  CREATE TABLE "households" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (15.3ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "description" character varying, "password_digest" character varying, "username" character varying, "household_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "provider" character varying, "uid" character varying, "oauth_token" character varying, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) [0m
+  [1m[35m (9.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (5.1ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171216012232')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114050423')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (2.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "31 McAlister Dr"], ["created_at", "2017-12-16 18:32:21.211718"], ["updated_at", "2017-12-16 18:32:21.211718"]]
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.9ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'greatguy22' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["username", "greatguy22"], ["password_digest", "$2a$10$.6zVDJv7mo6gmbx9.8LynuqIFwKIxwHhwZ2gb0tOCgKcuRlAy/d5y"], ["household_id", 1], ["created_at", "2017-12-16 18:32:21.457880"], ["updated_at", "2017-12-16 18:32:21.457880"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'agrouse' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["username", "agrouse"], ["password_digest", "$2a$10$DNSAme7YY8PAXx9sMxIJV.s./myFTWnBE/QwPt1mP5mlFySw.yMQa"], ["household_id", 2], ["created_at", "2017-12-16 18:32:21.537942"], ["updated_at", "2017-12-16 18:32:21.537942"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'wogzaly' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Walter"], ["last_name", "Ogzaly"], ["username", "wogzaly"], ["password_digest", "$2a$10$YYeucE4jZVg.ss9QU0AwF.8LH83p0P3QhyorzjsiYs3597b8tEYbG"], ["household_id", 1], ["created_at", "2017-12-16 18:32:21.616747"], ["updated_at", "2017-12-16 18:32:21.616747"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'eburns' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Erin"], ["last_name", "Burns"], ["username", "eburns"], ["password_digest", "$2a$10$cMpdBaeKlITdCMVF2fZP0.zz5IdSxNpbFHy1l0A4C94teoq/kDuie"], ["household_id", 2], ["created_at", "2017-12-16 18:32:21.697337"], ["updated_at", "2017-12-16 18:32:21.697337"]]
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.6ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'mbarker' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mackenna"], ["last_name", "Barker"], ["description", "test user"], ["username", "mbarker"], ["password_digest", "$2a$10$KUzsJAIRlsrNwwaXwjrgK.ONvw8rdYeBsmY8yKaVmnxucXlPthequ"], ["household_id", 1], ["created_at", "2017-12-16 18:32:21.778795"], ["updated_at", "2017-12-16 18:32:21.778795"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'epeyko' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Emma"], ["last_name", "Peyko"], ["username", "epeyko"], ["password_digest", "$2a$10$rAbqi5xt.lPAvwyKOt7YrOv4bzSdebBDcK63P6LJP4PQO4dej1zwy"], ["household_id", 1], ["created_at", "2017-12-16 18:32:21.858887"], ["updated_at", "2017-12-16 18:32:21.858887"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'aunderwood' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Adrien"], ["last_name", "Underwood"], ["username", "aunderwood"], ["password_digest", "$2a$10$Rvr/MO4pKlJp485ZLUknYeW/zCkLj7hZlaB3EL/Ta7A91wJsKerUO"], ["household_id", 1], ["created_at", "2017-12-16 18:32:21.937809"], ["updated_at", "2017-12-16 18:32:21.937809"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'households'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "31 McAlister Dr"], ["created_at", "2017-12-16 18:32:34.763561"], ["updated_at", "2017-12-16 18:32:34.763561"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (1.0ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'greatguy22' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mPerson Load (0.9ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36m (110.8ms)[0m  [1mDROP DATABASE IF EXISTS "app_development"[0m
+  [1m[35m (112.5ms)[0m  DROP DATABASE IF EXISTS "app_test"
+  [1m[36m (728.1ms)[0m  [1mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (729.6ms)[0m  CREATE DATABASE "app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (19.8ms)[0m  CREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (14.1ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (14.0ms)[0m  CREATE TABLE "people" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "description" character varying, "password_digest" character varying, "username" character varying, "household_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "provider" character varying, "uid" character varying, "oauth_token" character varying, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) 
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171216012232')
+  [1m[36m (2.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171114050423')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171009063806')
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171010023550')[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (15.3ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (14.2ms)[0m  CREATE TABLE "households" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (13.0ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "description" character varying, "password_digest" character varying, "username" character varying, "household_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "provider" character varying, "uid" character varying, "oauth_token" character varying, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) [0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.9ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171216012232')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171114050423')
+  [1m[36m (42.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171009063806')[0m
+  [1m[35m (2.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171010023550')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "31 McAlister Dr"], ["created_at", "2017-12-16 18:34:16.101325"], ["updated_at", "2017-12-16 18:34:16.101325"]]
+  [1m[35m (4.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.9ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'greatguy22' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["username", "greatguy22"], ["password_digest", "$2a$10$60JcmHVPPniJMSoS3v/aheMBUTcgn53i0sAzrr.OuFRpKv13OAH2a"], ["household_id", 1], ["created_at", "2017-12-16 18:34:16.328806"], ["updated_at", "2017-12-16 18:34:16.328806"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'agrouse' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["username", "agrouse"], ["password_digest", "$2a$10$BnqBx6300dmBpPVo3me7AOThYa25Lu5QeUnfJ3DLRadrLpdndBrv6"], ["household_id", 2], ["created_at", "2017-12-16 18:34:16.408497"], ["updated_at", "2017-12-16 18:34:16.408497"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'wogzaly' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Walter"], ["last_name", "Ogzaly"], ["username", "wogzaly"], ["password_digest", "$2a$10$To3NgyQbR1iN4BslnWfoQ.iRjsoKYRYT3H5L5beara7ftAWfmICLy"], ["household_id", 1], ["created_at", "2017-12-16 18:34:16.488107"], ["updated_at", "2017-12-16 18:34:16.488107"]]
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'eburns' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Erin"], ["last_name", "Burns"], ["username", "eburns"], ["password_digest", "$2a$10$hcxF4thoY5CMIOj7O5Ek7O8aoNcmnOlln/dyw5akD7lSFVvJqKG.G"], ["household_id", 2], ["created_at", "2017-12-16 18:34:16.567760"], ["updated_at", "2017-12-16 18:34:16.567760"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'mbarker' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mackenna"], ["last_name", "Barker"], ["description", "test user"], ["username", "mbarker"], ["password_digest", "$2a$10$bwGHHb6c4gz4JIRRYyqcNOSOgOxCHI6V4DApfUN95cRhBEi7ov0Hq"], ["household_id", 1], ["created_at", "2017-12-16 18:34:16.647642"], ["updated_at", "2017-12-16 18:34:16.647642"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'epeyko' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Emma"], ["last_name", "Peyko"], ["username", "epeyko"], ["password_digest", "$2a$10$qCuBiJPUJC6mz6IKg6t4JuQj9Mo.HkOwlXoXzDxgLCRKbLQR0T4z6"], ["household_id", 1], ["created_at", "2017-12-16 18:34:16.726839"], ["updated_at", "2017-12-16 18:34:16.726839"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'aunderwood' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Adrien"], ["last_name", "Underwood"], ["username", "aunderwood"], ["password_digest", "$2a$10$iE6dEDsOdEamWuTKRx5CEeIHH44glauX0uTcvF6fz.s73d/58bNsa"], ["household_id", 1], ["created_at", "2017-12-16 18:34:16.805917"], ["updated_at", "2017-12-16 18:34:16.805917"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36m (15.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (7.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20171009063806)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (11.1ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "description" character varying, "password_digest" character varying, "username" character varying, "household_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171009063806"]]
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateChores (20171010023550)
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ubuntu/workspace/db/migrate/20171010023550_create_chores.rb:12)
+  [1m[36m (9.0ms)[0m  [1mCREATE TABLE "chores" ("id" serial primary key, "task" character varying, "priority" character varying, "status" character varying, "description" character varying, "person_assigned" character varying, "last_accomplished" timestamp, "history" character varying, "household_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171010023550"]]
+  [1m[36m (5.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateHouseholds (20171114050423)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE "households" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20171114050423"]]
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddAvatarsToUsers (20171216012232)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "people" ADD "image_file_name" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "people" ADD "image_content_type" character varying
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "people" ADD "image_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "people" ADD "image_updated_at" timestamp
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20171216012232"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'chores'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'households'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "households" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "31 McAlister Dr"], ["created_at", "2017-12-16 18:36:14.088069"], ["updated_at", "2017-12-16 18:36:14.088069"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (1.0ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'greatguy22' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bryce"], ["last_name", "Bullock"], ["username", "greatguy22"], ["password_digest", "$2a$10$2Nby/rvJK6T/aRQEkuOiS./HsEwnVEI4VXr0IMEGAJX41Z5NCEjMW"], ["household_id", 1], ["created_at", "2017-12-16 18:36:14.358495"], ["updated_at", "2017-12-16 18:36:14.358495"]]
+  [1m[35m (5.2ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'agrouse' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Amy"], ["last_name", "Grouse"], ["username", "agrouse"], ["password_digest", "$2a$10$vgC.hnEBqRbrMheaFXbeDOz56rsHr/nAximuFsmSEQQTkTM4ime2y"], ["household_id", 2], ["created_at", "2017-12-16 18:36:14.469520"], ["updated_at", "2017-12-16 18:36:14.469520"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'wogzaly' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Walter"], ["last_name", "Ogzaly"], ["username", "wogzaly"], ["password_digest", "$2a$10$mSdcdmRpLImtxnF/wURACOzeg1M836qUbtZEGGGXybgCKIM3GskL2"], ["household_id", 1], ["created_at", "2017-12-16 18:36:14.557988"], ["updated_at", "2017-12-16 18:36:14.557988"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'eburns' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Erin"], ["last_name", "Burns"], ["username", "eburns"], ["password_digest", "$2a$10$AcPgocC.SkaO.uWhQGJBheXcwcL8KyutteMjssgSuHCnzX91Nl8XO"], ["household_id", 2], ["created_at", "2017-12-16 18:36:14.644806"], ["updated_at", "2017-12-16 18:36:14.644806"]]
+  [1m[35m (3.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'mbarker' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "description", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mackenna"], ["last_name", "Barker"], ["description", "test user"], ["username", "mbarker"], ["password_digest", "$2a$10$Ae7ceEj9pspgiuS8hQBZ2.nZNyLKetGfQcaxuyOMZEVcjZFvT0n6W"], ["household_id", 1], ["created_at", "2017-12-16 18:36:14.728654"], ["updated_at", "2017-12-16 18:36:14.728654"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'epeyko' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Emma"], ["last_name", "Peyko"], ["username", "epeyko"], ["password_digest", "$2a$10$rMNgLHEJ1AOc.xosKfhMtOQ5D7tgplaoTGr.whNLpTuxK9tF16k/e"], ["household_id", 1], ["created_at", "2017-12-16 18:36:14.812901"], ["updated_at", "2017-12-16 18:36:14.812901"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'aunderwood' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "username", "password_digest", "household_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Adrien"], ["last_name", "Underwood"], ["username", "aunderwood"], ["password_digest", "$2a$10$PQ3o.CXAClBDV0szzVJgNu.rO7s5aAwFpcmJuxTtMEOiWo9yzeoS."], ["household_id", 1], ["created_at", "2017-12-16 18:36:14.898453"], ["updated_at", "2017-12-16 18:36:14.898453"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people"[0m
+
+
+Started GET "/" for 129.81.188.6 at 2017-12-16 18:36:42 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/access/landing" for 129.81.188.6 at 2017-12-16 18:36:42 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#landing as HTML
+  Rendered access/landing.html.erb within layouts/application (4.0ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_home_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___3201584251909423821_16286100 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:36)
+  Rendered layouts/_home_header (0.6ms)
+Completed 200 OK in 902ms (Views: 890.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/access.self-a9777fa3b05025408c4dd97d20f8372614ee876804c223043ee1ab9b09d7f5e5.css?body=1" for 129.81.188.6 at 2017-12-16 18:36:44 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/chores.self-f938d66bc0eed922e5d01f85949a2d98ed9dcc02b8da95f747c0ced4ca10ebac.css?body=1" for 129.81.188.6 at 2017-12-16 18:36:44 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/main.self-a8430d38017f597ebf1a55c0583209b0b1969b5933362a1466f32256baf36496.css?body=1" for 129.81.188.6 at 2017-12-16 18:36:44 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/main.css" for 129.81.188.6 at 2017-12-16 18:36:44 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/access/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (31.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.1ms)
+
+
+Started GET "/assets/people.self-ab5f27518e7661d987001c10a01258a7246823853d6f38aa32395f0a6c39645a.css?body=1" for 129.81.188.6 at 2017-12-16 18:36:44 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/access/login" for 129.81.188.6 at 2017-12-16 18:36:48 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  Rendered access/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 129.81.188.6 at 2017-12-16 18:36:49 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JXqdvnerJLMqgV7zgR54HGMr40Jy0+8S9eWGfXJZiPiqnbC6ulj01LAR+gl+V8RqjFCkfqxQyoiRLeSfblkUCA==", "username"=>"greatguy22", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.7ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "greatguy22"]]
+Redirected to https://menage-mama-agrouse.c9users.io/chores
+Completed 302 Found in 153ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/chores" for 129.81.188.6 at 2017-12-16 18:36:49 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChoresController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_chore_form.html.erb (17.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "people".* FROM "people"
+  Rendered chores/_task_form.html.erb (3.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mChore Load (0.9ms)[0m  SELECT  "chores".* FROM "chores"  ORDER BY "chores"."status" ASC LIMIT 50 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered chores/index.html.erb within layouts/application (35.5ms)
+DEPRECATION WARNING: The file /home/ubuntu/workspace/app/views/layouts/_header did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_layouts_application_html_erb___3201584251909423821_16286100 at /home/ubuntu/workspace/app/views/layouts/application.html.erb:40)
+  Rendered layouts/_header (0.5ms)
+Completed 200 OK in 124ms (Views: 117.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/main.css" for 129.81.188.6 at 2017-12-16 18:36:50 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/main.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.9ms)
+
+
+Started GET "/assets/menage_tutorial.mp4" for 129.81.188.6 at 2017-12-16 18:36:50 +0000
+Cannot render console from 129.81.188.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
