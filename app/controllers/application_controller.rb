@@ -55,7 +55,14 @@ class ApplicationController < ActionController::Base
   def chores_logic(chore)
     status=chore.status
     priority=chore.priority
-    last_accomplished=chore.last_accomplished
+    if priority == nil
+      return status
+    end
+    if chore.last_accomplished == nil
+      last_accomplished = chore.created_at
+    else
+      last_accomplished=chore.last_accomplished
+    end
     case status
     when "needs to be done"
       status_num =0
@@ -66,7 +73,6 @@ class ApplicationController < ActionController::Base
     else
       status_num = 2
     end
-    if last_accomplished != nil
     
     case priority
     when "daily"
@@ -79,9 +85,6 @@ class ApplicationController < ActionController::Base
       priority_num = 2
     end
     
-    else
-      priority_num = 2
-    end
     if priority_num < status_num
       if priority_num == 1
         return "ok condition"
