@@ -2,12 +2,6 @@
 <div id="page_content">
 
 
-<div class="text-center">
-    <h2> Details about <%= @chores.task %> </h2>
-</div>
-
-
-
 
 <div class="row">
     <div class="card" style="width: 350px;">
@@ -20,7 +14,7 @@
     <div class="card" style="width: 620px;">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> <%= @people.first_name %> <%= @people.last_name%> </h1>
+                <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> Details about <%= @chores.task %> </h1>
             </div>
             
         </div>
@@ -46,10 +40,15 @@
                 <%end%></p>
             </div>
             <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 22px;"><%= @people.household_id%></p>
+                <p style="font-size: 22px;"><span class="bigcircle", style = <%="color:#{chores_logic(@chores)}; font-size:60px!important;"%>></span></p>
             </div>
             <div class="col-md-4" style="text-align:center; padding-right: 15px;">
-                <p style="font-size: 22px;"><%= @people.description%></p>
+                <p style="font-size: 22px;"><%= @chores.priority%></p>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col md-6 offset-md-3">
+                <p style="font-size: 22px;">Person assigned: <%= @chores.person_assigned %></p>
             </div>
         </div>
         
@@ -62,21 +61,16 @@
 
 <div class="row">
     <div class="card col-md-6 offset-md-3">
-        <%if @people == Person.find(session[:user_id])%>
+
         <h2 style="color:black;">Update Chore</h2>
         <div id="updateperson">
         <%= form_tag chore_path, :method => :put do |f| %>
             <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-            <%= submit_tag 'Update'%>
-        <% end %>
-            
-            
             
             <%= submit_tag 'Update'%>
             <% end %>
         </div>
         
-        <%end%>
     </div>
         
 </div>
@@ -86,41 +80,6 @@
 </br>
 <div id="linkback">
 <%= link_to 'Back to chore list', chores_path %>
-</div>
-
-
-
-
-
-
-<div class='people_info'>
-  <li>Last completed:
-   <% if @chores.last_accomplished != nil%>
-       <%= Time.at(@chores.last_accomplished).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")  %> </li>
-    <%else%>
-        <%=Time.at(@chores.created_at).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")%>
-    <%end%>
-  <li>Status:
-    <span class="circle", style = <%="color:#{chores_logic(@chores)}"%>></span></li>
-    <li>Frequency:
-    <%= @chores.priority%> </li>
-  <li>Person Assigned:
-    <%= @chores.person_assigned %> </li>
-
-</div>
-<div class='middle'>
-<h2>Update chore</h2>
-<div id="updateperson">
-<%= form_tag chore_path, :method => :put do |f| %>
-    <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-    <%= submit_tag 'Update'%>
-    <% end %>
-</div>
-</div>
-<br>
-<br>
-<div id="linkback">
-<%= link_to 'Back to chores list', chores_path %>
 </div>
 
 </div>
