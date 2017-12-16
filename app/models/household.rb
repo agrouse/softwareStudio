@@ -1,5 +1,5 @@
 class Household < ActiveRecord::Base
-    #household model with has many people and chores, validates name length
+    #household model with has many people and chores, validates name presence and length
     has_many :people
     has_many :chores
 

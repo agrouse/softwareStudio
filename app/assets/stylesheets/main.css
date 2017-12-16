@@ -164,7 +164,12 @@ ol li {
     background-color: #B1B695;
 }
 
-
+#map_content {
+	width: 1000px;
+	overflow: hidden;
+	margin: auto;
+	padding: 0 24px 20px 20px;
+}
 
 
 
@@ -278,3 +283,8 @@ table th {
   content: ' \25CF';
   font-size: 200px;
 }
+
+       #map {
+        height: 400px;
+        width: 100%;
+       }

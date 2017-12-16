@@ -11,7 +11,7 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="main.css" type="text/css" />
   
-  /*Javascript method to toggle visibiltiy of the Menage tutorial video*/
+  <!--Javascript method to toggle visibiltiy of the Menage tutorial video-->
   
   <script type="text/javascript">
 			<!--
@@ -39,14 +39,14 @@
 <% else %>
     <%= render 'layouts/header' %>
     
-    /*Adding the hidden information within the popup box to pages where user is logged in, this is only shown when the user click the link to What is Menage*/
+    <!--Adding the hidden information within the popup box to pages where user is logged in, this is only shown when the user click the link to What is Menage-->
     
     <div id= "popup-box" class="popup-position" style="color:black">
 		  <div id="popup-wrapper" style="color:black">
 		    <div id="popup-container" style="color:black">
 		      <h3>Menage Tutorial </h3>
 		      
-		      /*Adding the video to the popup box */
+		      <!--Adding the video to the popup box -->
 		      
 		      <video src="assets/menage_tutorial.mp4" width="700" height="500" controls>
 		      </video>
@@ -56,7 +56,7 @@
 		</div>
 		<div id="wrapper">
 			
-			/*Link to the popup box that is shown on every page after a user is logged in*/
+			<!--Link to the popup box that is shown on every page after a user is logged in-->
 			
 		  <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box');">What is Menage?</a></p>
 		</div>
