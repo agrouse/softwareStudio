@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+  # helpful methods used throughout the application
   protect_from_forgery with: :exception
   
   
@@ -8,6 +7,8 @@ class ApplicationController < ActionController::Base
   helper_method :chores_of_household
   helper_method :people_of_any_household
   helper_method :chores_logic
+  #get people of house from user's id, 
+  #return list of people in that house
   def people_of_personal_household
     #get user's id from currently logged in person
     userID = session[:user_id]
@@ -24,6 +25,9 @@ class ApplicationController < ActionController::Base
     return peopleList
     
   end
+  
+  #get people of house from specific house id, 
+  #return list of people of that house
   def people_of_any_household(house)
     houseID = house.id
     peopleList = []
@@ -34,10 +38,9 @@ class ApplicationController < ActionController::Base
     end
     return peopleList
   end
-    #get household_id of particular house
     
-    #get people of house from 
-    #return people of that house
+  #get chores of house from user's id, 
+  #return list of chores of that house
   def chores_of_household
     #get user's id from currently logged in person
     userID = session[:user_id]
@@ -45,13 +48,22 @@ class ApplicationController < ActionController::Base
     person = Person.find(userID)
     choreslist = []
     Chore.all.each do |chore|
-      if chore.person_assigned == person.first_name
+      if (chore.person_assigned == person.first_name) && (chore.household_id==person.household_id)
         choreslist.push(chore)
       end
     end
     return choreslist
     
   end
+  
+  #chores_logic takes in a chore and determines the color output of the chore.
+  #this is done using both the manually inputted status, along with the time
+  #last completed, and the frequency. It first checks if it is a task by
+  #seeing if status==nil, and sets the color to purple if this is the case
+  #otherwise it determines values from 0-2 based on the status manually entered
+  #and the time since last completed and weighted based on the priority.
+  #at the end it takes the lower of the two numbers and outputs that correspond
+  #color.
   def chores_logic(chore)
     status=chore.status
     priority=chore.priority
@@ -105,7 +117,6 @@ class ApplicationController < ActionController::Base
       return status
     end
   end
-   
   
   private
     def confirm_logged_in

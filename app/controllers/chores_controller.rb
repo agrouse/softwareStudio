@@ -2,7 +2,7 @@ class ChoresController < ApplicationController
     #controller for both tasks and chores, with status being nil for tasks
     before_action :confirm_logged_in
     def index
-        @chores = Chore.order(:person_assigned).page(params[:page]).per_page(50)
+        @chores = Chore.order(:status).page(params[:page]).per_page(50)
     end
     
     def show
