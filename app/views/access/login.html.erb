@@ -12,9 +12,9 @@
         <h2 style="color:white; margin-top: 5%">Login</h2>
         <%= form_tag(access_attempt_login_path, :class => 'regForm', :method => :post) do %>
             <%= label_tag(:username, nil, class: 'accessInput custom-control') %>
-            <%= text_field_tag(:username, params[:username], class: 'accessInput custom-control') %>
+            <%= text_field_tag(:username, params[:username], class: 'accessInput custom-control', required: true) %>
             <%= label_tag(:password, nil, class: 'accessInput custom-control') %>
-            <%= password_field_tag(:password, nil, class: 'accessInput custom-control') %>
+            <%= password_field_tag(:password, nil, class: 'accessInput custom-control', required: true) %>
             <%= button_tag(type: 'submit',value: "submit", class: "submitBtn btn btn-primary", style: "margin-left: 55%; margin-top: 5%") do %>
                 <span class="glyphicon glyphicon-ok"></span> 
             <% end %>

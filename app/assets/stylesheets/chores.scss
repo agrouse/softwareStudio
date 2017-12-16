@@ -9,6 +9,7 @@
     margin-right: 1px;
     position:absolute;
     width: 100%;
+    justify-content: left;
     height: 30px;
     box-sizing: border-box;
     
@@ -21,4 +22,7 @@
   text-align: left;
   text-transform: uppercase;
   width: 100%;
+}
+.btnSubmit {
+    background: transparent;
 }
