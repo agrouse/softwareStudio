@@ -150,7 +150,7 @@
                         <tbody>
                         <%if @chores 
                             @chores.each do |t| 
-                              if (t.household_id==ses_house_id) && (chores_logic(t) == "red") %>
+                              if (t.household_id==ses_house_id) && (chores_logic(t) == "red" || chores_logic(t) == "purple") %>
                             <tr>
                                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
                                  <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>

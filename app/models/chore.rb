@@ -1,8 +1,11 @@
 class Chore < ActiveRecord::Base
+    #chore model with validations of task and priority lengths
     belongs_to :household
     
-    validates_presence_of :task,
-                :length => { :within => 2..30 }, 
-                :format => /\A[a-zA-Z ]+\Z/
+    validates :task, :presence => true,
+                    :length => { :within => 2..50 }
+    validates :priority, :presence => true,
+                    :length => { :within => 2..50 }
+
            
 end

@@ -1,25 +1,31 @@
 class HouseholdsController < ApplicationController
-
+    
+    #controller for household to connect users together and assign chores to only
+    #those in the household
     before_action :confirm_logged_in, :except => [:joinHousehold]
     def index
-        @households = Household.order(:name).page(params[:page]).per_page(2)
-        #@households = Household.all
+        @households = Household.order(:name).page(params[:page]).per_page(5)
     end
     
     def show
         id = params[:id]
         @households = Household.find(params[:id])
         @households = Household.find(id)
-       # @household = Household.where(:person => )
     end
     
     def new
         @households = Household.new
-        # default: render 'new' template
     end
     
+    #Create household with validation on the text input to be greater than 2,
+    #less than 50
     def create 
         @households = Household.create(household_params)
+        if @households.valid?
+            flash[:notice] = "#{@households.name} was successfully created."
+        else
+            flash[:notice] = @households.errors.full_messages[0]
+        end
         redirect_to households_path
     end
     
@@ -35,10 +41,6 @@ class HouseholdsController < ApplicationController
         @households.destroy
         redirect_to households_path
     end
-    
-    def joinHousehold
-    end
-
     
     private 
         def household_params
