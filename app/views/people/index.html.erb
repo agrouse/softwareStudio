@@ -45,16 +45,17 @@
                             <div class="card-block" style="text-align: center;">
                                     <h4 class="card-title" style="color:white;" ><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
                                     <h6 class="card-subtitle" style="color:white;"><%= t.username %></h6> 
-                                    <button id="choreBtn">Show Chores</button>
-                                    <div id="showChores" style="padding:5%; display: none; color:white">
-                                        <%Chore.all.each do |chore|%>
-                                            <%if chore.person_assigned == t.first_name%>
-                                            <%puts chore.person_assigned %>
-                                            <li style="color:white;"><%=chore.task%></li>
-                                            <%end%>
-                                        <%end%>
+                                    <button class="choreBtn">Show Chores</button>
+                                        <div class="showChores" style="padding:5%; display: none; color:white">
+                                            <%Chore.all.each do |chore|%>
+                                                <%if chore.person_assigned == t.first_name%>
+                                                <li style="color:white;"><%=chore.task%></li>
+                                                <%end%>
+                                                <%end%>
+                                            
                                         
-                                    </div>
+                                        </div>
+                                        
                                     <br>
                                     <br>
                                     <br>
@@ -89,9 +90,8 @@ $(document).ready(function(){
     $("#updateBtn").click(function(){
         $("#updateperson").slideToggle("slow");
     });
-    $("#choreBtn").click(function(){
-        console.log("hello");
-        $("#showChores").slideToggle("slow");
+    $(".choreBtn").click(function(){
+        $(this).next('.showChores').slideToggle("slow");
     });
     
 });
