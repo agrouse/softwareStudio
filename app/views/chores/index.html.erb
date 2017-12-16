@@ -101,7 +101,7 @@
                              <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
                              <td><%= t.priority %>   </td>
                              <td><%= t.person_assigned%></td>
-                             <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now, :status => "doesn't need to be done"}), :class => "button", :method => "PUT" %>
+                             <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %>
                                     
                                  </td>
                          </tr>
@@ -156,7 +156,7 @@
                                  <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
                                  <td><%= t.priority %>   </td>
                                  <td><%= t.person_assigned%></td>
-                                 <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now, :status => "doesn't need to be done"}), :class => "button", :method => "PUT" %>
+                                 <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %>
                                         
                                      </td>
                              </tr>
