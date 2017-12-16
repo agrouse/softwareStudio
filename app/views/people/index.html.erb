@@ -19,17 +19,7 @@
                                 <%end%>
                         </div>
                     
-                        
-                        <button id="updateBtn">Update</button>
-                        <div id = "updateperson" style="display: none;">
-                            <%= form_for person, url: 'people/update' do |r| %>
-                                    <%= r.label :first_name, :value => person.first_name %>
-                                    <%= r.text_field :first_name, :value =>person.first_name  %>
-                                    <%= r.label :last_name, :value => person.last_name %>
-                                    <%= r.text_field :last_name, :value => person.last_name %>
-                                <%= r.submit %>
-                              <% end %>
-                    </div>
+                    
                 </div>
             </div>
         </div>
