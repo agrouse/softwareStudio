@@ -1,21 +1,40 @@
 <div id="page_content">
 
-<h2 style="text-align: center"> Details about <%= @households.name %> </h2>
-
-<div class='people_info'>
-<h3> People</h3>
-<% people = people_of_any_household(@households) %> 
-<% people.each do |p| %>
- <li><%= p.first_name%> <%= p.last_name%></li>
-<% end %>
-</div>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="row">
+    <div class="card col-md-10 offset-md-1">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> House details </h1>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4" style="text-align:center;">
+                <p>House name</p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p>House members</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4" style="text-align:center;">
+                <p style="font-size: 22px;"><%= @households.name %></p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p style="font-size: 22px;"><% people = people_of_any_household(@households) %> 
+                    <% people.each do |p| %>
+                     <li><%= p.first_name%> <%= p.last_name%></li>
+                    <% end %></p>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+
 
 <div id="linkback">
 <%= link_to 'Back to house list', households_path %>

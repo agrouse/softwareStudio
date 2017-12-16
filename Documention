@@ -24,3 +24,6 @@ git commit -m "Message"
 When merge errors:
 git clean -df 
 git checkout -- .
+
+broom cursor:
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/holidays/hol-1/hol33.cur), progress !important;}</style><a href="http://www.cursors-4u.com/cursor/2005/10/26/hol33.html" target="_blank" title="Witches Broom"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Witches Broom" style="position:absolute; top: 0px; right: 0px;" /></a>
