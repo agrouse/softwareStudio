@@ -44,7 +44,8 @@
                 <p style="font-size: 22px;"><%= @people.username%></p>
             </div>
             <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 22px;"><%= Household.find(@people.household_id).name%></p>
+                <p style="font-size: 22px;"><%if @people.household_id%>
+                                        <%=Household.find(@people.household_id).name%><%end%></p>
             </div>
             <div class="col-md-4" style="text-align:center; padding-right: 15px;">
                 <p style="font-size: 12px;"><%Chore.all.each do |chore|%>

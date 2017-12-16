@@ -19,7 +19,12 @@
       end
     end
     resources :people
-    resources :households
+    resources :households do
+      collection do
+        get 'join'
+      end
+    end
+        
     root :to => redirect('/access/landing')
     # root 'chores#hello'
     
