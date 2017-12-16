@@ -3,8 +3,6 @@ class ChoresController < ApplicationController
     before_action :confirm_logged_in
     def index
         @chores = Chore.order(:household_id).page(params[:page]).per_page(50)
-        #@chores = Chore.order(:task).page(params[:page]).per_page(5)
-        #@chores = Chore.all
     end
     
     def show
@@ -22,10 +20,6 @@ class ChoresController < ApplicationController
         house_id=Person.find(session[:user_id]).household_id
         @chores.update(:household_id => house_id)
         @chores.update(status: "uncompleted" )
-        #if @task_length.length < 2 
-         #   flash[:notice] = "#{@chores.task} was successfully created."
-        #else
-         #   flash[:notice] = "#{@chores.task} unable to be created, check parameters."
         redirect_to chores_path
         
     end
