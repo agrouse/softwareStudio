@@ -2,11 +2,18 @@
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 0px;
     margin: auto;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     border: 2px solid white; 
     
 }
-.glyphicon .glyphicon-envelope{
-    margin-bottom: 5%;
-    margin-right: 5%;
+
+.card-block {
+    color: white;
 }
+.choreBtn{
+    background: none;
+    color: white;
+    border-radius:0;
+    margin-top: 15px;
+}
+
