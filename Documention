@@ -4,7 +4,7 @@ Get up to date with all changes:
 Amy:
 1). switched from sqlite to postgres:
 make sure to run 
-sudo service postgresql start
+sudo service postgresql star
 sudo sudo -u postgres psql
 2). pushed project successfully to heroku
 
