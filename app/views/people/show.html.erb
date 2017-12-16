@@ -11,11 +11,21 @@
 </br>
 </br>
 </br>
+        
+        
+<% if @people.image_file_name.nil?  %>
+    <%pic="/assets/default-user.png" %>
+<% else %>
+    <%= image_tag @people.image.url(:medium) %>
+<% end %>
 
 
 <div class="row">
     <div class="card" style="width: 300px;">
-        <img class="card-img-top" src="/assets/default-user.png" alt="Card image cap"/>
+        <img class="card-img-top" src=<%=pic%>
+         alt="Card image cap"/>
+
+        
     </div>
     
     <div class="card" style="width: 650px;">

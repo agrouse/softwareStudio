@@ -63,3 +63,18 @@
     border-bottom: .5px solid white; 
     color: white;
 }
+
+.success{
+	background-color: #EAFFF8;
+}
+.success+i{
+	color: #1C9D39;
+	display: block;
+}
+.error+i{
+	color: #B82020;
+	display: block;
+}
+.error{
+	background-color: #FFF1FF;
+}
