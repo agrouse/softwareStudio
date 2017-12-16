@@ -19,7 +19,14 @@ class ChoresController < ApplicationController
         @chores = Chore.create(chore_params)
         house_id=Person.find(session[:user_id]).household_id
         @chores.update(:household_id => house_id)
+<<<<<<< HEAD
         @chores.update(status: "uncompleted" )
+=======
+        #if @task_length.length < 2 
+         #   flash[:notice] = "#{@chores.task} was successfully created."
+        #else
+         #   flash[:notice] = "#{@chores.task} unable to be created, check parameters."
+>>>>>>> ac83f6c291d99da097a0953238d1916b684c0613
         redirect_to chores_path
         
     end
@@ -41,7 +48,7 @@ class ChoresController < ApplicationController
        @chores = Chore.find params[:id]
        @chores.update_attributes(chore_params)
        flash[:notice] = "#{@chores.task} was successfully updated."
-       redirect_to chore_path(@chores)
+       redirect_to chores_path
     end
     
     def destroy
