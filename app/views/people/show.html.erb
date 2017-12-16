@@ -1,4 +1,4 @@
-
+<div class="peopleWrapper">
 <div id="page_content">
  
 <div class="text-center">
@@ -12,7 +12,7 @@
 </br>
 
 <div class="row">
-    <div class="card" style="width: 350px;">
+    <div class="card" style="width: 350px; background: #DEFFED;">
         <img class="card-img-top" src="/assets/user.jpg"
          alt="Card image cap"/>
 
@@ -47,8 +47,11 @@
                 <p style="font-size: 22px;"><%= Household.find(@people.household_id).name%></p>
             </div>
             <div class="col-md-4" style="text-align:center; padding-right: 15px;">
-                <p style="font-size: 22px;"><% chores_of_household.each do |chore_item| %>
-                                                <%=chore_item.task%> <span class="circle", style = <%="color:#{chores_logic(chore_item)}"%>></span><%end%></p>
+                <p style="font-size: 12px;"><%Chore.all.each do |chore|%>
+                    <%if chore.person_assigned == @people.first_name%>
+                        <li><%=chore.task%> <span class="circle" style = <%="color:#{chores_logic(chore)}"%>></span></li>
+                    <%end%>
+                    <%end%></p>
             </div>
         </div>
         
@@ -89,4 +92,5 @@
 <%= link_to 'Back to profile list', people_path %>
 </div>
 
+</div>
 </div>
