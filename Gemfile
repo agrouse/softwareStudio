@@ -41,6 +41,11 @@ gem 'bootstrap-sass', '3.3.7'
 
 gem 'jquery-validation-rails'
 
+#images for users
+gem 'paperclip', '~> 4.1'
+gem 'paperclip-cloudinary'
+
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
