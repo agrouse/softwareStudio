@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20171216012232) do
     t.integer  "household_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"

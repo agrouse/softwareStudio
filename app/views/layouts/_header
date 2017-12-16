@@ -1,4 +1,5 @@
 <div class="nav nav-tabs justify-content-center" style="padding-bottom:1%; padding-top:1%"> 
+		
 <div id="header">
       <ul id="menu">
         <li class="nav-item"><a href="/chores">Chores</a></li>

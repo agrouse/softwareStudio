@@ -5,6 +5,7 @@
           <h2>an easy way to divide chores</h2>
         </div>
     </div>
+		  
     <div id="menubar">
       <ul id="menu">
         <li><a href="/access/landing">Home</a></li>
@@ -12,4 +13,5 @@
         <li><a href="/access/login">Login</a></li>
       </ul>
     </div>
+    
 </div>
