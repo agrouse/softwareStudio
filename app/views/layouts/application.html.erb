@@ -10,6 +10,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="main.css" type="text/css" />
+  
+  /*Javascript method to toggle visibiltiy of the Menage tutorial video*/
+  
   <script type="text/javascript">
 			<!--
 			    function toggle_visibility(id) {
@@ -26,16 +29,25 @@
 	</style>
 </head>
 <body>
+	
+	/*adding the proper header and menage tutorial only when the user is already logged in by checking the current page of the application*/
+	
 <% if current_page?(controller: 'access', action: 'landing') %>
     <%= render 'layouts/home_header' %>
 <% elsif (current_page?(controller: 'access', action: 'login')) || (current_page?(controller: 'access', action: 'attempt_login')) || (current_page?(controller: 'people', action: 'signup')) %>
     <%= nil %>
 <% else %>
     <%= render 'layouts/header' %>
+    
+    /*Adding the hidden information within the popup box to pages where user is logged in, this is only shown when the user click the link to What is Menage*/
+    
     <div id= "popup-box" class="popup-position" style="color:black">
 		  <div id="popup-wrapper" style="color:black">
 		    <div id="popup-container" style="color:black">
 		      <h3>Menage Tutorial </h3>
+		      
+		      /*Adding the video to the popup box */
+		      
 		      <video src="assets/menage_tutorial.mp4" width="700" height="500" controls>
 		      </video>
 		      <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box');">Back to Menage</a></p>
@@ -43,6 +55,9 @@
 		</div>
 		</div>
 		<div id="wrapper">
+			
+			/*Link to the popup box that is shown on every page after a user is logged in*/
+			
 		  <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box');">What is Menage?</a></p>
 		</div>
 <% end %>
