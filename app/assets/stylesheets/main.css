@@ -44,11 +44,13 @@ a, a:hover {
 	outline: none;
 	text-decoration: underline;
 	color: white;
+	font: normal 'century gothic', arial, sans-serif;
 	
 }
 
 #popup-container a{
 	color: black;
+	font: normal 100% 'century gothic', arial, sans-serif;
 	
 }
 
@@ -174,12 +176,16 @@ ol li {
 	
 } 
 
-.popup-position{ display: none; position: fixed; top: 0; right: 0; background-color: rgba(0,0,0,0.7); width: 100%; height: 100%; color: "black";}
-#popup-wrapper{ width: 500px; margin: 70px auto; text-align: left; color: "black";}
-#popup-container{ background-color: #FFF; padding: 20px; border-radius: 4px; color: "black";}
+.popup-position{ display: none; position: fixed; top: 0; right: 0; background-color: rgba(0,0,0,0.7); width: 100%; height: 100%; color: "black";
+	font: normal 100% 'century gothic', arial, sans-serif;
+}
+#popup-wrapper{ width: 900px; margin: 20px auto; text-align: center; color: "black";
+	font: normal 100% 'century gothic', arial, sans-serif;
+}
+#popup-container{ background-color: #FFF; padding: 10px; border-radius: 4px; color: "black";font: normal 125% 'century gothic', arial, sans-serif;}
 
 
-#wrapper{width: 1200px; margin: 5px auto; text-align: right;}
+#wrapper{width: 1200px; margin: 5px auto; text-align: right; font: normal 100% 'century gothic', arial, sans-serif;}
 
 
 table {
