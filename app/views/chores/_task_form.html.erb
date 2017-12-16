@@ -1,0 +1,19 @@
+<div class="row" style="justify-content: center;">
+<%= label_tag(:task, nil, style: "color: white;") %>
+</div>
+<div class="row">
+<%= text_field :chore, :task, :class => "col-md-12 choreInput" %>
+</div>
+<div class="row" style="justify-content: center;">
+<%= label_tag(:Finish_By, nil, style: "color: white;") %>
+</div>
+<div class="row">
+<%= text_field :chore, :priority, :class => "col-md-12 choreInput" %>
+</div>
+<div class="row" style="justify-content: center;">
+<%= label_tag(:Person_Assigned, nil, style: "color: white;") %>
+</div>
+<div class="row">
+<%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-12 dropDown choreInput"}) %>
+</div>
+

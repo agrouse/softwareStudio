@@ -1,6 +1,25 @@
-<td style="width=25%"><%= text_field :chore, :task, :class => "col-md-12 choreInput" %></td>
-<td><%= select :chore, :status, ['needs to be done', 'ok condition', 'doesn\'t need to be done'],{},class: "col-md-12 dropDown choreInput" %></td>
-<td><%= select :chore, :priority, ['daily', 'weekly', 'monthly'],{},class: "col-md-12 dropDown choreInput" %></td>
-<td><%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-12 dropDown choreInput"}) %></td>
-
+<div class="row" style="justify-content: center;">
+<%= label_tag(:Chore, nil, style: "color: white;") %>
+</div>
+<div class="row">
+<%= text_field :chore, :task, :class => "col-md-12 choreInput" %>
+</div>
+<div class="row" style="justify-content: center;">
+<%= label_tag(:Status, nil, style: "color: white;") %>
+</div>
+<div class="row">
+<%= select :chore, :status, ['red', 'yellow', 'green'],{}, class: "col-md-12 dropDown choreInput" %>
+</div>
+<div class="row" style="justify-content: center;">
+<%= label_tag(:Frequency, nil, style: "color: white;") %>
+</div>
+<div class="row">
+<%= select :chore, :priority, ['daily', 'weekly', 'monthly'],{},class: "col-md-12 dropDown choreInput" %>
+</div>
+<div class="row" style="justify-content: center;">
+<%= label_tag(:Person_Assigned, nil, style: "color: white;") %>
+</div>
+<div class="row">
+<%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-12 dropDown choreInput"}) %>
+</div>
 

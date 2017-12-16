@@ -2,6 +2,8 @@
     <!-- div for styles -->
     <div id="page_content">
     <h1 class="text-center", style="margin-top:5%; margin-bottom:5%; font-size: 50px; color:#BDD4E7;">My House</h1>
+    
+    <!--acquire current user info -->
     <%ses_id=session[:user_id]
     user_house_id=Person.find(ses_id).household_id
     person=Person.find(ses_id)%>
@@ -13,23 +15,13 @@
                         <h6 class="card-subtitle" style="color:white; font-size: 20px;"><%= person.username %></h6> 
                         <div style="padding: 5%">
                                 <%Chore.all.each do |chore|%>
-                                    <%if chore.person_assigned == person.first_name%>
+                                    <%if chore.person_assigned == person.first_name %>
                                     <li style="color:white;"><%=chore.task%></li>
                                     <%end%>
                                 <%end%>
                         </div>
                     
-                        
-                        <button id="updateBtn">Update</button>
-                        <div id = "updateperson" style="display: none;">
-                            <%= form_for person, url: 'people/update' do |r| %>
-                                    <%= r.label :first_name, :value => person.first_name %>
-                                    <%= r.text_field :first_name, :value =>person.first_name  %>
-                                    <%= r.label :last_name, :value => person.last_name %>
-                                    <%= r.text_field :last_name, :value => person.last_name %>
-                                <%= r.submit %>
-                              <% end %>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -43,18 +35,19 @@
                     <div class="col-md-4">
                         <div class="card card-inverse">
                             <div class="card-block" style="text-align: center;">
-                                    <h4 class="card-title" style="color:white;" ><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
-                                    <h6 class="card-subtitle" style="color:white;"><%= t.username %></h6> 
-                                    <button id="choreBtn">Show Chores</button>
-                                    <div id="showChores" style="padding:5%; display: none; color:white">
-                                        <%Chore.all.each do |chore|%>
-                                            <%if chore.person_assigned == t.first_name%>
-                                            <%puts chore.person_assigned %>
-                                            <li style="color:white;"><%=chore.task%></li>
-                                            <%end%>
-                                        <%end%>
+                                    <h4 class="card-title" ><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
+                                    <h6 class="card-subtitle" ><%= t.username %></h6> 
+                                    <button class="choreBtn">Show Chores</button>
+                                        <div class="showChores" style="padding:5px; display: none;">
+                                            <%Chore.all.each do |chore|%>
+                                                <%if chore.person_assigned == t.first_name%>
+                                                <li><%=chore.task%></li>
+                                                <%end%>
+                                                <%end%>
+                                            
                                         
-                                    </div>
+                                        </div>
+                                        
                                     <br>
                                     <br>
                                     <br>
@@ -64,8 +57,7 @@
                 <%end%>
               <%end%>
             <%end%> 
-        </div>
-     <%else%>
+                 <%else%>
         <%controller.redirect_to households_path%>
         <%t=Person.find(ses_id)%>
         <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> 
@@ -77,21 +69,20 @@
     
     <br>
     
-    
-    </div>
-</div>
-<div class=col-md-12>
+    <div class=col-md-12>
 <h2 style ="text-align: center"><%= link_to "Leave Household", person_path(:id => session[:user_id], people: {:household_id => nil}), :class => "button", :method => "PUT" %></h2>
 </div>
+    </div>
+</div>
+</div>
+
+
 
 <script>
 $(document).ready(function(){
-    $("#updateBtn").click(function(){
-        $("#updateperson").slideToggle("slow");
-    });
-    $("#choreBtn").click(function(){
-        console.log("hello");
-        $("#showChores").slideToggle("slow");
+    //function to show toggle chores on each person's card
+    $(".choreBtn").click(function(){
+        $(this).next('.showChores').slideToggle("slow");
     });
     
 });

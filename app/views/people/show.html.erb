@@ -7,28 +7,19 @@
 </div>
 </div>
 
-
 </br>
 </br>
 </br>
-        
-        
-<% if @people.image_file_name.nil?  %>
-    <%pic="/assets/default-user.png" %>
-<% else %>
-    <%= image_tag @people.image.url(:medium) %>
-<% end %>
-
 
 <div class="row">
-    <div class="card" style="width: 300px;">
-        <img class="card-img-top" src=<%=pic%>
+    <div class="card" style="width: 350px;">
+        <img class="card-img-top" src="/assets/user.jpg"
          alt="Card image cap"/>
 
         
     </div>
     
-    <div class="card" style="width: 650px;">
+    <div class="card" style="width: 620px;">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> <%= @people.first_name %> <%= @people.last_name%> </h1>
@@ -44,19 +35,20 @@
                 <p>household</p>
             </div>
             <div class="col-md-4" style="text-align:center;">
-                <p>chore preferences</p>
+                <p>chore list</p>
             </div>
         </div>
         
         <div class="row">
             <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 28px;"><%= @people.username%></p>
+                <p style="font-size: 22px;"><%= @people.username%></p>
             </div>
             <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 28px;"><%= @people.household_id%></p>
+                <p style="font-size: 22px;"><%= Household.find(@people.household_id).name%></p>
             </div>
-            <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 28px;"><%= @people.description%></p>
+            <div class="col-md-4" style="text-align:center; padding-right: 15px;">
+                <p style="font-size: 22px;"><% chores_of_household.each do |chore_item| %>
+                                                <%=chore_item.task%> <span class="circle", style = <%="color:#{chores_logic(chore_item)}"%>></span><%end%></p>
             </div>
         </div>
         
@@ -80,11 +72,6 @@
             <%= label :people, :last_name, 'Last name' %>
             <%= text_field :people, :last_name  %>
             </br>
-            <%= label :people, :description, 'Chore preferences' %>
-            <%= text_field :people, :description %>
-            </br>
-            
-            
             
             <%= submit_tag 'Update'%>
             <% end %>

@@ -7,13 +7,65 @@
         <h1 style="color:#BDD4E7; font-size: 50px; font-weight: strong; margin-top:40px; margin-bottom:60px;";>Chores</h1>
     </div>
     
+    <!-- Button trigger modal -->
+<div class="row">
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="newChoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="ModalLabel">
+            <ul class="nav nav-tabs" id="choretable" style="width:100%;">
+                <li class="active"><a href="#chore" data-toggle="tab">New chore</a></li>
+                <li><a href="#task" data-toggle="tab">New task</a></li>
+            </ul>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="tab-content">
+              <div class="tab-pane active" id="chore" >
+                  <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
+                            <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
+                            <div class="row" style="justify-content: center;">
+                             <%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm") do %>
+            <span class="glyphicon glyphicon-plus"></span></div>
+            <% end %>
+                                    <% end %> 
+                            
+              </div>
+              <div class="tab-pane" id="task" >
+                                    <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
+                            <%= render(:partial => 'task_form', :locals => {:f => f}) %>
+                            <div class="row" style="justify-content: center;">
+                             <%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm", style:"justify-content:center;") do %>
+            <span class="glyphicon glyphicon-plus"></span></div>
+            <% end %>
+            
+                                    <% end %> 
+
+              </div>
+            </div>
     
-    
+      </div>
+
+    </div>
+  </div>
+</div>    
+
     <ul class="nav nav-tabs" id="choretable" style="width:100%;">
         <li class="active"><a href="#all" data-toggle="tab">All chores</a></li>
         <li><a href="#uncompleted" data-toggle="tab">Needs to be done </a></li>
+        <div class="col-md-8"></div>
+        <button type="button" class="btn" style="background:none;" data-toggle="modal" data-target="#newChoreModal">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
      </ul>
-     
+
     
     <div class="tab-content">
         
@@ -41,21 +93,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
-                        <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                        <td><%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm", style:"justify-content:center;") do %>
-                                    <span class="glyphicon glyphicon-plus"></span></td>
-                                <% end %>
-                                <% end %>    
                     <%if @chores
                         @chores.each do |t| 
                           if t.household_id==ses_house_id%>
                         <tr>
                              <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                             <td><%= chores_logic(t) %></td>
+                             <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
                              <td><%= t.priority %>   </td>
                              <td><%= t.person_assigned%></td>
-                             <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now, :status => "doesn't need to be done"}), :class => "button", :method => "PUT" %>
+                             <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %>
                                     
                                  </td>
                          </tr>
@@ -102,21 +148,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
-                            <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                            <td><%= button_tag(type: "submit", class: "btn", style:"justify-content:center;") do %>
-                                        <span class="glyphicon glyphicon-plus"></span></td>
-                                    <% end %>
-                                    <% end %>    
                         <%if @chores 
                             @chores.each do |t| 
-                              if (t.household_id==ses_house_id) && (t.status == "needs to be done") %>
+                              if (t.household_id==ses_house_id) && (chores_logic(t) == "red" || chores_logic(t) == "purple") %>
                             <tr>
                                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                                 <td><%= chores_logic(t) %></td>
+                                 <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
                                  <td><%= t.priority %>   </td>
                                  <td><%= t.person_assigned%></td>
-                                 <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now, :status => "doesn't need to be done"}), :class => "button", :method => "PUT" %>
+                                 <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %>
                                         
                                      </td>
                              </tr>
