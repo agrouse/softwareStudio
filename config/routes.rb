@@ -13,21 +13,16 @@
   get 'access/landing'
   get 'access/home'
   
-    resources :chores
+    resources :chores do
+      collection do
+        get 'complete'
+      end
+    end
     resources :people
     resources :households
     root :to => redirect('/access/landing')
     # root 'chores#hello'
     
-    get '/households/:id' => 'households#show'
-    
-    get '/people/:id' => 'people#show'
-    
-    post 'chores' => redirect('/chores')
-    
-    post 'people' => redirect('/households')
-    
-    put 'chores' => redirect('/chores')
     
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/') 
