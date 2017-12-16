@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dpazl4dkh
+  api_key: '663369427245665'
+  api_secret: _YDiI4cgzaUDCXUOGalA9aoprSY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dpazl4dkh
+  api_key: '663369427245665'
+  api_secret: _YDiI4cgzaUDCXUOGalA9aoprSY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dpazl4dkh
+  api_key: '663369427245665'
+  api_secret: _YDiI4cgzaUDCXUOGalA9aoprSY
+  enhance_image_tag: true
+  static_image_support: false
