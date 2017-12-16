@@ -23,7 +23,6 @@ class ChoresController < ApplicationController
          #   flash[:notice] = "#{@chores.task} was successfully created."
         #else
          #   flash[:notice] = "#{@chores.task} unable to be created, check parameters."
-        @chores.update(status: "uncompleted" )
         redirect_to chores_path
         
     end
