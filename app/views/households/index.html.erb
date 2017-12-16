@@ -4,6 +4,7 @@
 <div id="profiletop">
 <h1>Households</h1>
 </div>
+<div id="map"></div>
 </div>
         <table style="width:100%">
             <tr>
@@ -42,4 +43,22 @@
                 <% end %>
 
 </div>
+
+<script>
+      function initMap() {
+        var uluru = {lat: 29.940994, lng: -90.118619};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAacBm75-nBRb0-g8tqEFKyjmmUuggC6G8&callback=initMap">
+    </script>
+    
 
