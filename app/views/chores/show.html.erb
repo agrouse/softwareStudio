@@ -2,7 +2,97 @@
 <div id="page_content">
 
 
-<h2> Details about <%= @chores.task %> </h2>
+<div class="text-center">
+    <h2> Details about <%= @chores.task %> </h2>
+</div>
+
+
+
+
+<div class="row">
+    <div class="card" style="width: 350px;">
+        <img class="card-img-top" src="/assets/chore.jpg"
+         alt="Card image cap"/>
+
+        
+    </div>
+    
+    <div class="card" style="width: 620px;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> <%= @people.first_name %> <%= @people.last_name%> </h1>
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4" style="text-align:center;">
+                <p>Last completed:</p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p>Status:</p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p>Priority:</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4" style="text-align:center;">
+                <p style="font-size: 22px;"><% if @chores.last_accomplished != nil%>
+                   <%= Time.at(@chores.last_accomplished).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")  %>
+                <%else%>
+                    <%=Time.at(@chores.created_at).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")%>
+                <%end%></p>
+            </div>
+            <div class="col-md-4" style="text-align:center;">
+                <p style="font-size: 22px;"><%= @people.household_id%></p>
+            </div>
+            <div class="col-md-4" style="text-align:center; padding-right: 15px;">
+                <p style="font-size: 22px;"><%= @people.description%></p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</br>
+
+
+
+<div class="row">
+    <div class="card col-md-6 offset-md-3">
+        <%if @people == Person.find(session[:user_id])%>
+        <h2 style="color:black;">Update Chore</h2>
+        <div id="updateperson">
+        <%= form_tag chore_path, :method => :put do |f| %>
+            <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
+            <%= submit_tag 'Update'%>
+        <% end %>
+            
+            
+            
+            <%= submit_tag 'Update'%>
+            <% end %>
+        </div>
+        
+        <%end%>
+    </div>
+        
+</div>
+
+
+</br>
+</br>
+<div id="linkback">
+<%= link_to 'Back to chore list', chores_path %>
+</div>
+
+
+
+
+
+
 <div class='people_info'>
   <li>Last completed:
    <% if @chores.last_accomplished != nil%>
