@@ -65,12 +65,22 @@ class ApplicationController < ActionController::Base
     end
     case status
     when "needs to be done"
+      status="red"
       status_num =0
     when "ok condition"
+      status="yellow"
       status_num = 1
     when "doesn't need to be done"
+      status="green"
       status_num = 2
+    when "green"
+      status_num=2
+    when "yellow"
+      status_num=1
+    when "red"
+      status_num=0
     else
+      status="green"
       status_num = 2
     end
     
@@ -87,9 +97,11 @@ class ApplicationController < ActionController::Base
     
     if priority_num < status_num
       if priority_num == 1
-        return "ok condition"
+        #return "ok condition"
+        return "yellow"
       else
-        return "needs to be done"
+        #return "needs to be done"
+        return "red"
       end
     else
       return status

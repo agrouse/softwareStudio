@@ -52,7 +52,7 @@
                           if t.household_id==ses_house_id%>
                         <tr>
                              <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                             <td><%= chores_logic(t) %></td>
+                             <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
                              <td><%= t.priority %>   </td>
                              <td><%= t.person_assigned%></td>
                              <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now, :status => "doesn't need to be done"}), :class => "button", :method => "PUT" %>
@@ -110,10 +110,10 @@
                                     <% end %>    
                         <%if @chores 
                             @chores.each do |t| 
-                              if (t.household_id==ses_house_id) && (t.status == "needs to be done") %>
+                              if (t.household_id==ses_house_id) && (chores_logic(t) == "red") %>
                             <tr>
                                  <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                                 <td><%= chores_logic(t) %></td>
+                                 <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
                                  <td><%= t.priority %>   </td>
                                  <td><%= t.person_assigned%></td>
                                  <td><%= link_to "Complete", chore_path(:id => t.id, chore: { :last_accomplished => Time.now, :status => "doesn't need to be done"}), :class => "button", :method => "PUT" %>
