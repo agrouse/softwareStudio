@@ -3,7 +3,6 @@
   # See how all your routes lay out with "rake routes".
 
   Rails.application.routes.draw do
-  get 'access/menu'
 
   get 'access/login'
   get 'access/attempt_login'
@@ -30,8 +29,6 @@
     end
         
     root :to => redirect('/access/landing')
-    # root 'chores#hello'
-    
     
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/') 
