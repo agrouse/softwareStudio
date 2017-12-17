@@ -1,42 +1,43 @@
+<!--Display individual house information-->
 <div id="page_content">
-
-
-
-<div class="row">
-    <div class="card col-md-10 offset-md-1">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> House details </h1>
+    <div class="row">
+        <div class="card col-md-10 offset-md-1">
+            
+            <!--House details header-->
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> House details </h1>
+                </div>
             </div>
             
+            <!--House content headers-->
+            <div class="row">
+                <div class="col-md-4" style="text-align:center;">
+                    <p>House name</p>
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    <p>House members</p>
+                </div>
+            </div>
+            
+            <!--House content information-->
+            <div class="row">
+                <div class="col-md-4" style="text-align:center;">
+                    <p style="font-size: 22px;"><%= @households.name %></p>
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    <p style="font-size: 22px;"><% people = people_of_any_household(@households) %> 
+                        <% people.each do |p| %>
+                            <li><%= p.first_name%> <%= p.last_name%></li>
+                        <% end %>
+                    </p>
+                </div>
+            </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-4" style="text-align:center;">
-                <p>House name</p>
-            </div>
-            <div class="col-md-4" style="text-align:center;">
-                <p>House members</p>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 22px;"><%= @households.name %></p>
-            </div>
-            <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 22px;"><% people = people_of_any_household(@households) %> 
-                    <% people.each do |p| %>
-                     <li><%= p.first_name%> <%= p.last_name%></li>
-                    <% end %></p>
-            </div>
-            </div>
-        </div>
-        
     </div>
-
-
-<div id="linkback">
-<%= link_to 'Back to house list', households_path %>
-</div>
+    
+    <!--Link back to household list-->
+    <div id="linkback">
+        <%= link_to 'Back to house list', households_path %>
+    </div>
 </div>
