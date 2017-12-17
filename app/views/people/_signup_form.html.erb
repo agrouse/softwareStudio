@@ -1,0 +1,15 @@
+<div class = "row">
+    <%= f.text_field :first_name, placeholder: "First name", :id => 'fname', :class =>'accessInput custom-control', :required => true%>
+</div>
+<div class = "row field">
+    <%= f.text_field :last_name, placeholder: "Last name", :id => 'lname', :class =>'lname accessInput custom-control', :required => true%>
+</div>
+<div class = "row field">
+    <%= f.text_field :username, placeholder: "User name", :id => 'uname', :class =>'uname accessInput custom-control', :required => true %>
+</div>
+<div class= "row field">
+    <%= f.password_field :password, placeholder: "Password", :id => 'pword', :class => 'pword accessInput custom-control', :required => true %>
+</div>
+<div class="row field">
+    <%= f.password_field :password_confirmation, placeholder: "Confirm password", :id => 'cpword',:class => 'cpword accessInput custom-control', :required => true %>
+</div>
