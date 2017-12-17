@@ -1,25 +1,24 @@
+<!--Show chore information page and update chore form-->
 <div id = "choreProf">
-<!-- Added in header and horizontal menu -->
 <div id="page_content">
 
-
-
+<!--Main chore info card-->
 <div class="row">
+    
+    <!--Insert Broom image-->
     <div class="card" style="width: 350px; background: #DEFFED;">
-        <img class="card-img-top" src="/assets/chore.jpg"
-         alt="Card image cap"/>
-
-        
+        <img class="card-img-top" src="/assets/chore.jpg" alt="Card image cap"/>
     </div>
     
+    <!--Chore content display-->
     <div class="card" style="width: 620px;">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h1 style="text-align:center; color:black; padding-top: 15%; padding-bottom: 15%; font-size: 32px;"> Details about <%= @chores.task %> </h1>
             </div>
-            
         </div>
         
+        <!--Chore content headers-->
         <div class="row">
             <div class="col-md-4" style="text-align:center;">
                 <p>Last completed:</p>
@@ -32,13 +31,17 @@
             </div>
         </div>
         
+        <!--Chore header values-->
         <div class="row">
             <div class="col-md-4" style="text-align:center;">
-                <p style="font-size: 22px;"><% if @chores.last_accomplished != nil%>
-                   <%= Time.at(@chores.last_accomplished).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")  %>
-                <%else%>
-                    <%=Time.at(@chores.created_at).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")%>
-                <%end%></p>
+                <p style="font-size: 22px;">
+                    <!--display time in central time-->
+                    <% if @chores.last_accomplished != nil%>
+                        <%= Time.at(@chores.last_accomplished).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")  %>
+                    <%else%>
+                        <%=Time.at(@chores.created_at).in_time_zone("Central Time (US & Canada)").strftime("%B %e, %Y at %I:%M %p")%>
+                    <%end%>
+                </p>
             </div>
             <div class="col-md-4" style="text-align:center;">
                 <p style="font-size: 22px;"><span class="bigcircle", style = <%="color:#{chores_logic(@chores)}; font-size:60px!important;"%>></span></p>
@@ -52,24 +55,20 @@
                 <p style="font-size: 22px;">Person assigned: <%= @chores.person_assigned %></p>
             </div>
         </div>
-        
     </div>
 </div>
 
 </br>
 
-
-
+<!--Update chore form-->
 <div class="row">
     <div class="card col-md-6 offset-md-3">
-
         <h2 style="color:black;">Update Chore</h2>
         <div id="updateperson">
             <%= form_tag chore_path, :method => :put do %>
             <%= label :chore, :task, 'Chore' %>
             <%= text_field :chore, :task  %>
             </br>
-            
             <%= label :chore, :status, 'Status' %>
             <%= select :chore, :status, ['red', 'yellow', 'green'],{},class: "col-md-12 dropDown choreInput" %>
             </br>
@@ -79,22 +78,18 @@
             <%= label :chore, :person_assigned, 'Person assigned' %>
             <%= collection_select(:chore, :person_assigned, people_of_personal_household, :first_name, :first_name, {}, {class: "col-md-12 dropDown choreInput"}) %>
             </br>
-        
-            
             <%= submit_tag 'Update'%>
             <% end %>
         </div>
-        
     </div>
-        
 </div>
 
+</br>
+</br>
 
-</br>
-</br>
+<!--Link back to previous page -->
 <div id="linkback">
 <%= link_to 'Back to chore list', chores_path %>
 </div>
-
 </div>
 </div>
