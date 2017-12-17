@@ -1,3 +1,4 @@
+<!--List of people in user household-->
 <div id="peopleWrapper">
     <!-- div for styles -->
     <div id="page_content">
@@ -7,77 +8,73 @@
     <%ses_id=session[:user_id]
     user_house_id=Person.find(ses_id).household_id
     person=Person.find(ses_id)%>
+    
+    <!--Display user's card-->
     <div class="card-deck">
         <div class="col-md-6 offset-md-3" class="justify-contents: center;">
             <div class="card card-inverse">
                 <div class="card-block" style="text-align:center">
                     <h4 class="card-title" style="color:white; font-size: 30px;" ><%= person.first_name + " " + person.last_name %></h4> 
-                        <h6 class="card-subtitle" style="color:white; font-size: 20px;"><%= person.username %></h6> 
-                        <div style="padding: 5%">
-                                <%Chore.all.each do |chore|%>
-                                    <%if chore.person_assigned == person.first_name %>
-                                    <li style="color:white;"><%=chore.task%></li>
-                                    <%end%>
-                                <%end%>
-                        </div>
-                    
-                    
+                    <h6 class="card-subtitle" style="color:white; font-size: 20px;"><%= person.username %></h6> 
+                    <div style="padding: 5%">
+                        <%Chore.all.each do |chore|%>
+                            <%if chore.person_assigned == person.first_name %>
+                                <li style="color:white;"><%=chore.task%></li>
+                            <%end%>
+                        <%end%>
+                    </div>
                 </div>
             </div>
         </div>
-                
-            </div>
-        </div>
-        <%if user_house_id != nil%>
-            <%if @people
-              @people.each do |t| %>
+    </div>
+    </div>
+    
+    <!--Display rest of house users-->
+    <%if user_house_id != nil%>
+        <%if @people
+            @people.each do |t| %>
                 <%if t.household_id==user_house_id and t != person %>
                     <div class="col-md-4">
                         <div class="card card-inverse">
                             <div class="card-block" style="text-align: center;">
-                                    <h4 class="card-title" ><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
-                                    <h6 class="card-subtitle" ><%= t.username %></h6> 
-                                    <button class="choreBtn">Show Chores</button>
-                                        <div class="showChores" style="padding:5px; display: none;">
-                                            <%Chore.all.each do |chore|%>
-                                                <%if chore.person_assigned == t.first_name%>
-                                                <li><%=chore.task%></li>
-                                                <%end%>
-                                                <%end%>
-                                            
-                                        
-                                        </div>
-                                        
-                                    <br>
-                                    <br>
-                                    <br>
+                                <h4 class="card-title" ><a href="<%= people_path %>/<%= t.id %>"><%= t.first_name + " " + t.last_name %> </a></h4> 
+                                <h6 class="card-subtitle" ><%= t.username %></h6> 
+                                <button class="choreBtn">Show Chores</button>
+                                <div class="showChores" style="padding:5px; display: none;">
+                                    <%Chore.all.each do |chore|%>
+                                        <%if chore.person_assigned == t.first_name%>
+                                            <li><%=chore.task%></li>
+                                        <%end%>
+                                    <%end%>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 <%end%>
-              <%end%>
-            <%end%> 
-                 <%else%>
+            <%end%>
+        <%end%> 
+    <%else%>
         <%controller.redirect_to households_path%>
-        <%t=Person.find(ses_id)%>
-        <a href="<%= people_path %>/<%= t.id %>"><%= t.first_name %> </a> 
-            <%= t.username %>   
-            <%= t.description%>
-            <%= button_to "Delete", t, :method => :delete %>
-     <%end%>
+    <%end%>
     </table>
     
     <br>
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Option to leave household-->
     <div class=col-md-12>
-<h2 style ="text-align: center"><%= link_to "Leave Household", person_path(:id => session[:user_id], people: {:household_id => nil}), :class => "button", :method => "PUT" %></h2>
-</div>
+        <h2 style ="text-align: center"><%= link_to "Leave Household", person_path(:id => session[:user_id], people: {:household_id => nil}), :class => "button", :method => "PUT" %></h2>
     </div>
 </div>
-</div>
 
-
-
+<!--javascript to show/hide chores-->
 <script>
 $(document).ready(function(){
     //function to show toggle chores on each person's card
