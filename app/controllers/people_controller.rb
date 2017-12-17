@@ -40,7 +40,6 @@ class PeopleController < ApplicationController
         end 
        redirect_to person_path(@people)
     end
-    #route to join household. User attribute for validation purposes.
     def joinhouse
         @people=Person.find(session[:user_id])
         @people.update_attribute(:household_id, params[:id])
