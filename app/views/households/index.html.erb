@@ -1,51 +1,52 @@
-<!-- div for styles -->
+<!--List all households and choose to create and or join one-->
 <div id="page_content">
-<div class="text-center">
-<div id="profiletop">
-<h1>Households</h1>
-</div>
-<div id="map"></div>
-</div>
-        <table style="width:100%">
-            <tr>
-                <div class="tbl-header">
-                    <th>Households</th>
-                    <th>Members of Household</th>
-                    <th>Join Household</th>
-                </div>
-            </tr>
-
     
-<%if @households
-  @households.each do |t| %>
+    <!--Header with google map-->
+    <div class="text-center">
+        <div id="profiletop">
+            <h1>Households</h1>
+        </div>
+        <div id="map"></div>
+    </div>
+    
+    <!--Households table with join house options-->
+    <table style="width:100%">
+        <!--Table headers-->
         <tr>
-         <td><a href="<%= households_path %>/<%= t.id %>"><%= t.name %> </a> </td>
-         <td><% people = people_of_any_household(t) %> 
-             <% people.each do |p| %> <%= p.first_name%> <%= p.last_name%>,
-         <% end %></td>
-         <td><%= link_to "Join", joinhouse_people_path(:id => t.id), :class => "button", :method => "GET" %>
-  </td>
-     </tr>
-   
- <%end%> 
- <%end%>
-</table>
-
-<br>
-
-<%= will_paginate @households, previous_label: h("<"), next_label: h(">") %>
-
-<h2>Add Household</h2>
-        <%= form_tag households_path, class: "newHousehold", :method => :post do %>
-                <%= label :households, :name, 'Name:', style: "color: white;" %>
-                <%= text_field :households, :name %>
-                <%= submit_tag 'Submit'%>
-                <% end %>
+            <div class="tbl-header">
+                <th>Households</th>
+                <th>Members of Household</th>
+                <th>Join Household</th>
+            </div>
+        </tr>
+        <%if @households
+            @households.each do |t| %>
+                <tr>
+                    <td><a href="<%= households_path %>/<%= t.id %>"><%= t.name %> </a> </td>
+                    <td><% people = people_of_any_household(t) %> 
+                        <% people.each do |p| %> <%= p.first_name%> <%= p.last_name%>,
+                        <% end %></td>
+                    <td><%= link_to "Join", joinhouse_people_path(:id => t.id), :class => "button", :method => "GET" %></td>
+                </tr>
+            <%end%> 
+        <%end%>
+    </table>
+    
+    <!--Create household form-->
+    <br>
+    <%= will_paginate @households, previous_label: h("<"), next_label: h(">") %>
+    <h2>Add Household</h2>
+    <%= form_tag households_path, class: "newHousehold", :method => :post do %>
+        <%= label :households, :name, 'Name:', style: "color: white;" %>
+        <%= text_field :households, :name %>
+        <%= submit_tag 'Submit'%>
+    <% end %>
 
 </div>
 
+<!--google maps script-->
 <script>
-      function initMap() {
+    function initMap() {
         var uluru = {lat: 29.940994, lng: -90.118619};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
@@ -55,10 +56,10 @@
           position: uluru,
           map: map
         });
-      }
-    </script>
-    <script async defer
+    }
+</script>
+<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAacBm75-nBRb0-g8tqEFKyjmmUuggC6G8&callback=initMap">
-    </script>
+</script>
     
 

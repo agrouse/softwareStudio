@@ -1,192 +1,165 @@
-<!-- div for styles -->
+<!-- Page to view household chore list -->
 <div class="choreWrapper">
     <div id="page_content">
-    <br>
-    <br>
-    <div class="text-center">
-        <h1 style="color:#BDD4E7; font-size: 50px; font-weight: strong; margin-top:40px; margin-bottom:60px;";>Chores</h1>
-    </div>
-    
-    <!-- Button trigger modal -->
-<div class="row">
-
-</div>
-<!-- Modal -->
-<div class="modal fade" id="newChoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title" id="ModalLabel">
-            <ul class="nav nav-tabs" id="choretable" style="width:100%;">
-                <li class="active"><a href="#chore" data-toggle="tab">New chore</a></li>
-                <li><a href="#task" data-toggle="tab">New task</a></li>
-            </ul>
+        
+        <!-- Chores title-->
+        <div class="text-center">
+            <h1 style="color:#BDD4E7; font-size: 50px; font-weight: strong; margin-top:40px; margin-bottom:60px;";>Chores</h1>
         </div>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <div class="tab-content">
-              <div class="tab-pane active" id="chore" >
-                  <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
-                            <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
-                            <div class="row" style="justify-content: center;">
-                             <%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm") do %>
-            <span class="glyphicon glyphicon-plus"></span></div>
-            <% end %>
-                                    <% end %> 
+        
+        <!-- Pop up for adding chore -->
+        <div class="modal fade" id="newChoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    
+                    <!--Pop up tabs task and chore-->
+                    <div class="modal-header">
+                        <div class="modal-title" id="ModalLabel">
+                            <ul class="nav nav-tabs" id="choretable" style="width:100%;">
+                                <li class="active"><a href="#chore" data-toggle="tab">New chore</a></li>
+                                <li><a href="#task" data-toggle="tab">New task</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <!--Pop up form content-->
+                    <div class="modal-body">
+                        <div class="tab-content">
                             
-              </div>
-              <div class="tab-pane" id="task" >
-                                    <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
-                            <%= render(:partial => 'task_form', :locals => {:f => f}) %>
-                            <div class="row" style="justify-content: center;">
-                             <%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm", style:"justify-content:center;") do %>
-            <span class="glyphicon glyphicon-plus"></span></div>
-            <% end %>
-            
-                                    <% end %> 
-
-              </div>
+                            <!--Chore form tab-->
+                            <div class="tab-pane active" id="chore" >
+                                <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
+                                    <%= render(:partial => 'chore_form', :locals => {:f => f}) %>
+                                    <div class="row" style="justify-content: center;">
+                                    <%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm") do %>
+                                        <span class="glyphicon glyphicon-plus"></span></div>
+                                    <% end %>
+                                <% end %> 
+                            </div>
+                            
+                            <!--Task form tab-->
+                            <div class="tab-pane" id="task" >
+                                <%= form_tag chores_path, class: "newChore", :method => :post do |f|%>
+                                    <%= render(:partial => 'task_form', :locals => {:f => f}) %>
+                                    <div class="row" style="justify-content: center;">
+                                    <%= button_tag(type: "submit",  class: "btnSubmit btn btn-sm", style:"justify-content:center;") do %>
+                                        <span class="glyphicon glyphicon-plus"></span></div>
+                                    <% end %>
+                                <% end %> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>    
     
-      </div>
-
-    </div>
-  </div>
-</div>    
-
-    <ul class="nav nav-tabs" id="choretable" style="width:100%;">
-        <li class="active"><a href="#all" data-toggle="tab">All chores</a></li>
-        <li><a href="#uncompleted" data-toggle="tab">Needs to be done </a></li>
-        <div class="col-md-8"></div>
-        <button type="button" class="btn" style="background:none;" data-toggle="modal" data-target="#newChoreModal">
-          <span class="glyphicon glyphicon-plus"></span>
-        </button>
-     </ul>
-
-    
-    <div class="tab-content">
+        <!--navigation tab options, all chores and needs to be done-->
+        <ul class="nav nav-tabs" id="choretable" style="width:100%;">
+            <li class="active"><a href="#all" data-toggle="tab">All chores</a></li>
+            <li><a href="#uncompleted" data-toggle="tab">Needs to be done </a></li>
+            <div class="col-md-8"></div>
+            <button type="button" class="btn" style="background:none;" data-toggle="modal" data-target="#newChoreModal">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </ul>
         
-        
-        <div class="tab-pane active" id="all" >
-          
-        <div class="choreWrapper">  
-        <%ses_id=session[:user_id]
-            ses_house_id=Person.find(ses_id).household_id
-            if ses_house_id!=nil%>   
-           
-            <div id="tableWrapper">
-        
-            <br>
-            <div class="row">
-               <div id="tableScroll">
-                <table class="table table-hover table-fixed">
-                    <thead>
-                        <tr>
-                          <th id="choreHeader">Task</th>
-                          <th id="choreHeader">Current Status</th>
-                          <th id="choreHeader">Frequency</th>
-                          <th id="choreHeader">Person Assigned</th>
-                          <th id="choreHeader">Complete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <%if @chores
-                        @chores.each do |t| 
-                          if t.household_id==ses_house_id%>
-                        <tr>
-                             <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                             <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
-                             <td><%= t.priority %>   </td>
-                             <td><%= t.person_assigned%></td>
-                             <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %>
-                                    
-                                 </td>
-                         </tr>
-                       <%end%>
-                 <%end%> 
-                <%end%>
-                   <%= will_paginate @chores, previous_label: h("<"), next_label: h(">") %>
-                    </tbody>
-               
-                </table>
-                
-            </div>
-            </div>
+        <div class="tab-content">
             
-            </div>
-            
-            <%else%>
-               <h2><%= link_to "Please join or create a household first", households_path %></h2>
-            <%end%>
-            </div>
-        </div>
-    
-    
-        <div class="tab-pane" id="uncompleted">
-            
-            <div class="choreWrapper">
-            <%ses_id=session[:user_id]
+            <!--Chore list for all chores tab-->
+            <div class="tab-pane active" id="all" >
+                <div class="choreWrapper">  
+                <%ses_id=session[:user_id]
                 ses_house_id=Person.find(ses_id).household_id
                 if ses_house_id!=nil%>   
-               
-                <div id="tableWrapper">
-            
-                <br>
-                <div class="row">
-                   <div id="tableScroll">
-                    <table class="table table-hover table-fixed">
-                        <thead>
-                            <tr>
-                              <th id="choreHeader">Task</th>
-                              <th id="choreHeader">Current Status</th>
-                              <th id="choreHeader">Frequency</th>
-                              <th id="choreHeader">Person Assigned</th>
-                              <th id="choreHeader">Complete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <%if @chores 
-                            @chores.each do |t| 
-                              if (t.household_id==ses_house_id) && (chores_logic(t) == "red" || chores_logic(t) == "purple") %>
-                            <tr>
-                                 <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
-                                 <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
-                                 <td><%= t.priority %>   </td>
-                                 <td><%= t.person_assigned%></td>
-                                 <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %>
-                                        
-                                     </td>
-                             </tr>
-                           <%end%>
-                     <%end%> 
-                    <%end%>
-                       
-                        </tbody>
-                   
-                    </table>
-                    
+                    <div id="tableWrapper">
+                        <br>
+                        <div class="row">
+                            <div id="tableScroll">
+                                <table class="table table-hover table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th id="choreHeader">Task</th>
+                                            <th id="choreHeader">Current Status</th>
+                                            <th id="choreHeader">Frequency</th>
+                                            <th id="choreHeader">Person Assigned</th>
+                                            <th id="choreHeader">Complete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <%if @chores
+                                            @chores.each do |t| 
+                                                if t.household_id==ses_house_id%>
+                                                    <tr>
+                                                        <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+                                                        <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
+                                                        <td><%= t.priority %></td>
+                                                        <td><%= t.person_assigned%></td>
+                                                        <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %></td>
+                                                    </tr>
+                                               <%end%>
+                                            <%end%> 
+                                        <%end%>
+                                        <%= will_paginate @chores, previous_label: h("<"), next_label: h(">") %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                <%else%>
+                    <h2><%= link_to "Please join or create a household first", households_path %></h2>
+                <%end%>
                 </div>
-                </div>
-                
-                
-                
-                </div>
-                
+            </div>
+    
+            <!--Chore list for needs to be done chores tab-->
+            <div class="tab-pane" id="uncompleted">
+                <div class="choreWrapper">  
+                <%ses_id=session[:user_id]
+                ses_house_id=Person.find(ses_id).household_id
+                if ses_house_id!=nil%>   
+                    <div id="tableWrapper">
+                        <br>
+                        <div class="row">
+                            <div id="tableScroll">
+                                <table class="table table-hover table-fixed">
+                                    <thead>
+                                        <tr>
+                                            <th id="choreHeader">Task</th>
+                                            <th id="choreHeader">Current Status</th>
+                                            <th id="choreHeader">Frequency</th>
+                                            <th id="choreHeader">Person Assigned</th>
+                                            <th id="choreHeader">Complete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <%if @chores 
+                                            @chores.each do |t| 
+                                                if (t.household_id==ses_house_id) && (chores_logic(t) == "red" || chores_logic(t) == "purple") %>
+                                                    <tr>
+                                                        <td><a href="<%= chores_path %>/<%= t.id %>"><%= t.task %> </a> </td>
+                                                        <td><span class="circle", style = <%="color:#{chores_logic(t)}"%>></span></td>
+                                                        <td><%= t.priority %>   </td>
+                                                        <td><%= t.person_assigned%></td>
+                                                        <td><%= link_to "Complete", complete_chores_path(:id => t.id), :class => "button", :method => "GET" %></td>
+                                                    </tr>
+                                                <%end%>
+                                            <%end%> 
+                                        <%end%>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 <%else%>
                    <h2><%= link_to "Please join or create a household first", households_path %></h2>
                 <%end%>
+                </div>
             </div>
         </div>
-    
-    
-    </div>
-
     </div>  
-            
-    </div>
 </div>
 
 <script>
