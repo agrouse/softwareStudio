@@ -4,7 +4,7 @@ Feature: user authentication
     Given a user with username "test" and password "password"
     Given I am on the sign in page
     When I sign in as "test" with password "password"
-    Then I should be on the sign in page
+    Then I should be on the households page
 
   Scenario: user logs out (happy path)
     Given I am signed in with username "test_user" and password "password"

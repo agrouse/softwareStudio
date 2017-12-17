@@ -22,7 +22,8 @@ module NavigationHelpers
     
     when /^sign up/
       '/people/signup'
-      
+    when /^My House/
+      '/people'
     when /^households/
       '/households'
       

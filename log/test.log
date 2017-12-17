@@ -1506,3 +1506,245 @@ Processing by PeopleController#signup as HTML
 Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
   [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1 LIMIT 1  [["username", "testing2"]]
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (10.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-17 04:11:00 +0000
+Processing by PeopleController#signup as HTML
+  Rendered layouts/_houseSVG.html.erb (0.4ms)
+  Rendered people/_signup_form.html.erb (18.1ms)
+  Rendered people/signup.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 4476ms (Views: 4465.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-17 04:11:05 +0000
+Processing by PeopleController#signup as HTML
+  Rendered layouts/_houseSVG.html.erb (0.1ms)
+  Rendered people/_signup_form.html.erb (0.6ms)
+  Rendered people/signup.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-17 04:12:58 +0000
+Processing by PeopleController#signup as HTML
+  Rendered layouts/_houseSVG.html.erb (0.4ms)
+  Rendered people/_signup_form.html.erb (10.2ms)
+  Rendered people/signup.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 269ms (Views: 258.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-17 04:12:59 +0000
+Processing by PeopleController#signup as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered people/_signup_form.html.erb (0.5ms)
+  Rendered people/signup.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (1.3ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'test' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.5ms)
+  Rendered access/_login_form.html.erb (0.7ms)
+  Rendered access/login.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 278ms (Views: 268.1ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.6ms)
+  Rendered access/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (1.0ms)
+  Rendered access/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.2ms)
+  Rendered access/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'test' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.8ms)
+  Rendered access/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:13:42 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.3ms)
+  Rendered access/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-17 04:15:32 +0000
+Processing by PeopleController#signup as HTML
+  Rendered layouts/_houseSVG.html.erb (0.4ms)
+  Rendered people/_signup_form.html.erb (10.1ms)
+  Rendered people/signup.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 255ms (Views: 244.5ms | ActiveRecord: 0.0ms)
+Started POST "/people" for 127.0.0.1 at 2017-12-17 04:15:33 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"first_name"=>"testing", "last_name"=>"testing", "username"=>"testing1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>"submit"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (1.0ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'testing1' LIMIT 1
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "testing"], ["last_name", "testing"], ["password_digest", "$2a$04$.IRmLKlPolsGFwMcV..KC.hdHHJh.LmIYXCjYdsSDaD0BKIvWKPjq"], ["username", "testing1"], ["created_at", "2017-12-17 04:15:33.262456"], ["updated_at", "2017-12-17 04:15:33.262456"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE ("people"."username" = 'testing1' AND "people"."id" != 1) LIMIT 1[0m
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 76ms (ActiveRecord: 9.7ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:15:33 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.8ms)
+  Rendered access/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+  [1m[35mPerson Load (0.5ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1 LIMIT 1  [["username", "testing1"]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-17 04:15:33 +0000
+Processing by PeopleController#signup as HTML
+  Rendered layouts/_houseSVG.html.erb (0.1ms)
+  Rendered people/_signup_form.html.erb (0.5ms)
+  Rendered people/signup.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 46ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+Started POST "/people" for 127.0.0.1 at 2017-12-17 04:15:33 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "people"=>{"first_name"=>"testing2", "last_name"=>"testing2", "username"=>"testing2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "button"=>"submit"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.6ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'testing2' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'testing2' LIMIT 1
+Redirected to http://www.example.com/people/signup
+Completed 302 Found in 17ms (ActiveRecord: 1.3ms)
+Started GET "/people/signup" for 127.0.0.1 at 2017-12-17 04:15:33 +0000
+Processing by PeopleController#signup as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered people/_signup_form.html.erb (0.4ms)
+  Rendered people/signup.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1 LIMIT 1[0m  [["username", "testing2"]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Exists (1.1ms)[0m  SELECT  1 AS one FROM "people" WHERE "people"."username" = 'test' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.5ms)
+  Rendered access/_login_form.html.erb (0.7ms)
+  Rendered access/login.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 321ms (Views: 310.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.3ms)
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.2ms)
+  Rendered access/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test_user", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test_user"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.2ms)
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "people" WHERE "people"."username" = 'test' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.3ms)
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "username"=>"test", "password"=>"[FILTERED]", "button"=>"submit"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."username" = $1  ORDER BY "people"."id" ASC LIMIT 1[0m  [["username", "test"]]
+Redirected to http://www.example.com/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/access/login" for 127.0.0.1 at 2017-12-17 04:16:03 +0000
+Processing by AccessController#login as HTML
+  Rendered layouts/_houseSVG.html.erb (0.0ms)
+  Rendered access/_login_form.html.erb (0.3ms)
+  Rendered access/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
